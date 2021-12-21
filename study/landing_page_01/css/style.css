@@ -1,7 +1,6 @@
 @charset "utf-8";
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
 @font-face {
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'Noto Sans KR';
     src: url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
 }
 
@@ -83,7 +82,7 @@ p.blockmsg2 {
     font-size:1.250em
 }
 
-a.homebtn   {
+a.homebtn {
     display:block;
     width: 140px;
     height:32px;
@@ -91,7 +90,7 @@ a.homebtn   {
     text-align: center;
     margin-top: 2.9%;
     margin-left: calc(120px + 2%);
-    border:1px solid black;
+    border:1px solid #040000;
     box-sizing: border-box;
     font-size: 0.875em;
 }
@@ -106,13 +105,11 @@ aside {
 aside div {
     height:59px;
     display:flex;
-    align-items: center;
-    justify-items: center;
     padding-top:18px;
 }
 aside div img {
     margin-left:63px;
-    margin-top:10px;
+    margin-top:5px;
 }
 aside div p {
     margin-left: 3.1%;
@@ -130,18 +127,14 @@ aside div p span em {
 
 @media (max-width:640px) {
 
-
     #wrap {
         width:calc(100% - 11.2%);
         min-width:360px;
-        margin:0 auto;
     }
 
     #wrap h1 {
-        width: 100%;
-        height: 86px;
-        margin-top: 5.1%;
-        text-align: right;
+        height: auto;
+        margin-top: 4%;
     }
 
     #wrap h1 a {
@@ -152,28 +145,15 @@ aside div p span em {
     }
 
     img.logo {
-        object-fit: contain;
         width:100%;
     }
 
     div.line1 {
-        width: 100%;
-        height: 2px;
         margin-top: 4%;
-        background-color: #a91313;
-    }
-
-    div.line2 {
-        width: 100%;
-        height: 1px;
-        margin-top: 2px;
-        background-color: #a91313;
     }
 
     div.blockmsg1 {
-        width: 100%;
         height:auto;
-        display:flex;
         margin-top: 4.3%;
     }
 
@@ -190,33 +170,23 @@ aside div p span em {
     }
 
     p.blockmsg2 {
-        display:block;
         width:100%;
         margin: 4.4% auto 0;
         font-size:1.5em;
         text-align:center;
-
-
     }
 
     a.homebtn {
-        display:block;
         width: 55.6%;
         height:auto;
         line-height: 2.5em;
-        text-align: center;
         margin: 3.7% auto 0;
-        border:1px solid #040000;
-        box-sizing: border-box;
         font-size:1.5em;
     }
 
     aside {
-        width:100%;
         height:auto;
         margin-top:13.4%;
-        border-radius: 5px;
-        background-color: #f2f2f2;
     }
     aside div {
         height:auto;
@@ -225,7 +195,6 @@ aside div p span em {
     aside div img {
         order: 2;
         margin: 10px 5.8% 10px 0;
-        text-align: right;
         width:21.4%;
         height:auto;
     }
@@ -239,10 +208,6 @@ aside div p span em {
         display:inline-block;
         margin-top: 0.875em;
         font-size: 0.938em;
-    }
-
-    aside div p span em {
-        font-style: inherit;
     }
 
     aside div p span em {
