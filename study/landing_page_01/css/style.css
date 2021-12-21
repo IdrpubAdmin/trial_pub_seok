@@ -29,6 +29,7 @@ a {
 #wrap h1 a {
     width: 63px;
     height:47px;
+    display:inline-block;
     margin-right: 0.5%;
 }
 
@@ -122,10 +123,150 @@ aside div p span {
     color:#555;
 }
 
+aside div p span em {
+    font-style: inherit;
+}
 
 
+@media (max-width:640px) {
 
 
+    #wrap {
+        width:calc(100% - 11.2%);
+        min-width:360px;
+        margin:0 auto;
+    }
+
+    #wrap h1 {
+        width: 100%;
+        height: 86px;
+        margin-top: 5.1%;
+        text-align: right;
+    }
+
+    #wrap h1 a {
+
+        width: 16.1%;
+        height:auto;
+        margin-right: 0;
+    }
+
+    img.logo {
+        object-fit: contain;
+        width:100%;
+    }
+
+    div.line1 {
+        width: 100%;
+        height: 2px;
+        margin-top: 4%;
+        background-color: #a91313;
+    }
+
+    div.line2 {
+        width: 100%;
+        height: 1px;
+        margin-top: 2px;
+        background-color: #a91313;
+    }
+
+    div.blockmsg1 {
+        width: 100%;
+        height:auto;
+        display:flex;
+        margin-top: 4.3%;
+    }
+
+    div.blockmsg1 img {
+        width:13.8%;
+        height:13.8%;
+
+    }
+    div.blockmsg1 p {
+        height:auto;
+        margin-left:3.5%;
+        padding-top:0;
+        line-height: 1.24;
+    }
+
+    p.blockmsg2 {
+        display:block;
+        width:100%;
+        margin: 4.4% auto 0;
+        font-size:1.5em;
+        text-align:center;
+
+
+    }
+
+    a.homebtn {
+        display:block;
+        width: 55.6%;
+        height:auto;
+        line-height: 2.5em;
+        text-align: center;
+        margin: 3.7% auto 0;
+        border:1px solid #040000;
+        box-sizing: border-box;
+        font-size:1.5em;
+    }
+
+    aside {
+        width:100%;
+        height:auto;
+        margin-top:13.4%;
+        border-radius: 5px;
+        background-color: #f2f2f2;
+    }
+    aside div {
+        height:auto;
+        padding:1rem 0 1rem;
+    }
+    aside div img {
+        order: 2;
+        margin: 10px 5.8% 10px 0;
+        text-align: right;
+        width:21.4%;
+        height:auto;
+    }
+    aside div p {
+        margin-left: 5.6%;
+        width:69.1%;
+        font-size: 1.4em;
+    }
+
+    aside div p span {
+        display:inline-block;
+        margin-top: 0.875em;
+        font-size: 0.938em;
+    }
+
+    aside div p span em {
+        font-style: inherit;
+    }
+
+    aside div p span em {
+        font-weight: 600;
+    }
+}
+
+@media (max-width:590px) {
+    body {
+        font-size:14px;
+    }
+}
+
+@media (max-width:520px) {
+    body {
+        font-size:12px;
+    }
+}
+
+@media (max-width:440px) {
+    body {
+        font-size:11px;
+    }
+}
 
 
 
