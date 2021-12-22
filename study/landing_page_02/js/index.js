@@ -1,88 +1,36 @@
-/* --------------------------
- * GLOBAL VARS
- * -------------------------- */
-// The date you want to count down to
-var targetDate = new Date("2021/12/25 00:00:00");
+var timer;
 
-// Other date related variables
-var days;
-var hrs;
-var min;
-var sec;
+var compareDate = new Date();
+compareDate.setMinutes(compareDate.getMinutes() + 15);
 
-/* --------------------------
- * ON DOCUMENT LOAD
- * -------------------------- */
-$(function() {
-    // Calculate time until launch date
-    timeToLaunch();
-    // Transition the current countdown from 0
-    numberTransition('#days', days, 1000, 'easeOutQuad');
-    numberTransition('#hours', hrs, 1000, 'easeOutQuad');
-    numberTransition('#minutes', min, 1000, 'easeOutQuad');
-    numberTransition('#seconds', sec, 1000, 'easeOutQuad');
-    // Begin Countdown
-    setTimeout(countDownTimer,1001);
-});
+timer = setInterval(function() {
+    timeBetweenDates(compareDate);
+}, 1000);
 
-/* --------------------------
- * FIGURE OUT THE AMOUNT OF
-   TIME LEFT BEFORE LAUNCH
- * -------------------------- */
-function timeToLaunch(){
-    // Get the current date
-    var currentDate = new Date();
+function timeBetweenDates(toDate) {
+    var dateEntered = toDate;
+    var now = new Date();
+    var difference = dateEntered.getTime() - now.getTime();
 
-    // Find the difference between dates
-    var diff = (currentDate - targetDate)/1000;
-    var diff = Math.abs(Math.floor(diff));
+    if (difference <= 0) {
 
-    // Check number of days until target
-    days = Math.floor(diff/(24*60*60));
-    sec = diff - days * 24*60*60;
+        // Timer done
+        clearInterval(timer);
 
-    // Check number of hours until target
-    hrs = Math.floor(sec/(60*60));
-    sec = sec - hrs * 60*60;
+    } else {
 
-    // Check number of minutes until target
-    min = Math.floor(sec/(60));
-    sec = sec - min * 60;
+        var seconds = Math.floor(difference / 1000);
+        var minutes = Math.floor(seconds / 60);
+        var hours = Math.floor(minutes / 60);
+        var days = Math.floor(hours / 24);
+
+        hours %= 24;
+        minutes %= 60;
+        seconds %= 60;
+
+        $("#days").text(days);
+        $("#hours").text(hours);
+        $("#minutes").text(minutes);
+        $("#seconds").text(seconds);
+    }
 }
-
-/* --------------------------
- * DISPLAY THE CURRENT
-   COUNT TO LAUNCH
- * -------------------------- */
-function countDownTimer(){
-
-    // Figure out the time to launch
-    timeToLaunch();
-
-    // Write to countdown component
-    $( "#days" ).text(days);
-    $( "#hours" ).text(hrs);
-    $( "#minutes" ).text(min);
-    $( "#seconds" ).text(sec);
-
-    // Repeat the check every second
-    setTimeout(countDownTimer,1000);
-}
-
-/* --------------------------
- * TRANSITION NUMBERS FROM 0
-   TO CURRENT TIME UNTIL LAUNCH
- * -------------------------- */
-function numberTransition(id, endPoint, transitionDuration, transitionEase){
-    // Transition numbers from 0 to the final number
-    $({numberCount: $(id).text()}).animate({numberCount: endPoint}, {
-        duration: transitionDuration,
-        easing:transitionEase,
-        step: function() {
-            $(id).text(Math.floor(this.numberCount));
-        },
-        complete: function() {
-            $(id).text(this.numberCount);
-        }
-    });
-};
