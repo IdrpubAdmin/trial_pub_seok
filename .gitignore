@@ -1,0 +1,11 @@
+/.git
+/.idea
+.idea
+*.log
+/bak/
+/.gitlab-ci.yml
+node_modules/
+package-lock.json
+.sass-cache
+*.scssc
+!.vscode/settings.json
