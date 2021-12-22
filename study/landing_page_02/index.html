@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dongbanmall waiting page</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/index.js"></script>
+
+</head>
+<body>
+
+
+<section id="wrap">
+    <div class="content">
+        <header>
+            <h1>
+                <img src="img/logo_pc.png" alt="가치삽시다 PC로고" class="logo_pc">
+                <img src="img/logo_m.png" alt="가치삽시다 모바일로고" class="logo_m">
+            </h1>
+        </header>
+
+        <div class="txt1">
+            <p>동시 접속자가 많아 <em>대기 중</em>입니다.</p>
+            <p>잠시 기다려 주세요.</p>
+        </div>
+
+        <div class="gaugebar">
+            <div class="persentbar">
+                <div class="gauge"></div>
+            </div>
+            <p class="gaugepersent">70%</p>
+        </div>
+
+        <div class="timer">
+            <span>예상 대기시간</span>
+            <p>약 <em id="minutes">12</em>분 <em id="seconds">26</em>초</p>
+        </div>
+
+        <div class="waitcounter">
+            현재 대기인원 : <em>6,678</em><b>명</b>
+        </div>
+
+        <div class="alert">
+            ⓘ 새로고침 또는 뒤로가기를 하시면 <em>다시 대기시간이 부여됩니다.</em>
+        </div>
+
+
+
+    </div>
+
+</section>
+
+</body>
+</html>
