@@ -28,9 +28,9 @@ function timeBetweenDates(toDate) {
         minutes %= 60;
         seconds %= 60;
 
-        $("#days").text(days);
-        $("#hours").text(hours);
-        $("#minutes").text(minutes);
-        $("#seconds").text(seconds);
+        $(".days").text(days);
+        $(".hours").text(hours);
+        $(".minutes").text(minutes);
+        $(".seconds").text(seconds);
     }
 }

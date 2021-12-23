@@ -7,7 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Dongbanmall waiting page</title>
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/index.js"></script>
@@ -16,45 +15,49 @@
 <body>
 
 
-<section id="wrap">
-    <div class="content">
-        <header>
-            <h1>
-                <img src="img/logo_pc.png" alt="가치삽시다 PC로고" class="logo_pc">
-                <img src="img/logo_m.png" alt="가치삽시다 모바일로고" class="logo_m">
-            </h1>
-        </header>
+<!-- wrap s -->
+<section class="wrap">
 
-        <div class="txt1">
-            <p>동시 접속자가 많아 <em>대기 중</em>입니다.</p>
-            <p>잠시 기다려 주세요.</p>
+    <!-- content s-->
+    <div class="content">
+
+        <div class="logo">
+            <img src="img/logo.png" alt="가치삽시다 로고">
         </div>
 
+        <header class="txt1">
+            <h1>
+                동시 접속자가 많아 <br class="m-version"> <em>대기 중</em>입니다.
+            </h1>
+            <p>잠시 기다려 주세요.</p>
+        </header>
+
         <div class="gaugebar">
-            <div class="persentbar">
+            <div class="gb-area">
                 <div class="gauge"></div>
             </div>
-            <p class="gaugepersent">70%</p>
+            <p class="gauge-persent">70%</p>
         </div>
 
         <div class="timer">
             <span>예상 대기시간</span>
-            <p>약 <em id="minutes">15</em>분 <em id="seconds">00</em>초</p>
+            <p>약 <em class="minutes">15</em>분 <em class="seconds">00</em>초</p>
         </div>
 
-        <div class="waitcounter">
+        <div class="wait-counter">
             현재 대기인원 : <em>6,678</em><b>명</b>
         </div>
 
         <div class="alert">
-            ⓘ 새로고침 또는 뒤로가기를 하시면 <em>다시 대기시간이 부여됩니다.</em>
+            ⓘ 새로고침 또는 뒤로가기를 하시면 <br class="m-version">다시 대기시간이 부여됩니다.
         </div>
 
 
-
     </div>
+    <!--    //content e-->
 
 </section>
+<!-- //wrap e -->
 
 </body>
 </html>
