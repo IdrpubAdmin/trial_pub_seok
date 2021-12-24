@@ -1,0 +1,22 @@
+{
+  "name": "gulp_study",
+  "version": "1.0.0",
+  "description": "Learn Gulp by building an awesome development environment",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IdrpubAdmin/trial_pub_seok.git"
+  },
+  "author": "Eunseok Oh <eunseok0722@idrsystems.co.kr>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IdrpubAdmin/trial_pub_seok/issues"
+  },
+  "homepage": "https://github.com/IdrpubAdmin/trial_pub_seok#readme",
+  "dependencies": {
+    "gulp": "^4.0.2"
+  }
+}
