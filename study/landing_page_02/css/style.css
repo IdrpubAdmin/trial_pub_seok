@@ -1,9 +1,38 @@
 @charset "UTF-8";
 @font-face {
     font-family: 'NanumSquare';
-    src: url('font/NanumSquareR.woff');
-    src: url('font/NanumSquareR.ttf') format('truetype');
+    font-style: normal;
     font-weight: normal;
+    font-display: auto;
+    /* option :
+       auto: 브라우저 기본 동작
+       block: FOIT 방식, 로딩까지 텍스트를 보여주지 않음
+       swap : FOUT 기본폰트로 노출 후 무한정 응답대기
+       fallback 100ms 동안 block 후 기본폰트 노출, 응답 올 경우 해당 폰트로 swap
+       optional: 100ms block 후 기본폰트 노출, 그 후 대체 하지 않음 */
+    src: local('NanumSquare'), /* 설치된 폰트 먼저 확인*/
+    url('font/NanumSquareR.woff2') format('woff2'),
+    url('font/NanumSquareR.woff') format('woff'),
+    url('font/NanumSquareR.ttf') format('truetype'),
+    url('font/NanumSquareR.eot') format('embedded-opentype');
+}
+
+@font-face {
+    font-family: 'NanumSquareB';
+    src: local('NanumSquareB'),
+    url('font/NanumSquareB.woff2') format('woff2'),
+    url('font/NanumSquareB.woff') format('woff'),
+    url('font/NanumSquareB.ttf') format('truetype'),
+    url('font/NanumSquareB.eot') format('embedded-opentype');
+}
+
+@font-face {
+    font-family: 'NanumSquareEB';
+    src: local('NanumSquareEB'),
+    url('font/NanumSquareEB.woff2') format('woff2'),
+    url('font/NanumSquareEB.woff') format('woff'),
+    url('font/NanumSquareEB.ttf') format('truetype'),
+    url('font/NanumSquareEB.eot') format('embedded-opentype');
 }
 
 html {
@@ -56,9 +85,7 @@ em {
 }
 
 .txt1 h1 {
-    font-size: 3.2rem;
-    font-weight: 600;
-
+    font: 3.2rem 'NanumSquareB', 'Gothic';
 }
 
 .txt1 h1 em {
@@ -67,8 +94,7 @@ em {
 }
 
 .txt1 p {
-    font-size: 1.8rem;
-    font-weight: 600;
+    font: 1.8rem 'NanumSquareB', 'Gothic';
     margin-top: 22px;
 }
 
@@ -96,7 +122,7 @@ em {
 
 p.gauge-persent {
     font-size: 1.2rem;
-    font-weight: bold;
+    color: #010101;
     line-height: 1.25;
     margin-left: 1.4%;
 }
@@ -120,7 +146,7 @@ p.gauge-persent {
 }
 
 .timer p em {
-    font-weight: 600;
+    font-family: 'NanumSquareEB', sans-serif;
 }
 
 .wait-counter {
