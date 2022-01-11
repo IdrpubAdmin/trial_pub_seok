@@ -1,0 +1,26 @@
+{
+  "name": "supergulp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "eunseok0722 <94890651+eunseok0722@users.noreply.github.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "gulp dev",
+    "build": "gulp build"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.7",
+    "@babel/preset-env": "^7.16.7",
+    "@babel/register": "^7.16.7",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-cli": "^2.3.0",
+    "gulp-pug": "^5.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-webserver": "^0.9.1",
+    "node-sass": "^7.0.1"
+  },
+  "dependencies": {
+    "gulp-image": "^6.3.1"
+  }
+}
