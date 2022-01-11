@@ -1,0 +1,28 @@
+
+$width: 100%;
+$header_bg_color: rgba(0, 0, 0, 0.5);
+$gnb_font_color: #c4b79e;
+
+  .header {
+    width: $width;
+    background: $header_bg_color;
+    text-align: center;
+    h1 {
+      display: inline-block;
+      img {
+        width: 100%;
+      }
+    }
+    nav {
+      display: flex;
+      a {
+        display: block;
+        width: 5rem;
+        height:auto;
+        border-left: 1px solid $gnb_font_color;
+        &:first-child {
+          border-left: none;
+        }
+      }
+    }
+  }
