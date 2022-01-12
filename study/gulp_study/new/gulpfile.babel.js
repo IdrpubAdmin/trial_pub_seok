@@ -13,9 +13,25 @@ import ws from "gulp-webserver";
 
 import image from "gulp-image";
 //이미지 자동 컴파일
+import dartSass from "sass";
+//sass 컴파일을 위한 기본 sass
+import gulpSass from "gulp-sass";
+//gulp에서 sass를 동작하기 위한 gulp sass
+import autoprefixer from "gulp-autoprefixer";
+//호환성을 높이기 위한 prefix를 자동으로 넣어주는 역할
+import miniCSS from "gulp-csso";
 
-const sass = require('gulp-sass')(require('node-sass'));
-//gulp-sass 는 node-sass로 컴파일하는 과정이 필요한데 위와 같은 식으로 적어줘야 작동함
+import bro from "gulp-bro";
+//browseify 는 import export 와 같이 브라우저에서 인식하지 못하는 node 언어를 브라우저가 인식하게 해주는 플러그인
+
+import babelify from "babelify";
+//browseify 진행 중 ECMA script 버전간 변환을 도와주는 플러그인
+
+import ghPages from "gulp-gh-pages";
+//깃허브 레파지토리에 업로드해주는 기능
+
+const sass = gulpSass(dartSass);
+//gulp-sass 는 컴파일 과정이 필요해서 위와 같이 작성
 
 
 const routes = {
@@ -32,6 +48,11 @@ const routes = {
         watch: "src/scss/**/*.scss",
         src: "src/scss/styles.scss",
         dest: "build/css"
+    },
+    js: {
+        watch: "src/js/**/*.js",
+        src: "src/js/main.js",
+        dest: "build/js"
     }
 };
 //경로를 정해주는 메서드
@@ -59,14 +80,6 @@ const clean = () => del(["build"]);
 const webserver = () => gulp.src("build").pipe(ws({livereload: true, open: true}));
 //웹서버에 자동으로 열리도록 만드는 파이프
 
-const watch = () => {
-    gulp.watch(routes.pug.watch, pug);
-    // gulp.watch(routes.img.src, img);
-    gulp.watch(routes.scss.watch, styles);
-}
-//파일에 변화가 있을 떄 변환할 수 있도록 감시하는 역할
-
-
 const img = () => gulp.src(routes.img.src).pipe(image()).pipe(gulp.dest(routes.img.dest));
 //위치의 이미지를 불러와서 자동으로 새로운 위치에 저장하는 과정
 
@@ -74,21 +87,52 @@ const styles = () =>
     gulp
         .src(routes.scss.src)
         .pipe(sass().on("error", sass.logError))
+        .pipe(autoprefixer())
+        //익스플로러 호환 등 자동으로 prefix추가해주는 플러그인
+        .pipe(miniCSS())
         .pipe(gulp.dest(routes.scss.dest));
 //scss의 위치확인 > 에러가 있을 경우 알려주는 파이프 > 결과물 저장 위치 경로 지정
 
+const js = () => gulp.src(routes.js.src)
+    .pipe(bro({
+        transform: [
+        babelify.configure({presets: ['@babel/preset-env'] }),
+        ["uglifyify", { global: true}]
+        ]}))
+    .pipe(gulp.dest(routes.js.dest));
+//gulp-browseify에 속성으로 진행 간 babelify를 통해서 preset-env 가 적용될 수 있도록 하는 과정
+//브라우저에서 최신 자바스크립트 언어를 이해할 수 있도록 컴파일하는 과정
+
+
+const ghDeploy = () => gulp.src("build/**/*").pipe(ghPages());
+
+const watch = () => {
+    gulp.watch(routes.pug.watch, pug);
+    gulp.watch(routes.img.src, img);
+    gulp.watch(routes.scss.watch, styles);
+    gulp.watch(routes.js.src, js);
+}
+//파일에 변화가 있을 떄 변환할 수 있도록 감시하는 역할
 
 const prepare = gulp.series([clean, img]);
 //준비과정의 시리즈를 만들기 위해서 위와 같이 적어줌 
 // 이미지를 매번 만들면 오래걸리기 때문에 초기 단계에서 만들 예정임 
 
-const assets = gulp.series([pug, styles]);
+const assets = gulp.series([pug, styles, js]);
 //실제 컴파일되고 생성되는 과정의 시리즈
 
 
-const postDev = gulp.parallel([webserver, watch]);
+const live = gulp.parallel([webserver, watch]);
 //라이브서버에 자동으로 올라가는 프로세스 만듦
 
-export const dev = gulp.series([prepare, assets, postDev]);
+
 // 함수 clean, pug 를 이어서 작업하는 dev 라는 함수를 만들었음
 //export 라고 붙는 이유는 pakage.json에 스크립트로 gulp dev와 gulp build 를 적어뒀기 때문
+export const build = gulp.series([prepare, assets]);
+//기존 파일을 지우고 이미지를 컴파일하여 옮기는 작업을 먼저 함
+//다음 pug, scss, js파일을 컴파일하여 옮기는 작업을 진행
+export const dev = gulp.series([build,live]);
+//위와 같은 옮기기 작업이 끝나고 작업결과를 라이브를 통해서 실시간으로 볼 수 있도록 하기 위해 라이브를 켬
+//실시간으로 변경사항이 보일 수 있도록 변경됨
+export const deploy = gulp.series([build, ghDeploy]);
+//빌드 작업이 완료된 다음 해당 소스를 깃허브에 올리기 위한 작업

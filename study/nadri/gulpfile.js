@@ -5,16 +5,16 @@ const sass = require('gulp-sass')(require('sass'));
 const babel = require('gulp-babel');
 const uglify = require('gulp-uglify');
 const rename = require('gulp-rename');
-// const del = require('del');
-// const image = require('gulp-image')
+const del = require('del');
+const image = require('gulp-image')
 const sourcemaps = require('gulp-sourcemaps');
 
 
-// function clean() {
-//     return gulp.src('.')
-//         .pipe(del('output/*'))
-//         .pipe(gulp.dest('output/'));
-// }
+function clean() {
+    return gulp.src('.')
+        .pipe(del('output/**/*'))
+        .pipe(gulp.dest('output/'));
+}
 
 function extend() {
     return gulp.src('./src/html/*.html')
@@ -30,11 +30,11 @@ function buildStyles() {
         .pipe(gulp.dest('./output/css'));
 };
 
-// function img () {
-//     return gulp.src('./src/img/*')
-//         .pipe(image())
-//         .pipe(gulp.dest('./output/img'));
-// }
+function img () {
+    return gulp.src('./src/img/*')
+        .pipe(image())
+        .pipe(gulp.dest('./output/img'));
+}
 
 
 exports.buildStyles = buildStyles;
