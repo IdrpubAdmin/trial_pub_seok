@@ -1,0 +1,61 @@
+@import "_reset";
+
+@font-face {
+  font-family: 'BMYEONSUNG';
+  font-weight: 400;
+  src: local('BMYEONSUNG'),
+  url('fonts/BMYEONSUNG.woff2') format('woff2'),
+  url('fonts/BMYEONSUNG.woff') format('woff'),
+  url('fonts/BMYEONSUNG.ttf') format('truetype'),
+  url('fonts/BMYEONSUNG.eot') format('embedded-opentype');
+}
+
+@font-face {
+  font-family: 'NanumMyeongjo';
+  font-weight: 400;
+  src: local('NanumMyeongjo'),
+  url('fonts/NanumMyeongjo.woff2') format('woff2'),
+  url('fonts/NanumMyeongjo.woff') format('woff'),
+  url('fonts/NanumMyeongjo.ttf') format('truetype'),
+  url('fonts/NanumMyeongjo.eot') format('embedded-opentype');
+}
+
+@font-face {
+  font-family: 'NanumMyeongjoBold';
+  font-weight: 700;
+  src: local('NanumMyeongjoBold'),
+  url('fonts/NanumMyeongjoBold.woff2') format('woff2'),
+  url('fonts/NanumMyeongjoBold.woff') format('woff'),
+  url('fonts/NanumMyeongjoBold.ttf') format('truetype'),
+  url('fonts/NanumMyeongjoBold.eot') format('embedded-opentype');
+}
+
+@font-face {
+  font-family: 'NanumSquareR';
+  font-weight: 400;
+  src: local('NanumSquareR'),
+  url('fonts/NanumSquareR.woff2') format('woff2'),
+  url('fonts/NanumSquareR.woff') format('woff'),
+  url('fonts/NanumSquareR.ttf') format('truetype'),
+  url('fonts/NanumSquareR.eot') format('embedded-opentype');
+}
+
+@font-face {
+  font-family: 'NanumSquareB';
+  font-weight: 700;
+  src: local('NanumSquareB'),
+  url('fonts/NanumSquareB.woff2') format('woff2'),
+  url('fonts/NanumSquareB.woff') format('woff'),
+  url('fonts/NanumSquareB.ttf') format('truetype'),
+  url('fonts/NanumSquareB.eot') format('embedded-opentype');
+}
+@import "_variables";
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+html {
+  font-size:62.5%;
+}
+@import "header";

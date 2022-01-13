@@ -1,28 +1,84 @@
-
 $width: 100%;
-$header_bg_color: rgba(0, 0, 0, 0.5);
-$gnb_font_color: #c4b79e;
+$max-width: 1920px;
+$header_bg_color: rgba(3, 3, 2, 0.5);
+$gnb_sub_font_color: #c4b79e;
+$gnb_font_color: #faf3e1;
 
-  .header {
-    width: $width;
-    background: $header_bg_color;
-    text-align: center;
-    h1 {
-      display: inline-block;
-      img {
-        width: 100%;
+.header {
+  width: $width;
+  max-width: $max-width;
+  height: 134px;
+  background: $header_bg_color;
+  text-align: center;
+  position: relative;
+
+  h1 {
+    position: absolute;
+    left: 50%;
+    top: 34px;
+    transform: translateX(-50%);
+    display: inline-block;
+    width: 174px;
+    height: auto;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .header_nav {
+    position: absolute;
+    right: 0;
+    top: 81px;
+    display: flex;
+
+    a {
+      display: block;
+      width: 5rem;
+      color: $gnb_font_color;
+      height: auto;
+      border-left: 1px solid $gnb_sub_font_color;
+
+      &:first-child {
+        border-left: none;
       }
     }
-    nav {
-      display: flex;
-      a {
-        display: block;
-        width: 5rem;
-        height:auto;
-        border-left: 1px solid $gnb_font_color;
-        &:first-child {
-          border-left: none;
+  }
+}
+
+.gnb {
+  width: $width;
+  max-width: $max-width;
+  height: 52px;
+  font: 2.2rem "BMYEONSUNG";
+  color: $gnb_font_color;
+  background: $header_bg_color;
+  text-align: center;
+
+  ul {
+    width: $width;
+    display: flex;
+    li {
+      width: 20%;
+      a{
+        line-height: 52px;
+        vertical-align: center;
+        img {
+          width: 44px;
+          margin-right:5%;
+
         }
       }
     }
   }
+}
+
+.gnb-sub {
+  width: $width;
+  max-width: $max-width;
+  display:flex;
+  ul {
+
+  }
+
+}
