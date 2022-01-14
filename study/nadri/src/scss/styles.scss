@@ -1,5 +1,5 @@
 @import "_reset";
-
+@import "variables";
 @font-face {
   font-family: 'BMYEONSUNG';
   font-weight: 400;
@@ -49,13 +49,8 @@
   url('fonts/NanumSquareB.ttf') format('truetype'),
   url('fonts/NanumSquareB.eot') format('embedded-opentype');
 }
-@import "_variables";
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-html {
-  font-size:62.5%;
-}
+
 @import "header";
+@import "main";
+@import "footer";

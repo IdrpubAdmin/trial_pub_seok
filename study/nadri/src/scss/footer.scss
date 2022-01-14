@@ -1,0 +1,26 @@
+$width: 100%;
+$max-width: 1920px;
+$gnb_width: calc(100% - 10%);
+$header_bg_color: rgba(3, 3, 2, 0.5);
+$gnb_sub_font_color: #c4b79e;
+$gnb_font_color: #faf3e1;
+$gnb_font_color_hover: #fbb813;
+
+@mixin width {
+  width: $width;
+  max-width: $max-width;
+  margin: 0 auto;
+};
+@mixin gnb_width {
+  width: $gnb_width;
+  margin: 0 auto;
+};
+
+.footer {
+  background: url("../img/location_bg.png") no-repeat center center/cover;
+  @include width;
+  height:643px;
+
+
+
+};

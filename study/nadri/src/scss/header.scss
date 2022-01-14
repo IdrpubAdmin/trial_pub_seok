@@ -1,22 +1,42 @@
 $width: 100%;
 $max-width: 1920px;
+$gnb_width: calc(100% - 10%);
 $header_bg_color: rgba(3, 3, 2, 0.5);
 $gnb_sub_font_color: #c4b79e;
 $gnb_font_color: #faf3e1;
+$gnb_font_color_hover: #fbb813;
+$gnb_z_index: 100;
 
-.header {
+@mixin width {
   width: $width;
   max-width: $max-width;
+  margin: 0 auto;
+};
+@mixin gnb_width {
+  width: $gnb_width;
+  margin: 0 auto;
+};
+
+@mixin align_center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+.header {
+  @include width;
   height: 134px;
   background: $header_bg_color;
   text-align: center;
-  position: relative;
+  @include align_center;
+  top:0;
+  color: $gnb_sub_font_color;
 
   h1 {
-    position: absolute;
-    left: 50%;
+    @include align_center;
     top: 34px;
-    transform: translateX(-50%);
+
     display: inline-block;
     width: 174px;
     height: auto;
@@ -28,16 +48,17 @@ $gnb_font_color: #faf3e1;
 
   .header_nav {
     position: absolute;
-    right: 0;
+    right: 1%;
     top: 81px;
     display: flex;
 
     a {
       display: block;
-      width: 5rem;
-      color: $gnb_font_color;
+      width: 7rem;
       height: auto;
       border-left: 1px solid $gnb_sub_font_color;
+      font: 700 1.4rem "NanumMyeongjo";
+      color: $gnb_sub_font_color;
 
       &:first-child {
         border-left: none;
@@ -47,25 +68,29 @@ $gnb_font_color: #faf3e1;
 }
 
 .gnb {
-  width: $width;
-  max-width: $max-width;
+  @include width;
+  @include align_center;
   height: 52px;
   font: 2.2rem "BMYEONSUNG";
   color: $gnb_font_color;
   background: $header_bg_color;
-  text-align: center;
+  top: 134px;
+  z-index: $gnb_z_index;
 
-  ul {
-    width: $width;
+  > ul {
+    @include gnb_width;
     display: flex;
     li {
       width: 20%;
+
       a{
         line-height: 52px;
         vertical-align: center;
+
         img {
           width: 44px;
           margin-right:5%;
+          margin-left:28%;
 
         }
       }
@@ -73,12 +98,32 @@ $gnb_font_color: #faf3e1;
   }
 }
 
-.gnb-sub {
-  width: $width;
-  max-width: $max-width;
-  display:flex;
-  ul {
-
-  }
-
+.gnb_sub {
+  @include width;
+  @include align_center;
+  height: 241px;
+  margin-top: 2px;
+  background: $header_bg_color;
+  z-index: $gnb_z_index;
 }
+.gnb_sub_wrap {
+  @include gnb_width;
+
+  display: flex;
+  ul {
+    width:20%;
+    margin-top: 19px;
+    li {
+      margin-left: 46%;
+      height: 28px;
+      a {
+        font: 700 1.4rem "NanumMyeongjo";
+        color: $gnb_sub_font_color;
+        &:hover {
+          color: $gnb_font_color_hover;
+        }
+      }
+    }
+  }
+}
+

@@ -1,0 +1,29 @@
+@mixin html {
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  html {
+    font-size:62.5%;
+  }
+};
+@include html;
+
+//header 
+$width: 100%;
+$max-width: 1920px;
+$gnb_width: calc(100% - 10%);
+$header_bg_color: rgba(3, 3, 2, 0.5);
+$gnb_sub_font_color: #c4b79e;
+$gnb_font_color: #faf3e1;
+$gnb_font_color_hover: #fbb813;
+
+@mixin width {
+  width: $width;
+  max-width: $max-width;
+  margin: 0 auto;
+};
+@mixin gnb_width {
+  width: $gnb_width;
+  margin: 0 auto;
+};
