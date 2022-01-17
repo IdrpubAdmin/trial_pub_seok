@@ -21,7 +21,7 @@
 }
 
 @font-face {
-  font-family: 'NanumMyeongjoBold';
+  font-family: 'NanumMyeongjo';
   font-weight: 700;
   src: local('NanumMyeongjoBold'),
   url('fonts/NanumMyeongjoBold.woff2') format('woff2'),
@@ -31,7 +31,7 @@
 }
 
 @font-face {
-  font-family: 'NanumSquareR';
+  font-family: 'NanumSquare';
   font-weight: 400;
   src: local('NanumSquareR'),
   url('fonts/NanumSquareR.woff2') format('woff2'),
@@ -41,13 +41,22 @@
 }
 
 @font-face {
-  font-family: 'NanumSquareB';
+  font-family: 'NanumSquare';
   font-weight: 700;
   src: local('NanumSquareB'),
   url('fonts/NanumSquareB.woff2') format('woff2'),
   url('fonts/NanumSquareB.woff') format('woff'),
   url('fonts/NanumSquareB.ttf') format('truetype'),
   url('fonts/NanumSquareB.eot') format('embedded-opentype');
+}
+@font-face {
+  font-family: 'Lato';
+  font-weight: 700;
+  src: local('Lato-Bold'),
+  url('fonts/Lato-Bold.woff2') format('woff2'),
+  url('fonts/Lato-Bold.woff') format('woff'),
+  url('fonts/Lato-Bold.ttf') format('truetype'),
+  url('fonts/Lato-Bold.eot') format('embedded-opentype');
 }
 
 

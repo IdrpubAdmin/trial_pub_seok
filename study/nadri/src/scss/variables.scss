@@ -7,6 +7,7 @@
     font-size:62.5%;
   }
 };
+
 @include html;
 
 //header 
@@ -14,9 +15,15 @@ $width: 100%;
 $max-width: 1920px;
 $gnb_width: calc(100% - 10%);
 $header_bg_color: rgba(3, 3, 2, 0.5);
-$gnb_sub_font_color: #c4b79e;
-$gnb_font_color: #faf3e1;
-$gnb_font_color_hover: #fbb813;
+
+$beige: #c4b79e;
+$white: #faf3e1;
+$yellow: #fbb813;
+$brown: #786c60;
+$orange: #f37537;
+$black:  #18161b;
+
+$gnb_z_index: 100;
 
 @mixin width {
   width: $width;
@@ -25,5 +32,12 @@ $gnb_font_color_hover: #fbb813;
 };
 @mixin gnb_width {
   width: $gnb_width;
+  max-width: $max-width;
   margin: 0 auto;
 };
+
+@mixin align_center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}

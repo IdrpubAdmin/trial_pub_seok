@@ -1,21 +1,4 @@
-$width: 100%;
-$max-width: 1920px;
-$gnb_width: calc(100% - 10%);
-$header_bg_color: rgba(3, 3, 2, 0.5);
-$gnb_sub_font_color: #c4b79e;
-$gnb_font_color: #faf3e1;
-$gnb_font_color_hover: #fbb813;
-
-@mixin width {
-  width: $width;
-  max-width: $max-width;
-  margin: 0 auto;
-};
-@mixin gnb_width {
-  width: $gnb_width;
-  max-width: $max-width;
-  margin: 0 auto;
-};
+@use "variables";
 
 .footer {
   background: url("../img/footer_bg.jpg") no-repeat center center/cover;
@@ -23,13 +6,35 @@ $gnb_font_color_hover: #fbb813;
   height:322px;
   padding-top:15px;
   ul {
-  @include gnb_width;
-    h2 {
-      color: $gnb_sub_font_color;
-      font: 3.1rem "Lato";
+    @include gnb_width;
+    display:flex;
+    margin-top: 47px;
+    li {
+      width:25%;
+      &:nth-child(2) {
+        width: 50%;
+      }
+      h2 {
+        color: $beige;
+        font: 700 3.1rem "Lato";
+      }
+      span {
+        display: inline-block;
+        margin-top:45px;
+        font: 1.4rem "NanumSquare";
+        color: $white;
+        line-height: 1.6;
+      }
     }
   }
-
+  small {
+    @include gnb_width;
+    display: inline-block;
+    text-align: center;
+    color:$white;
+    margin-top:80px;
+    font: 700 1.55rem "NanumSquare";
+  }
 };
 
 .center_line {
@@ -38,3 +43,4 @@ $gnb_font_color_hover: #fbb813;
   background: #fff;
   opacity: 0.5;
 }
+
