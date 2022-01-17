@@ -13,14 +13,28 @@ $gnb_font_color_hover: #fbb813;
 };
 @mixin gnb_width {
   width: $gnb_width;
+  max-width: $max-width;
   margin: 0 auto;
 };
 
 .footer {
-  background: url("../img/location_bg.png") no-repeat center center/cover;
+  background: url("../img/footer_bg.jpg") no-repeat center center/cover;
   @include width;
-  height:643px;
-
-
+  height:322px;
+  padding-top:15px;
+  ul {
+  @include gnb_width;
+    h2 {
+      color: $gnb_sub_font_color;
+      font: 3.1rem "Lato";
+    }
+  }
 
 };
+
+.center_line {
+  @include width;
+  height: 2px;
+  background: #fff;
+  opacity: 0.5;
+}
