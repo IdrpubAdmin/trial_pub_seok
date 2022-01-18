@@ -29,6 +29,15 @@
   url('fonts/NanumMyeongjoBold.ttf') format('truetype'),
   url('fonts/NanumMyeongjoBold.eot') format('embedded-opentype');
 }
+@font-face {
+  font-family: 'NanumMyeongjo';
+  font-weight: 900;
+  src: local('NanumMyeongjoExtraBold'),
+  url('fonts/NanumMyeongjoExtraBold.woff2') format('woff2'),
+  url('fonts/NanumMyeongjoExtraBold.woff') format('woff'),
+  url('fonts/NanumMyeongjoExtraBold.ttf') format('truetype'),
+  url('fonts/NanumMyeongjoExtraBold.eot') format('embedded-opentype');
+}
 
 @font-face {
   font-family: 'NanumSquare';
@@ -57,6 +66,15 @@
   url('fonts/Lato-Bold.woff') format('woff'),
   url('fonts/Lato-Bold.ttf') format('truetype'),
   url('fonts/Lato-Bold.eot') format('embedded-opentype');
+}
+@font-face {
+  font-family: 'Lato';
+  font-weight: 400;
+  src: local('Lato-Regular'),
+  url('fonts/Lato-Regular.woff2') format('woff2'),
+  url('fonts/Lato-Regular.woff') format('woff'),
+  url('fonts/Lato-Regular.ttf') format('truetype'),
+  url('fonts/Lato-Regular.eot') format('embedded-opentype');
 }
 
 

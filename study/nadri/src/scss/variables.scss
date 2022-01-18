@@ -21,7 +21,11 @@ $white: #faf3e1;
 $yellow: #fbb813;
 $brown: #786c60;
 $orange: #f37537;
+$orange_02: #f4811f;
 $black:  #18161b;
+$light_black: #333333;
+$charcoal: #595757;
+$gray: #7d7d7d;
 
 $gnb_z_index: 100;
 
@@ -41,3 +45,10 @@ $gnb_z_index: 100;
   left: 50%;
   transform: translateX(-50%);
 }
+
+@mixin border {
+  border:1px solid red;
+  box-sizing: border-box;
+}
+
+$contents_width: 1200px;

@@ -28,6 +28,7 @@
 
   }
   >p {
+    font: 1.6rem "Lato";
     color: $brown;
     text-align: center;
   }
@@ -138,18 +139,211 @@ button.more {
 }
 
 .main_franchise {
-  width: 1200px;
+  width: 1440px;
   margin: 0 auto;
   display:flex;
   padding-top: 61px;
+
   div.main_franchise_left {
+    width: 50%;
     >img {
-      width:505px;
-      height:auto;
+    }
+    ul {
+      margin-top:35px;
+      li {
+        width:100%;
+        font:1.6rem "NanumMyeongjo";
+        margin-top:0.8rem;
+        color: $black;
+        img {
+          width: 1.9rem;
+          vertical-align: bottom;
+        }
+      }
+    }
+    button {
+      background: #fff;
+      margin-top: 21px;
+      padding: 14px 30px;
+      font: 1.6rem "BMYEONSUNG";
+      color:$beige;
+      border: 1px solid $beige;
+      border-radius: 3px;
     }
 
   }
-
-
+  div.main_franchise_right {
+    width:50%;
+  }
 }
+.main_franchise_issue {
+  @include width;
+  position:relative;
+  height: 59.3rem;
+  background: url("../img/franchise_bg.png") no-repeat 0 0/cover;
+  .main_franchise_issue_header {
+    @include align_center;
+    top: -17.5rem;
+    text-align: center;
+    h2 {
+      font: 3.6rem "BMYEONSUNG";
+      color: $brown;
+
+      span {
+        color: $orange;
+      }
+    }
+    p {
+      font:1.6rem "Loto";
+      color:$brown;
+    }
+    .btn_franchise {
+      display:flex;
+      justify-content: center;
+      margin-top: 4.2rem;
+
+      div {
+        width:5rem;
+        margin-left: 5px;
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+.main_franchise_issue_contents {
+  width: 1440px;
+  margin: 0 auto;
+  .center_line {
+    position:absolute;
+    left:33rem;
+    z-index:-1;
+    width:2px;
+    height: 59.3rem;
+    background: $beige;
+  }
+  ul {
+    width: $contents_width;
+    display:flex;
+    li {
+      width:90%;
+      margin-top: 6.1rem;
+      &:first-child {
+        width: 20rem;
+        margin-right: 3rem;
+      }
+      img {
+        width: 100%;
+      }
+      .center_line_orange {
+        width: 8.3rem;
+      }
+      h2 {
+        font: 700 2rem "NanumMyeongjo";
+        color: $light_black;
+        line-height: 1.4;
+        span {
+          font: 900 1.4rem "NanumMyeongjo";
+          color: $orange_02;
+        }
+      }
+      p {
+        margin-top:2rem;
+        font: 700 1.6rem "NanumMyeongjo";
+        color: $gray;
+        line-height: 1.2;
+      }
+      .btn_read_more {
+        position:relative;
+        top:1rem;
+        display: block;
+        width:10rem;
+        height:1.4rem;
+        font: 900 1.4rem "NanumMyeongjo";
+        color: $orange_02;
+      }
+    }
+  }
+}
+}
+.main_store {
+  @include width;
+  padding-top: 10.7rem;
+  .main_store_header {
+    text-align: center;
+    h2 {
+      font: 3.6rem "BMYEONSUNG";
+      color: $brown;
+      span {
+        color: $orange;
+      }
+    }
+    p {
+      font: 1.6rem "Lato";
+      color: $brown;
+    }
+  }
+  .main_store_list {
+    @include width;
+    margin-top: 4.4rem;
+    position:relative;
+    ul {
+      display:flex;
+      li {
+        flex: 1;
+        position:relative;
+        &:nth-child(1):after, &:nth-child(3):after {
+          content: "";
+          display:block;
+          width:100%;
+          height:100%;
+          background: #fff;
+          opacity: 0.7;
+          position:absolute;
+          top:0;
+          left:0;
+        }
+        .main_store_list_text {
+          width:100%;
+          height:8rem;
+          padding: 1.5rem 2.7rem;
+          box-sizing: border-box;
+          background: $black;
+          opacity: 0.7;
+          position: absolute;
+          bottom: 0;
+          h3 {
+            font: 700 2.3rem "NanumMyeongjo";
+            color:$yellow;
+          }
+          p {
+            font: 700 1.8rem "NanumMyeongjo";
+            color: $white;
+            line-height: 1.4;
+          }
+        }
+      }
+    }
+    .btn_store {
+      width:100%;
+      div {
+        width: 4.8rem;
+        height: auto;
+        position: absolute;
+        top: 50%;
+        transform:translate(-50%, -50%);
+        img {
+          width: 100%;
+        }
+      }
+      .prev {
+        left: 30%;
+      }
+      .next{
+        left: 70%;
+      }
+    }
+  }
+}
+
 
