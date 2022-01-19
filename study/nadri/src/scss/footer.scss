@@ -6,13 +6,14 @@
   height:322px;
   padding-top:15px;
   ul {
-    @include gnb_width;
+    @include contents_width;
     display:flex;
     margin-top: 47px;
     li {
-      width:25%;
+      width:20%;
+      padding-left: 1rem;
       &:nth-child(2) {
-        width: 50%;
+        width: 60%;
       }
       h2 {
         color: $beige;

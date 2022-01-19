@@ -2,10 +2,11 @@
 
 .main_bnr {
   @include width;
-  background: url("../img/main_bg_slice.png") no-repeat center top/cover;
+  background: url("../img/main_bg_slice.png") no-repeat center top/contain;
   height: auto;
   position:relative;
   img.main_bnr_bg {
+    width: 100%;
     visibility: hidden;
   }
   img.main_bnr_slogan {
@@ -17,7 +18,7 @@
 }
 .main_menu {
   @include width;
-  padding: 3% 0;
+  margin-top:-15rem;
   h2 {
     font: 3.6rem "BMYEONSUNG";
     color: $brown;
@@ -35,12 +36,12 @@
 
 }
 .main_menu_slide {
-  @include gnb_width;
+  @include contents_width;
   margin-top: 3%;
   margin-bottom:3%;
   position:relative;
   ul {
-    width:80%;
+    width:100%;
     margin: 0 auto;
     display:flex;
     li {
@@ -90,27 +91,23 @@ button.more {
 }
 
 .btn_menu {
-
-  div.prev {
+  div {
     position:absolute;
     top:50%;
-    left:5%;
     transform:translateY(-50%);
-    width: 1.9%;
-    height: auto;
+    width:4.6rem;
   }
-  div.next {
-    position:absolute;
-    top:50%;
-    right:5%;
-    transform:translateY(-50%);
-    width: 1.9%;
-    height: auto;
+  .prev {
+    left:-5%;
+  }
+  .next {
+    right:-5%;
   }
 }
 .main_bar_bnr {
   background: url("../img/bar_bnr_bg_img.png") no-repeat center center/cover;
   @include width;
+  margin-top:9rem;
   height: auto;
   text-align: center;
   position: relative;
@@ -212,11 +209,10 @@ button.more {
     }
   }
 .main_franchise_issue_contents {
-  width: 1440px;
-  margin: 0 auto;
+  @include contents_width;
   .center_line {
     position:absolute;
-    left:33rem;
+    left:44.5rem;
     z-index:-1;
     width:2px;
     height: 59.3rem;
@@ -345,5 +341,63 @@ button.more {
     }
   }
 }
+
+.main_search {
+  @include width;
+  height: 32.2rem;
+  background : url("../img/locations_bg.jpg") no-repeat center center/cover;
+  position: relative;
+  ul {
+    width: $contents_width;
+    @include align_center;
+    top:50%;
+    transform:translate(-50%, -50%);
+    display:flex;
+    li {
+      &:first-child {
+        width: 23.3rem;
+        margin-right: 2.4rem;
+      }
+      h2 {
+        font: 4.6rem "BMYEONSUNG";
+        color: $white;
+      }
+      p {
+        font: 1.8rem "NanumMyeongjo";
+        color: $beige;
+      }
+
+      img {
+        width: 100%;
+      }
+      .main_search_select {
+        padding-top: 5.1rem;
+        select {
+          width: 21.4rem;
+          font: 1.6rem "NanumSquare";
+          color: $gray;
+          padding: 1.3rem;
+          border-radius: $border-radius;
+          margin-right: 1rem;
+          .icoArrow {
+            margin-right: 1.2rem;
+          }
+        }
+        input {
+          width: 22.7rem;
+          font: 700 1.6rem "Lato";
+          background: $yellow;
+          color: $white;
+          border: none;
+          padding: 1.4rem;
+          border-radius: $border-radius;
+          vertical-align: -10%;
+        }
+      }
+    }
+
+  }
+}
+
 
 

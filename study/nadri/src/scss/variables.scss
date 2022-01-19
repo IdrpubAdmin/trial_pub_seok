@@ -13,6 +13,7 @@
 //header 
 $width: 100%;
 $max-width: 1920px;
+$contents_width: 1200px;
 $gnb_width: calc(100% - 10%);
 $header_bg_color: rgba(3, 3, 2, 0.5);
 
@@ -28,6 +29,7 @@ $charcoal: #595757;
 $gray: #7d7d7d;
 
 $gnb_z_index: 100;
+$border-radius: 0.5rem;
 
 @mixin width {
   width: $width;
@@ -40,6 +42,18 @@ $gnb_z_index: 100;
   margin: 0 auto;
 };
 
+@mixin contents_width {
+  width: $contents_width;
+  max-width: $max-width;
+  margin: 0 auto;
+};
+
+@mixin align_center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 @mixin align_center {
   position: absolute;
   left: 50%;
@@ -51,4 +65,3 @@ $gnb_z_index: 100;
   box-sizing: border-box;
 }
 
-$contents_width: 1200px;

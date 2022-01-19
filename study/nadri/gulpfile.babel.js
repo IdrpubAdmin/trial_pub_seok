@@ -84,7 +84,7 @@
  // 새로 빌드된 파일과 충돌을 일으킬 수 있기 때문에 del 플러그인 이용 기존의 build에 위치한 파일을 삭제하는 작업 
  // clean 을 export 하지 않으면 콘솔이나 package.json 에서 사용하지 못함
 
- const webserver = () => gulp.src("build").pipe(ws({ livereload: true, open: true }));
+ const webserver = () => gulp.src("build").pipe(ws({ livereload: true, open: true, fallback: "news.html", directoryListing: {enable:true, path: "build"}}));
  //웹서버에 자동으로 열리도록 만드는 파이프
 
  const img = () => gulp.src(routes.img.src).pipe(image()).pipe(gulp.dest(routes.img.dest));

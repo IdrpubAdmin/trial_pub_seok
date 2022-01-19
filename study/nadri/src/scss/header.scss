@@ -4,7 +4,6 @@
 .header {
   @include width;
   height: 134px;
-  background: $header_bg_color;
   text-align: center;
   @include align_center;
   top:0;
@@ -17,7 +16,6 @@
     display: inline-block;
     width: 174px;
     height: auto;
-
     img {
       width: 100%;
     }
@@ -25,7 +23,7 @@
 
   .header_nav {
     position: absolute;
-    right: 1%;
+    right: 16%;
     top: 81px;
     display: flex;
 
@@ -55,20 +53,17 @@
   z-index: $gnb_z_index;
 
   > ul {
-    @include gnb_width;
+    @include contents_width;
     display: flex;
     li {
       width: 20%;
-
       a{
         line-height: 52px;
-        vertical-align: center;
-
         img {
           width: 44px;
           margin-right:5%;
-          margin-left:28%;
-
+          margin-left:25%;
+          vertical-align: -30%;
         }
       }
     }
@@ -84,13 +79,13 @@
   z-index: $gnb_z_index;
 }
 .gnb_sub_wrap {
-  @include gnb_width;
+  @include contents_width;
   display: flex;
   ul {
     width:20%;
     margin-top: 19px;
     li {
-      margin-left: 46%;
+      margin-left: 50%;
       height: 28px;
       a {
         font: 700 1.4rem "NanumMyeongjo";
