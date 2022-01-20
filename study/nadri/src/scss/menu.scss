@@ -1,0 +1,135 @@
+@use "variables";
+
+.menu {
+  @include width;
+
+  .menu_header {
+    position: relative;
+    text-align: center;
+
+    img {
+      width: 100%;
+    }
+
+    h2 {
+      position: absolute;
+      top: 31.1rem;
+      left: 50%;
+      transform: translateX(-50%);
+      font: 700 4.65rem "NanumSquare";
+      color: $white;
+
+      span {
+        color: $yellow;
+      }
+    }
+
+    p {
+      position: absolute;
+      top: 37.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      font: 700 1.8rem "NanumMyeongjo";
+      color: $white;
+    }
+  }
+
+  .menu_contents {
+    @include width;
+    margin-top:10rem;
+    margin-bottom: 25rem;
+    .menu_contents_header {
+      text-align: center;
+      h2 {
+        display: inline-block;
+        width: 19.3rem;
+        font: 4.8rem "BMYEONSUNG";
+        color: $brown;
+        line-height: 1;
+
+        img {
+          width: 100%;
+          transform: translateX(10%);
+        }
+
+      }
+      .center_line_brown {
+        width:10rem;
+        height: 0.4rem;
+        background: $brown;
+        margin: 0 auto;
+      }
+      h3 {
+        margin-top: 3.8rem;
+        font: 700 3rem "NanumMyeongjo";
+        color: $orange_02;
+      }
+    }
+
+    .menu_contents_slide {
+      @include width;
+      height: 60rem;
+      background: url("../img/menu_contents_bg.png") no-repeat center 70%/contain;
+      overflow: hidden;
+      position: relative;
+      margin-top:4rem;
+      ul {
+        margin-top:3rem;
+        display: flex;
+        align-items: center;
+        width:120%;
+        position: absolute;
+        left:50%;
+        transform:translateX(-49%);
+
+        li {
+          flex: 1;
+          text-align: center;
+          &:nth-of-type(3) {
+            flex: 2;
+          }
+        }
+      }
+      .btn_menu {
+        @include width;
+        div {
+          position: absolute;
+          top: 55%;
+          transform:translate(-50% -50%);
+          width: 4.7rem;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .prev {
+          left: 32.5%;
+        }
+        .next {
+          left: 65%;
+        }
+      }
+    }
+    .menu_contents_list {
+      @include width;
+      margin-top:9rem;
+      ul {
+        @include gnb_width;
+        display:flex;
+        li {
+          flex: 1;
+          margin-right: 6.4rem;
+          text-align: center;
+          img {
+            width: 100%;
+          }
+          p {
+            font:1.2rem "Dotum";
+            color:$charcoal;
+          }
+        }
+      }
+    }
+
+  }
+}
