@@ -1,0 +1,174 @@
+@use "variables";
+
+
+.cs {
+  @include width;
+
+  .cs_header {
+    position: relative;
+    text-align: center;
+
+    img {
+      width: 100%;
+    }
+
+    h2 {
+      position: absolute;
+      top: 31.1rem;
+      left: 50%;
+      transform: translateX(-50%);
+      font: 700 4.65rem "NanumSquare";
+      color: $white;
+
+      span {
+        color: $yellow;
+      }
+    }
+
+    p {
+      position: absolute;
+      top: 37.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      font: 700 1.8rem "NanumMyeongjo";
+      color: $white;
+    }
+  }
+
+  .cs_contents {
+    @include contents_width;
+    margin-top: 10rem;
+    margin-bottom: 8.7rem;
+    .cs_contents_header {
+      text-align: center;
+
+      h2 {
+        display: inline-block;
+        width: 19.3rem;
+        font: 4.8rem "BMYEONSUNG";
+        color: $brown;
+        line-height: 1;
+
+        img {
+          width: 100%;
+          transform: translateX(10%);
+        }
+      }
+
+      .center_line_brown {
+        width: 10rem;
+        height: 0.4rem;
+        background: $brown;
+        margin: 0 auto;
+      }
+
+      h3 {
+        margin-top: 3.8rem;
+        font: 700 3rem "NanumMyeongjo";
+        color: $orange_02;
+      }
+
+      p {
+        font: 1.8rem "NanumSquare";
+        color: $brown;
+        margin-top: 1rem;
+
+        span {
+          color: $yellow_02;
+          font-weight: 700;
+        }
+      }
+    }
+  .cs_form {
+    width:100%;
+    margin-top: 6.3rem;
+    table {
+      width:100%;
+      border-top: 2px solid $brown;
+      border-bottom: 1px solid $beige_02;
+      th {
+        height: 5rem;
+        line-height: 5;
+        background: $ivory;
+        font: 700 1.8rem "NanumSquare";
+        text-align: left;
+        color: $charcoal;
+        padding: 1.5rem 2rem;
+        box-sizing: border-box;
+        &:last-of-type {
+          font: 1.2rem "Dotum";
+          color: #666;
+          text-align: right;
+          span {
+            color: $orange_02;
+          }
+        }
+      }
+      td {
+        border-top: 1px solid $beige_02;
+        padding: 1rem 2rem;
+        box-sizing: border-box;
+        &:first-of-type {
+          background: $white_02;
+        }
+        label {
+          display: inline-block;
+          width:25rem;
+          height:3rem;
+          font: 700 1.4rem "Dotum";
+          color: $charcoal;
+          text-align: right;
+          span {
+            color: $orange_02;
+          }
+        }
+        textarea {
+          vertical-align: middle;
+          resize: none;
+        }
+      }
+    }
+  }
+  }
+  .hide {
+    visibility: hidden;
+  }
+  input  {
+    border: 1px solid #ccc;
+    padding: 0.9rem;
+    box-sizing: border-box;
+  }
+  textarea {
+    border: 1px solid #ccc;
+    padding: 2rem;
+    box-sizing: border-box;
+    line-height: 1.5;
+  }
+  select {
+    border: 1px solid #ccc;
+    padding: 0.8rem;
+    box-sizing: border-box;
+    vertical-align: -15%;
+  }
+
+
+  .Privacy {
+    margin-top: 2rem;
+  }
+  .agree {
+    font: 1.2rem "Dotum";
+    color: #666;
+    margin-top:1rem;
+    vertical-align: -20%;
+  }
+  .btn_cs_list {
+    display:block;
+    background: $brown;
+    color: $white;
+    border: 1px solid #999;
+    width: 10rem;
+    height: 4rem;
+    font: 700 1.4rem "NanumSquare";
+    margin: 3rem auto 0;
+  }
+}
