@@ -10,6 +10,8 @@
   color: $beige;
   z-index: $gnb_z_index;
 
+
+
   h1 {
     @include align_center;
     top: 34px;
@@ -40,6 +42,15 @@
       }
     }
   }
+}
+
+.header_bg_color {
+  @include width;
+  height: 13.4rem;
+  background: $header_bg_color;
+  position: absolute;
+  top:0;
+  left:0;
 }
 
 .gnb {
