@@ -5,13 +5,13 @@
 
  import gulp from "gulp";
  //걸프를 쓰기위한 클라이언트를 올리는 과정 
- import gpug from "gulp-pug";
+ // import gpug from "gulp-pug";
  //걸프 퍼그의 html 로 컴파일 하는 플러그인
  import extender from "gulp-html-extend";
 
  import del from "del";
  //충돌을 막기 위해 작업 전에 기존 파일을 삭제하는 플러그인 
- import ws from "gulp-webserver";
+ // import ws from "gulp-webserver";
 
  import image from "gulp-image";
  //이미지 자동 컴파일
@@ -29,7 +29,7 @@
  import babelify from "babelify";
  //browseify 진행 중 ECMA script 버전간 변환을 도와주는 플러그인
 
- import ghPages from "gulp-gh-pages";
+ // import ghPages from "gulp-gh-pages";
  //깃허브 레파지토리에 업로드해주는 기능
 
  const sass = gulpSass(dartSass);
@@ -84,7 +84,7 @@
  // 새로 빌드된 파일과 충돌을 일으킬 수 있기 때문에 del 플러그인 이용 기존의 build에 위치한 파일을 삭제하는 작업 
  // clean 을 export 하지 않으면 콘솔이나 package.json 에서 사용하지 못함
 
- const webserver = () => gulp.src("build").pipe(ws({ livereload: true, open: true, fallback: "news.html", directoryListing: {enable:true, path: "build"}}));
+ // const webserver = () => gulp.src("build").pipe(ws({ livereload: true, open: true, directoryListing: {enable:true, path: "build"}}));
  //웹서버에 자동으로 열리도록 만드는 파이프
 
  const img = () => gulp.src(routes.img.src).pipe(image()).pipe(gulp.dest(routes.img.dest));
@@ -115,7 +115,8 @@
  //브라우저에서 최신 자바스크립트 언어를 이해할 수 있도록 컴파일하는 과정
 
 
- const ghDeploy = () => gulp.src("build/**/*").pipe(ghPages());
+ // const ghDeploy = () => gulp.src("build/**/*").pipe(ghPages());
+// 자동으로 Github 페이지에 커밋하는 pipe
 
  const watch = () => {
          gulp.watch(routes.html.watch, html);
@@ -134,7 +135,7 @@
  //실제 컴파일되고 생성되는 과정의 시리즈
 
 
- const live = gulp.parallel([webserver, watch]);
+ const live = gulp.parallel([watch]);
  //라이브서버에 자동으로 올라가는 프로세스 만듦
 
 
@@ -146,5 +147,5 @@
  export const dev = gulp.series([build, live]);
  //위와 같은 옮기기 작업이 끝나고 작업결과를 라이브를 통해서 실시간으로 볼 수 있도록 하기 위해 라이브를 켬
  //실시간으로 변경사항이 보일 수 있도록 변경됨
- export const deploy = gulp.series([build, ghDeploy]);
+ // export const deploy = gulp.series([build, ghDeploy]);
  //빌드 작업이 완료된 다음 해당 소스를 깃허브에 올리기 위한 작업
