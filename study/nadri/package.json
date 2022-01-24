@@ -1,7 +1,7 @@
 {
   "name": "supergulp",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "index.html",
   "author": "eunseok0722 <94890651+eunseok0722@users.noreply.github.com>",
   "license": "MIT",
   "type": "module",
