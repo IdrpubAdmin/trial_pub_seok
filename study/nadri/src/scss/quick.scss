@@ -1,0 +1,104 @@
+@use "variables";
+
+.quick {
+  @include width;
+  @include align_center;
+  top: 60%;
+  z-index: $gnb_z_index - 1;
+
+  .quick_list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-right: 3rem;
+    li {
+      .quick_items {
+        display: flex;
+        li {
+          text-align: center;
+          line-height: 5rem!important;
+          margin-bottom: 0.5rem;
+          font: 1.6rem "BMYEONSUNG";
+          color: $white;
+          &:first-of-type {
+            width: 13rem;
+            height: auto;
+            margin-right: 0.8rem;
+      }
+          &:last-of-type {
+            width: 5rem;
+            height: 5rem;
+            border-radius: $border-radius;
+            img {
+              width: 2.9rem;
+              line-height: 5rem;
+              height: auto;
+              vertical-align: middle;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.quick_list_event {
+  li:first-of-type {
+    color: $brown!important;
+    background: url("../img/snb_event_bg.png") no-repeat center center/contain;
+  }
+  li:last-of-type {
+    background-color: $white;
+  }
+}
+.quick_list_news {
+  li:first-of-type {
+      background: url("../img/snb_news_bg.png") no-repeat center center/contain;
+  }
+  li:last-of-type {
+    background-color: $beige;
+  }
+}
+.quick_list_cs {
+  li:first-of-type {
+      background: url("../img/snb_cs_bg.png") no-repeat center center/contain;
+  }
+  li:last-of-type {
+    background-color: $brown;
+  }
+}
+.quick_list_store {
+  li:first-of-type {
+    background: url("../img/snb_location_bg.png") no-repeat center center/contain;
+  }
+  li:last-of-type {
+    background-color: $yellow;
+  }
+}
+.quick_list_franchise {
+  li:first-of-type {
+    background: url("../img/snb_store_bg.png") no-repeat center center/contain;
+  }
+  li:last-of-type {
+    background-color: $orange;
+  }
+}
+
+.quick_top_btn {
+  display: block;
+  text-align: center;
+  width:5rem;
+  font: 1.2rem "Lato";
+  color: $charcoal;
+  display: none;
+}
+
+//퀵 메뉴 활성화
+.show_item {
+  display: inline-block;
+}
+
+//퀵 메뉴 비활성화
+.hide_item {
+  display: none;
+}

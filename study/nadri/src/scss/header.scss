@@ -1,16 +1,18 @@
 @use "variables";
 
-
 .header {
   @include width;
   height: 134px;
   text-align: center;
   @include align_center;
-  top:0;
+  top: 0;
   color: $beige;
   z-index: $gnb_z_index;
 
-
+  .header_wrap {
+    @include contents_width;
+    position: relative;
+  }
 
   h1 {
     @include align_center;
@@ -18,6 +20,7 @@
     display: inline-block;
     width: 174px;
     height: auto;
+
     img {
       width: 100%;
     }
@@ -25,8 +28,8 @@
 
   .header_nav {
     position: absolute;
-    right: 16%;
-    top: 81px;
+    right: 1rem;
+    top: 8.1rem;
     display: flex;
 
     a {
@@ -49,8 +52,8 @@
   height: 13.4rem;
   background: $header_bg_color;
   position: absolute;
-  top:0;
-  left:0;
+  top: 0;
+  left: 0;
 }
 
 .gnb {
@@ -66,14 +69,17 @@
   > ul {
     @include contents_width;
     display: flex;
+
     li {
       width: 20%;
-      a{
+
+      a {
         line-height: 52px;
+
         img {
           width: 44px;
-          margin-right:5%;
-          margin-left:25%;
+          margin-right: 5%;
+          margin-left: 25%;
           vertical-align: -30%;
         }
       }
@@ -89,18 +95,23 @@
   background: $header_bg_color;
   z-index: $gnb_z_index;
 }
+
 .gnb_sub_wrap {
   @include contents_width;
   display: flex;
+
   ul {
-    width:20%;
+    width: 20%;
     margin-top: 19px;
+
     li {
       margin-left: 50%;
       height: 28px;
+
       a {
         font: 700 1.4rem "NanumMyeongjo";
         color: $beige;
+
         &:hover {
           color: $yellow;
         }

@@ -10,13 +10,14 @@
 
 @include html;
 
-//header 
+//너비
 $width: 100%;
 $max-width: 1920px;
 $contents_width: 1200px;
 $gnb_width: calc(100% - 10%);
-$header_bg_color: rgba(3, 3, 2, 0.5);
 
+
+//색상표
 $beige: #c4b79e;
 $beige_02: #e3ded1;
 $ivory: #f6f3eb;
@@ -24,15 +25,19 @@ $white: #faf3e1;
 $white_02: #faf9f6;
 $yellow: #fbb813;
 $yellow_02: #ffd33a;
-$brown: #786c60;
 $orange: #f37537;
 $orange_02: #f4811f;
 $red: #ed1c24;
+$brown: #786c60;
 $black:  #18161b;
 $light_black: #333333;
 $charcoal: #595757;
 $gray: #7d7d7d;
 
+//header, gnb 배경값
+$header_bg_color: rgba(3, 3, 2, 0.5);
+
+//header, gnb, 공통 속성
 $gnb_z_index: 100;
 $border-radius: 0.5rem;
 
@@ -47,17 +52,13 @@ $border-radius: 0.5rem;
   margin: 0 auto;
 };
 
+
+// pc 1200px 기준 너비값
 @mixin contents_width {
   width: $contents_width;
   max-width: $max-width;
   margin: 0 auto;
 };
-
-@mixin align_center {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-}
 
 @mixin align_center {
   position: absolute;
