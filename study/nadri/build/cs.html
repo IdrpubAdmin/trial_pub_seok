@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<!-- start header.html-->
+<div class="skip_nav skip">
+    <a href="#">나드리김밥 소개</a>
+    <a href="#">메뉴 안내</a>
+    <a href="#">매장 찾기</a>
+    <a href="#">프랜차이즈 안내</a>
+    <a href="#">커뮤니티</a>
+</div>
+
+<header class="header">
+    <h1>
+        <a href="#">
+            <img src="img/main_logo.png" alt="나드리 김밥 홈으로 이동하기">
+                <span class="skip">
+                    시절공감 1988 나드리 김밥
+                </span>
+        </a>
+    </h1>
+    <nav class="header_nav">
+        <a href="#">HOME</a>
+        <a href="#">로그인</a>
+        <a href="#">고객센터</a>
+    </nav>
+</header>
+
+<nav class="gnb">
+    <ul>
+        <li>
+            <h2>
+                <a href="">
+                    <img src="img/gnb_icon_01.png" alt="나드리김밥 소개">나드리김밥
+                </a>
+            </h2>
+        </li>
+        <li>
+            <a href="">
+                <h2><img src="img/gnb_icon_02.png" alt="매뉴안내">매뉴안내</h2>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <h2><img src="img/gnb_icon_03.png" alt="매뉴안내">매장찾기</h2>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <h2><img src="img/gnb_icon_04.png" alt="매뉴안내">프랜차이즈</h2>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <h2><img src="img/gnb_icon_05.png" alt="매뉴안내">커뮤니티</h2>
+            </a>
+        </li>
+    </ul>
+    <div class="gnb_sub">
+        <div class="gnb_sub_wrap">
+            <ul class="gnb_sub_about">
+                <li><a href="#">나드리 소개</a></li>
+                <li><a href="#">CEO인사말</a></li>
+                <li><a href="#">CI/BI 소개</a></li>
+                <li><a href="#">오시는 길</a></li>
+            </ul>
+            <ul class="gnb_sub_menu">
+                <li><a href="#">김밥류</a></li>
+                <li><a href="#">돈까스</a></li>
+                <li><a href="#">식사류</a></li>
+                <li><a href="#">면류</a></li>
+                <li><a href="#">간식류</a></li>
+                <li><a href="#">계절메뉴</a></li>
+            </ul>
+            <ul class="gnb_sub_location">
+                <li><a href="#">매장찾기</a></li>
+                <li><a href="#">매장갤러리</a></li>
+            </ul>
+            <ul class="gnb_sub_franchise">
+                <li><a href="#">나드리경쟁력</a></li>
+                <li><a href="#">가맹개설절차</a></li>
+                <li><a href="#">창업비용</a></li>
+                <li><a href="#">인테리어컨셉</a></li>
+            </ul>
+            <ul class="gnb_sub_community">
+                <li><a href="#">나들이소식</a></li>
+                <li><a href="#">이벤트</a></li>
+                <li><a href="#">보도및홍보자료</a></li>
+                <li><a href="#">고객센터</a></li>
+            </ul>
+        </div> <!--gnb_sub_wrap-->
+    </div><!--gnb_sub-->
+</nav>
+<!-- end header.html-->
+<!-- start contents -->
+<section class="cs">
+    <header class="cs_header">
+        <img src="img/news_main_bg.png" alt="소통하는 기업 나드리 김밥">
+        <div class="header_bg_color"></div>
+        <h2>소통하는 기업, <span>나드리 김밥</span></h2>
+        <p>나드리 김밥 홈페이지에 방문해주셔서 감사합니다.</p>
+    </header>
+
+    <div class="cs_contents">
+        <div class="cs_contents_header">
+            <h2>
+                <img src="img/news_header_img.png" alt="나드리 소식" ><br>
+                고객센터
+            </h2>
+            <div class="center_line_brown"></div>
+
+            <h3>나드리김밥에게 무엇이든 물어보세요.</h3>
+            <p>문의하신 내용에 대한 답변은 <span>업무일 기준으로 2~3일</span>정도 소요될 수 있습니다.</p>
+        </div>
+
+        <div class="cs_form">
+            <table>
+                <tr>
+                    <th>문의하기</th>
+                    <th><span>(필수)</span> 항목은 반드시 입려개 주셔야 문의접수가 가능합니다.</th>
+                </tr>
+                <tr>
+                    <td><label for="form_name" >이 름 <span>(필수)</span></label></td>
+                    <td><input type="text" id="form_name" placeholder="입력하세요." required></td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="form_phoneNmb1">휴대전화 <span>(필수)</span></label>
+                    </td>
+                    <td>
+                        <select id="form_phoneNmb1" required>
+                            <option value="010" selected>010</option>
+                            <option value="010">011</option>
+                            <option value="010">016</option>
+                            <option value="010">017</option>
+                            <option value="010">018</option>
+                            <option value="010">019</option>
+                        </select> -
+                        <input type="number" maxlength="4" id="form_phoneNmb2"> -
+                        <input type="number" maxlength="4" id="form_phoneNmb3">
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="form_email1">이 메 일<span class="hide">(필수)</span></label></td>
+                    <td>
+                        <input type="text" id="form_email1"> @
+                        <input type="text" id="form_email2">
+                        <select name="email" id="form_email_select">
+                            <option value="">직접입력</option>
+                            <option value="naver.com">naver.com</option>
+                            <option value="hanmail.net">hanmail.net</option>
+                            <option value="gmail.com">gmail.com</option>
+                            <option value="nate.com">nate.com</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="form_title">제 목 <span>(필수)</span></label></td>
+                    <td><input type="text" id="form_title" required></td>
+                </tr>
+                <tr>
+                    <td><label for="form_contents">내 용 <span>(필수)</span></label></td>
+                    <td><textarea name="form_contents" id="form_contents" cols="120" rows="7" wrap="hard" required></textarea></td>
+                </tr>
+
+            </table>
+
+            <textarea readonly cols="167" rows="7" class="Privacy">1. 개인 정보의 이용 목적
+여러분이 제공해주신 개인정보는 보다 정확한 서비스를 제공하기 위해 이용되며, 이용약관에 명시된 목적 이외에 다른 용도로 이용하거나 본인의 승낙 없이 제3자에게 개인정보를 제공하지 않습니다. 다만, 다음 각 사항에 해당하는 경우에는 예외로 제3자와 공유될 수 있습니다.
+1) 관계법령에 의하여 수사상의 목적으로 관계기관으로부터 요구가 있을 경우
+2) 기타 관계법령에서 정한 절차에 따른 요청이 있는 경우
+개인정보를 새로이 제3자에게 제공하는 경우에는 제공받는 자, 제공목적 및 제공할 정보의 내용을 이메일 등을 통해 당사자에게 미리 고지하여 동의를 얻으며, 당사자의 동의 없이 어떠한 정보도 제공하지 않습니다.
+
+1. 개인 정보의 이용 목적
+
+            </textarea>
+            <input type="checkbox" class="agree"> 개인정보 취급방침에 동의합니다.
+
+            <button class="btn_cs_list">문의하기</button>
+
+        </div>
+    </div>
+
+</section>
+
+
+<!-- end contents -->
+<!-- start footer.html-->
+<footer class="footer">
+
+    <div class="center_line"></div>
+
+    <ul>
+        <li>
+            <h2>Information</h2>
+            <span>(주) 나드리FS | 대표 조송연 <br>사업자등록번호 : 3066-02-81924</span>
+        </li>
+        <li>
+            <h2>Locations</h2>
+            <address><span>나드리 본사: 대구광역시 달성군 유가면 테크노 중앙대로 2길 14 <br>
+                서울·경기지역본부 : 서울특별시 마포구 홍익로 2길 27-22 | TEL 053-784-9615</span></address>
+        </li>
+        <li>
+            <h2>Contact us</h2>
+            <address><span>대표전화 : 1588-7178 <br>팩스: 053-7812-3959</span></address>
+        </li>
+    </ul>
+    <small>Copyright &copy; Nadri<em>FS</em> Inc. All Rights Reserved.</small>
+
+</footer>
+
+<!-- end footer.html-->
+</body>
+</html>

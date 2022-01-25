@@ -4,11 +4,14 @@
   @include width;
 
   .menu_header {
+    height: 50rem;
+    width:auto;
     position: relative;
     text-align: center;
 
     img {
-      width: 100%;
+      width: auto;
+      height: 100%;
     }
 
     h2 {
