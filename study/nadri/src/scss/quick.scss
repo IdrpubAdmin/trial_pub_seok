@@ -1,16 +1,17 @@
 @use "variables";
 
 .quick {
-  @include width;
-  @include align_center;
-  top: 60%;
+
+  position: absolute;
+  right: 3rem;
+  top: 20%;
   z-index: $gnb_z_index - 1;
+
 
   .quick_list {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    margin-right: 3rem;
     li {
       .quick_items {
         display: flex;
@@ -102,3 +103,13 @@
 .hide_item {
   display: none;
 }
+
+@media (max-width: 1199px) {
+ .quick {
+   display: none;
+ }
+}
+
+//@media (max-width: 640px) {
+//
+//}

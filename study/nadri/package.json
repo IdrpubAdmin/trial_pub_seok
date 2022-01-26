@@ -34,6 +34,7 @@
     "gulp-webserver": "^0.9.1",
     "node-sass": "^7.0.1",
     "sass": "^1.47.0",
+    "swiper": "^7.4.1",
     "uglifyify": "^5.0.2",
     "update": "^0.7.4"
   },

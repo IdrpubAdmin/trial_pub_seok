@@ -1,5 +1,6 @@
 @import "_reset";
 @import "variables";
+@import "layout";
 @font-face {
   font-family: 'BMYEONSUNG';
   font-weight: 400;
@@ -79,6 +80,7 @@
 
 
 @import "header";
+@import "gnb";
 @import "main";
 @import "quick";
 @import "menu";

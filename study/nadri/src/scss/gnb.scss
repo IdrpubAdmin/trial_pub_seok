@@ -1,0 +1,150 @@
+@use "variables";
+
+.gnb {
+  @include width;
+  @include align_center;
+  height: 5.2rem;
+  font: 2.2rem "BMYEONSUNG";
+  color: $white;
+  background: $header_bg_color;
+  top: 13.4rem;
+  z-index: $gnb_z_index;
+
+  > ul {
+    @include contents_width;
+    display: flex;
+
+    li {
+      width: 20%;
+
+      a {
+        line-height: 5.2rem;
+
+        img {
+          width: 4.4rem;
+          margin-right: 5%;
+          margin-left: 25%;
+          vertical-align: -30%;
+        }
+      }
+    }
+  }
+}
+
+.gnb_sub {
+  @include width;
+  @include align_center;
+  height: 24.1rem;
+  margin-top: 0.2rem;
+  background: $header_bg_color;
+  z-index: $gnb_z_index;
+}
+
+.gnb_sub_wrap {
+  @include contents_width;
+  display: flex;
+
+  ul {
+    width: 20%;
+    margin-top: 1.9rem;
+
+    li {
+      margin-left: 50%;
+      height: 2.8rem;
+
+      a {
+        font: 700 1.4rem "NanumMyeongjo";
+        color: $beige;
+
+        &:hover {
+          color: $yellow;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1199px) {
+  .gnb {
+    @include rwd_width;
+    @include align_center;
+
+
+    > ul {
+      @include gnb_width;
+      display: flex;
+
+      li {
+        width: auto;
+        flex: 1;
+        text-align: center;
+
+        &:nth-of-type(4) {
+          display: none;
+        }
+
+        a {
+          display: block;
+          width: 100%;
+          line-height: 5.2rem;
+
+          img {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  .gnb_sub {
+    @include rwd_width;
+    margin-top: 0.2rem;
+  }
+
+  .gnb_sub_wrap {
+    @include gnb_width;
+    display: flex;
+
+    ul {
+      flex: 1;
+      width: auto;
+      margin-top: 1.9rem;
+
+      &:nth-of-type(4) {
+        display: none;
+      }
+
+      li {
+        margin-left: 0;
+        text-align: center;
+
+        a {
+          display: block;
+          width: 100%;
+          line-height: 2.8rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 640px) {
+
+  .gnb {
+    height:auto;
+    > ul {
+      display: flex;
+      flex-wrap: wrap;
+      li {
+        flex: 1 1 33.33%;
+        &:nth-of-type(4) {
+          display: block;
+        }
+      }
+    }
+  }
+
+    .gnb_sub {
+      display: none;
+  }
+}

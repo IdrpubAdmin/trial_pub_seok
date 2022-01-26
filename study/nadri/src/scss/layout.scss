@@ -1,0 +1,73 @@
+@use "variables";
+
+//html font 크기 변경, a 태그 기본속성 삭제
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+html {
+    font-size:62.5%;
+}
+
+
+// PC 레이아웃 설정
+
+@mixin width {
+    width: $width;
+    max-width: $max-width;
+    margin: 0 auto;
+};
+
+@mixin gnb_width {
+    width: $width - 10%;
+    max-width: $max-width;
+    margin: 0 auto;
+};
+
+// pc 콘텐츠 최적화 가로 너비 (현재 1200px)
+@mixin contents_width {
+    width: $contents_width;
+    max-width: $max-width;
+    margin: 0 auto;
+};
+
+// 중앙정렬
+@mixin align_center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+// 영역 검사용 border 1px solid red
+@mixin border {
+    border:1px solid red;
+    box-sizing: border-box;
+}
+
+// 모든 콘텐츠를 감싸는 container 클래스
+.container {
+    @include width;
+    position: relative;
+}
+
+// Tablet 설정
+
+@mixin rwd_width {
+    width: 100%;
+    min-width: 320px;
+    margin: 0 auto;
+}
+
+@media (max-width: 1199px) {
+
+    .container {
+        @include rwd_width;
+    }
+}
+
+//Mobile 설정
+
+
+//img 축소비율
+
+$m_size : 0.75;

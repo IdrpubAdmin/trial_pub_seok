@@ -183,7 +183,7 @@ button.more {
     }
 
     ul {
-      margin-top: 35px;
+      margin-top: 3.5rem;
 
       li {
         width: 100%;
@@ -200,8 +200,8 @@ button.more {
 
     button {
       background: #fff;
-      margin-top: 21px;
-      padding: 14px 30px;
+      margin-top: 2.1rem;
+      padding: 1.4rem 3rem;
       font: 1.6rem "BMYEONSUNG";
       color: $beige;
       border: 1px solid $beige;
@@ -486,487 +486,968 @@ button.more {
   }
 }
 
-
-@media (min-width: 640px) and (max-width: 1199px) {
-  .main_bnr {
-    @include width;
-    background-image: url("../img/main_slogan.png"), url("../img/main_bg_slice.png");
-    background-size: 81.3rem 27.9rem, auto 101%;
-    background-position: 35% 60%, 0 0;
-    background-repeat: no-repeat;
-
-    height: 100rem;
-    position: relative;
-
-    img.main_bnr_bg {
-
-      width: auto;
-      height: 100%;
-      visibility: hidden;
-    }
-
-    img.main_bnr_slogan {
-      display: none;
-      width: 81.3rem;
-      position: absolute;
-      top: 45.8rem;
-      left: 37.5rem;
-    }
-  }
-  .main_menu {
-    @include width;
-
-    h2 {
-      font: 3.6rem "BMYEONSUNG";
-      color: $brown;
-      text-align: center;
-      margin-top: 7rem;
-
-      em {
-        color: $orange;
-      }
-
-    }
-
-    > p {
-      font: 1.6rem "Lato";
-      color: $brown;
-      text-align: center;
-    }
-
-  }
-  .main_menu_slide {
-    @include contents_width;
-    margin-top: 3%;
-    margin-bottom: 3%;
-    position: relative;
-
-    ul {
-      width: 100%;
-      margin: 0 auto;
-      display: flex;
-
-      li {
-        width: 23%;
-        margin: 0 1% 0 1%;
-        text-align: right;
-
-        h3 {
-          text-align: center;
-          font: 2.4rem "BMYEONSUNG";
-          color: $brown;
-          margin-top: 1rem;
-        }
-
-        img {
-          width: 100%;
-
-          &:after {
-            content: "";
-            background: $black;
-            opacity: 0;
-          }
-        }
-
-        p {
-          text-align: center;
-          font: 1.6rem "NanumMyeongjo";
-          color: $brown;
-          margin-top: 1rem;
-        }
-      }
-    }
-  }
-  button.more {
-    text-align: right;
-    background: #fff;
-    border-radius: 3px;
-    border: 1px solid $brown;
-    color: $black;
-    margin: 3% 0;
-    font: 900 0.9rem "NanumMyeongjo";
-    padding-top: 1%;
-    padding-bottom: 1%;
-
-  }
-  .center_line_orange {
-    @include width;
-    height: 4px;
-    background-color: $orange;
-    margin: 1% 0;
-  }
-
-  .btn_menu {
-    width: $contents_width;
-
-    div {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 4.6rem;
-    }
-
-    .prev {
-      left: -5%;
-    }
-
-    .next {
-      right: -5%;
-    }
-  }
-  .main_bar_bnr {
-    background: url("../img/bar_bnr_bg_img.png") no-repeat center center/cover;
-    @include width;
-    margin-top: 9rem;
-    height: auto;
-    text-align: center;
-    position: relative;
-
-    img {
-      visibility: hidden;
-    }
-
-  }
-
-  .main_bar_bnr_txt {
-    width: 100%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    h2 {
-      color: $white;
-      font: 700 2.95rem "NanumMyeongjo";
-    }
-
-    p {
-      color: $beige;
-      font: 1.6rem "NanumSquare";
-      margin-top: 26px;
-      line-height: 1.4;
-    }
-  }
-
-
-  .main_franchise {
-    width: $contents_width + 240px;
-    height: 76.9rem;
-    margin: 0 auto;
-    display: flex;
-    padding-top: 6.1rem;
-    overflow: hidden;
-
-
-    div.main_franchise_left {
-      width: 60.1rem;
-      margin-left: 6rem;
-
-      > img {
-        width: 50rem;
-      }
-
-      ul {
-        margin-top: 35px;
-
-        li {
-          width: 100%;
-          font: 1.6rem "NanumMyeongjo";
-          margin-top: 0.8rem;
-          color: $black;
-
-          img {
-            width: 1.9rem;
-            vertical-align: bottom;
-          }
-        }
-      }
-
-      button {
-        background: #fff;
-        margin-top: 21px;
-        padding: 14px 30px;
-        font: 1.6rem "BMYEONSUNG";
-        color: $beige;
-        border: 1px solid $beige;
-        border-radius: 3px;
-      }
-
-    }
-
-    div.main_franchise_right {
-      width: 77.9rem;
-
-      img {
-        width: 77.9rem;
-      }
-    }
-  }
-  .main_franchise_issue {
-    @include width;
-    position: relative;
-    height: 59.3rem;
-    background: url("../img/franchise_bg.png") no-repeat 0 0/cover;
-
-    .main_franchise_issue_header {
-      @include align_center;
-      top: -17.5rem;
-      text-align: center;
-
-      h2 {
-        font: 3.6rem "BMYEONSUNG";
-        color: $brown;
-
-        span {
-          color: $orange;
-        }
-      }
-
-      p {
-        font: 1.6rem "Loto";
-        color: $brown;
-      }
-
-      .btn_franchise {
-        display: flex;
-        justify-content: center;
-        margin-top: 4.2rem;
-
-        div {
-          width: 5rem;
-          margin-left: 5px;
-
-          &:first-child {
-            margin-left: 0;
-          }
-        }
-      }
-    }
-
-    .main_franchise_issue_contents {
-      @include contents_width;
-
-      .center_line {
-        position: absolute;
-        left: 44.5rem;
-        z-index: -1;
-        width: 2px;
-        height: 59.3rem;
-        background: $beige;
-      }
-
-      ul {
-        width: $contents_width;
-        display: flex;
-
-        li {
-          width: 90%;
-          margin-top: 6.1rem;
-
-          &:first-child {
-            width: 20rem;
-            margin-right: 3rem;
-          }
-
-          img {
-            width: 100%;
-          }
-
-          .center_line_orange {
-            width: 8.3rem;
-          }
-
-          h2 {
-            font: 700 2rem "NanumMyeongjo";
-            color: $light_black;
-            line-height: 1.4;
-
-            span {
-              font: 900 1.4rem "NanumMyeongjo";
-              color: $orange_02;
-            }
-          }
-
-          p {
-            margin-top: 2rem;
-            font: 700 1.6rem "NanumMyeongjo";
-            color: $gray;
-            line-height: 1.2;
-          }
-
-          .btn_read_more {
-            position: relative;
-            top: 1rem;
-            display: block;
-            width: 10rem;
-            height: 1.4rem;
-            font: 900 1.4rem "NanumMyeongjo";
-            color: $orange_02;
-          }
-        }
-      }
-    }
-  }
-  .main_store {
-    @include width;
-    padding-top: 10.7rem;
-
-    .main_store_header {
-      text-align: center;
-
-      h2 {
-        font: 3.6rem "BMYEONSUNG";
-        color: $brown;
-
-        span {
-          color: $orange;
-        }
-      }
-
-      p {
-        font: 1.6rem "Lato";
-        color: $brown;
-      }
-    }
-
-    .main_store_list {
-      @include width;
-      margin-top: 4.4rem;
-      position: relative;
-
-      ul {
-        display: flex;
-
-        li {
-          flex: 1;
-          position: relative;
-
-          &:nth-child(1):after, &:nth-child(3):after {
-            content: "";
-            display: block;
-            width: 100%;
-            height: 100%;
-            background: #fff;
-            opacity: 0.7;
-            position: absolute;
-            top: 0;
-            left: 0;
-          }
-
-          .main_store_list_text {
-            width: 100%;
-            height: auto;
-            padding: 1.5rem 2.7rem;
-            box-sizing: border-box;
-            background: $black;
-            opacity: 0.7;
-            position: absolute;
-            bottom: 0;
-
-            h3 {
-              font: 700 2.3rem "NanumMyeongjo";
-              color: $yellow;
-            }
-
-            p {
-              font: 700 1.8rem "NanumMyeongjo";
-              color: $white;
-              line-height: 1.4;
-            }
-          }
-        }
-      }
-
-      .btn_store {
-        width: 100%;
-
-        a {
-          width: 4.8rem;
-          height: auto;
-          position: absolute;
-          top: 50%;
-          transform: translate(-50%, -50%);
-
-          img {
-            width: 100%;
-          }
-        }
-
-        .prev {
-          left: 30%;
-        }
-
-        .next {
-          left: 70%;
-        }
-      }
-    }
-  }
-
-  .main_search {
-    @include width;
-    height: 32.2rem;
-    background: url("../img/locations_bg.jpg") no-repeat center center/cover;
-    position: relative;
-
-    ul {
-      width: $contents_width;
-      @include align_center;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      display: flex;
-
-      li {
-        &:first-child {
-          width: 23.3rem;
-          margin-right: 2.4rem;
-        }
-
-        h2 {
-          font: 4.6rem "BMYEONSUNG";
-          color: $white;
-        }
-
-        p {
-          font: 1.8rem "NanumMyeongjo";
-          color: $beige;
-        }
-
-        img {
-          width: 100%;
-        }
-
-        .main_search_select {
-          padding-top: 5.1rem;
-
-          select {
-            width: 21.4rem;
-            font: 1.6rem "NanumSquare";
-            color: $gray;
-            padding: 1.3rem;
-            border-radius: $border-radius;
-            margin-right: 1rem;
-
-            .icoArrow {
-              margin-right: 1.2rem;
-            }
-          }
-
-          input {
-            width: 22.7rem;
-            font: 700 1.6rem "Lato";
-            background: $yellow;
-            color: $white;
-            border: none;
-            padding: 1.4rem;
-            border-radius: $border-radius;
-            vertical-align: -10%;
-          }
-        }
-      }
-
-    }
-  }
+@media (max-width: 1199px) {
+  //.main_bnr {
+  //  @include rwd_width;
+  //  background-image: url("../img/main_bg_slice.png");
+  //  background-size: auto 100%;
+  //  background-position: 50% 0;
+  //  background-repeat: no-repeat;
+  //
+  //  height: 70rem;
+  //
+  //  img.main_bnr_bg {
+  //
+  //    width: auto;
+  //    height: 100%;
+  //    visibility: hidden;
+  //  }
+  //
+  //  img.main_bnr_slogan {
+  //    display: block;
+  //    width: 60%;
+  //    @include align_center;
+  //    top: 35rem;
+  //
+  //
+  //  }
+  //}
+  //.main_menu {
+  //  @include width;
+  //
+  //  h2 {
+  //    font: 3.6rem "BMYEONSUNG";
+  //    color: $brown;
+  //    text-align: center;
+  //    margin-top: 7rem;
+  //
+  //    em {
+  //      color: $orange;
+  //    }
+  //
+  //  }
+  //
+  //  > p {
+  //    font: 1.6rem "Lato";
+  //    color: $brown;
+  //    text-align: center;
+  //  }
+
+  //}
+  //.main_menu_slide {
+  //  @include contents_width;
+  //  margin-top: 3%;
+  //  margin-bottom: 3%;
+  //  position: relative;
+  //
+  //  ul {
+  //    width: 100%;
+  //    margin: 0 auto;
+  //    display: flex;
+  //
+  //    li {
+  //      width: 23%;
+  //      margin: 0 1% 0 1%;
+  //      text-align: right;
+  //
+  //      h3 {
+  //        text-align: center;
+  //        font: 2.4rem "BMYEONSUNG";
+  //        color: $brown;
+  //        margin-top: 1rem;
+  //      }
+  //
+  //      img {
+  //        width: 100%;
+  //
+  //        &:after {
+  //          content: "";
+  //          background: $black;
+  //          opacity: 0;
+  //        }
+  //      }
+  //
+  //      p {
+  //        text-align: center;
+  //        font: 1.6rem "NanumMyeongjo";
+  //        color: $brown;
+  //        margin-top: 1rem;
+  //      }
+  //    }
+  //  }
+  //}
+  //button.more {
+  //  text-align: right;
+  //  background: #fff;
+  //  border-radius: 3px;
+  //  border: 1px solid $brown;
+  //  color: $black;
+  //  margin: 3% 0;
+  //  font: 900 0.9rem "NanumMyeongjo";
+  //  padding-top: 1%;
+  //  padding-bottom: 1%;
+  //
+  //}
+  //.center_line_orange {
+  //  @include width;
+  //  height: 4px;
+  //  background-color: $orange;
+  //  margin: 1% 0;
+  //}
+  //
+  //.btn_menu {
+  //  width: $contents_width;
+  //
+  //  div {
+  //    position: absolute;
+  //    top: 50%;
+  //    transform: translateY(-50%);
+  //    width: 4.6rem;
+  //  }
+  //
+  //  .prev {
+  //    left: -5%;
+  //  }
+  //
+  //  .next {
+  //    right: -5%;
+  //  }
+  //}
+  //.main_bar_bnr {
+  //  background: url("../img/bar_bnr_bg_img.png") no-repeat center center/cover;
+  //  @include width;
+  //  margin-top: 9rem;
+  //  height: auto;
+  //  text-align: center;
+  //  position: relative;
+  //
+  //  img {
+  //    visibility: hidden;
+  //  }
+  //
+  //}
+  //
+  //.main_bar_bnr_txt {
+  //  width: 100%;
+  //  position: absolute;
+  //  top: 50%;
+  //  left: 50%;
+  //  transform: translate(-50%, -50%);
+  //
+  //  h2 {
+  //    color: $white;
+  //    font: 700 2.95rem "NanumMyeongjo";
+  //  }
+  //
+  //  p {
+  //    color: $beige;
+  //    font: 1.6rem "NanumSquare";
+  //    margin-top: 26px;
+  //    line-height: 1.4;
+  //  }
+  //}
+  //
+  //
+  //.main_franchise {
+  //  width: $contents_width + 240px;
+  //  height: 76.9rem;
+  //  margin: 0 auto;
+  //  display: flex;
+  //  padding-top: 6.1rem;
+  //  overflow: hidden;
+  //
+  //
+  //  div.main_franchise_left {
+  //    width: 60.1rem;
+  //    margin-left: 6rem;
+  //
+  //    > img {
+  //      width: 50rem;
+  //    }
+  //
+  //    ul {
+  //      margin-top: 35px;
+  //
+  //      li {
+  //        width: 100%;
+  //        font: 1.6rem "NanumMyeongjo";
+  //        margin-top: 0.8rem;
+  //        color: $black;
+  //
+  //        img {
+  //          width: 1.9rem;
+  //          vertical-align: bottom;
+  //        }
+  //      }
+  //    }
+  //
+  //    button {
+  //      background: #fff;
+  //      margin-top: 21px;
+  //      padding: 14px 30px;
+  //      font: 1.6rem "BMYEONSUNG";
+  //      color: $beige;
+  //      border: 1px solid $beige;
+  //      border-radius: 3px;
+  //    }
+  //
+  //  }
+  //
+  //  div.main_franchise_right {
+  //    width: 77.9rem;
+  //
+  //    img {
+  //      width: 77.9rem;
+  //    }
+  //  }
+  //}
+  //.main_franchise_issue {
+  //  @include width;
+  //  position: relative;
+  //  height: 59.3rem;
+  //  background: url("../img/franchise_bg.png") no-repeat 0 0/cover;
+  //
+  //  .main_franchise_issue_header {
+  //    @include align_center;
+  //    top: -17.5rem;
+  //    text-align: center;
+  //
+  //    h2 {
+  //      font: 3.6rem "BMYEONSUNG";
+  //      color: $brown;
+  //
+  //      span {
+  //        color: $orange;
+  //      }
+  //    }
+  //
+  //    p {
+  //      font: 1.6rem "Loto";
+  //      color: $brown;
+  //    }
+  //
+  //    .btn_franchise {
+  //      display: flex;
+  //      justify-content: center;
+  //      margin-top: 4.2rem;
+  //
+  //      div {
+  //        width: 5rem;
+  //        margin-left: 5px;
+  //
+  //        &:first-child {
+  //          margin-left: 0;
+  //        }
+  //      }
+  //    }
+  //  }
+  //
+  //  .main_franchise_issue_contents {
+  //    @include contents_width;
+  //
+  //    .center_line {
+  //      position: absolute;
+  //      left: 44.5rem;
+  //      z-index: -1;
+  //      width: 2px;
+  //      height: 59.3rem;
+  //      background: $beige;
+  //    }
+  //
+  //    ul {
+  //      width: $contents_width;
+  //      display: flex;
+  //
+  //      li {
+  //        width: 90%;
+  //        margin-top: 6.1rem;
+  //
+  //        &:first-child {
+  //          width: 20rem;
+  //          margin-right: 3rem;
+  //        }
+  //
+  //        img {
+  //          width: 100%;
+  //        }
+  //
+  //        .center_line_orange {
+  //          width: 8.3rem;
+  //        }
+  //
+  //        h2 {
+  //          font: 700 2rem "NanumMyeongjo";
+  //          color: $light_black;
+  //          line-height: 1.4;
+  //
+  //          span {
+  //            font: 900 1.4rem "NanumMyeongjo";
+  //            color: $orange_02;
+  //          }
+  //        }
+  //
+  //        p {
+  //          margin-top: 2rem;
+  //          font: 700 1.6rem "NanumMyeongjo";
+  //          color: $gray;
+  //          line-height: 1.2;
+  //        }
+  //
+  //        .btn_read_more {
+  //          position: relative;
+  //          top: 1rem;
+  //          display: block;
+  //          width: 10rem;
+  //          height: 1.4rem;
+  //          font: 900 1.4rem "NanumMyeongjo";
+  //          color: $orange_02;
+  //        }
+  //      }
+  //    }
+  //  }
+  //}
+  //.main_store {
+  //  @include width;
+  //  padding-top: 10.7rem;
+  //
+  //  .main_store_header {
+  //    text-align: center;
+  //
+  //    h2 {
+  //      font: 3.6rem "BMYEONSUNG";
+  //      color: $brown;
+  //
+  //      span {
+  //        color: $orange;
+  //      }
+  //    }
+  //
+  //    p {
+  //      font: 1.6rem "Lato";
+  //      color: $brown;
+  //    }
+  //  }
+  //
+  //  .main_store_list {
+  //    @include width;
+  //    margin-top: 4.4rem;
+  //    position: relative;
+  //
+  //    ul {
+  //      display: flex;
+  //
+  //      li {
+  //        flex: 1;
+  //        position: relative;
+  //
+  //        &:nth-child(1):after, &:nth-child(3):after {
+  //          content: "";
+  //          display: block;
+  //          width: 100%;
+  //          height: 100%;
+  //          background: #fff;
+  //          opacity: 0.7;
+  //          position: absolute;
+  //          top: 0;
+  //          left: 0;
+  //        }
+  //
+  //        .main_store_list_text {
+  //          width: 100%;
+  //          height: auto;
+  //          padding: 1.5rem 2.7rem;
+  //          box-sizing: border-box;
+  //          background: $black;
+  //          opacity: 0.7;
+  //          position: absolute;
+  //          bottom: 0;
+  //
+  //          h3 {
+  //            font: 700 2.3rem "NanumMyeongjo";
+  //            color: $yellow;
+  //          }
+  //
+  //          p {
+  //            font: 700 1.8rem "NanumMyeongjo";
+  //            color: $white;
+  //            line-height: 1.4;
+  //          }
+  //        }
+  //      }
+  //    }
+  //
+  //    .btn_store {
+  //      width: 100%;
+  //
+  //      a {
+  //        width: 4.8rem;
+  //        height: auto;
+  //        position: absolute;
+  //        top: 50%;
+  //        transform: translate(-50%, -50%);
+  //
+  //        img {
+  //          width: 100%;
+  //        }
+  //      }
+  //
+  //      .prev {
+  //        left: 30%;
+  //      }
+  //
+  //      .next {
+  //        left: 70%;
+  //      }
+  //    }
+  //  }
+  //}
+  //
+  //.main_search {
+  //  @include width;
+  //  height: auto;
+  //  background: url("../img/locations_bg.jpg") no-repeat center center/cover;
+  //  position: relative;
+  //
+  //  ul {
+  //    width: $contents_width;
+  //    @include align_center;
+  //    top: 50%;
+  //    transform: translate(-50%, -50%);
+  //    display: flex;
+  //
+  //    li {
+  //      &:first-child {
+  //        width: 23.3rem;
+  //        margin-right: 2.4rem;
+  //      }
+  //
+  //      h2 {
+  //        font: 4.6rem "BMYEONSUNG";
+  //        color: $white;
+  //      }
+  //
+  //      p {
+  //        font: 1.8rem "NanumMyeongjo";
+  //        color: $beige;
+  //      }
+  //
+  //      img {
+  //        width: 100%;
+  //      }
+  //
+  //      .main_search_select {
+  //        padding-top: 5.1rem;
+  //
+  //        select {
+  //          width: 21.4rem;
+  //          font: 1.6rem "NanumSquare";
+  //          color: $gray;
+  //          padding: 1.3rem;
+  //          border-radius: $border-radius;
+  //          margin-right: 1rem;
+  //
+  //          .icoArrow {
+  //            margin-right: 1.2rem;
+  //          }
+  //        }
+  //
+  //        input {
+  //          width: 22.7rem;
+  //          font: 700 1.6rem "Lato";
+  //          background: $yellow;
+  //          color: $white;
+  //          border: none;
+  //          padding: 1.4rem;
+  //          border-radius: $border-radius;
+  //          vertical-align: -10%;
+  //        }
+  //      }
+  //    }
+  //
+  //  }
+  //}
 
 }
 
+@media (max-width: 640px) {
+  //.main_bnr {
+  //  @include width;
+  //  background-image: url("../img/main_slogan.png"), url("../img/main_bg_slice.png");
+  //  background-size: 81.3rem 27.9rem, auto 101%;
+  //  background-position: 35% 60%, 0 0;
+  //  background-repeat: no-repeat;
+  //
+  //  height: 100rem;
+  //  position: relative;
+  //
+  //  img.main_bnr_bg {
+  //
+  //    width: auto;
+  //    height: 100%;
+  //    visibility: hidden;
+  //  }
+  //
+  //  img.main_bnr_slogan {
+  //    display: none;
+  //    width: 81.3rem;
+  //    position: absolute;
+  //    top: 45.8rem;
+  //    left: 37.5rem;
+  //  }
+  //}
+  //.main_menu {
+  //  @include width;
+  //
+  //  h2 {
+  //    font: 3.6rem "BMYEONSUNG";
+  //    color: $brown;
+  //    text-align: center;
+  //    margin-top: 7rem;
+  //
+  //    em {
+  //      color: $orange;
+  //    }
+  //
+  //  }
+  //
+  //  > p {
+  //    font: 1.6rem "Lato";
+  //    color: $brown;
+  //    text-align: center;
+  //  }
+  //
+  //}
+  //.main_menu_slide {
+  //  @include contents_width;
+  //  margin-top: 3%;
+  //  margin-bottom: 3%;
+  //  position: relative;
+  //
+  //  ul {
+  //    width: 100%;
+  //    margin: 0 auto;
+  //    display: flex;
+  //
+  //    li {
+  //      width: 23%;
+  //      margin: 0 1% 0 1%;
+  //      text-align: right;
+  //
+  //      h3 {
+  //        text-align: center;
+  //        font: 2.4rem "BMYEONSUNG";
+  //        color: $brown;
+  //        margin-top: 1rem;
+  //      }
+  //
+  //      img {
+  //        width: 100%;
+  //
+  //        &:after {
+  //          content: "";
+  //          background: $black;
+  //          opacity: 0;
+  //        }
+  //      }
+  //
+  //      p {
+  //        text-align: center;
+  //        font: 1.6rem "NanumMyeongjo";
+  //        color: $brown;
+  //        margin-top: 1rem;
+  //      }
+  //    }
+  //  }
+  //}
+  //button.more {
+  //  text-align: right;
+  //  background: #fff;
+  //  border-radius: 3px;
+  //  border: 1px solid $brown;
+  //  color: $black;
+  //  margin: 3% 0;
+  //  font: 900 0.9rem "NanumMyeongjo";
+  //  padding-top: 1%;
+  //  padding-bottom: 1%;
+  //
+  //}
+  //.center_line_orange {
+  //  @include width;
+  //  height: 4px;
+  //  background-color: $orange;
+  //  margin: 1% 0;
+  //}
+  //
+  //.btn_menu {
+  //  width: $contents_width;
+  //
+  //  div {
+  //    position: absolute;
+  //    top: 50%;
+  //    transform: translateY(-50%);
+  //    width: 4.6rem;
+  //  }
+  //
+  //  .prev {
+  //    left: -5%;
+  //  }
+  //
+  //  .next {
+  //    right: -5%;
+  //  }
+  //}
+  //.main_bar_bnr {
+  //  background: url("../img/bar_bnr_bg_img.png") no-repeat center center/cover;
+  //  @include width;
+  //  margin-top: 9rem;
+  //  height: auto;
+  //  text-align: center;
+  //  position: relative;
+  //
+  //  img {
+  //    visibility: hidden;
+  //  }
+  //
+  //}
+  //
+  //.main_bar_bnr_txt {
+  //  width: 100%;
+  //  position: absolute;
+  //  top: 50%;
+  //  left: 50%;
+  //  transform: translate(-50%, -50%);
+  //
+  //  h2 {
+  //    color: $white;
+  //    font: 700 2.95rem "NanumMyeongjo";
+  //  }
+  //
+  //  p {
+  //    color: $beige;
+  //    font: 1.6rem "NanumSquare";
+  //    margin-top: 26px;
+  //    line-height: 1.4;
+  //  }
+  //}
+  //
+  //
+  //.main_franchise {
+  //  width: $contents_width + 240px;
+  //  height: 76.9rem;
+  //  margin: 0 auto;
+  //  display: flex;
+  //  padding-top: 6.1rem;
+  //  overflow: hidden;
+  //
+  //
+  //  div.main_franchise_left {
+  //    width: 60.1rem;
+  //    margin-left: 6rem;
+  //
+  //    > img {
+  //      width: 50rem;
+  //    }
+  //
+  //    ul {
+  //      margin-top: 35px;
+  //
+  //      li {
+  //        width: 100%;
+  //        font: 1.6rem "NanumMyeongjo";
+  //        margin-top: 0.8rem;
+  //        color: $black;
+  //
+  //        img {
+  //          width: 1.9rem;
+  //          vertical-align: bottom;
+  //        }
+  //      }
+  //    }
+  //
+  //    button {
+  //      background: #fff;
+  //      margin-top: 21px;
+  //      padding: 14px 30px;
+  //      font: 1.6rem "BMYEONSUNG";
+  //      color: $beige;
+  //      border: 1px solid $beige;
+  //      border-radius: 3px;
+  //    }
+  //
+  //  }
+  //
+  //  div.main_franchise_right {
+  //    width: 77.9rem;
+  //
+  //    img {
+  //      width: 77.9rem;
+  //    }
+  //  }
+  //}
+  //.main_franchise_issue {
+  //  @include width;
+  //  position: relative;
+  //  height: 59.3rem;
+  //  background: url("../img/franchise_bg.png") no-repeat 0 0/cover;
+  //
+  //  .main_franchise_issue_header {
+  //    @include align_center;
+  //    top: -17.5rem;
+  //    text-align: center;
+  //
+  //    h2 {
+  //      font: 3.6rem "BMYEONSUNG";
+  //      color: $brown;
+  //
+  //      span {
+  //        color: $orange;
+  //      }
+  //    }
+  //
+  //    p {
+  //      font: 1.6rem "Loto";
+  //      color: $brown;
+  //    }
+  //
+  //    .btn_franchise {
+  //      display: flex;
+  //      justify-content: center;
+  //      margin-top: 4.2rem;
+  //
+  //      div {
+  //        width: 5rem;
+  //        margin-left: 5px;
+  //
+  //        &:first-child {
+  //          margin-left: 0;
+  //        }
+  //      }
+  //    }
+  //  }
+  //
+  //  .main_franchise_issue_contents {
+  //    @include contents_width;
+  //
+  //    .center_line {
+  //      position: absolute;
+  //      left: 44.5rem;
+  //      z-index: -1;
+  //      width: 2px;
+  //      height: 59.3rem;
+  //      background: $beige;
+  //    }
+  //
+  //    ul {
+  //      width: $contents_width;
+  //      display: flex;
+  //
+  //      li {
+  //        width: 90%;
+  //        margin-top: 6.1rem;
+  //
+  //        &:first-child {
+  //          width: 20rem;
+  //          margin-right: 3rem;
+  //        }
+  //
+  //        img {
+  //          width: 100%;
+  //        }
+  //
+  //        .center_line_orange {
+  //          width: 8.3rem;
+  //        }
+  //
+  //        h2 {
+  //          font: 700 2rem "NanumMyeongjo";
+  //          color: $light_black;
+  //          line-height: 1.4;
+  //
+  //          span {
+  //            font: 900 1.4rem "NanumMyeongjo";
+  //            color: $orange_02;
+  //          }
+  //        }
+  //
+  //        p {
+  //          margin-top: 2rem;
+  //          font: 700 1.6rem "NanumMyeongjo";
+  //          color: $gray;
+  //          line-height: 1.2;
+  //        }
+  //
+  //        .btn_read_more {
+  //          position: relative;
+  //          top: 1rem;
+  //          display: block;
+  //          width: 10rem;
+  //          height: 1.4rem;
+  //          font: 900 1.4rem "NanumMyeongjo";
+  //          color: $orange_02;
+  //        }
+  //      }
+  //    }
+  //  }
+  //}
+  //.main_store {
+  //  @include width;
+  //  padding-top: 10.7rem;
+  //
+  //  .main_store_header {
+  //    text-align: center;
+  //
+  //    h2 {
+  //      font: 3.6rem "BMYEONSUNG";
+  //      color: $brown;
+  //
+  //      span {
+  //        color: $orange;
+  //      }
+  //    }
+  //
+  //    p {
+  //      font: 1.6rem "Lato";
+  //      color: $brown;
+  //    }
+  //  }
+  //
+  //  .main_store_list {
+  //    @include width;
+  //    margin-top: 4.4rem;
+  //    position: relative;
+  //
+  //    ul {
+  //      display: flex;
+  //
+  //      li {
+  //        flex: 1;
+  //        position: relative;
+  //
+  //        &:nth-child(1):after, &:nth-child(3):after {
+  //          content: "";
+  //          display: block;
+  //          width: 100%;
+  //          height: 100%;
+  //          background: #fff;
+  //          opacity: 0.7;
+  //          position: absolute;
+  //          top: 0;
+  //          left: 0;
+  //        }
+  //
+  //        .main_store_list_text {
+  //          width: 100%;
+  //          height: auto;
+  //          padding: 1.5rem 2.7rem;
+  //          box-sizing: border-box;
+  //          background: $black;
+  //          opacity: 0.7;
+  //          position: absolute;
+  //          bottom: 0;
+  //
+  //          h3 {
+  //            font: 700 2.3rem "NanumMyeongjo";
+  //            color: $yellow;
+  //          }
+  //
+  //          p {
+  //            font: 700 1.8rem "NanumMyeongjo";
+  //            color: $white;
+  //            line-height: 1.4;
+  //          }
+  //        }
+  //      }
+  //    }
+  //
+  //    .btn_store {
+  //      width: 100%;
+  //
+  //      a {
+  //        width: 4.8rem;
+  //        height: auto;
+  //        position: absolute;
+  //        top: 50%;
+  //        transform: translate(-50%, -50%);
+  //
+  //        img {
+  //          width: 100%;
+  //        }
+  //      }
+  //
+  //      .prev {
+  //        left: 30%;
+  //      }
+  //
+  //      .next {
+  //        left: 70%;
+  //      }
+  //    }
+  //  }
+  //}
+  //
+  //.main_search {
+  //  @include width;
+  //  height: 32.2rem;
+  //  background: url("../img/locations_bg.jpg") no-repeat center center/cover;
+  //  position: relative;
+  //
+  //  ul {
+  //    width: $contents_width;
+  //    @include align_center;
+  //    top: 50%;
+  //    transform: translate(-50%, -50%);
+  //    display: flex;
+  //
+  //    li {
+  //      &:first-child {
+  //        width: 23.3rem;
+  //        margin-right: 2.4rem;
+  //      }
+  //
+  //      h2 {
+  //        font: 4.6rem "BMYEONSUNG";
+  //        color: $white;
+  //      }
+  //
+  //      p {
+  //        font: 1.8rem "NanumMyeongjo";
+  //        color: $beige;
+  //      }
+  //
+  //      img {
+  //        width: 100%;
+  //      }
+  //
+  //      .main_search_select {
+  //        padding-top: 5.1rem;
+  //
+  //        select {
+  //          width: 21.4rem;
+  //          font: 1.6rem "NanumSquare";
+  //          color: $gray;
+  //          padding: 1.3rem;
+  //          border-radius: $border-radius;
+  //          margin-right: 1rem;
+  //
+  //          .icoArrow {
+  //            margin-right: 1.2rem;
+  //          }
+  //        }
+  //
+  //        input {
+  //          width: 22.7rem;
+  //          font: 700 1.6rem "Lato";
+  //          background: $yellow;
+  //          color: $white;
+  //          border: none;
+  //          padding: 1.4rem;
+  //          border-radius: $border-radius;
+  //          vertical-align: -10%;
+  //        }
+  //      }
+  //    }
+  //
+  //  }
+  //}
+
+}

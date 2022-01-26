@@ -2,7 +2,7 @@
 
 .header {
   @include width;
-  height: 134px;
+  height: 13.4rem;
   text-align: center;
   @include align_center;
   top: 0;
@@ -16,9 +16,9 @@
 
   h1 {
     @include align_center;
-    top: 34px;
     display: inline-block;
-    width: 174px;
+    top: 3.4rem;
+    width: 17.4rem;
     height: auto;
 
     img {
@@ -47,6 +47,7 @@
   }
 }
 
+// 서브페이지 header 상단 백그라운드 컬러 조정
 .header_bg_color {
   @include width;
   height: 13.4rem;
@@ -56,67 +57,70 @@
   left: 0;
 }
 
-.gnb {
-  @include width;
-  @include align_center;
-  height: 52px;
-  font: 2.2rem "BMYEONSUNG";
-  color: $white;
-  background: $header_bg_color;
-  top: 134px;
-  z-index: $gnb_z_index;
 
-  > ul {
-    @include contents_width;
-    display: flex;
+// Tablet
 
-    li {
-      width: 20%;
+@media (max-width: 1199px) {
+
+  .header {
+    @include rwd_width;
+
+    .header_wrap {
+      @include rwd_width;
+    }
+    .header_nav {
+      a {
+        width: 6.5rem;
+      }
+    }
+  }
+
+  .header_bg_color {
+    @include rwd_width;
+  }
+}
+
+@media (max-width: 640px) {
+
+  .header {
+
+    h1 {
+      @include align_center;
+      top: 3rem;
+      width: 17.4rem * $m_size;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .header_nav {
+      width: 10rem;
+      height: 2rem;
+      @include align_center;
+      right: auto;
+      top: 10.25rem;
+      display: flex;
 
       a {
-        line-height: 52px;
-
-        img {
-          width: 44px;
-          margin-right: 5%;
-          margin-left: 25%;
-          vertical-align: -30%;
+        text-indent: -9999px;
+        width: 2rem;
+        height: 2rem;
+        border-left: none;
+        flex: 1;
+        //Home
+        &:first-child {
+          background: url("../img/header_ico_house.png") no-repeat center center/contain;
+        }
+        //로그인
+        &:nth-child(2) {
+          background: url("../img/header_ico_account.png") no-repeat center center/contain;
+        }
+        //고객센터
+        &:last-child {
+          background: url("../img/header_ico_cs.png") no-repeat center center/contain;
         }
       }
     }
   }
 }
-
-.gnb_sub {
-  @include width;
-  @include align_center;
-  height: 241px;
-  margin-top: 2px;
-  background: $header_bg_color;
-  z-index: $gnb_z_index;
-}
-
-.gnb_sub_wrap {
-  @include contents_width;
-  display: flex;
-
-  ul {
-    width: 20%;
-    margin-top: 19px;
-
-    li {
-      margin-left: 50%;
-      height: 28px;
-
-      a {
-        font: 700 1.4rem "NanumMyeongjo";
-        color: $beige;
-
-        &:hover {
-          color: $yellow;
-        }
-      }
-    }
-  }
-}
-
