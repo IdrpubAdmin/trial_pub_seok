@@ -7,6 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="css/styles.css">
+    <script type="text/javascript" src="js/swiper-bundle.js" ></script>
+    <script type="text/javascript" src="js/gnb_slide_toggle.js"></script>
+    <script type="module" src="js/swiper.js"></script>
 </head>
 <body>
 
@@ -50,69 +53,69 @@
     <ul>
         <li>
             <h2>
-                <a href="javascript:void(0);">
+                <a href="#none" class="triggerToggle">
                     <img src="img/gnb_icon_01.png" alt="나드리김밥 소개">나드리김밥
                 </a>
             </h2>
         </li>
         <li>
-            <a href="javascript:void(0);">
+            <a href="#none" class="triggerToggle">
                 <h2><img src="img/gnb_icon_02.png" alt="매뉴안내">매뉴안내</h2>
             </a>
         </li>
         <li>
-            <a href="javascript:void(0);">
+            <a href="#none" class="triggerToggle">
                 <h2><img src="img/gnb_icon_03.png" alt="매뉴안내">매장찾기</h2>
             </a>
         </li>
         <li>
-            <a href="javascript:void(0);">
+            <a href="#none" class="triggerToggle">
                 <h2><img src="img/gnb_icon_04.png" alt="매뉴안내">프랜차이즈</h2>
             </a>
         </li>
         <li>
-            <a href="javascript:void(0);">
+            <a href="#none" class="triggerToggle">
                 <h2><img src="img/gnb_icon_05.png" alt="매뉴안내">커뮤니티</h2>
             </a>
         </li>
     </ul>
-    <div class="gnb_sub">
+    <div class="gnb_sub" id="target">
         <div class="gnb_sub_wrap">
             <ul class="gnb_sub_about">
-                <li><a href="javascript:void(0);">나드리 소개</a></li>
-                <li><a href="javascript:void(0);">CEO인사말</a></li>
-                <li><a href="javascript:void(0);">CI/BI 소개</a></li>
-                <li><a href="javascript:void(0);">오시는 길</a></li>
+                <li><a href="#none">나드리 소개</a></li>
+                <li><a href="#none">CEO인사말</a></li>
+                <li><a href="#none">CI/BI 소개</a></li>
+                <li><a href="#none">오시는 길</a></li>
             </ul>
             <ul class="gnb_sub_menu">
-                <li><a href="javascript:void(0);">김밥류</a></li>
-                <li><a href="javascript:void(0);">돈까스</a></li>
-                <li><a href="javascript:void(0);">식사류</a></li>
-                <li><a href="javascript:void(0);">면류</a></li>
-                <li><a href="javascript:void(0);">간식류</a></li>
-                <li><a href="javascript:void(0);">계절메뉴</a></li>
+                <li><a href="#none">김밥류</a></li>
+                <li><a href="#none">돈까스</a></li>
+                <li><a href="#none">식사류</a></li>
+                <li><a href="#none">면류</a></li>
+                <li><a href="#none">간식류</a></li>
+                <li><a href="#none">계절메뉴</a></li>
             </ul>
             <ul class="gnb_sub_location">
-                <li><a href="javascript:void(0);">매장찾기</a></li>
-                <li><a href="javascript:void(0);">매장갤러리</a></li>
+                <li><a href="#none">매장찾기</a></li>
+                <li><a href="#none">매장갤러리</a></li>
             </ul>
             <ul class="gnb_sub_franchise">
-                <li><a href="javascript:void(0);">나드리경쟁력</a></li>
-                <li><a href="javascript:void(0);">가맹개설절차</a></li>
-                <li><a href="javascript:void(0);">창업비용</a></li>
-                <li><a href="javascript:void(0);">인테리어컨셉</a></li>
+                <li><a href="#none">나드리경쟁력</a></li>
+                <li><a href="#none">가맹개설절차</a></li>
+                <li><a href="#none">창업비용</a></li>
+                <li><a href="#none">인테리어컨셉</a></li>
             </ul>
             <ul class="gnb_sub_community">
-                <li><a href="javascript:void(0);">나들이소식</a></li>
-                <li><a href="javascript:void(0);">이벤트</a></li>
-                <li><a href="javascript:void(0);">보도및홍보자료</a></li>
-                <li><a href="javascript:void(0);">고객센터</a></li>
+                <li><a href="#none">나들이소식</a></li>
+                <li><a href="#none">이벤트</a></li>
+                <li><a href="#none">보도및홍보자료</a></li>
+                <li><a href="#none">고객센터</a></li>
             </ul>
         </div> <!--gnb_sub_wrap-->
     </div><!--gnb_sub-->
 </nav>
 <!-- end gnb.html-->
-<!-- start sub_quick.html-->
+<!-- start quick_sub.html-->
 <nav class="quick">
     <ul class="quick_list">
         <li>
@@ -162,7 +165,7 @@
         </li>
     </ul>
 </nav>
-<!-- end sub_quick.html-->
+<!-- end quick_sub.html-->
 <!-- start contents -->
 <section class="news">
 
@@ -176,7 +179,7 @@
     <div class="news_contents">
         <div class="news_contents_header">
             <h2>
-                <img src="img/news_header_img.png" alt="나드리 소식" ><br>
+                <img src="img/news_header_img.png" alt="나드리 소식"><br>
                 나드리 소식
             </h2>
             <div class="center_line_brown"></div>
@@ -184,58 +187,75 @@
             <h3>나드리 김밥의 따근 따근한 새로운 소식</h3>
             <p>새로운 메뉴, 매장들을 확인하실 수 있으며, 여러가지 <span>공지사항</span>도 함께 알려드립니다.</p>
         </div>
-        
+
         <div class="news_contents_main">
             <div class="news_contents_main_head">
                 <h4>나드리 김밥 신규 매장 리뉴얼 5월 오픈 예정</h4>
                 <p>2016. 12. 31.</p>
             </div>
-            
+
             <div class="news_contents_main_contents_area">
                 <img src="img/news_img_01.png" alt="나드리김밥 신규 매장 리뉴얼 5월 오픈 예정">
 
                 <p>
                     <span>나드리 김밥 신규 매장 리뉴얼 5월 오픈 예정</span><br>
                     나드리 김밥 신규 매장 리뉴얼 5월 오픈 예정
-                    나드리 김밥은 매년 1회 우수사원들을 선발해 해외연수를 실시하여 선진 요리기법전수, 신메뉴 및 식재료 연구, 그리고 고객서비스에 대한 심도 깉은 연수가 진행되었으며, 앞으로도 지속적인 연구와 직원 교육을 통해 더 나은 맛과 서비스를 고객님들께 제공하도록 하겠습니다.
+                    나드리 김밥은 매년 1회 우수사원들을 선발해 해외연수를 실시하여 선진 요리기법전수, 신메뉴 및 식재료 연구, 그리고 고객서비스에 대한 심도 깉은 연수가 진행되었으며, 앞으로도
+                    지속적인 연구와 직원 교육을 통해 더 나은 맛과 서비스를 고객님들께 제공하도록 하겠습니다.
                 </p>
             </div>
 
-            <div class="news_contents_main_list">
-                <button class="btn_news prev"><img src="img/btn_news_prev.png" alt="이전으로"></button>
-                <ul>
-                    <li>
+            <div class="swiper news_swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
                         <img src="img/news_img_01.png" alt="매장 리뉴얼">
                         <p>나드리 김밥은 매년 1회 우수사원들을 선발해 해외연수를 실시하여 선진 요리기법 전수,
                             <span>2016. 12. 31.</span>
                         </p>
-                    </li>
-                    <li>
+                    </div>
+                    <div class="swiper-slide">
                         <img src="img/news_img_01.png" alt="매장 리뉴얼">
                         <p>나드리 김밥은 매년 1회 우수사원들을 선발해 해외연수를 실시하여 선진 요리기법 전수,
                             <span>2016. 12. 31.</span>
                         </p>
-                    </li>
-                    <li>
+                    </div>
+                    <div class="swiper-slide">
                         <img src="img/news_img_01.png" alt="매장 리뉴얼">
                         <p>나드리 김밥은 매년 1회 우수사원들을 선발해 해외연수를 실시하여 선진 요리기법 전수,
                             <span>2016. 12. 31.</span>
                         </p>
-                    </li>
-                    <li>
+                    </div>
+                    <div class="swiper-slide">
                         <img src="img/news_img_01.png" alt="매장 리뉴얼">
                         <p>나드리 김밥은 매년 1회 우수사원들을 선발해 해외연수를 실시하여 선진 요리기법 전수,
                             <span>2016. 12. 31.</span>
                         </p>
-                    </li>
-                    <li>
+                    </div>
+                    <div class="swiper-slide">
                         <img src="img/news_img_01.png" alt="매장 리뉴얼">
                         <p>나드리 김밥은 매년 1회 우수사원들을 선발해 해외연수를 실시하여 선진 요리기법 전수,
                             <span>2016. 12. 31.</span>
                         </p>
-                    </li>
-                </ul>
-                <button class="btn_news next"><img src="img/btn_news_next.png" alt="다음으로"></button>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/news_img_01.png" alt="매장 리뉴얼">
+                        <p>나드리 김밥은 매년 1회 우수사원들을 선발해 해외연수를 실시하여 선진 요리기법 전수,
+                            <span>2016. 12. 31.</span>
+                        </p>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/news_img_01.png" alt="매장 리뉴얼">
+                        <p>나드리 김밥은 매년 1회 우수사원들을 선발해 해외연수를 실시하여 선진 요리기법 전수,
+                            <span>2016. 12. 31.</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="btn_news prev swiper-button-prev">
+                    <img src="img/btn_news_prev.png" alt="이전으로">
+                </div>
+                <div class="btn_news next swiper-button-next">
+                    <img src="img/btn_news_next.png" alt="다음으로">
+                </div>
             </div>
 
             <button class="btn_news_list">목 록</button>

@@ -10,6 +10,9 @@
     "not IE 11",
     "maintained node versions"
   ],
+  "tags": [
+    "swiper"
+  ],
   "scripts": {
     "dev": "gulp dev",
     "build": "gulp build",
@@ -36,7 +39,8 @@
     "sass": "^1.47.0",
     "swiper": "^7.4.1",
     "uglifyify": "^5.0.2",
-    "update": "^0.7.4"
+    "update": "^0.7.4",
+    "parcel-bundler": "^1.6.1"
   },
   "repository": {
     "type": "git",

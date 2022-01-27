@@ -53,7 +53,7 @@
      },
      js: {
          watch: "src/js/**/*.js",
-         src: "src/js/main.js",
+         src: "src/js/*.js",
          dest: "build/js"
      },
      font: {
@@ -105,11 +105,11 @@
  //scss의 위치확인 > 에러가 있을 경우 알려주는 파이프 > 결과물 저장 위치 경로 지정
 
  const js = () => gulp.src(routes.js.src)
-     .pipe(bro({
-         transform: [
-             babelify.configure({ presets: ['@babel/preset-env'] }), ["uglifyify", { global: true }]
-         ]
-     }))
+     // .pipe(bro({
+     //     transform: [
+     //         babelify.configure({ presets: ['@babel/preset-env'] }), ["uglifyify", { global: true }]
+     //     ]
+     // }))
      .pipe(gulp.dest(routes.js.dest));
  //gulp-browseify에 속성으로 진행 간 babelify를 통해서 preset-env 가 적용될 수 있도록 하는 과정
  //브라우저에서 최신 자바스크립트 언어를 이해할 수 있도록 컴파일하는 과정
