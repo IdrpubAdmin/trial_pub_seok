@@ -14,21 +14,21 @@ html {
 // PC 레이아웃 설정
 
 @mixin width {
-    width: $width;
-    max-width: $max-width;
+    width: 100%;
+    max-width: 1920px;
     margin: 0 auto;
 };
 
 @mixin gnb_width {
-    width: $width - 10%;
-    max-width: $max-width;
+    width: 100% - 10%;
+    max-width: 1920px;
     margin: 0 auto;
 };
 
 // pc 콘텐츠 최적화 가로 너비 (현재 1200px)
 @mixin contents_width {
-    width: $contents_width;
-    max-width: $max-width;
+    width: 1200px;
+    max-width: 1920px;
     margin: 0 auto;
 };
 

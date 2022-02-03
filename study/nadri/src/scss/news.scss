@@ -1,4 +1,5 @@
 @use "variables";
+@use "layout";
 
 .news {
   @include width;
@@ -8,10 +9,12 @@
     width: 100%;
     position: relative;
     text-align: center;
+    background: url("../img/news_main_bg.png") no-repeat center center/cover ;
 
     img {
       height: 100%;
       width: auto;
+      display: none;
     }
 
     h2 {
@@ -74,6 +77,10 @@
         font: 1.8rem "NanumSquare";
         color: $brown;
         margin-top: 1rem;
+
+        br {
+          display: none;
+        }
 
         span {
           color: $yellow;
@@ -207,7 +214,7 @@
     }
   }
 }
-
+//tablet size
 @media (max-width: 1199px) {
 
   .news {
@@ -215,6 +222,7 @@
 
     .news_header {
       @include rwd_width;
+
       h2 {
         width: $gnb_width;
         top: 26.1rem;
@@ -224,15 +232,34 @@
       }
       p {
         width: $gnb_width;
+
       }
     }
 
     .news_contents {
       @include rwd_width;
       margin-top: 5rem;
+
       .news_contents_header {
         @include gnb_width;
+
+        h3 {
+          font-size: 3rem * 0.95;
+
+          span {
+            display: block;
+          }
+        }
+
+        p {
+          line-height: 1.4;
+
+          em {
+            display: block;
+          }
+        }
       }
+
       .news_contents_main {
         @include rwd_width;
         padding-bottom: 10rem;
@@ -242,8 +269,11 @@
             width: 18rem;
           }
         }
+
         .btn_news {
-          width: 3rem;
+          width: 5rem;
+          height: 100%;
+
           img {
             width: 100%;
             height: 100%;
@@ -254,23 +284,53 @@
   }
 }
 
+//mobile size
 @media (max-width: 640px) {
 
   .news {
-    .news_contents {
+    .news_header {
+      p {
+        line-height: 1.4;
 
+        span {
+          display: block;
+        }
+      }
+    }
+
+    .news_contents {
       margin-top: 5rem;
+      .news_contents_header {
+        p {
+            br {
+              display: block;
+            }
+          }
+      }
+
       .news_contents_main {
         @include rwd_width;
         padding-bottom: 10rem;
 
+        .news_contents_main_head {
+          h4 {
+            width: 20rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+
+        }
+
         .swiper-slide {
           p {
-            width: 18rem;
+            width: 12rem;
           }
         }
+
         .btn_news {
-          width: 5rem;
+          width: 3rem;
+
           img {
             width: 100%;
             height: 100%;
