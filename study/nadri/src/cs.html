@@ -4,7 +4,6 @@
 
 <section class="cs">
     <header class="cs_header">
-        <img src="img/news_main_bg.png" alt="소통하는 기업 나드리 김밥">
         <div class="header_bg_color"></div>
         <h2>소통하는 기업, <span>나드리 김밥</span></h2>
         <p>나드리 김밥 홈페이지에 <span>방문해주셔서 감사합니다.</span></p>
@@ -18,15 +17,15 @@
             </h2>
             <div class="center_line_brown"></div>
 
-            <h3>나드리김밥에게 무엇이든 물어보세요.</h3>
-            <p>문의하신 내용에 대한 답변은 <span>업무일 기준으로 2~3일</span>정도 소요될 수 있습니다.</p>
+            <h3>나드리김밥에게 <em>무엇이든 물어보세요.</em></h3>
+            <p>문의하신 내용에 대한 답변은 <em><span>업무일 기준으로 2~3일</span></em>정도 소요될 수 있습니다.</p>
         </div>
 
         <div class="cs_form">
             <table>
                 <tr>
                     <th>문의하기</th>
-                    <th><span>(필수)</span> 항목은 반드시 입력해 주셔야 문의접수가 가능합니다.</th>
+                    <th><span>(필수)</span> 항목<em>은</em> 반드시 입력<em>해 주셔야 문의접수가 가능합니다.</em></th>
                 </tr>
                 <tr>
                     <td><label for="form_name" >이 름 <span>(필수)</span></label></td>
@@ -52,8 +51,8 @@
                 <tr>
                     <td><label for="form_email1">이 메 일 <span class="hide">(필수)</span></label></td>
                     <td>
-                        <input type="text" id="form_email1"> @
-                        <input type="text" id="form_email2">
+                        <input type="text" id="form_email1"  required> @
+                        <input type="text" id="form_email2" required>
                         <select name="email" id="form_email_select">
                             <option value="">직접입력</option>
                             <option value="naver.com">naver.com</option>
@@ -69,12 +68,12 @@
                 </tr>
                 <tr>
                     <td><label for="form_contents">내 용 <span>(필수)</span></label></td>
-                    <td><textarea name="form_contents" id="form_contents" cols="120" rows="7" wrap="hard" required></textarea></td>
+                    <td><textarea name="form_contents" id="form_contents" wrap="hard" required></textarea></td>
                 </tr>
 
             </table>
 
-            <textarea readonly cols="167" rows="7" class="Privacy">1. 개인 정보의 이용 목적
+            <textarea readonly class="Privacy">1. 개인 정보의 이용 목적
 여러분이 제공해주신 개인정보는 보다 정확한 서비스를 제공하기 위해 이용되며, 이용약관에 명시된 목적 이외에 다른 용도로 이용하거나 본인의 승낙 없이 제3자에게 개인정보를 제공하지 않습니다. 다만, 다음 각 사항에 해당하는 경우에는 예외로 제3자와 공유될 수 있습니다.
 1) 관계법령에 의하여 수사상의 목적으로 관계기관으로부터 요구가 있을 경우
 2) 기타 관계법령에서 정한 절차에 따른 요청이 있는 경우
@@ -83,7 +82,7 @@
 1. 개인 정보의 이용 목적
 
             </textarea>
-            <input type="checkbox" class="agree"> 개인정보 취급방침에 동의합니다.
+            <input type="checkbox" class="agree" id="form_agree"> <label for="form_agree">개인정보 취급방침에 동의합니다.</label>
 
             <button class="btn_cs_list">문의하기</button>
 
