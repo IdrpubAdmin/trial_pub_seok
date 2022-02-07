@@ -6,39 +6,48 @@
   height: 5.2rem;
   font: 2.2rem "BMYEONSUNG";
   color: $white;
-  background: $header_bg_color;
+
   top: 13.4rem;
   z-index: $gnb_z_index;
+  overflow: hidden;
+  transition: height 0.5s cubic-bezier(0.23, 1, 0.320, 1);
 
-  > ul {
-    @include contents_width;
-    display: flex;
+  .gnb_main {
+    @include width;
+    height: 5.2rem;
+    background: $header_bg_color;
+    ul {
+      @include contents_width;
+      display: flex;
+      li {
+        width: 20%;
+        a {
+          display: block;
+          width: 100%;
+          height: 100%;
+          line-height: 5.2rem;
 
-    li {
-      width: 20%;
-
-      a {
-        display:block;
-        width:100%;
-        height:100%;
-        line-height: 5.2rem;
-
-        img {
-          width: 4.4rem;
-          margin-right: 5%;
-          margin-left: 25%;
-          vertical-align: -30%;
+          img {
+            width: 4.4rem;
+            margin-right: 5%;
+            margin-left: 25%;
+            vertical-align: -30%;
+          }
         }
       }
     }
   }
 }
-
+.gnb_line {
+  @include width;
+  height: 2px;
+  background: rgba(255, 255, 255, 0);
+}
 .gnb_sub {
   @include width;
   @include align_center;
   height: 24.1rem;
-  margin-top: 0.2rem;
+  // margin-top: 0.2rem;
   background: $header_bg_color;
   z-index: $gnb_z_index;
 }
@@ -70,29 +79,30 @@
 @media (max-width: 1199px) {
   .gnb {
     @include rwd_width;
-    @include align_center;
 
+    .gnb_main {
+      ul {
+        @include gnb_width;
+        display: flex;
 
-    > ul {
-      @include gnb_width;
-      display: flex;
+        li {
+          width: auto;
+          flex: 1;
+          text-align: center;
 
-      li {
-        width: auto;
-        flex: 1;
-        text-align: center;
-
-        &:nth-of-type(4) {
-          display: none;
-        }
-
-        a {
-          display: block;
-          width: 100%;
-          line-height: 5.2rem;
-
-          img {
+          &:nth-of-type(4) {
             display: none;
+          }
+
+          a {
+            display: block;
+            width: 100%;
+            line-height: 5.2rem;
+            img {
+              display: inline-block;
+              margin-right: 5%;
+              margin-left: 0%;
+            }
           }
         }
       }
@@ -101,7 +111,6 @@
 
   .gnb_sub {
     @include rwd_width;
-    margin-top: 0.2rem;
   }
 
   .gnb_sub_wrap {
@@ -132,22 +141,29 @@
 }
 
 @media (max-width: 640px) {
-
   .gnb {
-    height:auto;
-    > ul {
-      display: flex;
-      flex-wrap: wrap;
-      li {
-        flex: 1 1 33.33%;
-        &:nth-of-type(4) {
-          display: block;
+    height: auto;
+    overflow: visible;
+    .gnb_main {
+      height: auto;
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        li {
+          flex: 1 1 40%;
+          a {
+            img {
+              display: inline-block;
+              margin-right: 5%;
+              margin-left: 0%;
+            }
+          }
         }
       }
     }
   }
 
-    .gnb_sub {
-      display: none;
+  .gnb_sub {
+    display: none;
   }
 }

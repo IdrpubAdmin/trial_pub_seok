@@ -1,859 +1,829 @@
 @use "variables";
 @use "layout";
-
-
 .main_bnr {
-  @include width;
-  background-image: url("../img/main_slogan.png"), url("../img/main_bg_slice.png");
-  background-size: 81.3rem 27.9rem, auto 101%;
-  background-position: 35% 60%, 0 0;
-  background-repeat: no-repeat;
-
-  height: 100rem;
-  position: relative;
-
-  .main_bnr_bg {
-
-    width: auto;
-    height: 100%;
-    visibility: hidden;
-  }
-
-  .main_bnr_slogan {
-    display: none;
-    width: 81.3rem;
-    position: absolute;
-    top: 45.8rem;
-    left: 37.5rem;
-  }
+    @include width;
+    background-image: url("../img/main_slogan.png"), url("../img/main_bg_slice.png");
+    background-size: 81.3rem 27.9rem, auto 101%;
+    background-position: 35% 60%, 0 0;
+    background-repeat: no-repeat;
+    height: 100rem;
+    position: relative;
+    .main_bnr_bg {
+        width: auto;
+        height: 100%;
+        visibility: hidden;
+    }
+    .main_bnr_slogan {
+        display: none;
+        width: 81.3rem;
+        position: absolute;
+        top: 45.8rem;
+        left: 37.5rem;
+    }
 }
 
 .main_menu {
-  @include width;
-
-  h2 {
-    font: 3.6rem "BMYEONSUNG";
-    color: $brown;
-    text-align: center;
-    margin-top: 7rem;
-
-    em {
-      color: $orange;
+    @include width;
+    h2 {
+        font: 3.6rem "BMYEONSUNG";
+        color: $brown;
+        text-align: center;
+        margin-top: 7rem;
+        em {
+            color: $orange;
+        }
     }
-  }
-
-  > p {
-    font: 1.6rem "Lato";
-    color: $brown;
-    text-align: center;
-  }
-
+    >p {
+        font: 1.6rem "Lato";
+        color: $brown;
+        text-align: center;
+    }
 }
 
 .main_menu_slide_wrapper {
-  @include contents_width;
-  position: relative;
-
-
-  .main_menu_slide {
-    width: $width;
-    margin-top: 3%;
-    margin-bottom: 3%;
+    @include contents_width;
     position: relative;
-
-
-    ul {
-      width: 100%;
-      margin: 0 auto;
-      display: flex;
-
-      li {
-        width: 23%;
-        margin: 0 1% 0 1%;
-        text-align: right;
-        transform: translateX(-28%);
-
-        h3 {
-          text-align: center;
-          font: 2.4rem "BMYEONSUNG";
-          color: $brown;
-          margin-top: 1rem;
+    .main_menu_slide {
+        width: $width;
+        margin-top: 3%;
+        margin-bottom: 3%;
+        position: relative;
+        ul {
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            li {
+                width: 23%;
+                margin: 0 1% 0 1%;
+                text-align: right;
+                transform: translateX(-28%);
+                h3 {
+                    text-align: center;
+                    font: 2.4rem "BMYEONSUNG";
+                    color: $brown;
+                    margin-top: 1rem;
+                }
+                img {
+                    width: 100%;
+                    &:after {
+                        content: "";
+                        background: $black;
+                        opacity: 0;
+                    }
+                }
+                p {
+                    text-align: center;
+                    font: 1.6rem "NanumMyeongjo";
+                    color: $brown;
+                    margin-top: 1rem;
+                }
+            }
         }
-
-        img {
-          width: 100%;
-
-          &:after {
-            content: "";
-            background: $black;
-            opacity: 0;
-          }
-        }
-
-        p {
-          text-align: center;
-          font: 1.6rem "NanumMyeongjo";
-          color: $brown;
-          margin-top: 1rem;
-        }
-      }
     }
-  }
-
-  button.more {
-    text-align: right;
-    background: #fff;
-    border-radius: 3px;
-    border: 1px solid $brown;
-    color: $black;
-    margin: 3% 0;
-    font: 900 0.9rem "NanumMyeongjo";
-    padding-top: 1%;
-    padding-bottom: 1%;
-
-  }
-
-  .center_line_orange {
-    @include width;
-    height: 4px;
-    background-color: $orange;
-    margin: 1% 0;
-  }
-
-  .btn_menu {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 4.6rem;
-    font-size: 0;
-  }
-
-  .prev {
-    left: -5% !important;
-  }
-
-  .next {
-    right: -5% !important;
-  }
+    button.more {
+        text-align: right;
+        background: #fff;
+        border-radius: 3px;
+        border: 1px solid $brown;
+        color: $black;
+        margin: 3% 0;
+        font: 900 0.9rem "NanumMyeongjo";
+        padding-top: 1%;
+        padding-bottom: 1%;
+    }
+    .center_line_orange {
+        @include width;
+        height: 4px;
+        background-color: $orange;
+        margin: 1% 0;
+    }
+    .btn_menu {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 4.6rem;
+        font-size: 0;
+    }
+    .prev {
+        left: -5% !important;
+    }
+    .next {
+        right: -5% !important;
+    }
 }
 
 .main_bar_bnr {
-  background: url("../img/bar_bnr_bg_img.png") no-repeat center center/cover;
-  @include width;
-  margin-top: 9rem;
-  height: auto;
-  text-align: center;
-  position: relative;
-
-  img {
-    visibility: hidden;
-  }
-
+    background: url("../img/bar_bnr_bg_img.png") no-repeat center center/cover;
+    @include width;
+    margin-top: 9rem;
+    height: auto;
+    text-align: center;
+    position: relative;
+    img {
+        visibility: hidden;
+    }
 }
 
 .main_bar_bnr_txt {
-  width: 100%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
-  h2 {
-    color: $white;
-    font: 700 2.95rem "NanumMyeongjo";
-  }
-
-  p {
-    color: $beige;
-    font: 1.6rem "NanumSquare";
-    margin-top: 2.6rem;
-    line-height: 1.4;
-  }
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    h2 {
+        color: $white;
+        font: 700 2.95rem "NanumMyeongjo";
+    }
+    p {
+        color: $beige;
+        font: 1.6rem "NanumSquare";
+        margin-top: 2.6rem;
+        line-height: 1.4;
+    }
 }
 
-
 .main_franchise {
-  width: $contents_width + 240px;
-  height: 76.9rem;
-  margin: 0 auto;
-  display: flex;
-  padding-top: 6.1rem;
-  overflow: hidden;
-
-
-  .main_franchise_info {
-    width: 60.1rem;
-    margin-left: 6rem;
-
-    > img {
-      width: 50rem;
-    }
-
-    ul {
-      margin-top: 3.5rem;
-
-      li {
-        width: 100%;
-        font: 1.6rem "NanumMyeongjo";
-        margin-top: 0.8rem;
-        color: $black;
-
-        img {
-          width: 1.9rem;
-          vertical-align: bottom;
+    width: $contents_width + 240px;
+    margin: 0 auto;
+    height: 76.9rem;
+    display: flex;
+    padding-top: 6.1rem;
+    overflow: hidden;
+    .main_franchise_info {
+        width: 60.1rem;
+        margin-left: 6rem;
+        >img {
+            width: 50rem;
         }
-      }
+        ul {
+            margin-top: 3.5rem;
+            li {
+                width: 100%;
+                font: 1.6rem "NanumMyeongjo";
+                margin-top: 0.8rem;
+                color: $black;
+                img {
+                    width: 1.9rem;
+                    vertical-align: bottom;
+                }
+            }
+        }
+        button {
+            background: #fff;
+            margin-top: 2.1rem;
+            padding: 1.4rem 3rem;
+            font: 1.6rem "BMYEONSUNG";
+            color: $beige;
+            border: 1px solid $beige;
+            border-radius: 3px;
+        }
     }
-
-    button {
-      background: #fff;
-      margin-top: 2.1rem;
-      padding: 1.4rem 3rem;
-      font: 1.6rem "BMYEONSUNG";
-      color: $beige;
-      border: 1px solid $beige;
-      border-radius: 3px;
+    .main_franchise_question {
+        width: 77.9rem;
+        img {
+            width: 77.9rem;
+        }
     }
-
-  }
-
-  .main_franchise_question {
-    width: 77.9rem;
-
-    img {
-      width: 77.9rem;
-    }
-  }
 }
 
 .main_franchise_issue {
-  @include width;
-  position: relative;
-  height: 59.3rem;
-  background: url("../img/franchise_bg.png") no-repeat 0 0/cover;
-
-  .main_franchise_issue_header {
-    @include align_center;
-    top: -17.5rem;
-    text-align: center;
-
-    h2 {
-      font: 3.6rem "BMYEONSUNG";
-      color: $brown;
-
-      span {
-        color: $orange;
-      }
-    }
-
-    p {
-      font: 1.6rem "Loto";
-      color: $brown;
-    }
-
-  }
-
-  .main_franchise_issue_contents_wrapper {
     @include width;
-    height: 100%;
-    .btn_franchise {
-      justify-content: center;
-      margin-top: 4.2rem;
-      gap: 0 0.5rem;
-      width: 5rem;
-      font-size: 0;
-      top: -10rem;
-      left: 50%;
+    position: relative;
+    height: 59.3rem;
+    background: url("../img/franchise_bg.png") no-repeat 0 0 / cover;
+    .main_franchise_issue_header {
+        @include align_center;
+        top: -17.5rem;
+        text-align: center;
+        h2 {
+            font: 3.6rem "BMYEONSUNG";
+            color: $brown;
+            span {
+                color: $orange;
+            }
+            display: block;
+            width: 100%;
+        }
+        p {
+            font: 1.6rem "Loto";
+            color: $brown;
+        }
     }
-    .swiper-button-prev {
-      transform: translateX(-5rem);
-    }
-    .swiper-button-next {
-      transform: translateX(1rem);
-    }
-
-    .main_franchise_issue_contents {
-      @include contents_width;
-
-      .center_line {
+    .center_line {
         position: absolute;
-        left: 44.5rem;
+        left: calc(50% - 50rem);
         z-index: -1;
         width: 2px;
         height: 59.3rem;
         background: $beige;
-      }
-
-      ul {
-        width: $contents_width;
-        display: flex;
-
-        li {
-          width: 90%;
-          margin-top: 6.1rem;
-
-          &:first-child {
-            width: 20rem;
-            margin-right: 3rem;
-          }
-
-          img {
-            width: 100%;
-          }
-
-          .center_line_orange {
-            width: 8.3rem;
-          }
-
-          h2 {
-            font: 700 2rem "NanumMyeongjo";
-            color: $light_black;
-            line-height: 1.4;
-
-            span {
-              font: 900 1.4rem "NanumMyeongjo";
-              color: $orange_02;
-            }
-          }
-
-          p {
-            margin-top: 2rem;
-            font: 700 1.6rem "NanumMyeongjo";
-            color: $gray;
-            line-height: 1.2;
-          }
-
-          .btn_read_more {
-            position: relative;
-            top: 1rem;
-            display: block;
-            width: 10rem;
-            height: 1.4rem;
-            font: 900 1.4rem "NanumMyeongjo";
-            color: $orange_02;
-          }
-        }
-      }
     }
-  }
+    .main_franchise_issue_contents_wrapper {
+        @include width;
+        height: 100%;
+        .btn_franchise {
+            justify-content: center;
+            margin-top: 4.2rem;
+            gap: 0 0.5rem;
+            width: 5rem;
+            font-size: 0;
+            top: -10rem;
+            left: 50%;
+        }
+        .swiper-button-prev {
+            transform: translateX(-5rem);
+        }
+        .swiper-button-next {
+            transform: translateX(1rem);
+        }
+        .main_franchise_issue_contents,
+        .swiper {
+            @include contents_width;
+            .swiper-wrapper {
+                width: $contents_width;
+                height: 59.3rem;
+                clear: both;
+                .swiper-slide {
+                    width: $width;
+                    margin: 0 auto;
+                    height: 100%;
+                    li {
+                        float: left;
+                        width: calc(100% - 23rem);
+                        margin-top: 5rem;
+                        &:first-child {
+                            width: 20rem;
+                            margin-right: 3rem;
+                        }
+                        &:last-child {
+                            margin-top: 6.25rem;
+                            margin-right: 0;
+                        }
+                        img {
+                            width: 100%;
+                        }
+                        h2 {
+                            font: 700 2rem "NanumMyeongjo";
+                            color: $light_black;
+                            line-height: 1.4;
+                            span {
+                                font: 900 1.4rem "NanumMyeongjo";
+                                color: $orange_02;
+                            }
+                            display: inline-block;
+                            width: 100%;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                        }
+                        .center_line_orange {
+                            width: 8.3rem;
+                            height: 4px;
+                            display: inline-block;
+                            background-color: $orange_02;
+                        }
+                        p {
+                            display: inline-block;
+                            width: 100%;
+                            height: 5.7rem;
+                            margin-top: 2rem;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: normal;
+                            font: 700 1.6rem "NanumMyeongjo";
+                            line-height: 1.2;
+                            color: $gray;
+
+
+
+                        }
+                        .btn_read_more {
+                            position: relative;
+                            top: 1rem;
+                            display: block;
+                            width: 10rem;
+                            height: 1.4rem;
+                            font: 900 1.4rem "NanumMyeongjo";
+                            color: $orange_02;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 .main_store {
-  @include width;
-  padding-top: 10.7rem;
-
-  .main_store_header {
-    text-align: center;
-
-    h2 {
-      font: 3.6rem "BMYEONSUNG";
-      color: $brown;
-
-      span {
-        color: $orange;
-      }
-    }
-
-    p {
-      font: 1.6rem "Lato";
-      color: $brown;
-    }
-  }
-
-  .main_store_list {
     @include width;
-    margin-top: 4.4rem;
-    position: relative;
-
-    ul {
-      display: flex;
-
-      li {
+    padding-top: 10.7rem;
+    .main_store_header {
+        text-align: center;
+        h2 {
+            font: 3.6rem "BMYEONSUNG";
+            color: $brown;
+            span {
+                color: $orange;
+            }
+        }
+        p {
+            font: 1.6rem "Lato";
+            color: $brown;
+        }
+    }
+    .main_store_list {
+        @include width;
+        margin-top: 4.4rem;
         position: relative;
-
-        .main_store_list_text {
-          width: 100%;
-          height: auto;
-          padding: 1.5rem 2.7rem;
-          box-sizing: border-box;
-          background: $black;
-          opacity: 0.7;
-          position: absolute;
-          bottom: 0;
-
-          h3 {
-            font: 700 2.3rem "NanumMyeongjo";
-            color: $yellow;
-          }
-
-          p {
-            font: 700 1.8rem "NanumMyeongjo";
-            color: $white;
-            line-height: 1.4;
-          }
+        ul {
+            display: flex;
+            li {
+                position: relative;
+                .main_store_list_text {
+                    width: 100%;
+                    height: auto;
+                    padding: 1.5rem 2.7rem;
+                    box-sizing: border-box;
+                    background: $black;
+                    opacity: 0.7;
+                    position: absolute;
+                    bottom: 0;
+                    h3 {
+                        font: 700 2.3rem "NanumMyeongjo";
+                        color: $yellow;
+                    }
+                    p {
+                        font: 700 1.8rem "NanumMyeongjo";
+                        color: $white;
+                        line-height: 1.4;
+                    }
+                }
+            }
+            .swiper-slide-prev:after,
+            .swiper-slide-next:after {
+                content: "";
+                display: block;
+                width: 100%;
+                height: 100%;
+                background: #fff;
+                opacity: 0.7;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
         }
-      }
-
-      .swiper-slide-prev:after, .swiper-slide-next:after {
-        content: "";
-        display: block;
-        width: 100%;
-        height: 100%;
-        background: #fff;
-        opacity: 0.7;
-        position: absolute;
-        top: 0;
-        left: 0;
-      }
-    }
-
-    .btn_store {
-      width: 4.8rem;
-      font-size: 0;
-
-      a {
-        width: 4.8rem;
-        height: auto;
-        position: absolute;
-        top: 50%;
-        transform: translate(-50%, -50%);
-
-        img {
-          width: 100%;
-
+        .btn_store {
+            width: 4.8rem;
+            font-size: 0;
+            a {
+                width: 100%;
+                height: auto;
+                position: absolute;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                img {
+                    width: 100%;
+                }
+            }
         }
-      }
+        .prev {
+            left: 30%;
+        }
+        .next {
+            left: 70%;
+        }
     }
-
-    .prev {
-      left: 30%;
-    }
-
-    .next {
-      left: 70%;
-    }
-  }
 }
 
 .main_search {
-  @include width;
-  height: 32.2rem;
-  background: url("../img/locations_bg.jpg") no-repeat center center/cover;
-  position: relative;
-
-  ul {
-    width: $contents_width;
-    @include align_center;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-
-    li {
-      &:first-child {
-        width: 23.3rem;
-        margin-right: 2.4rem;
-      }
-
-      h2 {
-        font: 4.6rem "BMYEONSUNG";
-        color: $white;
-      }
-
-      p {
-        font: 1.8rem "NanumMyeongjo";
-        color: $beige;
-      }
-
-      img {
-        width: 100%;
-      }
-
-      .main_search_select {
-        padding-top: 5.1rem;
-
-        select {
-          width: 21.4rem;
-          font: 1.6rem "NanumSquare";
-          color: $gray;
-          padding: 1.3rem;
-          border-radius: $border-radius;
-          margin-right: 1rem;
-
-          .icoArrow {
-            margin-right: 1.2rem;
-          }
+    @include width;
+    height: 32.2rem;
+    background: url("../img/locations_bg.jpg") no-repeat center center/cover;
+    position: relative;
+    ul {
+        width: $contents_width;
+        @include align_center;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        li {
+            &:first-child {
+                width: 23.3rem;
+                margin-right: 2.4rem;
+            }
+            h2 {
+                font: 4.6rem "BMYEONSUNG";
+                color: $white;
+            }
+            p {
+                font: 1.8rem "NanumMyeongjo";
+                color: $beige;
+            }
+            img {
+                width: 100%;
+            }
+            .main_search_select {
+                padding-top: 5.1rem;
+                select {
+                    width: 21.4rem;
+                    font: 1.6rem "NanumSquare";
+                    color: $gray;
+                    padding: 1.3rem 0 1.3rem 1.3rem;
+                    border-radius: $border-radius;
+                    margin-right: 1rem;
+                }
+                input {
+                    width: 22.7rem;
+                    font: 700 1.6rem "Lato";
+                    background: $yellow;
+                    color: $white;
+                    border: none;
+                    padding: 1.4rem;
+                    border-radius: $border-radius;
+                    vertical-align: -10%;
+                }
+            }
         }
-
-        input {
-          width: 22.7rem;
-          font: 700 1.6rem "Lato";
-          background: $yellow;
-          color: $white;
-          border: none;
-          padding: 1.4rem;
-          border-radius: $border-radius;
-          vertical-align: -10%;
-        }
-      }
     }
-
-  }
 }
 
 // Tablet size
 @media (max-width: 1199px) {
-
-  // main 베너, 슬로건 이미지
-  .main_bnr {
-    @include rwd_width;
-    background-image: url("../img/main_bg_slice.png");
-    background-size: auto 100%;
-    background-position: 50% 0;
-    background-repeat: no-repeat;
-    height: 63rem;
-    //position: relative;
-
-    .main_bnr_bg {
-      //width: auto;
-      //height: 100%;
-      //visibility: hidden;
-    }
-
-    .main_bnr_slogan {
-      display: block;
-      width: 65%;
-      @include align_center;
-      top: 27.5rem;
-    }
-  }
-  //main_bnr 종료
-
-
-  .main_menu {
-    @include rwd_width;
-
-    h2 {
-      //font: 3.6rem "BMYEONSUNG";
-      //color: $brown;
-      //text-align: center;
-      //margin-top: 7rem;
-
-      em {
-        //color: $orange;
-      }
-    }
-
-    > p {
-      //font: 1.6rem "Lato";
-      //color: $brown;
-      //text-align: center;
-    }
-
-  }
-  //main_menu header 부분종료
-
-
-  .main_menu_slide_wrapper {
-    @include rwd_width;
-    //position: relative;
-
-
-    .main_menu_slide {
-      @include gnb_width;
-      margin-top: 3%;
-      margin-bottom: 3%;
-      //position: relative;
-      ul {
-        //width: 100%;
-        //margin: 0 auto;
-        //display: flex;
-        li {
-          //width: 23%;
-          //margin: 0 1% 0 1%;
-          //text-align: right;
-          transform: translateX(-10%);
-
-          h3 {
-            //text-align: center;
-            //font: 2.4rem "BMYEONSUNG";
-            //color: $brown;
-            //margin-top: 1rem;
-          }
-
-          img {
-            //width: 100%;
-
-            &:after {
-              //content: "";
-              //background: $black;
-              //opacity: 0;
-            }
-          }
-
-          p {
-            //text-align: center;
-            //font: 1.6rem "NanumMyeongjo";
-            //color: $brown;
-            //margin-top: 1rem;
-          }
-        }
-      }
-    }
-
-    button.more {
-      //text-align: right;
-      //background: #fff;
-      //border-radius: 3px;
-      //border: 1px solid $brown;
-      //color: $black;
-      //margin: 3% 0;
-      //font: 900 0.9rem "NanumMyeongjo";
-      //padding-top: 1%;
-      //padding-bottom: 1%;
-    }
-
-    .center_line_orange {
-      //@include width;
-      //height: 4px;
-      //background-color: $orange;
-      //margin: 1% 0;
-    }
-
-    .btn_menu {
-      //position: absolute;
-      //top: 50%;
-      //transform: translateY(-50%);
-      width: 2.5rem;
-      //font-size: 0;
-    }
-
-    .prev {
-      left: 0.5% !important;
-    }
-
-    .next {
-      right: 0.5% !important;
-    }
-  }
-  //main_menu_slide_wrapper 종료
-
-
-  .main_bar_bnr {
-    background: url("../img/bar_bnr_bg_img.png") no-repeat 45% center/cover;
-    @include rwd_width;
-    margin-top: 9rem;
-    height: 27rem;
-    //text-align: center;
-    //position: relative;
-    img {
-      //visibility: hidden;
-    }
-
-  }
-  //main_bar_bnr 종료
-
-  .main_bar_bnr_txt {
-    width: variables.$gnb_width;
-    //position: absolute;
-    //top: 50%;
-    //left: 50%;
-    //transform: translate(-50%, -50%);
-
-    h2 {
-      //color: $white;
-      //font: 700 2.95rem "NanumMyeongjo";
-    }
-
-    p {
-      //color: $beige;
-      //font: 1.6rem "NanumSquare";
-      margin-top: 26px;
-      line-height: 1.4;
-
-      span {
-        display: block;
-        line-height: 1.4;
-      }
-
-      br {
-        display: none;
-      }
-    }
-  }
-  //main_bar_bnr_text 종료
-
-  .main_franchise {
-    @include layout.rwd_width;
-    height: auto;
-    //display: flex;
-    flex-direction: column;
-    //padding-top: 6.1rem;
-    //overflow: hidden;
-
-    .main_franchise_info {
-      @include layout.gnb_width;
-
-      > img {
-        width: 100%;
-      }
-
-      ul {
-        //margin-top: 3.5rem;
-
-        li {
-          width: 100%;
-          //font: 1.6rem "NanumMyeongjo";
-          //margin-top: 0.8rem;
-          //color: $black;
-
-          img {
-            //width: 1.9rem;
-            //vertical-align: bottom;
-          }
-        }
-      }
-
-      button {
-        display: block;
-        margin: 2.1rem auto 0;
-
-        //background: #fff;
-        //margin-top: 2.1rem;
-        //padding: 1.4rem 3rem;
-        //font: 1.6rem "BMYEONSUNG";
-        //color: $beige;
-        //border: 1px solid $beige;
-        //border-radius: 3px;
-      }
-
-    }
-
-    div.main_franchise_question {
-      @include layout.gnb_width;
-      margin-top: 2.1rem;
-
-      img {
-        width: 100%;
-      }
-    }
-  }
-  //main_franchise 종료
-
-  .main_franchise_issue {
-    @include rwd_width;
-    //position: relative;
-    height: auto;
-    //background: url("../img/franchise_bg.png") no-repeat 0 0/cover;
-
-    .main_franchise_issue_header {
-      @include align_center;
-      top: 5rem;
-      //text-align: center;
-
-      h2 {
-        //font: 3.6rem "BMYEONSUNG";
-        //color: $brown;
-        span {
-          //color: $orange;
-        }
-      }
-
-      p {
-        //font: 1.6rem "Loto";
-        //color: $brown;
-      }
-
-      .btn_franchise {
-        //display: flex;
-        //justify-content: center;
-        margin-top: 2rem;
-        gap: 0 0.5rem;
-
-        div {
-          //width: 5rem;
-          margin-left: 0;
-        }
-      }
-    }
-
-    .main_franchise_issue_contents {
-      @include layout.gnb_width;
-      padding-top: 22rem;
-
-      .center_line {
-        position: absolute;
-        left: 12.5rem;
-        top: 0;
-        z-index: -1;
-        width: 2px;
-        height: 50rem;
-        background: $beige;
-      }
-
-      ul {
-        width: $contents_width;
-        display: flex;
-
-        li {
-          width: 90%;
-          margin-top: 6.1rem;
-
-          &:first-child {
-            width: 20rem;
-            margin-right: 3rem;
-          }
-
-          img {
-            width: 100%;
-          }
-
-          .center_line_orange {
-            width: 8.3rem;
-          }
-
-          h2 {
-            font: 700 2rem "NanumMyeongjo";
-            color: $light_black;
-            line-height: 1.4;
-
-            span {
-              font: 900 1.4rem "NanumMyeongjo";
-              color: $orange_02;
-            }
-          }
-
-          p {
-            margin-top: 2rem;
-            font: 700 1.6rem "NanumMyeongjo";
-            color: $gray;
-            line-height: 1.2;
-          }
-
-          .btn_read_more {
-            position: relative;
-            top: 1rem;
+    // main 베너, 슬로건 이미지
+    .main_bnr {
+        @include rwd_width;
+        background-image: url("../img/main_bg_slice.png");
+        background-size: auto 100%;
+        background-position: 50% 0;
+        background-repeat: no-repeat;
+        height: 63rem;
+        .main_bnr_slogan {
             display: block;
-            width: 10rem;
-            height: 1.4rem;
-            font: 900 1.4rem "NanumMyeongjo";
-            color: $orange_02;
-          }
+            width: 65%;
+            @include align_center;
+            top: 27.5rem;
         }
-      }
     }
-  }
-  // main_franchise_issue 종료
+    //main_bnr 종료
+    .main_menu {
+        @include rwd_width;
+    }
+    //main_menu header 부분종료
+    .main_menu_slide_wrapper {
+        @include rwd_width;
 
+        .main_menu_slide {
+            @include gnb_width;
+            margin-top: 3%;
+            margin-bottom: 3%;
 
-}
+            ul {
+                li {
+                    transform: translateX(-15%);
+                }
+            }
+        }
 
-//  Tablet 종료
+        .btn_menu {
+            width: 2.5rem;
+        }
+        .prev {
+            left: 1% !important;
+        }
+        .next {
+            right: 1% !important;
+        }
+    }    //main_menu_slide_wrapper 종료
+
+    .main_bar_bnr {
+        background: url("../img/bar_bnr_bg_img.png") no-repeat 45% center/cover;
+        @include rwd_width;
+        margin-top: 9rem;
+        height: 27rem;
+    }
+    //main_bar_bnr 종료
+    .main_bar_bnr_txt {
+        width: variables.$gnb_width;
+        p {
+            margin-top: 26px;
+            line-height: 1.4;
+            span {
+                display: block;
+                line-height: 1.4;
+            }
+            br {
+                display: none;
+            }
+        }
+    }
+    //main_bar_bnr_text 종료
+    .main_franchise {
+        @include layout.rwd_width;
+        height: auto;
+        flex-direction: column;
+        .main_franchise_info {
+            @include gnb_width;
+            >img {
+                display: block;
+                width: 60%;
+                margin: 0 auto;
+            }
+            ul {
+                @include rwd_width;
+                margin-top: 3.5rem;
+                li {
+                    width: 100%;
+                }
+            }
+            button {
+                display: block;
+                margin: 2.1rem auto 0;
+            }
+        }
+        div.main_franchise_question {
+            @include layout.gnb_width;
+            margin-top: 3.5rem;
+            img {
+                width: 100%;
+            }
+        }
+    }
+    //main_franchise 종료
+    .main_franchise_issue {
+        @include rwd_width;
+        height: auto;
+        .main_franchise_issue_header {
+            @include align_center;
+            @include gnb_width;
+            top: 5rem;
+        }
+        .center_line {
+            left: 13.3rem;
+        }
+        .main_franchise_issue_contents_wrapper {
+            @include rwd_width;
+            height: 59.3rem;
+            padding-top: 22rem;
+            .btn_franchise {
+                margin-top: 0;
+                top: 17.5rem;
+            }
+            .main_franchise_issue_contents,
+            .swiper {
+                @include gnb_width;
+                .swiper-wrapper {
+                    @include rwd_width;
+                }
+            }
+        } //main_franchise_issue_contents_wrapper
+    } // main_franchise_issue 종료
+    .main_store {
+        @include rwd_width;
+        .main_store_list {
+            @include rwd_width;
+            margin-top: 4.4rem;
+            ul {
+                li {
+                    .main_store_list_text {
+                        p {
+                            span {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+            .btn_store {
+                width: 3.5rem;
+                a {
+                    width: 100%;
+                    transform: translate(0, -50%);
+                }
+            }
+            .prev {
+                left: 5%;
+            }
+            .next {
+                left: auto;
+                right: 5%;
+            }
+        } //main_store_list
+    } //main_store
+
+    .main_search {
+        @include rwd_width;
+        ul {
+            @include gnb_width;
+            li {
+                flex: 1 1 auto;
+                text-align: center;
+                &:first-child {
+                    display: none;
+                }
+                .main_search_select {
+                    display: flex;
+                    gap: 0 1rem;
+                    text-align: center;
+                    select {
+                        flex: 1 1 auto;
+                        width: 100%;
+                        margin-right: 0;
+                        .icoArrow {
+                            margin-right: 1.2rem;
+                        }
+                    }
+                    input {
+                        flex: 1 1 auto;
+                        width: 100%;
+                    }
+                }
+            }
+        } 
+    } //main_search
+} //  Tablet 종료
+
 
 
 //  Mobile size
 @media (max-width: 640px) {
+    // main 베너, 슬로건 이미지
+    .main_bnr {
+        height: 47.5rem;
+        background-position: 65% 0;
+        .main_bnr_slogan {
+            // display: block;
+            width: 80%;
+            @include align_center;
+            top: 29rem;
+        }
+    }  //main_bnr 종료
+    .main_menu {
+        h2 {
+            span {
+                display:block;
+            }
+        }
+    }
+    //main_menu header 부분종료
+    .main_menu_slide_wrapper {
+        margin-top: 2rem;
+        .main_menu_slide {
+            @include gnb_width;
+            margin-top: 3%;
+            margin-bottom: 3%;
+            .swiper-wrapper, ul {
+                @include gnb_width;
+                .swiper-slide, li {
+                    width: 100%;
+                    transform: translateX(-15%);
+                    h3 {
+                        span {
+                            display: none;
+                        }
+                    }
+                    p {
+                        display:inline-block;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: pre-wrap;
+                        width: 100%;
+                        height: 5.7rem;
+                    }
+                }
+            }
+        }
+
+        .btn_menu {
+            width: 2rem;
+        }
+    }
+    //main_menu_slide_wrapper 종료
+
+    .main_bar_bnr_txt {
+        h2 {
+            font-size: 2.5rem;
+            span {
+                display: block;
+            }
+        }
+        p {
+            font-size: 1.2rem;
+        }
+    } //main_bar_bnr_text 종료
+    .main_franchise {
+        .main_franchise_info {
+            >img {
+                width: 100%;
+            }
+            ul {
+                li {
+                    font-size: 1.2rem;
+                    span {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    //main_franchise 종료
+
+    .main_franchise_issue {
+        .main_franchise_issue_header {
+            h2 {
+                em {
+                    display: block;
+                }
+            }
+        }
+        .center_line {
+            display: none;
+        }
+        .main_franchise_issue_contents_wrapper {
+            height: 50rem;
+            .btn_franchise {
+                width: 4.5rem;
+            }
+            .swiper-button-prev {
+                transform: translateX(-4rem);
+            }
+            .swiper-button-next {
+                transform: translateX(0);
+            }
+            .main_franchise_issue_contents,
+            .swiper {
+                @include gnb_width;
+                .swiper-wrapper {
+                    @include rwd_width;
+                    height: 50rem;
+                    .swiper-slide {
+                        li {
+                            width: 100%;
+                            margin-top: 3rem;
+                            &:first-child {
+                                display: none;
+                            }
+                            &:last-child {
+                                margin-top: 3.5rem;
+                            }
+                        }
+                    }
+                }
+            }
+        } //main_franchise_issue_contents_wrapper
+    } // main_franchise_issue 종료
+    .main_store {
+        padding-top: 7rem;
+        .main_store_header {
+            h2 {
+                em {
+                    display: block;
+                }
+            }
+        }
+        .main_store_list {
+            ul {
+                li {
+                    .main_store_list_text {
+                        p {
+                            display: none;
+                        }
+                    }
+                }
+            }
+            .btn_store {
+                width: 2rem;
+            }
+            .prev {
+                left: 1.5%;
+            }
+            .next {
+                right: 1.5%;
+            }
+        } //main_store_list
+    } //main_store
+
+    .main_search {
+        height: 46rem;
+        ul {
+            li {
+                h2 {
+                    span {
+                        display: block;
+                    }
+                }
+                p {
+                    line-height: 1.4;
+                    span {
+                        display: block;
+                    }
+                }
+                .main_search_select {
+                    padding-top: 2.8rem;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1rem 0;
+                }
+            }
+        } 
+    } //main_search
 
 
-}
-
-//  Mobile 종료
+} //  Mobile 종료

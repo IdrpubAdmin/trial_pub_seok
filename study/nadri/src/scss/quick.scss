@@ -4,9 +4,9 @@
 
 .quick {
 
-  position: absolute;
+  position: fixed;
   right: 3rem;
-  top: 20%;
+  top: 65%;
   z-index: $gnb_z_index - 1;
 
 
@@ -23,10 +23,16 @@
           margin-bottom: 0.5rem;
           font: 1.6rem "BMYEONSUNG";
           color: $white;
+          overflow: hidden;
           &:first-of-type {
-            width: 13rem;
+            font-size: 0;
+            width: 0;
             height: auto;
             margin-right: 0.8rem;
+            overflow: hidden;
+            transition: width 0.3s cubic-bezier(.51,0,.53,1);
+            position: absolute;
+            right:5rem;
       }
           &:last-of-type {
             width: 5rem;
@@ -91,19 +97,26 @@
   display: block;
   text-align: center;
   width:5rem;
-  font: 1.2rem "Lato";
+  font-size: 0;
+  font-family: "Lato";
   color: $charcoal;
-  display: none;
+  height:0;
+  overflow: hidden;
+  transition: height 0.5s ease-out;
+
 }
 
 //퀵 메뉴 활성화
-.show_item {
-  display: inline-block;
+.quick_btn_info {
+  width: 13rem!important;
+  font-size: 1.6rem!important;
+  // display: inline-block;
 }
 
-//퀵 메뉴 비활성화
-.hide_item {
-  display: none;
+//탑 버튼 활성화
+.show_top_btn {
+  height: auto;
+  font-size: 1.2rem;
 }
 
 @media (max-width: 1199px) {

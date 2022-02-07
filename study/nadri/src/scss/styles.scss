@@ -1,6 +1,7 @@
 @import "_reset";
 @import "variables";
 @import "layout";
+@import "_swiper-bundle";
 @font-face {
   font-family: 'BMYEONSUNG';
   font-weight: 400;
@@ -78,7 +79,6 @@
   url('fonts/Lato-Regular.eot') format('embedded-opentype');
 }
 
-
 @import "header";
 @import "gnb";
 @import "main";
@@ -88,5 +88,5 @@
 @import "cs";
 @import "store";
 @import "footer";
-@import "_swiper-bundle";
+
 

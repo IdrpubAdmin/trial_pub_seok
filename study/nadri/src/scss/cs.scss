@@ -210,9 +210,11 @@
 
     .cs_header {
       width: $width;
+
       h2 {
         width: $gnb_width;
         top: 26.1rem;
+
         span {
           display: block;
         }
@@ -220,7 +222,7 @@
 
       p {
         width: $gnb_width;
-        }
+      }
     }
 
     .cs_contents {
@@ -238,20 +240,25 @@
 
         table {
           @include rwd_width;
+
           tr {
             display: flex;
           }
+
           th, td {
             flex: 1 1 auto;
+
             &:first-of-type {
               flex: 0 1 17rem;
             }
+
             .hide {
               visibility: hidden;
             }
+
             input {
               width: 10rem;
-             }
+            }
 
             label {
               width: 12rem;
@@ -326,16 +333,19 @@
         margin-top: 6.3rem;
 
         table {
-          min-width: 280px!important;
+          min-width: 280px !important;
+
           tr {
             display: flex;
+
             th {
-              line-height: 5rem!important;
+              line-height: 5rem !important;
               text-align: center;
 
-              em{
+              em {
                 display: none;
               }
+
               &:last-of-type {
                 padding-right: 1rem;
                 box-sizing: border-box;
@@ -344,6 +354,7 @@
 
             td {
               padding: 0.5rem 0;
+
               input {
                 width: 6rem;
                 padding: 0.8rem;
@@ -370,20 +381,22 @@
               #form_title {
                 width: 100%;
               }
-
             }
           }
 
           th, td {
             flex: 1 1 auto;
-            padding:0;
+            padding: 0;
+
             &:first-of-type {
               flex: 0 0 auto;
               width: 8.5rem;
             }
+
             span {
               font-size: 0;
             }
+
             span:after {
               display: inline-block;
               width: 1rem;

@@ -1,15 +1,11 @@
 @use "variables";
 
-//html font 크기 변경, a 태그 기본속성 삭제
+//html font 크기 변경,
 
-a {
-    color: inherit;
-    text-decoration: none;
-}
+
 html {
     font-size:62.5%;
 }
-
 
 // PC 레이아웃 설정
 
@@ -50,7 +46,7 @@ html {
     position: relative;
 }
 
-// Tablet 설정
+// 반응형 설정
 
 @mixin rwd_width {
     width: 100%;
@@ -65,9 +61,6 @@ html {
     }
 }
 
-//Mobile 설정
-
-
-//img 축소비율
+//반응형 img 축소비율
 
 $m_size : 0.75;
