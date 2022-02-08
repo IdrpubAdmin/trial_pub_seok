@@ -1,6 +1,6 @@
 @use "variables";
 @use "layout";
-.main_bnr {
+.main-bnr {
     @include width;
     background-image: url("../img/main_slogan.png"), url("../img/main_bg_slice.png");
     background-size: 81.3rem 27.9rem, auto 101%;
@@ -8,12 +8,12 @@
     background-repeat: no-repeat;
     height: 100rem;
     position: relative;
-    .main_bnr_bg {
+    .main-bnr-bg {
         width: auto;
         height: 100%;
         visibility: hidden;
     }
-    .main_bnr_slogan {
+    .main-bnr-slogan {
         display: none;
         width: 81.3rem;
         position: absolute;
@@ -22,7 +22,7 @@
     }
 }
 
-.main_menu {
+.main-menu {
     @include width;
     h2 {
         font: 3.6rem "BMYEONSUNG";
@@ -40,10 +40,10 @@
     }
 }
 
-.main_menu_slide_wrapper {
-    @include contents_width;
+.main-menu-slide-wrapper {
+    @include contents-width;
     position: relative;
-    .main_menu_slide {
+    .main-menu-slide {
         width: $width;
         margin-top: 3%;
         margin-bottom: 3%;
@@ -91,13 +91,13 @@
         padding-top: 1%;
         padding-bottom: 1%;
     }
-    .center_line_orange {
+    .center-line-orange {
         @include width;
         height: 4px;
         background-color: $orange;
         margin: 1% 0;
     }
-    .btn_menu {
+    .btn-menu {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
@@ -112,7 +112,7 @@
     }
 }
 
-.main_bar_bnr {
+.main-bar-bnr {
     background: url("../img/bar_bnr_bg_img.png") no-repeat center center/cover;
     @include width;
     margin-top: 9rem;
@@ -124,7 +124,7 @@
     }
 }
 
-.main_bar_bnr_txt {
+.main-bar-bnr-txt {
     width: 100%;
     position: absolute;
     top: 50%;
@@ -142,14 +142,14 @@
     }
 }
 
-.main_franchise {
-    width: $contents_width + 240px;
+.main-franchise {
+    width: $contents-width + 240px;
     margin: 0 auto;
     height: 76.9rem;
     display: flex;
     padding-top: 6.1rem;
     overflow: hidden;
-    .main_franchise_info {
+    .main-franchise-info {
         width: 60.1rem;
         margin-left: 6rem;
         >img {
@@ -178,7 +178,7 @@
             border-radius: 3px;
         }
     }
-    .main_franchise_question {
+    .main-franchise-question {
         width: 77.9rem;
         img {
             width: 77.9rem;
@@ -186,13 +186,13 @@
     }
 }
 
-.main_franchise_issue {
+.main-franchise-issue {
     @include width;
     position: relative;
     height: 59.3rem;
     background: url("../img/franchise_bg.png") no-repeat 0 0 / cover;
-    .main_franchise_issue_header {
-        @include align_center;
+    .main-franchise-issue-header {
+        @include align-center;
         top: -17.5rem;
         text-align: center;
         h2 {
@@ -209,7 +209,7 @@
             color: $brown;
         }
     }
-    .center_line {
+    .center-line {
         position: absolute;
         left: calc(50% - 50rem);
         z-index: -1;
@@ -217,10 +217,10 @@
         height: 59.3rem;
         background: $beige;
     }
-    .main_franchise_issue_contents_wrapper {
+    .main-franchise-issue-contents-wrapper {
         @include width;
         height: 100%;
-        .btn_franchise {
+        .btn-franchise {
             justify-content: center;
             margin-top: 4.2rem;
             gap: 0 0.5rem;
@@ -235,11 +235,11 @@
         .swiper-button-next {
             transform: translateX(1rem);
         }
-        .main_franchise_issue_contents,
+        .main-franchise-issue-contents,
         .swiper {
-            @include contents_width;
+            @include contents-width;
             .swiper-wrapper {
-                width: $contents_width;
+                width: $contents-width;
                 height: 59.3rem;
                 clear: both;
                 .swiper-slide {
@@ -263,11 +263,11 @@
                         }
                         h2 {
                             font: 700 2rem "NanumMyeongjo";
-                            color: $light_black;
+                            color: $light-black;
                             line-height: 1.4;
                             span {
                                 font: 900 1.4rem "NanumMyeongjo";
-                                color: $orange_02;
+                                color: $orange-02;
                             }
                             display: inline-block;
                             width: 100%;
@@ -275,11 +275,11 @@
                             text-overflow: ellipsis;
                             white-space: nowrap;
                         }
-                        .center_line_orange {
+                        .center-line-orange {
                             width: 8.3rem;
                             height: 4px;
                             display: inline-block;
-                            background-color: $orange_02;
+                            background-color: $orange-02;
                         }
                         p {
                             display: inline-block;
@@ -296,14 +296,14 @@
 
 
                         }
-                        .btn_read_more {
+                        .btn-read-more {
                             position: relative;
                             top: 1rem;
                             display: block;
                             width: 10rem;
                             height: 1.4rem;
                             font: 900 1.4rem "NanumMyeongjo";
-                            color: $orange_02;
+                            color: $orange-02;
                         }
                     }
                 }
@@ -312,10 +312,10 @@
     }
 }
 
-.main_store {
+.main-store {
     @include width;
     padding-top: 10.7rem;
-    .main_store_header {
+    .main-store-header {
         text-align: center;
         h2 {
             font: 3.6rem "BMYEONSUNG";
@@ -329,7 +329,7 @@
             color: $brown;
         }
     }
-    .main_store_list {
+    .main-store-list {
         @include width;
         margin-top: 4.4rem;
         position: relative;
@@ -337,7 +337,7 @@
             display: flex;
             li {
                 position: relative;
-                .main_store_list_text {
+                .main-store-list-text {
                     width: 100%;
                     height: auto;
                     padding: 1.5rem 2.7rem;
@@ -370,7 +370,7 @@
                 left: 0;
             }
         }
-        .btn_store {
+        .btn-store {
             width: 4.8rem;
             font-size: 0;
             a {
@@ -393,14 +393,14 @@
     }
 }
 
-.main_search {
+.main-search {
     @include width;
     height: 32.2rem;
     background: url("../img/locations_bg.jpg") no-repeat center center/cover;
     position: relative;
     ul {
-        width: $contents_width;
-        @include align_center;
+        width: $contents-width;
+        @include align-center;
         top: 50%;
         transform: translate(-50%, -50%);
         display: flex;
@@ -420,7 +420,7 @@
             img {
                 width: 100%;
             }
-            .main_search_select {
+            .main-search-select {
                 padding-top: 5.1rem;
                 select {
                     width: 21.4rem;
@@ -448,30 +448,30 @@
 // Tablet size
 @media (max-width: 1199px) {
     // main 베너, 슬로건 이미지
-    .main_bnr {
-        @include rwd_width;
+    .main-bnr {
+        @include rwd-width;
         background-image: url("../img/main_bg_slice.png");
         background-size: auto 100%;
         background-position: 50% 0;
         background-repeat: no-repeat;
         height: 63rem;
-        .main_bnr_slogan {
+        .main-bnr-slogan {
             display: block;
             width: 65%;
-            @include align_center;
+            @include align-center;
             top: 27.5rem;
         }
     }
-    //main_bnr 종료
-    .main_menu {
-        @include rwd_width;
+    //main-bnr 종료
+    .main-menu {
+        @include rwd-width;
     }
-    //main_menu header 부분종료
-    .main_menu_slide_wrapper {
-        @include rwd_width;
+    //main-menu header 부분종료
+    .main-menu-slide-wrapper {
+        @include rwd-width;
 
-        .main_menu_slide {
-            @include gnb_width;
+        .main-menu-slide {
+            @include gnb-width;
             margin-top: 3%;
             margin-bottom: 3%;
 
@@ -482,7 +482,7 @@
             }
         }
 
-        .btn_menu {
+        .btn-menu {
             width: 2.5rem;
         }
         .prev {
@@ -491,17 +491,17 @@
         .next {
             right: 1% !important;
         }
-    }    //main_menu_slide_wrapper 종료
+    }    //main-menu-slide-wrapper 종료
 
-    .main_bar_bnr {
+    .main-bar-bnr {
         background: url("../img/bar_bnr_bg_img.png") no-repeat 45% center/cover;
-        @include rwd_width;
+        @include rwd-width;
         margin-top: 9rem;
         height: 27rem;
     }
-    //main_bar_bnr 종료
-    .main_bar_bnr_txt {
-        width: variables.$gnb_width;
+    //main-bar-bnr 종료
+    .main-bar-bnr-txt {
+        width: $gnb-width;
         p {
             margin-top: 26px;
             line-height: 1.4;
@@ -514,20 +514,20 @@
             }
         }
     }
-    //main_bar_bnr_text 종료
-    .main_franchise {
-        @include layout.rwd_width;
+    //main-bar-bnr-text 종료
+    .main-franchise {
+        @include rwd-width;
         height: auto;
         flex-direction: column;
-        .main_franchise_info {
-            @include gnb_width;
+        .main-franchise-info {
+            @include gnb-width;
             >img {
                 display: block;
                 width: 60%;
                 margin: 0 auto;
             }
             ul {
-                @include rwd_width;
+                @include rwd-width;
                 margin-top: 3.5rem;
                 li {
                     width: 100%;
@@ -538,51 +538,51 @@
                 margin: 2.1rem auto 0;
             }
         }
-        div.main_franchise_question {
-            @include layout.gnb_width;
+        div.main-franchise-question {
+            @include gnb-width;
             margin-top: 3.5rem;
             img {
                 width: 100%;
             }
         }
     }
-    //main_franchise 종료
-    .main_franchise_issue {
-        @include rwd_width;
+    //main-franchise 종료
+    .main-franchise-issue {
+        @include rwd-width;
         height: auto;
-        .main_franchise_issue_header {
-            @include align_center;
-            @include gnb_width;
+        .main-franchise-issue-header {
+            @include align-center;
+            @include gnb-width;
             top: 5rem;
         }
-        .center_line {
+        .center-line {
             left: 13.3rem;
         }
-        .main_franchise_issue_contents_wrapper {
-            @include rwd_width;
+        .main-franchise-issue-contents-wrapper {
+            @include rwd-width;
             height: 59.3rem;
             padding-top: 22rem;
-            .btn_franchise {
+            .btn-franchise {
                 margin-top: 0;
                 top: 17.5rem;
             }
-            .main_franchise_issue_contents,
+            .main-franchise-issue-contents,
             .swiper {
-                @include gnb_width;
+                @include gnb-width;
                 .swiper-wrapper {
-                    @include rwd_width;
+                    @include rwd-width;
                 }
             }
-        } //main_franchise_issue_contents_wrapper
-    } // main_franchise_issue 종료
-    .main_store {
-        @include rwd_width;
-        .main_store_list {
-            @include rwd_width;
+        } //main-franchise-issue-contents-wrapper
+    } // main-franchise-issue 종료
+    .main-store {
+        @include rwd-width;
+        .main-store-list {
+            @include rwd-width;
             margin-top: 4.4rem;
             ul {
                 li {
-                    .main_store_list_text {
+                    .main-store-list-text {
                         p {
                             span {
                                 display: none;
@@ -591,7 +591,7 @@
                     }
                 }
             }
-            .btn_store {
+            .btn-store {
                 width: 3.5rem;
                 a {
                     width: 100%;
@@ -605,20 +605,20 @@
                 left: auto;
                 right: 5%;
             }
-        } //main_store_list
-    } //main_store
+        } //main-store-list
+    } //main-store
 
-    .main_search {
-        @include rwd_width;
+    .main-search {
+        @include rwd-width;
         ul {
-            @include gnb_width;
+            @include gnb-width;
             li {
                 flex: 1 1 auto;
                 text-align: center;
                 &:first-child {
                     display: none;
                 }
-                .main_search_select {
+                .main-search-select {
                     display: flex;
                     gap: 0 1rem;
                     text-align: center;
@@ -637,7 +637,7 @@
                 }
             }
         } 
-    } //main_search
+    } //main-search
 } //  Tablet 종료
 
 
@@ -645,32 +645,32 @@
 //  Mobile size
 @media (max-width: 640px) {
     // main 베너, 슬로건 이미지
-    .main_bnr {
+    .main-bnr {
         height: 47.5rem;
         background-position: 65% 0;
-        .main_bnr_slogan {
+        .main-bnr-slogan {
             // display: block;
             width: 80%;
-            @include align_center;
+            @include align-center;
             top: 29rem;
         }
-    }  //main_bnr 종료
-    .main_menu {
+    }  //main-bnr 종료
+    .main-menu {
         h2 {
             span {
                 display:block;
             }
         }
     }
-    //main_menu header 부분종료
-    .main_menu_slide_wrapper {
+    //main-menu header 부분종료
+    .main-menu-slide-wrapper {
         margin-top: 2rem;
-        .main_menu_slide {
-            @include gnb_width;
+        .main-menu-slide {
+            @include gnb-width;
             margin-top: 3%;
             margin-bottom: 3%;
             .swiper-wrapper, ul {
-                @include gnb_width;
+                @include gnb-width;
                 .swiper-slide, li {
                     width: 100%;
                     transform: translateX(-15%);
@@ -691,13 +691,13 @@
             }
         }
 
-        .btn_menu {
+        .btn-menu {
             width: 2rem;
         }
     }
-    //main_menu_slide_wrapper 종료
+    //main-menu-slide-wrapper 종료
 
-    .main_bar_bnr_txt {
+    .main-bar-bnr-txt {
         h2 {
             font-size: 2.5rem;
             span {
@@ -707,9 +707,9 @@
         p {
             font-size: 1.2rem;
         }
-    } //main_bar_bnr_text 종료
-    .main_franchise {
-        .main_franchise_info {
+    } //main-bar-bnr-text 종료
+    .main-franchise {
+        .main-franchise-info {
             >img {
                 width: 100%;
             }
@@ -723,22 +723,22 @@
             }
         }
     }
-    //main_franchise 종료
+    //main-franchise 종료
 
-    .main_franchise_issue {
-        .main_franchise_issue_header {
+    .main-franchise-issue {
+        .main-franchise-issue-header {
             h2 {
                 em {
                     display: block;
                 }
             }
         }
-        .center_line {
+        .center-line {
             display: none;
         }
-        .main_franchise_issue_contents_wrapper {
+        .main-franchise-issue-contents-wrapper {
             height: 50rem;
-            .btn_franchise {
+            .btn-franchise {
                 width: 4.5rem;
             }
             .swiper-button-prev {
@@ -747,11 +747,11 @@
             .swiper-button-next {
                 transform: translateX(0);
             }
-            .main_franchise_issue_contents,
+            .main-franchise-issue-contents,
             .swiper {
-                @include gnb_width;
+                @include gnb-width;
                 .swiper-wrapper {
-                    @include rwd_width;
+                    @include rwd-width;
                     height: 50rem;
                     .swiper-slide {
                         li {
@@ -767,28 +767,28 @@
                     }
                 }
             }
-        } //main_franchise_issue_contents_wrapper
-    } // main_franchise_issue 종료
-    .main_store {
+        } //main-franchise-issue-contents-wrapper
+    } // main-franchise-issue 종료
+    .main-store {
         padding-top: 7rem;
-        .main_store_header {
+        .main-store-header {
             h2 {
                 em {
                     display: block;
                 }
             }
         }
-        .main_store_list {
+        .main-store-list {
             ul {
                 li {
-                    .main_store_list_text {
+                    .main-store-list-text {
                         p {
                             display: none;
                         }
                     }
                 }
             }
-            .btn_store {
+            .btn-store {
                 width: 2rem;
             }
             .prev {
@@ -797,10 +797,10 @@
             .next {
                 right: 1.5%;
             }
-        } //main_store_list
-    } //main_store
+        } //main-store-list
+    } //main-store
 
-    .main_search {
+    .main-search {
         height: 46rem;
         ul {
             li {
@@ -815,7 +815,7 @@
                         display: block;
                     }
                 }
-                .main_search_select {
+                .main-search-select {
                     padding-top: 2.8rem;
                     display: flex;
                     flex-direction: column;
@@ -823,7 +823,7 @@
                 }
             }
         } 
-    } //main_search
+    } //main-search
 
 
 } //  Mobile 종료

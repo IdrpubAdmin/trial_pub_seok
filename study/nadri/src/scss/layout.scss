@@ -15,21 +15,21 @@ html {
     margin: 0 auto;
 };
 
-@mixin gnb_width {
+@mixin gnb-width {
     width: 100% - 10%;
     max-width: 1920px;
     margin: 0 auto;
 };
 
 // pc 콘텐츠 최적화 가로 너비 (현재 1200px)
-@mixin contents_width {
+@mixin contents-width {
     width: 1200px;
     max-width: 1920px;
     margin: 0 auto;
 };
 
 // 중앙정렬
-@mixin align_center {
+@mixin align-center {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -48,19 +48,31 @@ html {
 
 // 반응형 설정
 
-@mixin rwd_width {
+@mixin rwd-width {
     width: 100%;
     min-width: 320px;
     margin: 0 auto;
 }
 
+@mixin tablet {
+ @media (max-width: 1199px) {
+     @content;
+ }
+}
+
+@mixin mobile {
+    @media (max-width: 640px) {
+        @content;
+    }
+}
+
 @media (max-width: 1199px) {
 
     .container {
-        @include rwd_width;
+        @include rwd-width;
     }
 }
 
 //반응형 img 축소비율
 
-$m_size : 0.75;
+$m-size : 0.75;

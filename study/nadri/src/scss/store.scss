@@ -3,97 +3,41 @@
 
 
 .store {
-  @include width;
 
-  .store_header {
-    height: 50rem;
-    position: relative;
-    text-align: center;
-    background: url("../img/news_main_bg.png") no-repeat center center/cover;
-
-    h2 {
-      width: $gnb_width;
-      display: inline-block;
-      position: absolute;
-      top: 31.1rem;
-      left: 50%;
-      transform: translateX(-50%);
-      font: 700 4.65rem "NanumSquare";
-      color: $white;
-
-      span {
-        color: $yellow;
-      }
-    }
-
+  .store-header {
     p {
-      width: $gnb_width;
-      display: inline-block;
-      position: absolute;
-      top: 37.5rem;
-      left: 50%;
-      transform: translateX(-50%);
-      font: 700 1.8rem "NanumMyeongjo";
-      color: $white;
+      span {
+        @include tablet {
+          display: block;
+        }
+      }
     }
   }
 
-  .store_contents {
-    @include contents_width;
+  .store-contents {
+    @include contents-width;
     margin-top: 10rem;
     margin-bottom: 8.7rem;
     clear: both;
 
-    .store_contents_header {
-      text-align: center;
+    .store-contents-header {
       margin-bottom: 6.2rem;
-
-      h2 {
-        display: inline-block;
-        width: 19.3rem;
-        font: 4.8rem "BMYEONSUNG";
-        color: $brown;
-        line-height: 1;
-
-        img {
-          width: 100%;
-          transform: translateX(10%);
-        }
-      }
-
-      .center_line_brown {
-        width: 10rem;
-        height: 0.4rem;
-        background: $brown;
-        margin: 0 auto;
-      }
-
-      h3 {
-        margin-top: 3.8rem;
-        font: 700 3rem "NanumMyeongjo";
-        color: $orange_02;
-      }
-
       p {
-        font: 1.8rem "NanumSquare";
-        color: $brown;
-        margin-top: 1rem;
-
         span {
-          color: $yellow_02;
+          color: $yellow-02;
           font-weight: 700;
         }
       }
     }
 
-    .contents_store {
+    .contents-store {
       float: left;
       width: 48%;
       height: 46rem;
       box-sizing: border-box;
       margin-right: 4%;
 
-      .store_new {
+      .store-new {
         @include width;
         border-top: 2px solid $brown;
 
@@ -113,17 +57,17 @@
 
         table {
           width: 100%;
-          border-top: 2px solid $beige_02;
+          border-top: 2px solid $beige-02;
           border-bottom: 1px solid $brown;
 
           tr {
             &:hover {
               td {
                 &:nth-of-type(2) {
-                  color: $orange_02;
+                  color: $orange-02;
                 }
 
-                .map_icon_img {
+                .map-icon-img {
                   background: url("../img/location_ico_map_enter.png") no-repeat center center/contain;
                 }
               }
@@ -134,7 +78,7 @@
             font: 700 1.2rem "Dotum";
             height: 3.6rem;
             line-height: 3.6rem !important;
-            background: $white_02;
+            background: $white-02;
             color: $charcoal;
           }
 
@@ -142,7 +86,7 @@
             height: 3.9rem;
             line-height: 3.9rem !important;
             text-align: center;
-            border-top: 1px solid $beige_02;
+            border-top: 1px solid $beige-02;
             font: 1.2rem "Dotum";
             color: $charcoal;
             vertical-align: middle;
@@ -158,7 +102,7 @@
         }
       }
 
-      .store_search {
+      .store-search {
         @include width;
         margin-top: 2.8rem;
         border-top: 2px solid $brown;
@@ -181,7 +125,7 @@
         ul {
           padding-top: 2.1rem;
           padding-bottom: 2.6rem;
-          border-top: 1px solid $beige_02;
+          border-top: 1px solid $beige-02;
 
           li {
             margin-top: 1rem;
@@ -225,7 +169,7 @@
 
     }
 
-    .contents_map {
+    .contents-map {
       float: left;
       width: 48%;
       height: 46.5rem;
@@ -233,22 +177,22 @@
       border-bottom: 1px solid $yellow;
       padding-bottom: 1.8rem;
 
-      .store_map {
+      .store-map {
         width: 100%;
 
-        .store_map_img {
+        .store-map-img {
           display: block;
           width: 25.5rem;
           margin: 0 auto;
           margin-top: 1.8rem;
         }
 
-        .store_map_header {
+        .store-map-header {
           display: flex;
           align-items: center;
           height: 5.7rem;
 
-          .icon_map {
+          .icon-map {
             width: 4rem;
             height: auto;
             margin-left: 2rem;
@@ -272,7 +216,7 @@
 
     }
 
-    .store_search_result {
+    .store-search-result {
       @include width;
       clear: both;
       padding-top: 5rem;
@@ -314,7 +258,7 @@
           }
 
           td {
-            border-top: 1px solid $beige_02;
+            border-top: 1px solid $beige-02;
             line-height: 3.9rem !important;
             text-align: center;
             font: 1.2rem "Dotum";
@@ -338,7 +282,7 @@
             }
 
             td:nth-of-type(6) {
-              .map_icon_img {
+              .map-icon-img {
                 background: url("../img/location_ico_map_enter.png") no-repeat center center/contain;
               }
             }
@@ -346,7 +290,7 @@
         }
       }
 
-      .store_search_result_switch {
+      .store-search-result-switch {
         @include width;
         display: flex;
         justify-content: center;
@@ -376,7 +320,7 @@
       }
     }
 
-    .map_icon_img {
+    .map-icon-img {
       width: 1.4rem;
       height: 2.1rem;
       margin: 0 auto;
@@ -387,48 +331,37 @@
 
 @media (max-width: 1199px) {
   .store {
-    @include rwd_width;
 
-    .store_header {
+    .store-header {
 
-      h2 {
-        width: $gnb_width;
-        top: 26.1rem;
-
-        span {
-          display: block;
-        }
-      }
 
       p {
-        width: $gnb_width;
+        //display: block;
         }
     }
 
-    .store_contents {
-      @include rwd_width;
-      margin-top: 10rem;
-      margin-bottom: 8.7rem;
+    .store-contents {
+      //margin-bottom: 8.7rem;
 
-      .contents_store {
-        @include gnb_width;
+      .contents-store {
+        @include gnb-width;
         float: none;
         height: auto;
 
-        .store_search {
+        .store-search {
           @include width;
           margin-top: 2.8rem;
         }
       }
 
-      .contents_map {
+      .contents-map {
         float: none;
-        @include gnb_width;
+        @include gnb-width;
         margin-top: 2.8rem!important;
       }
 
-      .store_search_result {
-        @include gnb_width;
+      .store-search-result {
+        @include gnb-width;
       }
     }
   }
@@ -437,7 +370,7 @@
 
 @media (max-width: 640px) {
   .store {
-    .store_header {
+    .store-header {
       h2 {
         em {
           display: none;
@@ -445,7 +378,7 @@
       }
 
       p {
-        line-height: 1.4;
+        //line-height: 1.4;
         span {
           display: block;
         }
@@ -453,23 +386,22 @@
       }
     }
 
-    .store_contents {
-      .store_contents_header {
+    .store-contents {
+      .store-contents-header {
         h3 {
           em {
             display: block;
           }
         }
         p {
-          line-height: 1.4;
           em {
             display: block;
           }
         }
       }
 
-      .contents_store {
-        .store_new {
+      .contents-store {
+        .store-new {
           table {
             tr {
               td:nth-of-type(1), td:nth-of-type(3), th:nth-of-type(1), th:nth-of-type(3)  {
@@ -479,7 +411,7 @@
           }
         }
 
-        .store_search {
+        .store-search {
           ul {
             li {
               display:flex;
@@ -507,7 +439,7 @@
         }
       }
 
-      .store_search_result {
+      .store-search-result {
         table {
           tr {
             th:nth-of-type(1), th:nth-of-type(4), td:nth-of-type(1), td:nth-of-type(4) {

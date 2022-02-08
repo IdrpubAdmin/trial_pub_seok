@@ -7,7 +7,7 @@
   padding-top: 1.5rem;
 
   ul {
-    @include contents_width;
+    @include contents-width;
     display: flex;
 
     li {
@@ -35,7 +35,7 @@
   }
 
   small {
-    @include gnb_width;
+    @include gnb-width;
     display: block;
     text-align: center;
     color: $white;
@@ -48,7 +48,7 @@
   }
 }
 
-.center_line {
+.center-line {
   @include width;
   height: 2px;
   background: #fff;
@@ -57,11 +57,11 @@
 
 @media (max-width: 1199px) {
   .footer {
-    @include rwd_width;
+    @include rwd-width;
     height: auto;
 
     ul {
-      @include gnb_width;
+      @include gnb-width;
       display: flex;
       flex-wrap: wrap;
 

@@ -1,99 +1,63 @@
 @use "variables";
 @use "layout";
 
-.news {
-  @include width;
-
-  .news_header {
-    height: 50rem;
-    width: 100%;
-    position: relative;
-    text-align: center;
-    background: url("../img/news_main_bg.png") no-repeat center center/cover ;
-
-    img {
-      height: 100%;
-      width: auto;
-      display: none;
-    }
-
-    h2 {
-      position: absolute;
-      top: 31.1rem;
-      left: 50%;
-      transform: translateX(-50%);
-      font: 700 4.65rem "NanumSquare";
-      color: $white;
-
-      span {
-        color: $yellow;
-      }
-    }
-
+.content-news {
+  .content-header-news {
+    background: url("../img/news_main_bg.png") no-repeat center center/cover;
     p {
-      position: absolute;
-      top: 37.5rem;
-      left: 50%;
-      transform: translateX(-50%);
-      font: 700 1.8rem "NanumMyeongjo";
-      color: $white;
+      span {
+        @include tablet {
+          display: block;
+        }
+      }
     }
   }
 
-  .news_contents {
-    @include contents_width;
-    margin-top: 10rem;
+  .section-news {
+    width: $contents-width;
+    @include tablet {
+      width: inherit;
+    }
 
-    .news_contents_header {
-      text-align: center;
-
-      h2 {
-        display: inline-block;
-        width: 19.3rem;
-        font: 4.8rem "BMYEONSUNG";
-        color: $brown;
-        line-height: 1;
-
-        img {
-          width: 100%;
-          transform: translateX(10%);
+    .section-header-news {
+      @include tablet {
+        h3 {
+          span {
+            display: block;
+          }
         }
       }
 
-      .center_line_brown {
-        width: 10rem;
-        height: 0.4rem;
-        background: $brown;
-        margin: 0 auto;
-      }
-
-      h3 {
-        margin-top: 3.8rem;
-        font: 700 3rem "NanumMyeongjo";
-        color: $orange_02;
-      }
-
       p {
-        font: 1.8rem "NanumSquare";
-        color: $brown;
-        margin-top: 1rem;
-
         br {
           display: none;
+          @include mobile {
+            display: block;
+          }
         }
 
         span {
           color: $yellow;
           font-weight: 700;
         }
+
+        em {
+          @include tablet {
+            display: block;
+          }
+        }
       }
     }
 
-    .news_contents_main {
+    .section-main-news {
       @include width;
       padding-bottom: 15rem;
+      @include tablet {
+        @include rwd-width;
+        padding-bottom: 10rem;
+      }
 
-      .news_contents_main_head {
+      .section-main-header-news {
         background: $ivory;
         border-top: 2px solid $brown;
         border-bottom: 1px solid $beige;
@@ -107,6 +71,12 @@
           color: $charcoal;
           line-height: 5rem;
           float: left;
+          @include mobile {
+            width: 20rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
         }
 
         p {
@@ -117,8 +87,8 @@
         }
       }
 
-      .news_contents_main_contents_area {
-        @include gnb_width;
+      .section-main-content-news {
+        @include gnb-width;
 
         img {
           text-align: center;
@@ -138,19 +108,22 @@
           }
         }
       }
-
-      .swiper {
-        @include width;
-        height: 100%;
+      .section-main-slide-news-wrapper {
+        position: relative;
       }
 
-      .news_swiper {
+      .swiper {
+        @include gnb-width;
+        height: auto;
+      }
+
+      .section-main-slide-news {
         border-top: 1px solid $beige;
         border-bottom: 1px solid $beige;
       }
 
       .swiper-wrapper {
-        @include gnb_width;
+        width: $width;
       }
 
       .swiper-slide {
@@ -179,6 +152,12 @@
           text-overflow: ellipsis;
           white-space: nowrap;
           line-height: 1.6;
+          @include tablet {
+            width: 18rem;
+          }
+          @include mobile {
+            width: 14rem;
+          }
 
           span {
             display: block;
@@ -188,154 +167,32 @@
         }
       }
 
-      .btn_news {
+      .btn-news {
         display: block;
-        width: 6.7rem;
+        width: 5%;
         height: 100%;
-        border: none;
+        border: 1px solid $beige;
+        box-sizing: border-box;
         padding: 0;
+        position: absolute;
+        font-size: 0;
 
         img {
           width: 100%;
           height: 100%;
         }
       }
-
-      .btn_news_list {
-        display: block;
-        background: $brown;
-        color: $white;
-        border: 1px solid #999;
+      .prev {
+        border-left:none;
+        border-right:none;
+      }
+      .next {
+        border-right:none;
+      }
+      .btn-news-list {
         width: 10rem;
         height: 4rem;
-        font: 700 1.4rem "NanumSquare";
         margin: 3rem auto 0;
-      }
-    }
-  }
-}
-//tablet size
-@media (max-width: 1199px) {
-
-  .news {
-    @include rwd_width;
-
-    .news_header {
-      @include rwd_width;
-
-      h2 {
-        width: $gnb_width;
-        top: 26.1rem;
-        span {
-          display: block;
-        }
-      }
-      p {
-        width: $gnb_width;
-
-      }
-    }
-
-    .news_contents {
-      @include rwd_width;
-      margin-top: 5rem;
-
-      .news_contents_header {
-        @include gnb_width;
-
-        h3 {
-          font-size: 3rem * 0.95;
-
-          span {
-            display: block;
-          }
-        }
-
-        p {
-          line-height: 1.4;
-
-          em {
-            display: block;
-          }
-        }
-      }
-
-      .news_contents_main {
-        @include rwd_width;
-        padding-bottom: 10rem;
-
-        .swiper-slide {
-          p {
-            width: 18rem;
-          }
-        }
-
-        .btn_news {
-          width: 5rem;
-          height: 100%;
-
-          img {
-            width: 100%;
-            height: 100%;
-          }
-        }
-      }
-    }
-  }
-}
-
-//mobile size
-@media (max-width: 640px) {
-
-  .news {
-    .news_header {
-      p {
-        line-height: 1.4;
-
-        span {
-          display: block;
-        }
-      }
-    }
-
-    .news_contents {
-      margin-top: 5rem;
-      .news_contents_header {
-        p {
-            br {
-              display: block;
-            }
-          }
-      }
-
-      .news_contents_main {
-        @include rwd_width;
-        padding-bottom: 10rem;
-
-        .news_contents_main_head {
-          h4 {
-            width: 20rem;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-          }
-
-        }
-
-        .swiper-slide {
-          p {
-            width: 12rem;
-          }
-        }
-
-        .btn_news {
-          width: 3rem;
-
-          img {
-            width: 100%;
-            height: 100%;
-          }
-        }
       }
     }
   }

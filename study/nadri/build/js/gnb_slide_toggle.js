@@ -1,5 +1,5 @@
 const gnb = document.querySelector(".gnb"),
-  gnbMain = document.querySelector(".gnb_main");
+  gnbMain = document.querySelector(".gnb-main");
 
 
   gnb.addEventListener('mouseover', function() {

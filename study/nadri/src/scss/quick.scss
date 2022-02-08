@@ -7,15 +7,15 @@
   position: fixed;
   right: 3rem;
   top: 65%;
-  z-index: $gnb_z_index - 1;
+  z-index: $gnb-z-index - 1;
 
 
-  .quick_list {
+  .quick-list {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     li {
-      .quick_items {
+      .quick-items {
         display: flex;
         li {
           text-align: center;
@@ -51,7 +51,7 @@
   }
 }
 
-.quick_list_event {
+.quick-list-event {
   li:first-of-type {
     color: $brown!important;
     background: url("../img/snb_event_bg.png") no-repeat center center/contain;
@@ -60,7 +60,7 @@
     background-color: $white;
   }
 }
-.quick_list_news {
+.quick-list-news {
   li:first-of-type {
       background: url("../img/snb_news_bg.png") no-repeat center center/contain;
   }
@@ -68,7 +68,7 @@
     background-color: $beige;
   }
 }
-.quick_list_cs {
+.quick-list-cs {
   li:first-of-type {
       background: url("../img/snb_cs_bg.png") no-repeat center center/contain;
   }
@@ -76,7 +76,7 @@
     background-color: $brown;
   }
 }
-.quick_list_store {
+.quick-list-store {
   li:first-of-type {
     background: url("../img/snb_location_bg.png") no-repeat center center/contain;
   }
@@ -84,7 +84,7 @@
     background-color: $yellow;
   }
 }
-.quick_list_franchise {
+.quick-list-franchise {
   li:first-of-type {
     background: url("../img/snb_store_bg.png") no-repeat center center/contain;
   }
@@ -93,12 +93,12 @@
   }
 }
 
-.quick_top_btn {
+.quick-top-btn {
   display: block;
   text-align: center;
   width:5rem;
   font-size: 0;
-  font-family: "Lato";
+  font-family: 'Lato';
   color: $charcoal;
   height:0;
   overflow: hidden;
@@ -107,14 +107,14 @@
 }
 
 //퀵 메뉴 활성화
-.quick_btn_info {
+.quick-btn-info {
   width: 13rem!important;
   font-size: 1.6rem!important;
   // display: inline-block;
 }
 
 //탑 버튼 활성화
-.show_top_btn {
+.show-top-btn {
   height: auto;
   font-size: 1.2rem;
 }

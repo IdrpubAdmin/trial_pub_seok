@@ -1,88 +1,59 @@
 @use "variables";
 @use "layout";
 
-.menu {
-  @include width;
-
-  .menu_header {
-    height: 50rem;
-    width: auto;
-    position: relative;
-    text-align: center;
-    background: url("../img/menu_header_bg.png") no-repeat center center/cover ;
-
-    img {
-      width: auto;
-      height: 100%;
-      display: none;
-    }
-
-    h2 {
-      position: absolute;
-      top: 31.1rem;
-      left: 50%;
-      transform: translateX(-50%);
-      font: 700 4.65rem "NanumSquare";
-      color: $white;
-
-      span {
-        color: $yellow;
-      }
-    }
-
+.content-menu {
+  .content-header-menu {
+    background: url("../img/menu_header_bg.png") no-repeat center center/cover;
     p {
-      position: absolute;
-      top: 37.5rem;
-      left: 50%;
-      transform: translateX(-50%);
-      font: 700 1.8rem "NanumMyeongjo";
-      color: $white;
+      span {
+        @include mobile {
+          display: block;
+          line-height: 1.6;
+        }
+      }
     }
   }
 
-  .menu_contents {
-    @include width;
-    margin-top: 10rem;
+  .section-menu {
     margin-bottom: 25rem;
+    @include tablet {
+      margin-bottom: 15rem;
+    }
+    @include mobile {
+      margin-top: 10rem;
+    }
 
-    .menu_contents_header {
-      text-align: center;
-
-      h2 {
-        display: inline-block;
-        width: 19.3rem;
-        font: 4.8rem "BMYEONSUNG";
-        color: $brown;
-        line-height: 1;
-
-        img {
-          width: 100%;
-          transform: translateX(10%);
+    .section-header-menu {
+      h3 {
+        span {
+          @include tablet {
+            display: block;
+          }
         }
 
-      }
-
-      .center_line_brown {
-        width: 10rem;
-        height: 0.4rem;
-        background: $brown;
-        margin: 0 auto;
-      }
-
-      h3 {
-        margin-top: 3.8rem;
-        font: 700 3rem "NanumMyeongjo";
-        color: $orange_02;
+        em {
+          @include mobile {
+            display: block;
+          }
+        }
       }
     }
 
-
-    .menu_contents_slide {
+    .section-content-slide-menu {
       @include width;
       height: 60rem;
       background: url("../img/menu_contents_bg.png") no-repeat center 45%/contain;
       //overflow: hidden;
-      margin-top: 4rem;
+      margin-top: 7.2rem;
+      @include tablet {
+        @include rwd-width;
+        height: auto;
+        margin-top: 4rem;
+        padding-bottom: 5rem;
+      }
+      @include mobile {
+        background: url("../img/menu_contents_bg.png") no-repeat center center/cover;
+      }
 
       .swiper-wrapper {
         margin-top: 3rem;
@@ -92,40 +63,82 @@
           text-align: center;
           transform: translateX(-30%);
           flex: 1 0 auto;
+          @include tablet {
+            transform: translateX(3%);
+          }
+          @include mobile {
+            transform: translate(1.5%, 3%);
+          }
 
           &.swiper-slide-active {
             flex: 2 0 30%;
             transform: scale(1.3) translate(-12.5%, 7%);
+            @include tablet {
+              transform: scale(1.3) translate(3%, 5%);
+            }
+            @include mobile {
+              flex: 1 0 auto;
+              transform: scale(1.1) translate(3%, 3%);
+            }
+          }
+
+          img {
+            @include tablet {
+              width: 100% * $m-size;
+            }
           }
         }
       }
 
-      .btn_menu {
+      .btn-menu {
         width: 4.7rem;
         text-indent: -9999px;
+        @include mobile {
+          width: 3rem;
+        }
       }
 
       .prev {
         left: 35%;
+        @include tablet {
+          left: 5%;
+        }
       }
 
       .next {
         left: 62.5%;
+        @include tablet {
+          left: auto;
+          right: 5%;
+        }
       }
     }
 
-    .menu_contents_list {
-      @include width;
+    .section-content-list-menu {
       margin-top: 9rem;
+      @include tablet {
+        margin-top: 3rem;
+      }
 
       ul {
-        @include gnb_width;
+        @include gnb-width;
         display: flex;
         gap: 2%;
+        @include tablet {
+          flex-wrap: wrap;
+          justify-content: center;
+          row-gap: 1rem;
+        }
 
         li {
           flex: 1;
           text-align: center;
+          @include tablet {
+            flex: 0 1 20%;
+          }
+          @include mobile {
+            flex-basis: 40%;
+          }
 
           img {
             width: 100%;
@@ -144,81 +157,19 @@
 // Tablet size
 
 @media (max-width: 1199px) {
-  .menu {
-    @include rwd_width;
+  .content-menu {
+    .section-menu {
 
-    .menu_header {
-      @include rwd_width;
+      .menu-contents-list {
+        //@include rwd-width;
 
-      h2 {
-        width: $gnb_width;
-        top: 26.1rem;
-
-        span {
-          display: block;
-        }
-      }
-
-      p {
-        width: $gnb_width;
-      }
-    }
-
-    .menu_contents {
-      @include rwd_width;
-      margin-top: 10rem;
-      margin-bottom: 15rem;
-
-      .menu_contents_header {
-        h3 {
-          span {
-            display: block;
-            line-height: 1.6;
-          }
-        }
-      }
-
-      .menu_contents_slide {
-        @include rwd_width;
-        height: auto;
-        margin-top: 4rem;
-        padding-bottom: 5rem;
-
-        .swiper-wrapper {
-          .swiper-slide {
-            transform: translateX(3%);
-
-            &.swiper-slide-active {
-              transform: scale(1.3) translate(3%, 5%);
-            }
-
-            img {
-              width: 100% * $m_size;
-            }
-          }
-        }
-        .prev {
-          left: 5%;
-        }
-
-        .next {
-          left: auto;
-          right: 5%;
-        }
-      }
-
-      .menu_contents_list {
-        @include rwd_width;
-        margin-top: 3rem;
 
         ul {
-          @include gnb_width;
-          flex-wrap: wrap;
-          justify-content: center;
-          row-gap: 1rem;
+          //@include gnb-width;
+          //flex-wrap: wrap;
 
           li {
-            flex: 0 1 20%;
+            //flex: 0 1 20%;
           }
         }
       }
@@ -230,55 +181,32 @@
 
 @media (max-width: 640px) {
   .menu {
-    .menu_header {
-      p {
-        span {
-          display: block;
-          line-height: 1.6;
-        }
-      }
-    }
+    .section-menu {
+      .menu-contents-slide {
+        //margin-top: 4rem;
+        //background: url("../img/menu_contents_bg.png") no-repeat center center/cover;
 
-  .menu_contents {
-    @include rwd_width;
-    margin-top: 10rem;
-    margin-bottom: 15rem;
-
-    .menu_contents_header {
-      h3 {
-        line-height: 1.4;
-        em {
-          display: block;
-        }
-      }
-    }
-
-    .menu_contents_slide {
-      margin-top: 4rem;
-      background: url("../img/menu_contents_bg.png") no-repeat center center/cover;
-      .swiper-wrapper {
-        .swiper-slide {
-          transform: translate(1.5%, 3%);
-
-          &.swiper-slide-active {
-            flex: 1 0 auto;
-            transform: scale(1.1) translate(3%, 3%);
+        .swiper-wrapper {
+          .swiper-slide {
+            &.swiper-slide-active {
+              //flex: 1 0 auto;
+              //transform: scale(1.1) translate(3%, 3%);
+            }
           }
         }
+
+        .btn-menu {
+          //width: 3rem;
+        }
       }
 
-      .btn_menu {
-        width: 3rem;
-      }
-    }
-
-    .menu_contents_list {
-      ul {
-        li {
-          flex: 0 1 40%;
+      .menu-contents-list {
+        ul {
+          li {
+            //flex: 0 1 40%;
+          }
         }
       }
     }
   }
-}
 }

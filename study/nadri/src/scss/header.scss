@@ -4,18 +4,18 @@
   @include width;
   height: 13.4rem;
   text-align: center;
-  @include align_center;
+  @include align-center;
   top: 0;
   color: $beige;
-  z-index: $gnb_z_index;
+  z-index: $gnb-z-index;
 
-  .header_wrap {
-    @include contents_width;
+  .header-wrap {
+    @include contents-width;
     position: relative;
   }
 
   h1 {
-    @include align_center;
+    @include align-center;
     display: inline-block;
     top: 3.4rem;
     width: 17.4rem;
@@ -26,7 +26,7 @@
     }
   }
 
-  .header_nav {
+  .header-nav {
     position: absolute;
     right: 1rem;
     top: 8.1rem;
@@ -48,10 +48,10 @@
 }
 
 // 서브페이지 header 상단 백그라운드 컬러 조정
-.header_bg_color {
+.header-bg-color {
   @include width;
   height: 13.4rem;
-  background: $header_bg_color;
+  background: $header-bg-color;
   position: absolute;
   top: 0;
   left: 0;
@@ -63,20 +63,20 @@
 @media (max-width: 1199px) {
 
   .header {
-    @include rwd_width;
+    @include rwd-width;
 
-    .header_wrap {
-      @include rwd_width;
+    .header-wrap {
+      @include rwd-width;
     }
-    .header_nav {
+    .header-nav {
       a {
         width: 6.5rem;
       }
     }
   }
 
-  .header_bg_color {
-    @include rwd_width;
+  .header-bg-color {
+    @include rwd-width;
   }
 }
 
@@ -85,19 +85,19 @@
   .header {
 
     h1 {
-      @include align_center;
+      @include align-center;
       top: 3rem;
-      width: 17.4rem * $m_size;
+      width: 17.4rem * $m-size;
 
       img {
         width: 100%;
       }
     }
 
-    .header_nav {
+    .header-nav {
       width: 10rem;
       height: 2rem;
-      @include align_center;
+      @include align-center;
       right: auto;
       top: 10.25rem;
       display: flex;

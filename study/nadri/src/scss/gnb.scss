@@ -2,22 +2,22 @@
 
 .gnb {
   @include width;
-  @include align_center;
+  @include align-center;
   height: 5.2rem;
   font: 2.2rem "BMYEONSUNG";
   color: $white;
 
   top: 13.4rem;
-  z-index: $gnb_z_index;
+  z-index: $gnb-z-index;
   overflow: hidden;
   transition: height 0.5s cubic-bezier(0.23, 1, 0.320, 1);
 
-  .gnb_main {
+  .gnb-main {
     @include width;
     height: 5.2rem;
-    background: $header_bg_color;
+    background: $header-bg-color;
     ul {
-      @include contents_width;
+      @include contents-width;
       display: flex;
       li {
         width: 20%;
@@ -38,22 +38,22 @@
     }
   }
 }
-.gnb_line {
+.gnb-line {
   @include width;
   height: 2px;
   background: rgba(255, 255, 255, 0);
 }
-.gnb_sub {
+.gnb-sub {
   @include width;
-  @include align_center;
+  @include align-center;
   height: 24.1rem;
   // margin-top: 0.2rem;
-  background: $header_bg_color;
-  z-index: $gnb_z_index;
+  background: $header-bg-color;
+  z-index: $gnb-z-index;
 }
 
-.gnb_sub_wrap {
-  @include contents_width;
+.gnb-sub-wrap {
+  @include contents-width;
   display: flex;
 
   ul {
@@ -78,11 +78,11 @@
 
 @media (max-width: 1199px) {
   .gnb {
-    @include rwd_width;
+    @include rwd-width;
 
-    .gnb_main {
+    .gnb-main {
       ul {
-        @include gnb_width;
+        @include gnb-width;
         display: flex;
 
         li {
@@ -109,12 +109,12 @@
     }
   }
 
-  .gnb_sub {
-    @include rwd_width;
+  .gnb-sub {
+    @include rwd-width;
   }
 
-  .gnb_sub_wrap {
-    @include gnb_width;
+  .gnb-sub-wrap {
+    @include gnb-width;
     display: flex;
 
     ul {
@@ -144,7 +144,7 @@
   .gnb {
     height: auto;
     overflow: visible;
-    .gnb_main {
+    .gnb-main {
       height: auto;
       ul {
         display: flex;
@@ -163,7 +163,7 @@
     }
   }
 
-  .gnb_sub {
+  .gnb-sub {
     display: none;
   }
 }

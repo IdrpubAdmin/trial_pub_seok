@@ -1,12 +1,12 @@
-//main_menu_slide 스와이퍼 동작 구현
-const MainSwiper = new Swiper('.main_menu_slide', {
+//main-menu-slide 스와이퍼 동작 구현
+const MainSwiper = new Swiper('.main-menu-slide', {
     slidesPerView: 2.2,
     spaceBetween: 20,
     centeredSlides: false,
     loop: true,
     navigation: {
-        nextEl: '.btn_menu_next',
-        prevEl: '.btn_menu_prev',
+        nextEl: '.btn-menu-next',
+        prevEl: '.btn-menu-prev',
     },
     breakpoints: {
         320: {
@@ -27,8 +27,8 @@ const MainSwiper = new Swiper('.main_menu_slide', {
 });
 
 
-//main_franchise_issue_contents 스와이퍼 동작구현
-const MainFranchiseSwiper = new Swiper('.main_franchise_issue_contents', {
+//main-franchise-issue-contents 스와이퍼 동작구현
+const MainFranchiseSwiper = new Swiper('.main-franchise-issue-contents', {
     slidesPerView: 2,
     spaceBetween: 5,
     direction: 'vertical',
@@ -36,8 +36,8 @@ const MainFranchiseSwiper = new Swiper('.main_franchise_issue_contents', {
     // centeredSlides: false,
     // loop: false,
     navigation: {
-        nextEl: '.btn_franchise_next',
-        prevEl: '.btn_franchise_prev',
+        nextEl: '.btn-franchise-next',
+        prevEl: '.btn-franchise-prev',
     },
     breakpoints: {
         320: {
@@ -57,15 +57,15 @@ const MainFranchiseSwiper = new Swiper('.main_franchise_issue_contents', {
 });
 
 
-//main_store_list 스와이퍼 동작 구현
-const MainStoreSwiper = new Swiper('.main_store_list', {
+//main-store-list 스와이퍼 동작 구현
+const MainStoreSwiper = new Swiper('.main-store-list', {
     slidesPerView: 1.25,
     spaceBetween: 0,
     centeredSlides: true,
     loop: true,
     navigation: {
-        nextEl: '.btn_store_next',
-        prevEl: '.btn_store_prev',
+        nextEl: '.btn-store-next',
+        prevEl: '.btn-store-prev',
     },
     breakpoints: {
         320: {
@@ -87,9 +87,9 @@ const MainStoreSwiper = new Swiper('.main_store_list', {
 
 
 
-//news_contents 스와이퍼 동작 구현
-const NewsSwiper = new Swiper('.news_swiper', {
-    slidesPerView: 2.4,
+//news-contents 스와이퍼 동작 구현
+const NewsSwiper = new Swiper('.section-main-slide-news', {
+    slidesPerView: 2,
     spaceBetween: 5,
 
     navigation: {
@@ -98,22 +98,22 @@ const NewsSwiper = new Swiper('.news_swiper', {
     },
     breakpoints: {
         320: {
-            slidesPerView: 2.4,
-            spaceBetween: 5,
+            slidesPerView: 2,
+            spaceBetween: 5
         },
         641: {
-            slidesPerView: 3.5,
+            slidesPerView: 3,
             spaceBetween: 10
         },
         1199: {
-            slidesPerView: 5.68,
+            slidesPerView: 5,
             spaceBetween: 10
         },
     }
 });
 
-//menu_contents 스와이퍼 동작 구현
-const MenuSwiper = new Swiper('.menu_contents_slide', {
+//menu-contents 스와이퍼 동작 구현
+const MenuSwiper = new Swiper('.section-content-slide-menu', {
     slidesPerView: 1.4,
     spaceBetween: 5,
     centeredSlides: true,

@@ -1,0 +1,127 @@
+@use "variables";
+@use "layout";
+
+//서브페이지 공통 contents width
+.content {
+  @include width;
+  @include tablet {
+    @include rwd-width;
+  }
+
+}
+
+//서브페이지 공통 section width
+.section {
+  @include width;
+  margin-top: 10rem;
+  @include tablet {
+    @include rwd-width;
+    margin-top: 10rem;
+  }
+}
+
+//서브페이지 공통 헤더 양식
+
+.content-header {
+  height: 50rem;
+  width: $width;
+  position:relative;
+  text-align :center;
+  background: url("../img/news_main_bg.png") no-repeat center center/cover;
+
+
+  img {
+    width: auto;
+    height: 100%;
+    display: none;
+  }
+
+  h2 {
+    position: absolute;
+    top: 31.1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font: 700 4.65rem "NanumSquare";
+    color: $white;
+    @include tablet {
+      width: $gnb-width;
+      top: 26.1rem;
+    }
+
+    span {
+      color: $yellow;
+      @include tablet {
+        display: block;
+      }
+    }
+  }
+
+  p {
+    position: absolute;
+    top: 37.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font: 700 1.8rem "NanumMyeongjo";
+    color: $white;
+    line-height: 1.6;
+    @include tablet {
+      width: $gnb-width;
+    }
+  }
+}
+
+//서브페이지 섹션 공통 헤더 양식
+
+.section-header {
+  text-align: center;
+
+  h2 {
+    display: inline-block;
+    width: 19.3rem;
+    font: 4.8rem "BMYEONSUNG";
+    color: $brown;
+    line-height: 1;
+
+    img {
+      width: 100%;
+      transform: translateX(10%);
+    }
+
+  }
+
+  .center-line-brown {
+    width: 10rem;
+    height: 0.4rem;
+    background: $brown;
+    margin: 0 auto;
+  }
+
+  h3 {
+    margin-top: 3.8rem;
+    font: 700 3rem "NanumMyeongjo";
+    color: $orange-02;
+    line-height: 1.4;
+  }
+
+  p {
+    font: 1.8rem "NanumSquare";
+    line-height: 1.6;
+    color: $brown;
+    margin-top: 1rem;
+  }
+}
+
+// 갈색 button 디자인
+
+.btn-brown {
+  display: block;
+  background: $brown;
+  color: $white;
+  border: 1px solid #999;
+  width: inherit;
+  height: inherit;
+  //width: 10rem;
+  //height: 4rem;
+  font: 700 1.4rem "NanumSquare";
+  //margin: 3rem auto 0;
+}
