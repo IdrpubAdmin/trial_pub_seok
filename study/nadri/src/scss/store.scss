@@ -2,9 +2,16 @@
 @use "layout";
 
 
-.store {
+.content-store {
 
-  .store-header {
+  .content-header-store {
+    h2 {
+      em {
+        @include mobile {
+          display: none;
+        }
+      }
+    }
     p {
       span {
         @include tablet {
@@ -14,31 +21,55 @@
     }
   }
 
-  .store-contents {
+  .section-store {
     @include contents-width;
     margin-top: 10rem;
     margin-bottom: 8.7rem;
-    clear: both;
 
-    .store-contents-header {
+    @include tablet {
+      width: 100%;
+    }
+
+    .section-header-store {
       margin-bottom: 6.2rem;
+      h3 {
+        em {
+          @include mobile {
+            display: block;
+          }
+        }
+      }
       p {
         span {
           color: $yellow-02;
           font-weight: 700;
         }
+        em {
+          @include mobile {
+            display: block;
+          }
+        }
+      }
+    }
+    .section-main-wrap {
+      display: flex;
+      @include tablet {
+        flex-direction: column;
       }
     }
 
-    .contents-store {
-      float: left;
-      width: 48%;
-      height: 46rem;
+    .section-main-search {
+      flex: 1 1 48%;
       box-sizing: border-box;
       margin-right: 4%;
+      @include tablet {
+        @include gnb-width;
+        order: 2;
+        margin-top: 2.8rem;
+      }
 
-      .store-new {
-        @include width;
+      .section-main-search-new {
+        width: 100%;
         border-top: 2px solid $brown;
 
         h2 {
@@ -58,9 +89,11 @@
         table {
           width: 100%;
           border-top: 2px solid $beige-02;
-          border-bottom: 1px solid $brown;
+          //border-bottom: 1px solid $brown;
 
           tr {
+            height: 3.9rem;
+            font: 1.2rem "Dotum";
             &:hover {
               td {
                 &:nth-of-type(2) {
@@ -70,31 +103,28 @@
                 .map-icon-img {
                   background: url("../img/location_ico_map_enter.png") no-repeat center center/contain;
                 }
+
+                }
+              }
+            td:nth-of-type(1), td:nth-of-type(3), th:nth-of-type(1), th:nth-of-type(3)  {
+              @include mobile {
+                display: none;
               }
             }
           }
 
           th {
-            font: 700 1.2rem "Dotum";
-            height: 3.6rem;
-            line-height: 3.6rem !important;
             background: $white-02;
-            color: $charcoal;
+            line-height: 3.9rem !important;
+            font-weight: 700;
           }
-
           td {
-            height: 3.9rem;
             line-height: 3.9rem !important;
             text-align: center;
-            border-top: 1px solid $beige-02;
             font: 1.2rem "Dotum";
-            color: $charcoal;
-            vertical-align: middle;
-
             &:nth-of-type(2) {
               font-weight: 700;
             }
-
             &:nth-of-type(3) {
               text-align: justify;
             }
@@ -102,7 +132,7 @@
         }
       }
 
-      .store-search {
+      .section-main-search-find {
         @include width;
         margin-top: 2.8rem;
         border-top: 2px solid $brown;
@@ -131,12 +161,22 @@
             margin-top: 1rem;
             font: 1.4rem "Dotum";
             color: $gray;
+            @include mobile {
+              display:flex;
+              align-items: center;
+              justify-content: flex-start;
+              gap: 0 1rem;
+            }
 
             label {
               display: inline-block;
               width: 10.8rem;
               text-align: right;
               padding-left: 0.9rem;
+              @include mobile {
+                flex: 0 1 6rem;
+                padding-left:0;
+              }
             }
 
             select {
@@ -145,6 +185,10 @@
               padding: 0.8rem;
               font: 1.4rem "Dotum";
               color: $gray;
+              @include mobile {
+                flex: 0 1 auto;
+                width: auto;
+              }
             }
 
             input {
@@ -152,16 +196,21 @@
               border: 1px solid #ccc;
               padding: 0.8rem;
               display: inline-block;
+              @include mobile {
+                flex: 1 1 13rem;
+                width: 13rem;
+              }
             }
 
             button {
+              display: inline-block;
               vertical-align: middle;
-              background: $brown;
-              border: 1px solid #ccc;
-              padding: 0.9rem;
+              padding: 0.8rem;
               font: 1.4rem "Dotum";
-              color: $white;
               width: 10rem;
+              @include mobile {
+                flex-basis: 6rem;
+              }
             }
           }
         }
@@ -169,15 +218,22 @@
 
     }
 
-    .contents-map {
-      float: left;
-      width: 48%;
-      height: 46.5rem;
+    .section-main-map {
+      flex: 1 1 48%;
+      //float: left;
+      //width: 48%;
+      //height: 46.5rem;
       border-top: 2px solid $yellow;
       border-bottom: 1px solid $yellow;
       padding-bottom: 1.8rem;
+      @include tablet {
+        order: 1;
+        @include gnb-width;
+        //margin-top: 2.8rem;
+        //float: none;
+      }
 
-      .store-map {
+      .main-map-wrap {
         width: 100%;
 
         .store-map-img {
@@ -187,7 +243,7 @@
           margin-top: 1.8rem;
         }
 
-        .store-map-header {
+        .main-map-header {
           display: flex;
           align-items: center;
           height: 5.7rem;
@@ -216,11 +272,14 @@
 
     }
 
-    .store-search-result {
+    .section-main-result {
       @include width;
       clear: both;
       padding-top: 5rem;
       display: block;
+      @include tablet {
+        @include gnb-width;
+      }
 
       h2 {
         display: block;
@@ -240,57 +299,52 @@
         }
       }
 
-      table {
+      .table-design-result {
         @include width;
         margin-top: 2rem;
-        border-top: 1px solid $brown;
-        border-bottom: 1px solid $brown;
-
-        tr {
+        ul {
           height: 3.9rem;
+          font: 1.2rem "Dotum";
+          display:flex;
 
-          th {
+          &:first-of-type {
             line-height: 3.9rem !important;
-            font: 1.2rem "Dotum";
-            color: $charcoal;
-            background: $ivory;
             font-weight: 700;
           }
 
-          td {
-            border-top: 1px solid $beige-02;
-            line-height: 3.9rem !important;
-            text-align: center;
-            font: 1.2rem "Dotum";
-            color: $charcoal;
-            vertical-align: middle;
 
+          li {
+            text-align: center;
+            flex: 1;
             &:nth-of-type(3) {
               font-weight: 700;
             }
-
             &:nth-of-type(4) {
               text-align: justify;
               padding-left: 6%;
             }
-
           }
 
           &:hover {
-            td:nth-of-type(3) {
+            li:nth-of-type(3) {
               color: $orange;
             }
 
-            td:nth-of-type(6) {
+            li:nth-of-type(6) {
               .map-icon-img {
                 background: url("../img/location_ico_map_enter.png") no-repeat center center/contain;
               }
             }
           }
+          li:nth-of-type(1), li:nth-of-type(4) {
+            @include mobile {
+              display: none;
+            }
+          }
         }
       }
 
-      .store-search-result-switch {
+      .main-result-switch {
         @include width;
         display: flex;
         justify-content: center;
@@ -325,129 +379,6 @@
       height: 2.1rem;
       margin: 0 auto;
       background: url("../img/location_ico_map_leave.png") no-repeat center center/contain;
-    }
-  }
-}
-
-@media (max-width: 1199px) {
-  .store {
-
-    .store-header {
-
-
-      p {
-        //display: block;
-        }
-    }
-
-    .store-contents {
-      //margin-bottom: 8.7rem;
-
-      .contents-store {
-        @include gnb-width;
-        float: none;
-        height: auto;
-
-        .store-search {
-          @include width;
-          margin-top: 2.8rem;
-        }
-      }
-
-      .contents-map {
-        float: none;
-        @include gnb-width;
-        margin-top: 2.8rem!important;
-      }
-
-      .store-search-result {
-        @include gnb-width;
-      }
-    }
-  }
-}
-
-
-@media (max-width: 640px) {
-  .store {
-    .store-header {
-      h2 {
-        em {
-          display: none;
-        }
-      }
-
-      p {
-        //line-height: 1.4;
-        span {
-          display: block;
-        }
-
-      }
-    }
-
-    .store-contents {
-      .store-contents-header {
-        h3 {
-          em {
-            display: block;
-          }
-        }
-        p {
-          em {
-            display: block;
-          }
-        }
-      }
-
-      .contents-store {
-        .store-new {
-          table {
-            tr {
-              td:nth-of-type(1), td:nth-of-type(3), th:nth-of-type(1), th:nth-of-type(3)  {
-                display: none;
-              }
-            }
-          }
-        }
-
-        .store-search {
-          ul {
-            li {
-              display:flex;
-              align-items: center;
-              justify-content: flex-start;
-              gap: 0 1rem;
-              label {
-                flex: 0 1 6rem;
-                padding-left:0;
-              }
-              select {
-                flex: 0 1 auto;
-                width: auto;
-              }
-              input {
-                flex: 1 1 13rem;
-                width: 13rem;
-              }
-
-              button {
-                flex-basis: 6rem;
-              }
-            }
-          }
-        }
-      }
-
-      .store-search-result {
-        table {
-          tr {
-            th:nth-of-type(1), th:nth-of-type(4), td:nth-of-type(1), td:nth-of-type(4) {
-              display: none;
-            }
-          }
-        }
-      }
     }
   }
 }

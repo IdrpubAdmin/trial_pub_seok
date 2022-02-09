@@ -3,6 +3,9 @@
 
 .cs {
   @include width;
+  @include tablet {
+    @include rwd-width;
+  }
 
   .cs-header {
     height: 50rem;
@@ -10,6 +13,9 @@
     position: relative;
     text-align: center;
     background: url("../img/news_main_bg.png") no-repeat center center/cover;
+    @include tablet {
+      //@include gnb-width;
+    }
 
     h2 {
       position: absolute;
@@ -18,9 +24,15 @@
       transform: translateX(-50%);
       font: 700 4.65rem "NanumSquare";
       color: $white;
+      @include tablet {
+        top: 26.1rem;
+      }
 
       span {
         color: $yellow;
+        @include tablet {
+          display: block;
+        }
       }
     }
 
@@ -31,16 +43,28 @@
       transform: translateX(-50%);
       font: 700 1.8rem "NanumMyeongjo";
       color: $white;
+      span {
+        @include mobile {
+          display: block;
+          line-height: 1.6;
+        }
+      }
     }
   }
 
-  .cs-contents {
+  .section-cs {
     @include contents-width;
     margin-top: 10rem;
     margin-bottom: 8.7rem;
+    @include tablet {
+      width: $width;
+    }
 
     .cs-contents-header {
       text-align: center;
+      @include tablet {
+        @include gnb-width;
+      }
 
       h2 {
         display: inline-block;
@@ -66,16 +90,27 @@
         margin-top: 3.8rem;
         font: 700 3rem "NanumMyeongjo";
         color: $orange-02;
+        em {
+          @include mobile {
+            display: block;
+          }
+        }
       }
 
       p {
         font: 1.8rem "NanumSquare";
         color: $brown;
         margin-top: 1rem;
+        line-height: 1.6;
 
         span {
           color: $yellow-02;
           font-weight: 700;
+        }
+        em {
+          @include mobile {
+            display: block;
+          }
         }
       }
     }
@@ -83,336 +118,235 @@
     .cs-form {
       width: 100%;
       margin-top: 6.3rem;
+      @include tablet {
+        @include gnb-width;
+        margin-top: 6.3rem;
+      }
 
       table {
         width: 100%;
         border-top: 2px solid $brown;
         border-bottom: 1px solid $beige-02;
-        th {
-          height: 5rem;
-          line-height: 5;
-          background: $ivory;
-          font: 700 1.8rem "NanumSquare";
-          text-align: left;
-          color: $charcoal;
-          padding: 1.5rem 2rem;
-          box-sizing: border-box;
-
-          &:last-of-type {
-            font: 1.2rem "Dotum";
-            color: #666;
-            text-align: right;
-
-            span {
-              color: $orange-02;
-            }
-          }
-        }
-
-        td {
-          border-top: 1px solid $beige-02;
-          padding: 1rem 2rem;
-          box-sizing: border-box;
-
-          &:first-of-type {
-            background: $white-02;
-          }
-
-          label {
-            display: inline-block;
-            width: 25rem;
-            height: 3rem;
-            font: 700 1.4rem "Dotum";
-            color: $charcoal;
-            text-align: right;
-            line-height: 3rem;
-
-            span {
-              color: $orange-02;
-            }
-          }
-
-          textarea {
-            vertical-align: middle;
-            resize: none;
-          }
-
-          #form-name {
-            width: 28.5rem;
-          }
-
-          #form-title {
-            width: 33rem;
-          }
-        }
-      }
-    }
-  }
-
-  .hide {
-    visibility: hidden;
-  }
-
-  input {
-    border: 1px solid #ccc;
-    padding: 0.9rem;
-    box-sizing: border-box;
-    font-size: 1.2rem;
-    color: $light-gray;
-  }
-
-  textarea {
-    width: 100%;
-    height: 7rem;
-    border: 1px solid #ccc;
-    padding: 1rem;
-    box-sizing: border-box;
-    line-height: 1.5;
-    font-size: 1.2rem;
-    color: $light-gray;
-  }
-
-  select {
-    border: 1px solid #ccc;
-    padding: 0.8rem;
-    box-sizing: border-box;
-    vertical-align: -15%;
-    font-size: 1.2rem;
-    color: $light-gray;
-  }
-
-
-  .Privacy {
-    width: 100%;
-    height: 14rem;
-    margin-top: 2rem;
-  }
-  .agree {
-    margin-top: 1rem;
-    vertical-align: -20%;
-  }
-  .form-agree {
-    font: 1.2rem "Dotum";
-    color: #666;
-    margin-top: 1rem;
-  }
-
-  .btn-cs-list {
-    display: block;
-    background: $brown;
-    color: $white;
-    border: 1px solid #999;
-    width: 10rem;
-    height: 4rem;
-    font: 700 1.4rem "NanumSquare";
-    margin: 3rem auto 0;
-  }
-}
-
-
-@media (max-width: 1199px) {
-
-  .cs {
-    @include rwd-width;
-
-    .cs-header {
-      width: $width;
-
-      h2 {
-        width: $gnb-width;
-        top: 26.1rem;
-
-        span {
-          display: block;
-        }
-      }
-
-      p {
-        width: $gnb-width;
-      }
-    }
-
-    .cs-contents {
-      @include rwd-width;
-      margin-top: 10rem;
-      margin-bottom: 8.7rem;
-
-      .cs-contents-header {
-        @include gnb-width;
-      }
-
-      .cs-form {
-        @include gnb-width;
-        margin-top: 6.3rem;
-
-        table {
-          @include rwd-width;
-
-          tr {
-            display: flex;
-          }
-
-          th, td {
-            flex: 1 1 auto;
-
-            &:first-of-type {
-              flex: 0 1 17rem;
-            }
-
-            .hide {
-              visibility: hidden;
-            }
-
-            input {
-              width: 10rem;
-            }
-
-            label {
-              width: 12rem;
-            }
-          }
-        }
-
-        .Privacy {
-          //@include rwd-width;
-          //display: block;
-          //margin-top: 2rem;
-        }
-
-        .agree {
-          //font: 1.2rem "Dotum";
-          //color: #666;
-          //margin-top: 1rem;
-          //vertical-align: -20%;
-        }
-
-        .btn-cs-list {
-          //display: block;
-          //background: $brown;
-          //color: $white;
-          //border: 1px solid #999;
-          //width: 10rem;
-          //height: 4rem;
-          //font: 700 1.4rem "NanumSquare";
-          //margin: 3rem auto 0;
-        }
-      }
-    }
-  }
-}
-
-
-@media (max-width: 640px) {
-
-  .cs {
-
-
-    .cs-header {
-
-
-      p {
-        span {
-          display: block;
-          line-height: 1.4;
-        }
-      }
-    }
-
-    .cs-contents {
-      .cs-contents-header {
-        h3 {
-          em {
-            display: block;
-          }
-        }
-
-        p {
-          line-height: 1.4;
-
-          em {
-            display: block;
-          }
-        }
-      }
-
-      .cs-form {
-        @include gnb-width;
-        margin-top: 6.3rem;
-
-        table {
+        @include mobile {
           min-width: 280px !important;
+        }
 
-          tr {
+        tr {
+          @include tablet {
             display: flex;
+          }
 
-            th {
-              line-height: 5rem !important;
+          th {
+            height: 5rem;
+            line-height: 5rem!important;
+            background: $ivory;
+            font: 700 1.8rem "NanumSquare";
+            text-align: left;
+            color: $charcoal;
+            padding: 0 2rem;
+            box-sizing: border-box;
+            @include tablet {
+              flex: 0 1 auto;
+            }
+            @include mobile {
+              flex: 1 1 auto;
+              padding: 0;
               text-align: center;
 
-              em {
+            }
+            em {
+              @include mobile {
                 display: none;
               }
+            }
 
-              &:last-of-type {
+            &:last-of-type {
+              font: 1.2rem "Dotum";
+              color: #666;
+              text-align: right;
+              @include tablet {
+                flex: 1 1 17rem;
+              }
+              @include mobile {
                 padding-right: 1rem;
                 box-sizing: border-box;
               }
+
+              span {
+                color: $orange-02;
+                @include mobile {
+                  font-size: 0;
+                  &:after {
+                    display: inline-block;
+                    width: 0.5rem;
+                    height: 1.2rem;
+                    margin-right: 0.5rem;
+                    content: "";
+                    background: url("../img/ico_required.png") no-repeat center center/contain;
+                  }
+                }
+              }
             }
 
-            td {
+          }
+
+          td {
+            border-top: 1px solid $beige-02;
+            padding: 1rem 2rem;
+            box-sizing: border-box;
+            @include tablet {
+              flex: 1 1 auto;
+            }
+            @include mobile {
+              flex: 1 1 auto;
               padding: 0.5rem 0;
+            }
 
-              input {
-                width: 6rem;
-                padding: 0.8rem;
+            &:first-of-type {
+              background: $white-02;
+              width: 24rem;
+              @include tablet {
+                flex: 0 1 17rem;
               }
+              @include mobile {
+                //flex: 0 1 8rem;
+                flex: 0 0 auto;
+                width: 8.5rem;
+              }
+            }
 
-              label {
+            label {
+              display: inline-block;
+              width: 24rem;
+              height: 3rem;
+              font: 700 1.4rem "Dotum";
+              color: $charcoal;
+              text-align: right;
+              line-height: 3rem;
+              @include tablet {
+                width: 8rem;
+              }
+              @include mobile {
+                //text-align: center;
+                width: 7rem;
+              }
+            }
+
+            .required-info {
+              width: 30rem;
+              @include tablet {
+                width: 12rem;
+              }
+              @include mobile {
                 width: 8rem;
               }
 
-              select {
-                width: 6rem;
+              &:after {
+                content: "(필수)";
+                color: $orange-02;
+                display: inline-block;
+                width: 5rem;
+                height: 3rem;
+                font-weight: 400;
+                margin: 0 0.5rem;
+                @include tablet {
+                  width: 4rem;
+                }
+                @include mobile {
+                  display: inline-block;
+                  width: 0.5rem;
+                  height: 1.4rem;
+                  content: "";
+                  margin-right: 0;
+                  background: url("../img/ico_required.png") no-repeat center center/contain;
+                }
               }
+            }
 
-              textarea {
+            #form-name {
+              width: 28.5rem;
+              @include mobile {
                 width: 100%;
+              }
+            }
+
+            #form-title {
+              width: 33rem;
+              @include mobile {
+                width: 100%;
+              }
+            }
+
+
+            input {
+              padding: 0.9rem;
+              font-size: 1.2rem;
+              @include tablet {
+                width: 12rem;
+              }
+              @include mobile {
+                width: 6rem;
+                padding: 0.8rem;
+              }
+            }
+
+            textarea {
+              width: 100%;
+              height: 7rem;
+              padding: 1rem;
+              line-height: 1.5;
+              font-size: 1.2rem;
+              vertical-align: middle;
+              resize: none;
+              @include tablet {
                 padding: 0.5rem;
               }
+            }
 
-
-              #form-name {
-                width: 100%;
+            select {
+              padding: 0.8rem;
+              vertical-align: -15%;
+              font-size: 1.2rem;
+              @include mobile {
+                width: 6rem;
               }
-
-              #form-title {
-                width: 100%;
-              }
-            }
-          }
-
-          th, td {
-            flex: 1 1 auto;
-            padding: 0;
-
-            &:first-of-type {
-              flex: 0 0 auto;
-              width: 8.5rem;
-            }
-
-            span {
-              font-size: 0;
-            }
-
-            span:after {
-              display: inline-block;
-              width: 1rem;
-              height: 1rem;
-              content: "";
-              background: url("../img/ico_required.png") no-repeat center center/contain;
             }
           }
         }
+      }
+
+      .Privacy {
+        width: 100%;
+        height: 14rem;
+        line-height: 1.6;
+        padding: 1rem;
+        margin-top: 2rem;
+        overflow: scroll;
+        overflow-x: hidden;
+        font-size: 1.2rem;
+        @include tablet {
+
+        }
+      }
+
+      .agree {
+        margin-top: 1rem;
+        vertical-align: -20%;
+        font: 1.2rem "Dotum";
+        color: #666;
+      }
+
+      .form-agree {
+        font: 1.2rem "Dotum";
+        color: #666;
+        margin-top: 1rem;
+
+      }
+
+      .btn-cs-list {
+        width: 10rem;
+        height: 4rem;
+        margin: 3rem auto 0;
       }
     }
   }

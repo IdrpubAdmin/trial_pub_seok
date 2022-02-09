@@ -120,8 +120,35 @@
   border: 1px solid #999;
   width: inherit;
   height: inherit;
-  //width: 10rem;
-  //height: 4rem;
   font: 700 1.4rem "NanumSquare";
-  //margin: 3rem auto 0;
+}
+
+
+// table 디자인 양식
+.table-design {
+  border-top: 1px solid $brown;
+  border-bottom: 1px solid $brown;
+
+  tr, ul {
+    th, &:first-of-type li {
+      color: $charcoal;
+      background: $ivory;
+    }
+
+    td, li {
+      border-top: 1px solid $beige-02;
+
+      color: $charcoal;
+      vertical-align: middle;
+    }
+  }
+}
+
+//input, select, textarea 기본 디자인
+
+.input-design {
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  //font-size: 1.2rem;
+  color: $light-gray;
 }
