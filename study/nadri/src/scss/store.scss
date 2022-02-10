@@ -12,6 +12,7 @@
         }
       }
     }
+
     p {
       span {
         @include tablet {
@@ -32,6 +33,7 @@
 
     .section-header-store {
       margin-bottom: 6.2rem;
+
       h3 {
         em {
           @include mobile {
@@ -39,11 +41,13 @@
           }
         }
       }
+
       p {
         span {
           color: $yellow-02;
           font-weight: 700;
         }
+
         em {
           @include mobile {
             display: block;
@@ -51,6 +55,7 @@
         }
       }
     }
+
     .section-main-wrap {
       display: flex;
       @include tablet {
@@ -94,6 +99,7 @@
           tr {
             height: 3.9rem;
             font: 1.2rem "Dotum";
+
             &:hover {
               td {
                 &:nth-of-type(2) {
@@ -104,9 +110,10 @@
                   background: url("../img/location_ico_map_enter.png") no-repeat center center/contain;
                 }
 
-                }
               }
-            td:nth-of-type(1), td:nth-of-type(3), th:nth-of-type(1), th:nth-of-type(3)  {
+            }
+
+            td:nth-of-type(1), td:nth-of-type(3), th:nth-of-type(1), th:nth-of-type(3) {
               @include mobile {
                 display: none;
               }
@@ -118,13 +125,16 @@
             line-height: 3.9rem !important;
             font-weight: 700;
           }
+
           td {
             line-height: 3.9rem !important;
             text-align: center;
             font: 1.2rem "Dotum";
+
             &:nth-of-type(2) {
               font-weight: 700;
             }
+
             &:nth-of-type(3) {
               text-align: justify;
             }
@@ -162,7 +172,7 @@
             font: 1.4rem "Dotum";
             color: $gray;
             @include mobile {
-              display:flex;
+              display: flex;
               align-items: center;
               justify-content: flex-start;
               gap: 0 1rem;
@@ -175,7 +185,7 @@
               padding-left: 0.9rem;
               @include mobile {
                 flex: 0 1 6rem;
-                padding-left:0;
+                padding-left: 0;
               }
             }
 
@@ -264,12 +274,9 @@
               color: #959595;
               display: block;
             }
-
           }
         }
-
       }
-
     }
 
     .section-main-result {
@@ -302,26 +309,60 @@
       .table-design-result {
         @include width;
         margin-top: 2rem;
+
         ul {
           height: 3.9rem;
+          line-height: 3.9rem !important;
           font: 1.2rem "Dotum";
-          display:flex;
+          display: flex;
 
           &:first-of-type {
-            line-height: 3.9rem !important;
-            font-weight: 700;
+            li {
+              font-weight: 700;
+              text-align: center!important;
+            }
+            &:hover {
+              li:nth-of-type(3) {
+                color: inherit;
+              }
+            }
           }
-
 
           li {
             text-align: center;
-            flex: 1;
+            flex: 1 1 5%;
+            @include mobile {
+              flex: 1 1 auto;
+            }
+
             &:nth-of-type(3) {
               font-weight: 700;
+              @include tablet {
+                flex: 1 1 15%;
+              }
+              @include mobile {
+                flex: 1 1 35%;
+              }
             }
+
             &:nth-of-type(4) {
+              flex: 1 0 30%;
               text-align: justify;
+              text-overflow: ellipsis;
+              white-space: nowrap;
               padding-left: 6%;
+              @include tablet {
+                flex: 1 0 40%;
+                padding-left: 0;
+              }
+            }
+            &:nth-of-type(5) {
+              @include tablet {
+                flex: 1 1 15%;
+              }
+              @include mobile {
+                flex: 1 1 20%;
+              }
             }
           }
 
@@ -336,6 +377,7 @@
               }
             }
           }
+
           li:nth-of-type(1), li:nth-of-type(4) {
             @include mobile {
               display: none;
@@ -374,11 +416,6 @@
       }
     }
 
-    .map-icon-img {
-      width: 1.4rem;
-      height: 2.1rem;
-      margin: 0 auto;
-      background: url("../img/location_ico_map_leave.png") no-repeat center center/contain;
-    }
+
   }
 }

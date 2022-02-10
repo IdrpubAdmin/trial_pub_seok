@@ -152,3 +152,12 @@
   //font-size: 1.2rem;
   color: $light-gray;
 }
+
+// 지도보기 아이콘 기본디자인
+
+.map-icon-img {
+  width: 1.4rem;
+  height: 3.9rem;
+  margin: 0 auto;
+  background: url("../img/location_ico_map_leave.png") no-repeat center center/contain;
+}

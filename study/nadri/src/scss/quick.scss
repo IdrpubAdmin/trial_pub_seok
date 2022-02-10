@@ -6,7 +6,7 @@
 
   position: fixed;
   right: 3rem;
-  top: 65%;
+  top: 60%;
   z-index: $gnb-z-index - 1;
 
 
@@ -14,37 +14,52 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    li {
-      .quick-items {
-        display: flex;
-        li {
-          text-align: center;
-          line-height: 5rem!important;
-          margin-bottom: 0.5rem;
-          font: 1.6rem "BMYEONSUNG";
-          color: $white;
-          overflow: hidden;
-          &:first-of-type {
-            font-size: 1.6rem;
-            width: 13rem;
-            height: auto;
-            margin-right: 0.8rem;
-            overflow: hidden;
-            transition: width 0.3s cubic-bezier(.51,0,.53,1);
-            position: absolute;
-            right:5rem;
-      }
-          &:last-of-type {
-            width: 5rem;
-            height: 5rem;
-            border-radius: $border-radius;
-            img {
-              width: 2.9rem;
-              line-height: 5rem;
-              height: auto;
-              vertical-align: middle;
+
+    .quick-list-item {
+      //width: 18.8rem;
+      margin-bottom: 0.5rem;
+
+      .quick-item-wrap {
+        width: 5rem;
+        height: 5rem;
+        position: relative;
+        overflow: hidden;
+
+          .quick-item {
+            width: 18.8rem;
+            display: flex;
+            //flex-basis: 18.8rem;
+            position:absolute;
+            right: 0;
+
+            li {
+              text-align: center;
+              line-height: 5rem !important;
+              margin-bottom: 0.5rem;
+              font: 1.6rem "BMYEONSUNG";
+              color: $white;
+
+              &:first-of-type {
+                font-size: 1.6rem;
+                width: 13rem;
+                height: auto;
+                margin-right: 0.8rem;
+                transition: all 0.3s cubic-bezier(.51, 0, .53, 1);
+              }
+
+              &:last-of-type {
+                width: 5rem;
+                height: 5rem;
+                border-radius: $border-radius;
+
+                img {
+                  width: 2.9rem;
+                  line-height: 5rem;
+                  height: auto;
+                  vertical-align: middle;
+                }
+              }
             }
-          }
         }
       }
     }
@@ -53,41 +68,50 @@
 
 .quick-list-event {
   li:first-of-type {
-    color: $brown!important;
+    color: $brown !important;
     background: url("../img/snb_event_bg.png") no-repeat center center/contain;
   }
+
   li:last-of-type {
     background-color: $white;
   }
 }
+
 .quick-list-news {
   li:first-of-type {
-      background: url("../img/snb_news_bg.png") no-repeat center center/contain;
+    background: url("../img/snb_news_bg.png") no-repeat center center/contain;
   }
+
   li:last-of-type {
     background-color: $beige;
   }
 }
+
 .quick-list-cs {
   li:first-of-type {
-      background: url("../img/snb_cs_bg.png") no-repeat center center/contain;
+    background: url("../img/snb_cs_bg.png") no-repeat center center/contain;
   }
+
   li:last-of-type {
     background-color: $brown;
   }
 }
+
 .quick-list-store {
   li:first-of-type {
     background: url("../img/snb_location_bg.png") no-repeat center center/contain;
   }
+
   li:last-of-type {
     background-color: $yellow;
   }
 }
+
 .quick-list-franchise {
   li:first-of-type {
     background: url("../img/snb_store_bg.png") no-repeat center center/contain;
   }
+
   li:last-of-type {
     background-color: $orange;
   }
@@ -96,20 +120,19 @@
 .quick-top-btn {
   display: block;
   text-align: center;
-  width:5rem;
+  width: 5rem;
   font-size: 0;
   font-family: 'Lato';
   color: $charcoal;
-  height:0;
+  height: 0;
   overflow: hidden;
   transition: height 0.5s ease-out;
 
 }
 
 //퀵 메뉴 활성화
-.quick-btn-info {
-  width: 13rem!important;
-  font-size: 1.6rem!important;
+.show-info-btn {
+  width: 18.8rem !important;
   // display: inline-block;
 }
 
@@ -120,9 +143,9 @@
 }
 
 @media (max-width: 1199px) {
- .quick {
-   display: none;
- }
+  .quick {
+    display: none;
+  }
 }
 
 //@media (max-width: 640px) {

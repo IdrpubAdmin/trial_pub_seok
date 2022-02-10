@@ -159,7 +159,6 @@ const assets = gulp.series([html, styles, js]);
 const live = gulp.parallel([watch, webserver]);
 //라이브서버에 자동으로 올라가는 프로세스 만듦
 
-
 // 함수 clean, pug 를 이어서 작업하는 dev 라는 함수를 만들었음
 //export 라고 붙는 이유는 pakage.json에 스크립트로 gulp dev와 gulp build 를 적어뒀기 때문
 export const build = gulp.series([prepare, assets]);
@@ -171,3 +170,6 @@ export const dev = gulp.series([build, live]);
 
 // export const deploy = gulp.series([build, ghDeploy]);
 //빌드 작업이 완료된 다음 해당 소스를 깃허브에 올리기 위한 작업
+
+export default gulp.series(build, live);
+// gulp 기본동작 작동 시 "dev"가 작동 될 수 있도록 만듦

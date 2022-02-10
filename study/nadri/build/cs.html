@@ -44,73 +44,91 @@
 <!-- end header.html-->
 <!-- start gnb.html-->
 <nav class="gnb">
-    <div class="gnb-main">
+    <div class="gnb-wrap">
         <ul>
             <li>
-                <h2>
-                    <a href="javascript:void(0);" class="triggerToggle">
-                        <img src="img/gnb_icon_01.png" alt="나드리김밥 소개">나드리김밥
+                <div class="gnb-main">
+                    <h2>
+                        <a href="javascript:void(0);" class="triggerToggle">
+                            <img src="img/gnb_icon_01.png" alt="나드리김밥 소개">나드리김밥
+                        </a>
+                    </h2>
+                </div> <!-- gnb-main-->
+                <div class="gnb-sub">
+                    <ul class="gnb-sub-about">
+                        <li><a href="javascript:void(0);">나드리 소개</a></li>
+                        <li><a href="javascript:void(0);">CEO인사말</a></li>
+                        <li><a href="javascript:void(0);">CI/BI 소개</a></li>
+                        <li><a href="javascript:void(0);">오시는 길</a></li>
+                    </ul>
+                </div><!--gnb-sub-->
+            </li>
+            <li>
+                <div class="gnb-main">
+                    <a href="menu.html" class="triggerToggle">
+                        <h2><img src="img/gnb_icon_02.png" alt="메뉴안내">메뉴안내</h2>
                     </a>
-                </h2>
+                </div> <!-- gnb-main-->
+                <div class="gnb-sub">
+                    <ul class="gnb-sub-menu" onclick="location.href='menu.html'">
+                        <li><a href="menu.html">김밥류</a></li>
+                        <li><a href="menu.html">돈까스</a></li>
+                        <li><a href="menu.html">식사류</a></li>
+                        <li><a href="menu.html">면류</a></li>
+                        <li><a href="menu.html">간식류</a></li>
+                        <li><a href="menu.html">계절메뉴</a></li>
+                    </ul>
+                </div><!--gnb-sub-->
             </li>
             <li>
-                <a href="menu.html" class="triggerToggle">
-                    <h2><img src="img/gnb_icon_02.png" alt="메뉴안내">메뉴안내</h2>
-                </a>
+                <div class="gnb-main">
+                    <a href="store.html" class="triggerToggle">
+                        <h2><img src="img/gnb_icon_03.png" alt="매장찾기">매장찾기</h2>
+                    </a>
+                </div> <!-- gnb-main-->
+                <div class="gnb-sub">
+                    <ul class="gnb-sub-location" onclick="location.href='store.html'">
+                        <li><a href="store.html">매장찾기</a></li>
+                        <li><a href="javascript:void(0);">매장갤러리</a></li>
+                    </ul>
+                </div><!--gnb-sub-->
             </li>
             <li>
-                <a href="store.html" class="triggerToggle">
-                    <h2><img src="img/gnb_icon_03.png" alt="매장찾기">매장찾기</h2>
-                </a>
+                <div class="gnb-main">
+                    <a href="javascript:void(0);" class="triggerToggle">
+                        <h2><img src="img/gnb_icon_04.png" alt="프랜차이즈">프랜차이즈</h2>
+                    </a>
+                </div> <!-- gnb-main-->
+                <div class="gnb-sub">
+                    <ul class="gnb-sub-franchise">
+                        <li><a href="javascript:void(0);">나드리경쟁력</a></li>
+                        <li><a href="javascript:void(0);">가맹개설절차</a></li>
+                        <li><a href="javascript:void(0);">창업비용</a></li>
+                        <li><a href="javascript:void(0);">인테리어컨셉</a></li>
+                    </ul>
+                </div><!--gnb-sub-->
             </li>
             <li>
-                <a href="javascript:void(0);" class="triggerToggle">
-                    <h2><img src="img/gnb_icon_04.png" alt="프랜차이즈">프랜차이즈</h2>
-                </a>
-            </li>
-            <li>
-                <a href="news.html" class="triggerToggle">
-                    <h2><img src="img/gnb_icon_05.png" alt="커뮤니티">커뮤니티</h2>
-                </a>
+                <div class="gnb-main">
+                    <a href="news.html" class="triggerToggle">
+                        <h2><img src="img/gnb_icon_05.png" alt="커뮤니티">커뮤니티</h2>
+                    </a>
+                </div> <!-- gnb-main-->
+                <div class="gnb-sub">
+                    <ul class="gnb-sub-community" onclick="location.href='news.html'">
+                        <li><a href="news.html">나들이소식</a></li>
+                        <li><a href="javascript:void(0);">이벤트</a></li>
+                        <li><a href="javascript:void(0);">보도및홍보자료</a></li>
+                        <li><a href="javascript:void(0);">고객센터</a></li>
+                    </ul>
+                </div><!--gnb-sub-->
             </li>
         </ul>
-    </div> <!-- gnb-main-->
-    <div class="gnb-line"></div>
-    <div class="gnb-sub" id="target">
-        <div class="gnb-sub-wrap">
-            <ul class="gnb-sub-about">
-                <li><a href="javascript:void(0);">나드리 소개</a></li>
-                <li><a href="javascript:void(0);">CEO인사말</a></li>
-                <li><a href="javascript:void(0);">CI/BI 소개</a></li>
-                <li><a href="javascript:void(0);">오시는 길</a></li>
-            </ul>
-            <ul class="gnb-sub-menu" onclick="location.href='menu.html'">
-                <li><a href="menu.html">김밥류</a></li>
-                <li><a href="menu.html">돈까스</a></li>
-                <li><a href="menu.html">식사류</a></li>
-                <li><a href="menu.html">면류</a></li>
-                <li><a href="menu.html">간식류</a></li>
-                <li><a href="menu.html">계절메뉴</a></li>
-            </ul>
-            <ul class="gnb-sub-location" onclick="location.href='store.html'">
-                <li><a href="store.html">매장찾기</a></li>
-                <li><a href="javascript:void(0);">매장갤러리</a></li>
-            </ul>
-            <ul class="gnb-sub-franchise">
-                <li><a href="javascript:void(0);">나드리경쟁력</a></li>
-                <li><a href="javascript:void(0);">가맹개설절차</a></li>
-                <li><a href="javascript:void(0);">창업비용</a></li>
-                <li><a href="javascript:void(0);">인테리어컨셉</a></li>
-            </ul>
-            <ul class="gnb-sub-community" onclick="location.href='news.html'">
-                <li><a href="news.html">나들이소식</a></li>
-                <li><a href="javascript:void(0);">이벤트</a></li>
-                <li><a href="javascript:void(0);">보도및홍보자료</a></li>
-                <li><a href="javascript:void(0);">고객센터</a></li>
-            </ul>
-        </div> <!--gnb-sub-wrap-->
-    </div><!--gnb-sub-->
+    </div> <!--gnb-wrap-->
+    <div class="gnb-sub-bg"></div>
+
 </nav>
+<div class="gnb-hamburger-btn"></div>
 <!-- end gnb.html-->
 
     <!--container-->
@@ -120,44 +138,54 @@
 <!-- start quick.html-->
 <nav class="quick">
     <ul class="quick-list">
-        <li>
+        <li class="quick-list-item">
             <a href="javascript:void(0);">
-                <ul class="quick-list-event quick-items">
-                    <li class="show-item">이벤트</li>
-                    <li><img src="img/snb_event_ico.png" alt="이벤트 소개"></li>
-                </ul>
+                <div class="quick-item-wrap">
+                    <ul class="quick-list-event quick-item">
+                        <li class="show-item">이벤트</li>
+                        <li><img src="img/snb_event_ico.png" alt="이벤트 소개"></li>
+                    </ul>
+                </div>
             </a>
         </li>
-        <li>
+        <li class="quick-list-item">
             <a href="news.html">
-                <ul class="quick-list-news quick-items">
-                    <li class="show-item">나들이소식</li>
-                    <li><img src="img/snb_news_ico.png" alt="나들이 소식"></li>
-                </ul>
+                <div class="quick-item-wrap">
+                    <ul class="quick-list-news quick-item">
+                        <li class="show-item">나들이소식</li>
+                        <li><img src="img/snb_news_ico.png" alt="나들이 소식"></li>
+                    </ul>
+                </div>
             </a>
         </li>
-        <li>
+        <li class="quick-list-item">
             <a href="cs.html">
-                <ul class="quick-list-cs quick-items">
-                    <li class="show-item">고객센터</li>
-                    <li><img src="img/snb_cs_ico.png" alt="고객센터"></li>
-                </ul>
+                <div class="quick-item-wrap">
+                    <ul class="quick-list-cs quick-item">
+                        <li class="show-item">고객센터</li>
+                        <li><img src="img/snb_cs_ico.png" alt="고객센터"></li>
+                    </ul>
+                </div>
             </a>
         </li>
-        <li>
+        <li class="quick-list-item">
             <a href="store.html">
-                <ul class="quick-list-store quick-items">
-                    <li class="show-item">오시는 길</li>
-                    <li><img src="img/snb_location_ico.png" alt="오시는 길 안내"></li>
-                </ul>
+                <div class="quick-item-wrap">
+                    <ul class="quick-list-store quick-item">
+                        <li class="show-item">오시는 길</li>
+                        <li><img src="img/snb_location_ico.png" alt="오시는 길 안내"></li>
+                    </ul>
+                </div>
             </a>
         </li>
-        <li>
+        <li class="quick-list-item">
             <a href="javascript:void(0);">
-                <ul class="quick-list-franchise quick-items">
-                    <li class="show-item">가맹점 안내</li>
-                    <li><img src="img/snb_store_ico.png" alt="가맹점 안내"></li>
-                </ul>
+                <div class="quick-item-wrap">
+                    <ul class="quick-list-franchise quick-item">
+                        <li class="show-item">가맹점 안내</li>
+                        <li><img src="img/snb_store_ico.png" alt="가맹점 안내"></li>
+                    </ul>
+                </div>
             </a>
         </li>
         <li>
