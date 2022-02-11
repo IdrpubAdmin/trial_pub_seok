@@ -1,6 +1,3 @@
-@use "variables";
-@use "layout";
-
 
 .quick {
 
@@ -9,6 +6,9 @@
   top: 60%;
   z-index: $gnb-z-index - 1;
 
+  @include tablet {
+    display: none;
+  }
 
   .quick-list {
     display: flex;
@@ -24,6 +24,7 @@
         height: 5rem;
         position: relative;
         overflow: hidden;
+        transition: all 0.3s cubic-bezier(.51, 0, .53, 1);
 
           .quick-item {
             width: 18.8rem;
@@ -44,7 +45,7 @@
                 width: 13rem;
                 height: auto;
                 margin-right: 0.8rem;
-                transition: all 0.3s cubic-bezier(.51, 0, .53, 1);
+
               }
 
               &:last-of-type {
@@ -126,8 +127,6 @@
   color: $charcoal;
   height: 0;
   overflow: hidden;
-  transition: height 0.5s ease-out;
-
 }
 
 //퀵 메뉴 활성화
@@ -140,12 +139,6 @@
 .show-top-btn {
   height: auto;
   font-size: 1.2rem;
-}
-
-@media (max-width: 1199px) {
-  .quick {
-    display: none;
-  }
 }
 
 //@media (max-width: 640px) {

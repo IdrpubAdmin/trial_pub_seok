@@ -1,52 +1,13 @@
-@use "variables";
 
-
-.cs {
-  @include width;
+.content-cs {
   @include tablet {
-    @include rwd-width;
   }
 
-  .cs-header {
-    height: 50rem;
-    width: 100%;
-    position: relative;
-    text-align: center;
-    background: url("../img/news_main_bg.png") no-repeat center center/cover;
-    @include tablet {
-      //@include gnb-width;
-    }
-
-    h2 {
-      position: absolute;
-      top: 31.1rem;
-      left: 50%;
-      transform: translateX(-50%);
-      font: 700 4.65rem "NanumSquare";
-      color: $white;
-      @include tablet {
-        top: 26.1rem;
-      }
-
-      span {
-        color: $yellow;
-        @include tablet {
-          display: block;
-        }
-      }
-    }
-
+  .content-header-cs {
     p {
-      position: absolute;
-      top: 37.5rem;
-      left: 50%;
-      transform: translateX(-50%);
-      font: 700 1.8rem "NanumMyeongjo";
-      color: $white;
       span {
         @include mobile {
           display: block;
-          line-height: 1.6;
         }
       }
     }
@@ -60,36 +21,12 @@
       width: $width;
     }
 
-    .cs-contents-header {
-      text-align: center;
+    .section-header-cs {
       @include tablet {
         @include gnb-width;
       }
 
-      h2 {
-        display: inline-block;
-        width: 19.3rem;
-        font: 4.8rem "BMYEONSUNG";
-        color: $brown;
-        line-height: 1;
-
-        img {
-          width: 100%;
-          transform: translateX(10%);
-        }
-      }
-
-      .center-line-brown {
-        width: 10rem;
-        height: 0.4rem;
-        background: $brown;
-        margin: 0 auto;
-      }
-
       h3 {
-        margin-top: 3.8rem;
-        font: 700 3rem "NanumMyeongjo";
-        color: $orange-02;
         em {
           @include mobile {
             display: block;
@@ -98,10 +35,6 @@
       }
 
       p {
-        font: 1.8rem "NanumSquare";
-        color: $brown;
-        margin-top: 1rem;
-        line-height: 1.6;
 
         span {
           color: $yellow-02;
@@ -115,7 +48,7 @@
       }
     }
 
-    .cs-form {
+    .section-main-cs {
       width: 100%;
       margin-top: 6.3rem;
       @include tablet {
@@ -139,10 +72,8 @@
           th {
             height: 5rem;
             line-height: 5rem!important;
-            background: $ivory;
             font: 700 1.8rem "NanumSquare";
             text-align: left;
-            color: $charcoal;
             padding: 0 2rem;
             box-sizing: border-box;
             @include tablet {
@@ -191,7 +122,6 @@
           }
 
           td {
-            border-top: 1px solid $beige-02;
             padding: 1rem 2rem;
             box-sizing: border-box;
             @include tablet {

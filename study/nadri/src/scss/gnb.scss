@@ -1,4 +1,3 @@
-@use "variables";
 
 .gnb {
   @include width;
@@ -21,7 +20,7 @@
     transition: left 0.5s cubic-bezier(0.23, 1, 0.320, 1);
     position: absolute;
     top: 13.4rem;
-    left: 50%;
+    left: -50%;
   }
 
   .gnb-wrap {
@@ -61,7 +60,8 @@
         .gnb-main {
           height: 5.2rem;
           @include mobile {
-            background-color: $header-bg-color-m;
+            background-color: $header-bg-color;
+
           }
 
           a {
@@ -74,11 +74,7 @@
             img {
               width: 4.4rem;
               margin-right: 5%;
-              margin-left: 25%;
-              vertical-align: -30%;
-              @include tablet {
-                margin-left: 0;
-              }
+              vertical-align: -35%;
             }
           }
         }
@@ -86,12 +82,6 @@
     }
   }
 }
-
-//.gnb-line {
-//  @include width;
-//  height: 2px;
-//  background: rgba(255, 255, 255, 0);
-//}
 
 .gnb-sub {
   //@include width;
@@ -102,7 +92,8 @@
   //background: $header-bg-color;
   //z-index: $gnb-z-index;
   @include mobile {
-    height: 0;
+     height:0;
+    //height: auto;
     transition: height 0.5s cubic-bezier(0.23, 1, 0.320, 1);
   }
 
@@ -111,7 +102,7 @@
     margin-top: 1.9rem;
     @include mobile {
       margin-top: 0;
-      background: $header-bg-color-m2;
+      background: $header-bg-color-m;
     }
 
     li {
@@ -157,105 +148,31 @@
   left: 10%;
   display: none;
   z-index: $gnb-z-index;
+  transition: all 0.3s cubic-bezier(1, 0, 0, 1);
   @include mobile {
     display: block;
-
-
   }
 }
-//@media (max-width: 1199px) {
-//  .gnb {
-//    //@include rwd-width;
-//
-//    .gnb-main {
-//      ul {
-//        //@include gnb-width;
-//        //display: flex;
-//
-//        li {
-//          width: auto;
-//          flex: 1;
-//          text-align: center;
-//
-//          &:nth-of-type(4) {
-//            display: none;
-//          }
-//
-//          a {
-//            display: block;
-//            width: 100%;
-//            line-height: 5.2rem;
-//
-//            img {
-//              display: inline-block;
-//              margin-right: 5%;
-//              margin-left: 0;
-//            }
-//          }
-//        }
-//      }
-//    }
-//  }
+// pc, tablet gnb toggle 클래스
+.gnb-down {
+  height: 29.5rem!important;
+  @include mobile {
+    height: 100%!important;
+  }
+}
 
-  //.gnb-sub {
-  //  @include rwd-width;
-  //}
-  //
-  //.gnb-sub-wrap {
-  //  @include gnb-width;
-  //  display: flex;
-  //
-  //  ul {
-  //    flex: 1;
-  //    width: auto;
-  //    margin-top: 1.9rem;
-  //
-  //    &:nth-of-type(4) {
-  //      display: none;
-  //    }
-  //
-  //    li {
-  //      margin-left: 0;
-  //      text-align: center;
-  //
-  //      a {
-  //        display: block;
-  //        width: 100%;
-  //        line-height: 2.8rem;
-  //      }
-  //    }
-  //  }
-  //}
-//}
-//
-//@media (max-width: 640px) {
-//  .gnb {
-//    height: auto;
-//    overflow: visible;
-//
-//    .gnb-main {
-//      height: auto;
-//
-//      ul {
-//        display: flex;
-//        flex-wrap: wrap;
-//
-//        li {
-//          flex: 1 1 40%;
-//
-//          a {
-//            img {
-//              display: inline-block;
-//              margin-right: 5%;
-//              margin-left: 0;
-//            }
-//          }
-//        }
-//      }
-//    }
-//  }
-//
-//  .gnb-sub {
-//    display: none;
-//  }
-//}
+
+//mobile gnb activate 클래스
+.gnb-activate {
+  left: 50%;
+}
+
+.gnb-sub-activate {
+  height: auto;
+}
+
+//mobile gnb-hamberger-btn 닫기 버튼으로 전환
+
+.gnb-close-btn {
+  background: url("../img/gnb_ico_close.png") no-repeat center center/contain;
+}

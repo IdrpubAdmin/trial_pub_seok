@@ -1,13 +1,31 @@
-@use "variables";
-@use "layout";
+
+.header-bg-color-main {
+    z-index: $gnb-z-index - 1;
+    display: none;
+    @include mobile {
+        display: block;
+    }
+}
+
 .main-bnr {
-    @include width;
     background-image: url("../img/main_slogan.png"), url("../img/main_bg_slice.png");
     background-size: 81.3rem 27.9rem, auto 101%;
     background-position: 35% 60%, 0 0;
     background-repeat: no-repeat;
     height: 100rem;
     position: relative;
+    @include tablet {
+        //@include rwd-width;
+        background-image: url("../img/main_bg_slice.png");
+        background-size: auto 100%;
+        background-position: 50% 0;
+        background-repeat: no-repeat;
+        height: 63rem;
+    }
+    @include mobile {
+        height: 47.5rem;
+        background-position: 65% 0;
+    }
     .main-bnr-bg {
         width: auto;
         height: 100%;
@@ -19,11 +37,21 @@
         position: absolute;
         top: 45.8rem;
         left: 37.5rem;
+        @include tablet {
+            display: block;
+            width: 65%;
+            @include align-center;
+            top: 27.5rem;
+        }
+        @include mobile {
+            width: 80%;
+            @include align-center;
+            top: 24rem;
+        }
     }
 }
 
 .main-menu {
-    @include width;
     h2 {
         font: 3.6rem "BMYEONSUNG";
         color: $brown;
@@ -31,6 +59,11 @@
         margin-top: 7rem;
         em {
             color: $orange;
+        }
+        span {
+            @include mobile {
+                display: block;
+            }
         }
     }
     >p {
@@ -43,25 +76,49 @@
 .main-menu-slide-wrapper {
     @include contents-width;
     position: relative;
+    @include tablet {
+        @include rwd-width;
+    }
+    @include mobile {
+        margin-top: 2rem;
+    }
     .main-menu-slide {
         width: $width;
         margin-top: 3%;
         margin-bottom: 3%;
         position: relative;
+        @include tablet {
+            @include gnb-width;
+            margin-top: 3%;
+            margin-bottom: 3%;
+        }
         ul {
             width: 100%;
             margin: 0 auto;
             display: flex;
+            @include mobile {
+                @include gnb-width;
+            }
             li {
                 width: 23%;
                 margin: 0 1% 0 1%;
                 text-align: right;
                 transform: translateX(-28%);
+                @include tablet {
+                    transform: translateX(-15%);
+                }
+                @include mobile {
+                    // width: 100%;
+                    transform: translateX(-15%);
+                }
                 h3 {
                     text-align: center;
                     font: 2.4rem "BMYEONSUNG";
                     color: $brown;
                     margin-top: 1rem;
+                    span {
+                        display:none;
+                    }
                 }
                 img {
                     width: 100%;
@@ -76,6 +133,14 @@
                     font: 1.6rem "NanumMyeongjo";
                     color: $brown;
                     margin-top: 1rem;
+                    @include mobile {
+                        display:inline-block;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: pre-wrap;
+                        width: 100%;
+                        height: 5.7rem;
+                    }
                 }
             }
         }
@@ -103,22 +168,38 @@
         transform: translateY(-50%);
         width: 4.6rem;
         font-size: 0;
+        @include tablet {
+            width: 2.5rem;
+        }
+        @include mobile {
+            width: 2rem;
+        }
     }
     .prev {
         left: -5% !important;
+        @include tablet {
+            left: 1% !important;
+        }
     }
     .next {
         right: -5% !important;
+        @include tablet {
+            right: 1% !important;
+        }
     }
 }
 
 .main-bar-bnr {
     background: url("../img/bar_bnr_bg_img.png") no-repeat center center/cover;
-    @include width;
     margin-top: 9rem;
     height: auto;
     text-align: center;
     position: relative;
+    @include tablet {
+        background: url("../img/bar_bnr_bg_img.png") no-repeat 45% center/cover;
+        margin-top: 9rem;
+        height: 27rem;
+    }
     img {
         visibility: hidden;
     }
@@ -130,15 +211,43 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    @include tablet {
+        width: $gnb-width;
+    }
     h2 {
         color: $white;
         font: 700 2.95rem "NanumMyeongjo";
+        @include mobile {
+            font-size: 2.5rem;
+        }
+        span {
+            @include mobile {
+                display: block;
+            }
+        }
     }
     p {
         color: $beige;
         font: 1.6rem "NanumSquare";
         margin-top: 2.6rem;
         line-height: 1.4;
+        @include tablet {
+            margin-top: 26px;
+            line-height: 1.4;
+        }
+        @include mobile {
+            font-size: 1.2rem;
+        }
+        span {
+            @include tablet {
+                display: block;
+            }
+        }
+        br {
+            @include tablet {
+                display: none;
+            }
+        }
     }
 }
 
@@ -149,19 +258,47 @@
     display: flex;
     padding-top: 6.1rem;
     overflow: hidden;
+    @include tablet {
+        @include rwd-width;
+        height: auto;
+        flex-direction: column;
+    }
     .main-franchise-info {
         width: 60.1rem;
         margin-left: 6rem;
+        @include tablet {
+            @include gnb-width;
+        }
         >img {
             width: 50rem;
+            @include tablet {
+                display: block;
+                width: 60%;
+                margin: 0 auto;
+            }
+            @include mobile {
+                width: 100%;
+            }
         }
         ul {
             margin-top: 3.5rem;
+            @include tablet {
+                @include rwd-width;
+                margin-top: 3.5rem;
+            }
             li {
                 width: 100%;
                 font: 1.6rem "NanumMyeongjo";
                 margin-top: 0.8rem;
                 color: $black;
+                @include mobile {
+                    font-size: 1.2rem;
+                }
+                span {
+                    @include mobile {
+                        display: none;
+                    }
+                }
                 img {
                     width: 1.9rem;
                     vertical-align: bottom;
@@ -176,33 +313,56 @@
             color: $beige;
             border: 1px solid $beige;
             border-radius: 3px;
+            @include tablet {
+                display: block;
+                margin: 2.1rem auto 0;
+            }
         }
     }
     .main-franchise-question {
         width: 77.9rem;
+        @include tablet {
+            @include gnb-width;
+            margin-top: 3.5rem;
+        }
         img {
             width: 77.9rem;
+            @include tablet {
+                width: 100%;
+            }
         }
     }
 }
 
 .main-franchise-issue {
-    @include width;
     position: relative;
     height: 59.3rem;
     background: url("../img/franchise_bg.png") no-repeat 0 0 / cover;
+    @include tablet {
+        height: auto;
+    }
     .main-franchise-issue-header {
         @include align-center;
         top: -17.5rem;
         text-align: center;
+        @include tablet {
+            @include align-center;
+            @include gnb-width;
+            top: 5rem;
+        }
         h2 {
             font: 3.6rem "BMYEONSUNG";
             color: $brown;
+            display: block;
+            width: 100%;
             span {
                 color: $orange;
             }
-            display: block;
-            width: 100%;
+            em {
+                @include mobile {
+                    display: block;
+                }
+            }
         }
         p {
             font: 1.6rem "Loto";
@@ -216,10 +376,24 @@
         width: 2px;
         height: 59.3rem;
         background: $beige;
+        @include tablet {
+            left: 13.3rem;
+        }
+        @include mobile {
+            display: none;
+        }
     }
     .main-franchise-issue-contents-wrapper {
         @include width;
         height: 100%;
+        @include tablet {
+            @include rwd-width;
+            height: 59.3rem;
+            padding-top: 22rem;
+        }
+        @include mobile {
+            height: 50rem;
+        }
         .btn-franchise {
             justify-content: center;
             margin-top: 4.2rem;
@@ -228,20 +402,42 @@
             font-size: 0;
             top: -10rem;
             left: 50%;
+            @include tablet {
+                margin-top: 0;
+                top: 17.5rem;
+            }
+            @include mobile {
+                width: 4.5rem;
+            }
         }
         .swiper-button-prev {
             transform: translateX(-5rem);
+            @include mobile {
+                transform: translateX(-4rem);
+            }
         }
         .swiper-button-next {
             transform: translateX(1rem);
+            @include mobile {
+                transform: translateX(0);
+            }
         }
         .main-franchise-issue-contents,
         .swiper {
             @include contents-width;
+            @include tablet {
+                @include gnb-width;
+            }
             .swiper-wrapper {
                 width: $contents-width;
                 height: 59.3rem;
                 clear: both;
+                @include tablet {
+                    @include rwd-width;
+                }
+                @include mobile {
+                    height: 50rem;
+                }
                 .swiper-slide {
                     width: $width;
                     margin: 0 auto;
@@ -250,13 +446,23 @@
                         float: left;
                         width: calc(100% - 23rem);
                         margin-top: 5rem;
+                        @include mobile {
+                            width: 100%;
+                            margin-top: 3rem;
+                        }
                         &:first-child {
                             width: 20rem;
                             margin-right: 3rem;
+                            @include mobile {
+                                display: none;
+                            }
                         }
                         &:last-child {
                             margin-top: 6.25rem;
                             margin-right: 0;
+                            @include mobile {
+                                margin-top: 3.5rem;
+                            }
                         }
                         img {
                             width: 100%;
@@ -313,8 +519,10 @@
 }
 
 .main-store {
-    @include width;
     padding-top: 10.7rem;
+    @include mobile {
+        padding-top: 7rem;
+    }
     .main-store-header {
         text-align: center;
         h2 {
@@ -322,6 +530,11 @@
             color: $brown;
             span {
                 color: $orange;
+            }
+            em {
+                @include mobile {
+                    display: block;
+                }
             }
         }
         p {
@@ -333,6 +546,10 @@
         @include width;
         margin-top: 4.4rem;
         position: relative;
+        @include tablet {
+            @include rwd-width;
+            margin-top: 4.4rem;
+        }
 
         ul {
             display: flex;
@@ -358,32 +575,19 @@
                         font: 700 1.8rem "NanumMyeongjo";
                         color: $white;
                         line-height: 1.4;
+                        span {
+                            @include tablet {
+                                display: none;
+                            }
+                        }
+                        @include mobile {
+                            display: none;
+                        }
                     }
                 }
-                &:nth-of-type(1):after, &:nth-of-type(3):after {
-                        //content: "";
-                        //display: block;
-                        //width: 100%;
-                        //height: 100%;
-                        //background: #fff;
-                        //opacity: 0.7;
-                        //position: absolute;
-                        //top: 0;
-                        //left: 0;
-                }
+
             }
-            //.swiper-slide-prev:after,
-            //.swiper-slide-next:after {
-            //    content: "";
-            //    display: block;
-            //    width: 100%;
-            //    height: 100%;
-            //    background: #fff;
-            //    opacity: 0.7;
-            //    position: absolute;
-            //    top: 0;
-            //    left: 0;
-            //}
+
         }
 
         .swiper-opacity {
@@ -412,12 +616,22 @@
         .btn-store {
             width: 4.8rem;
             font-size: 0;
+            @include tablet {
+                width: 3.5rem;
+            }
+            @include mobile {
+                width: 2rem;
+            }
             a {
                 width: 100%;
                 height: auto;
                 position: absolute;
                 top: 50%;
                 transform: translate(-50%, -50%);
+                @include tablet {
+                    width: 100%;
+                    transform: translate(0, -50%);
+                }
                 img {
                     width: 100%;
                 }
@@ -425,9 +639,22 @@
         }
         .prev {
             left: 30%;
+            @include tablet {
+                left: 5%;
+            }
+            @include mobile {
+                left: 1.5%;
+            }
         }
         .next {
             left: 70%;
+            @include tablet {
+                left: auto;
+                right: 5%;
+            }
+            @include mobile {
+                right: 1.5%;
+            }
         }
 
 
@@ -435,34 +662,69 @@
 }
 
 .main-search {
-    @include width;
     height: 32.2rem;
     background: url("../img/locations_bg.jpg") no-repeat center center/cover;
     position: relative;
+    @include mobile {
+        height: 46rem;
+    }
     ul {
         width: $contents-width;
         @include align-center;
         top: 50%;
         transform: translate(-50%, -50%);
         display: flex;
+        @include tablet {
+            @include gnb-width;
+        }
         li {
+            @include tablet {
+                flex: 1 1 auto;
+                text-align: center;
+            }
             &:first-child {
                 width: 23.3rem;
                 margin-right: 2.4rem;
+                @include tablet {
+                    display: none;
+                }
             }
             h2 {
                 font: 4.6rem "BMYEONSUNG";
                 color: $white;
+                span {
+                    @include mobile {
+                        display: block;
+                    }
+                }
             }
             p {
                 font: 1.8rem "NanumMyeongjo";
                 color: $beige;
+                @include mobile {
+                    line-height: 1.4;
+                }
+                span {
+                    @include mobile {
+                        display: block;
+                    }
+                }
             }
             img {
                 width: 100%;
             }
             .main-search-select {
                 padding-top: 5.1rem;
+                @include tablet {
+                    display: flex;
+                    gap: 0 1rem;
+                    text-align: center;
+                }
+                @include mobile {
+                    padding-top: 2.8rem;
+                    flex-direction: column;
+                    gap: 1rem 0;
+                }
                 select {
                     width: 21.4rem;
                     font: 1.6rem "NanumSquare";
@@ -470,6 +732,14 @@
                     padding: 1.3rem 0 1.3rem 1.3rem;
                     border-radius: $border-radius;
                     margin-right: 1rem;
+                    @include tablet {
+                        flex: 1 1 auto;
+                        width: 100%;
+                        margin-right: 0;
+                        .icoArrow {
+                            margin-right: 1.2rem;
+                        }
+                    }
                 }
                 input {
                     width: 22.7rem;
@@ -480,391 +750,12 @@
                     padding: 1.4rem;
                     border-radius: $border-radius;
                     vertical-align: -10%;
+                    @include tablet {
+                        flex: 1 1 auto;
+                        width: 100%;
+                    }
                 }
             }
         }
     }
 }
-
-// Tablet size
-@media (max-width: 1199px) {
-    // main 베너, 슬로건 이미지
-    .main-bnr {
-        @include rwd-width;
-        background-image: url("../img/main_bg_slice.png");
-        background-size: auto 100%;
-        background-position: 50% 0;
-        background-repeat: no-repeat;
-        height: 63rem;
-        .main-bnr-slogan {
-            display: block;
-            width: 65%;
-            @include align-center;
-            top: 27.5rem;
-        }
-    }
-    //main-bnr 종료
-    .main-menu {
-        @include rwd-width;
-    }
-    //main-menu header 부분종료
-    .main-menu-slide-wrapper {
-        @include rwd-width;
-
-        .main-menu-slide {
-            @include gnb-width;
-            margin-top: 3%;
-            margin-bottom: 3%;
-
-            ul {
-                li {
-                    transform: translateX(-15%);
-                }
-            }
-        }
-
-        .btn-menu {
-            width: 2.5rem;
-        }
-        .prev {
-            left: 1% !important;
-        }
-        .next {
-            right: 1% !important;
-        }
-    }    //main-menu-slide-wrapper 종료
-
-    .main-bar-bnr {
-        background: url("../img/bar_bnr_bg_img.png") no-repeat 45% center/cover;
-        @include rwd-width;
-        margin-top: 9rem;
-        height: 27rem;
-    }
-    //main-bar-bnr 종료
-    .main-bar-bnr-txt {
-        width: $gnb-width;
-        p {
-            margin-top: 26px;
-            line-height: 1.4;
-            span {
-                display: block;
-                line-height: 1.4;
-            }
-            br {
-                display: none;
-            }
-        }
-    }
-    //main-bar-bnr-text 종료
-    .main-franchise {
-        @include rwd-width;
-        height: auto;
-        flex-direction: column;
-        .main-franchise-info {
-            @include gnb-width;
-            >img {
-                display: block;
-                width: 60%;
-                margin: 0 auto;
-            }
-            ul {
-                @include rwd-width;
-                margin-top: 3.5rem;
-                li {
-                    width: 100%;
-                }
-            }
-            button {
-                display: block;
-                margin: 2.1rem auto 0;
-            }
-        }
-        div.main-franchise-question {
-            @include gnb-width;
-            margin-top: 3.5rem;
-            img {
-                width: 100%;
-            }
-        }
-    }
-    //main-franchise 종료
-    .main-franchise-issue {
-        @include rwd-width;
-        height: auto;
-        .main-franchise-issue-header {
-            @include align-center;
-            @include gnb-width;
-            top: 5rem;
-        }
-        .center-line {
-            left: 13.3rem;
-        }
-        .main-franchise-issue-contents-wrapper {
-            @include rwd-width;
-            height: 59.3rem;
-            padding-top: 22rem;
-            .btn-franchise {
-                margin-top: 0;
-                top: 17.5rem;
-            }
-            .main-franchise-issue-contents,
-            .swiper {
-                @include gnb-width;
-                .swiper-wrapper {
-                    @include rwd-width;
-                }
-            }
-        } //main-franchise-issue-contents-wrapper
-    } // main-franchise-issue 종료
-    .main-store {
-        @include rwd-width;
-        .main-store-list {
-            @include rwd-width;
-            margin-top: 4.4rem;
-            ul {
-                li {
-                    .main-store-list-text {
-                        p {
-                            span {
-                                display: none;
-                            }
-                        }
-                    }
-                }
-            }
-            .btn-store {
-                width: 3.5rem;
-                a {
-                    width: 100%;
-                    transform: translate(0, -50%);
-                }
-            }
-            .prev {
-                left: 5%;
-            }
-            .next {
-                left: auto;
-                right: 5%;
-            }
-        } //main-store-list
-    } //main-store
-
-    .main-search {
-        @include rwd-width;
-        ul {
-            @include gnb-width;
-            li {
-                flex: 1 1 auto;
-                text-align: center;
-                &:first-child {
-                    display: none;
-                }
-                .main-search-select {
-                    display: flex;
-                    gap: 0 1rem;
-                    text-align: center;
-                    select {
-                        flex: 1 1 auto;
-                        width: 100%;
-                        margin-right: 0;
-                        .icoArrow {
-                            margin-right: 1.2rem;
-                        }
-                    }
-                    input {
-                        flex: 1 1 auto;
-                        width: 100%;
-                    }
-                }
-            }
-        } 
-    } //main-search
-} //  Tablet 종료
-
-
-
-//  Mobile size
-@media (max-width: 640px) {
-    // main 베너, 슬로건 이미지
-    .main-bnr {
-        height: 47.5rem;
-        background-position: 65% 0;
-        .main-bnr-slogan {
-            // display: block;
-            width: 80%;
-            @include align-center;
-            top: 29rem;
-        }
-    }  //main-bnr 종료
-    .main-menu {
-        h2 {
-            span {
-                display:block;
-            }
-        }
-    }
-    //main-menu header 부분종료
-    .main-menu-slide-wrapper {
-        margin-top: 2rem;
-        .main-menu-slide {
-            @include gnb-width;
-            margin-top: 3%;
-            margin-bottom: 3%;
-            .swiper-wrapper, ul {
-                @include gnb-width;
-                .swiper-slide, li {
-                    width: 100%;
-                    transform: translateX(-15%);
-                    h3 {
-                        span {
-                            display: none;
-                        }
-                    }
-                    p {
-                        display:inline-block;
-                        overflow: hidden;
-                        text-overflow: ellipsis;
-                        white-space: pre-wrap;
-                        width: 100%;
-                        height: 5.7rem;
-                    }
-                }
-            }
-        }
-
-        .btn-menu {
-            width: 2rem;
-        }
-    }
-    //main-menu-slide-wrapper 종료
-
-    .main-bar-bnr-txt {
-        h2 {
-            font-size: 2.5rem;
-            span {
-                display: block;
-            }
-        }
-        p {
-            font-size: 1.2rem;
-        }
-    } //main-bar-bnr-text 종료
-    .main-franchise {
-        .main-franchise-info {
-            >img {
-                width: 100%;
-            }
-            ul {
-                li {
-                    font-size: 1.2rem;
-                    span {
-                        display: none;
-                    }
-                }
-            }
-        }
-    }
-    //main-franchise 종료
-
-    .main-franchise-issue {
-        .main-franchise-issue-header {
-            h2 {
-                em {
-                    display: block;
-                }
-            }
-        }
-        .center-line {
-            display: none;
-        }
-        .main-franchise-issue-contents-wrapper {
-            height: 50rem;
-            .btn-franchise {
-                width: 4.5rem;
-            }
-            .swiper-button-prev {
-                transform: translateX(-4rem);
-            }
-            .swiper-button-next {
-                transform: translateX(0);
-            }
-            .main-franchise-issue-contents,
-            .swiper {
-                @include gnb-width;
-                .swiper-wrapper {
-                    @include rwd-width;
-                    height: 50rem;
-                    .swiper-slide {
-                        li {
-                            width: 100%;
-                            margin-top: 3rem;
-                            &:first-child {
-                                display: none;
-                            }
-                            &:last-child {
-                                margin-top: 3.5rem;
-                            }
-                        }
-                    }
-                }
-            }
-        } //main-franchise-issue-contents-wrapper
-    } // main-franchise-issue 종료
-    .main-store {
-        padding-top: 7rem;
-        .main-store-header {
-            h2 {
-                em {
-                    display: block;
-                }
-            }
-        }
-        .main-store-list {
-            ul {
-                li {
-                    .main-store-list-text {
-                        p {
-                            display: none;
-                        }
-                    }
-                }
-            }
-            .btn-store {
-                width: 2rem;
-            }
-            .prev {
-                left: 1.5%;
-            }
-            .next {
-                right: 1.5%;
-            }
-        } //main-store-list
-    } //main-store
-
-    .main-search {
-        height: 46rem;
-        ul {
-            li {
-                h2 {
-                    span {
-                        display: block;
-                    }
-                }
-                p {
-                    line-height: 1.4;
-                    span {
-                        display: block;
-                    }
-                }
-                .main-search-select {
-                    padding-top: 2.8rem;
-                    display: flex;
-                    flex-direction: column;
-                    gap: 1rem 0;
-                }
-            }
-        } 
-    } //main-search
-
-
-} //  Mobile 종료

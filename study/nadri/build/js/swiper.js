@@ -85,8 +85,6 @@ const MainStoreSwiper = new Swiper('.main-store-list', {
     }
 });
 
-
-
 //news-contents 스와이퍼 동작 구현
 const NewsSwiper = new Swiper('.section-main-slide-news', {
     slidesPerView: 2,
@@ -113,7 +111,7 @@ const NewsSwiper = new Swiper('.section-main-slide-news', {
 });
 
 //menu-contents 스와이퍼 동작 구현
-const MenuSwiper = new Swiper('.section-content-slide-menu', {
+const MenuSwiper = new Swiper('.section-main-slide-menu', {
     slidesPerView: 1.4,
     spaceBetween: 5,
     centeredSlides: true,

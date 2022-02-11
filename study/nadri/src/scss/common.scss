@@ -1,22 +1,22 @@
-@use "variables";
-@use "layout";
+//html font 크기 변경
+html {
+  font-size:62.5%;
+}
+
+// 모든 콘텐츠를 감싸는 container 클래스
+.container {
+  @include width;
+  position: relative;
+  @include tablet {
+    @include rwd-width;
+  }
+}
 
 //서브페이지 공통 contents width
 .content {
   @include width;
   @include tablet {
     @include rwd-width;
-  }
-
-}
-
-//서브페이지 공통 section width
-.section {
-  @include width;
-  margin-top: 10rem;
-  @include tablet {
-    @include rwd-width;
-    margin-top: 10rem;
   }
 }
 
@@ -47,6 +47,9 @@
       width: $gnb-width;
       top: 26.1rem;
     }
+    @include mobile {
+      top: 23.6rem;
+    }
 
     span {
       color: $yellow;
@@ -67,6 +70,20 @@
     @include tablet {
       width: $gnb-width;
     }
+    @include mobile {
+      top: 35rem;
+    }
+  }
+}
+
+
+//서브페이지 공통 section width
+.section {
+  @include width;
+  margin-top: 10rem;
+  @include tablet {
+    @include rwd-width;
+    margin-top: 10rem;
   }
 }
 
@@ -137,9 +154,13 @@
 
     td, li {
       border-top: 1px solid $beige-02;
-
       color: $charcoal;
       vertical-align: middle;
+      a {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
     }
   }
 }

@@ -1,5 +1,3 @@
-@use "variables";
-@use "layout";
 
 .content-menu {
   .content-header-menu {
@@ -39,7 +37,7 @@
       }
     }
 
-    .section-content-slide-menu {
+    .section-main-slide-menu {
       @include width;
       height: 60rem;
       background: url("../img/menu_contents_bg.png") no-repeat center 45%/contain;
@@ -114,7 +112,7 @@
       }
     }
 
-    .section-content-list-menu {
+    .section-main-list-menu {
       margin-top: 9rem;
       @include tablet {
         margin-top: 3rem;
@@ -147,63 +145,6 @@
           p {
             font: 1.2rem "Dotum";
             color: $charcoal;
-          }
-        }
-      }
-    }
-  }
-}
-
-// Tablet size
-
-@media (max-width: 1199px) {
-  .content-menu {
-    .section-menu {
-
-      .menu-contents-list {
-        //@include rwd-width;
-
-
-        ul {
-          //@include gnb-width;
-          //flex-wrap: wrap;
-
-          li {
-            //flex: 0 1 20%;
-          }
-        }
-      }
-    }
-  }
-}
-
-// Mobile size
-
-@media (max-width: 640px) {
-  .menu {
-    .section-menu {
-      .menu-contents-slide {
-        //margin-top: 4rem;
-        //background: url("../img/menu_contents_bg.png") no-repeat center center/cover;
-
-        .swiper-wrapper {
-          .swiper-slide {
-            &.swiper-slide-active {
-              //flex: 1 0 auto;
-              //transform: scale(1.1) translate(3%, 3%);
-            }
-          }
-        }
-
-        .btn-menu {
-          //width: 3rem;
-        }
-      }
-
-      .menu-contents-list {
-        ul {
-          li {
-            //flex: 0 1 40%;
           }
         }
       }

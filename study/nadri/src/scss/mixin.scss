@@ -1,11 +1,4 @@
-@use "variables";
 
-//html font 크기 변경,
-
-
-html {
-    font-size:62.5%;
-}
 
 // PC 레이아웃 설정
 
@@ -40,12 +33,6 @@ html {
     box-sizing: border-box;
 }
 
-// 모든 콘텐츠를 감싸는 container 클래스
-.container {
-    @include width;
-    position: relative;
-}
-
 // 반응형 설정
 
 @mixin rwd-width {
@@ -65,14 +52,3 @@ html {
         @content;
     }
 }
-
-@media (max-width: 1199px) {
-
-    .container {
-        @include rwd-width;
-    }
-}
-
-//반응형 img 축소비율
-
-$m-size : 0.75;
