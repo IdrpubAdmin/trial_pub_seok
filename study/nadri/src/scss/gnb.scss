@@ -94,7 +94,8 @@
   @include mobile {
      height:0;
     //height: auto;
-    transition: height 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+    transition: height 0.5s ease;
+
   }
 
   ul {
@@ -112,6 +113,9 @@
         margin-left: 0;
         text-align: center;
       }
+      @include mobile {
+        height: 4rem;
+      }
 
       a {
         font: 700 1.4rem "NanumMyeongjo";
@@ -120,7 +124,9 @@
         height: 100%;
         line-height: 2.8rem;
         display: block;
-
+        @include mobile {
+          line-height: 4rem;
+        }
         &:hover {
           color: $yellow;
         }

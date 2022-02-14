@@ -1,6 +1,6 @@
 const gnb = document.querySelector(".gnb"),
     gnbMain = document.querySelectorAll(".gnb-main"),
-    // gnbSub = document.querySelectorAll(".gnb-sub"),
+    gnbSub = document.querySelectorAll(".gnb-sub"),
     gnbBtn = document.querySelector(".gnb-hamburger-btn");
 
 
@@ -17,6 +17,9 @@ gnb.addEventListener('mouseout', function () {
 gnbBtn.addEventListener('click', function () {
     gnbBtn.classList.toggle('gnb-close-btn');
     gnb.classList.toggle('gnb-activate');
+    for (let j = 0; j <gnbSub.length; j++) {
+        gnbSub[j].classList.remove('gnb-sub-activate');
+    }
 });
 
 
