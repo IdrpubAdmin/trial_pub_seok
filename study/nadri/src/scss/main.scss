@@ -100,10 +100,10 @@
                 @include gnb-width;
             }
             li {
-                width: 23%;
-                margin: 0 1% 0 1%;
+                //width: 23%;
+                //margin: 0 1% 0 1%;
                 text-align: right;
-                transform: translateX(-28%);
+                //transform: translateX(-28%);
                 @include tablet {
                     transform: translateX(-15%);
                 }

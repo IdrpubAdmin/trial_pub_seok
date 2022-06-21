@@ -217,7 +217,7 @@
         </div>
 
         <div class="section-main section-main-cs">
-            <table class="table-design">
+            <table class="table-design table-cs-design">
                 <tr>
                     <th>문의하기</th>
                     <th><span>(필수)</span> 항목<em>은</em> 반드시 입력<em>해 주셔야 문의접수가 가능합니다.</em></th>
@@ -228,11 +228,11 @@
                 </tr>
                 <tr>
                     <td>
-                        <label for="form-phoneNmb1" class="required-info">휴대전화</label>
+                        <label for="form-phone-number" class="required-info">휴대전화</label>
                     </td>
                     <td>
-                        <div class="phoneNmb-wrap">
-                            <select id="form-phoneNmb1" class="input-design"  required>
+                        <div class="phone-number-wrap">
+                            <select id="form-phone-number" class="input-design"  required>
                                 <option value="010" selected>010</option>
                                 <option value="010">011</option>
                                 <option value="010">016</option>
@@ -240,8 +240,8 @@
                                 <option value="010">018</option>
                                 <option value="010">019</option>
                             </select> -
-                            <input type="number" maxlength="4" id="form-phoneNmb2" class="input-design"> -
-                            <input type="number" maxlength="4" id="form-phoneNmb3" class="input-design">
+                            <input type="number" maxlength="4" id="form-phone-number2" class="input-design"> -
+                            <input type="number" maxlength="4" id="form-phone-number3" class="input-design">
                         </div>
                     </td>
                 </tr>
@@ -284,8 +284,12 @@
                 1. 개인 정보의 이용 목적
 
             </div>
-            <input type="checkbox" class="agree" id="form-agree"> <label for="form-agree" class="form-agree">개인정보 취급방침에
-            동의합니다.</label>
+            <div class="privacy-check">
+                <input type="checkbox" class="agree" id="form-agree">
+                <label for="form-agree" class="form-agree">개인정보 취급방침에
+                동의합니다.</label>
+            </div>
+
 
             <button type="button" class="btn-cs-list btn-brown">문의하기</button>
 

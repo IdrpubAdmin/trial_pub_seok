@@ -1,6 +1,5 @@
 
 .quick {
-
   position: fixed;
   right: 3rem;
   top: 60%;
@@ -35,9 +34,10 @@
 
             li {
               text-align: center;
-              line-height: 5rem !important;
               margin-bottom: 0.5rem;
-              font: 1.6rem "BMYEONSUNG";
+              font-size: 1.6rem;
+              font-family: "BMYEONSUNG";
+              line-height: 5rem;
               color: $white;
 
               &:first-of-type {

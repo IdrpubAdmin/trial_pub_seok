@@ -1,6 +1,6 @@
 //main-menu-slide 스와이퍼 동작 구현
 const MainSwiper = new Swiper('.main-menu-slide', {
-    slidesPerView: 2.2,
+    slidesPerView: 2,
     spaceBetween: 20,
     centeredSlides: false,
     loop: true,
@@ -10,17 +10,17 @@ const MainSwiper = new Swiper('.main-menu-slide', {
     },
     breakpoints: {
         320: {
-            slidesPerView: 2.2,
+            slidesPerView: 2,
             spaceBetween: 20,
             autoheight: true
         },
         641: {
-            slidesPerView: 3.2,
+            slidesPerView: 3,
             spaceBetween: 20,
             autoheight: true
         },
         1199: {
-            slidesPerView: 4.2,
+            slidesPerView: 4,
             spaceBetween: 20,
         },
     }

@@ -146,13 +146,14 @@ html {
   border-top: 1px solid $brown;
   border-bottom: 1px solid $brown;
 
-  tr, ul {
-    th, &:first-of-type li {
+  tr {
+    th {
       color: $charcoal;
       background: $ivory;
+      font-weight: 700;
     }
 
-    td, li {
+    td {
       border-top: 1px solid $beige-02;
       color: $charcoal;
       vertical-align: middle;
@@ -164,6 +165,11 @@ html {
     }
   }
 }
+
+.address-cell-design {
+  text-align: justify;
+}
+
 
 //input, select, textarea 기본 디자인
 
