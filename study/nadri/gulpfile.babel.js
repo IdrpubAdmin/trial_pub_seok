@@ -85,7 +85,7 @@ const routes = {
 
 const html = () =>
     gulp.src(routes.html.src)
-        .pipe(extender({verbose: true}))
+        .pipe(extender({verbose: false}))
         .pipe(gulp.dest(routes.html.dest));
 //pug 를 실행했을 때 실행되는 일들
 //gulp.src(routes.pug.src) src/.pug에 있는 퍼그파일을 불러오기

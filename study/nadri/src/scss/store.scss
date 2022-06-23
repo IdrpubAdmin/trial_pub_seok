@@ -350,9 +350,9 @@
   li {
     font-weight: 700;
     text-align: center;
-    flex: 1 1 auto;
+    flex: 1 1 10%;
     @include mobile {
-      flex: 1 1 auto;
+      flex: 1 1 5%;
     }
 
   }
@@ -362,28 +362,34 @@
       flex: 1 1 15%;
     }
     @include mobile {
-      flex: 1 1 35%;
+      flex: 1 1 20%;
     }
   }
 
   .store-address-design {
     flex: 1 1 30%;
-    text-align: justify;
+    text-align: center;
     text-overflow: ellipsis;
     white-space: nowrap;
-    padding-left: 6%;
+    //padding-left: 6%;
     box-sizing: border-box;
     @include tablet {
-      flex: 1 1 40%;
+      flex: 1 1 35%;
     }
   }
 
   .store-map-design {
     @include tablet {
-      flex: 1 1 15%;
+      flex: 1 1 5%;
     }
     @include mobile {
-      flex: 1 1 20%;
+      flex: 1 1 10%;
+    }
+  }
+
+  li:nth-of-type(2), li:nth-of-type(4) {
+    @include mobile {
+      display: none;
     }
   }
 }
@@ -422,40 +428,41 @@
     }
   }
 
-  li:nth-of-type(1), li:nth-of-type(4) {
+  li:nth-of-type(2), li:nth-of-type(4) {
     @include mobile {
       display: none;
     }
   }
+
+  .store-name-design {
+    font-weight: 700;
+    @include tablet {
+      flex: 1 1 15%;
+    }
+    @include mobile {
+      flex: 1 1 20%;
+    }
+  }
+
+  .store-address-design {
+    flex: 1 1 30%;
+    text-align: justify;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-left: 6%;
+    box-sizing: border-box;
+    @include tablet {
+      flex: 1 1 35%;
+      padding-left: 0;
+    }
+  }
+  .store-map-design {
+    @include tablet {
+      flex: 1 1 5%;
+    }
+    @include mobile {
+      flex: 1 1 10%;
+    }
+  }
 }
 
-.store-name-design {
-  font-weight: 700;
-  @include tablet {
-    flex: 1 1 15%;
-  }
-  @include mobile {
-    flex: 1 1 35%;
-  }
-}
-
-.store-address-design {
-  flex: 1 1 30%;
-  text-align: justify;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  padding-left: 6%;
-  box-sizing: border-box;
-  @include tablet {
-    flex: 1 1 40%;
-  }
-}
-
-.store-map-design {
-  @include tablet {
-    flex: 1 1 15%;
-  }
-  @include mobile {
-    flex: 1 1 20%;
-  }
-}

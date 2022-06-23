@@ -447,6 +447,12 @@ html { font-size: 62.5%; }
 
 .map-icon-img { width: 1.4rem; height: 3.9rem; margin: 0 auto; background: url("../img/location_ico_map_leave.png") no-repeat center center/contain; }
 
+.t-tit { font: 3.6rem "BMYEONSUNG"; color: #786c60; text-align: center; margin-top: 7rem; }
+
+.t-tit em { color: #f37537; }
+
+.s-tit { font: 1.6rem "Lato"; color: #786c60; text-align: center; }
+
 .quick { position: fixed; right: 3rem; top: 60%; z-index: 99; }
 
 @media (max-width: 1199px) { .quick { display: none; } }
@@ -1173,23 +1179,25 @@ html { font-size: 62.5%; }
 
 .table-header-design { height: 3.9rem; font-size: 1.2rem; font-family: "Dotum", serif; line-height: 3.9rem; display: flex; background-color: #f6f3eb; }
 
-.table-header-design li { font-weight: 700; text-align: center; flex: 1 1 auto; }
+.table-header-design li { font-weight: 700; text-align: center; flex: 1 1 10%; }
 
-@media (max-width: 640px) { .table-header-design li { flex: 1 1 auto; } }
+@media (max-width: 640px) { .table-header-design li { flex: 1 1 5%; } }
 
 .table-header-design .store-name-design { font-weight: 700; }
 
 @media (max-width: 1199px) { .table-header-design .store-name-design { flex: 1 1 15%; } }
 
-@media (max-width: 640px) { .table-header-design .store-name-design { flex: 1 1 35%; } }
+@media (max-width: 640px) { .table-header-design .store-name-design { flex: 1 1 20%; } }
 
-.table-header-design .store-address-design { flex: 1 1 30%; text-align: justify; text-overflow: ellipsis; white-space: nowrap; padding-left: 6%; box-sizing: border-box; }
+.table-header-design .store-address-design { flex: 1 1 30%; text-align: center; text-overflow: ellipsis; white-space: nowrap; box-sizing: border-box; }
 
-@media (max-width: 1199px) { .table-header-design .store-address-design { flex: 1 1 40%; } }
+@media (max-width: 1199px) { .table-header-design .store-address-design { flex: 1 1 35%; } }
 
-@media (max-width: 1199px) { .table-header-design .store-map-design { flex: 1 1 15%; } }
+@media (max-width: 1199px) { .table-header-design .store-map-design { flex: 1 1 5%; } }
 
-@media (max-width: 640px) { .table-header-design .store-map-design { flex: 1 1 20%; } }
+@media (max-width: 640px) { .table-header-design .store-map-design { flex: 1 1 10%; } }
+
+@media (max-width: 640px) { .table-header-design li:nth-of-type(2), .table-header-design li:nth-of-type(4) { display: none; } }
 
 .table-row-design { height: 3.9rem; font-size: 1.2rem; font-family: "Dotum"; line-height: 3.9rem; display: flex; border-top: 1px solid #e3ded1; }
 
@@ -1203,21 +1211,21 @@ html { font-size: 62.5%; }
 
 .table-row-design:hover li:nth-of-type(6) .map-icon-img { background: url("../img/location_ico_map_enter.png") no-repeat center center/contain; }
 
-@media (max-width: 640px) { .table-row-design li:nth-of-type(1), .table-row-design li:nth-of-type(4) { display: none; } }
+@media (max-width: 640px) { .table-row-design li:nth-of-type(2), .table-row-design li:nth-of-type(4) { display: none; } }
 
-.store-name-design { font-weight: 700; }
+.table-row-design .store-name-design { font-weight: 700; }
 
-@media (max-width: 1199px) { .store-name-design { flex: 1 1 15%; } }
+@media (max-width: 1199px) { .table-row-design .store-name-design { flex: 1 1 15%; } }
 
-@media (max-width: 640px) { .store-name-design { flex: 1 1 35%; } }
+@media (max-width: 640px) { .table-row-design .store-name-design { flex: 1 1 20%; } }
 
-.store-address-design { flex: 1 1 30%; text-align: justify; text-overflow: ellipsis; white-space: nowrap; padding-left: 6%; box-sizing: border-box; }
+.table-row-design .store-address-design { flex: 1 1 30%; text-align: justify; text-overflow: ellipsis; white-space: nowrap; padding-left: 6%; box-sizing: border-box; }
 
-@media (max-width: 1199px) { .store-address-design { flex: 1 1 40%; } }
+@media (max-width: 1199px) { .table-row-design .store-address-design { flex: 1 1 35%; padding-left: 0; } }
 
-@media (max-width: 1199px) { .store-map-design { flex: 1 1 15%; } }
+@media (max-width: 1199px) { .table-row-design .store-map-design { flex: 1 1 5%; } }
 
-@media (max-width: 640px) { .store-map-design { flex: 1 1 20%; } }
+@media (max-width: 640px) { .table-row-design .store-map-design { flex: 1 1 10%; } }
 
 .footer { background: url("../img/footer_bg.jpg") no-repeat center center/cover; width: 100%; max-width: 1920px; margin: 0 auto; height: 32.2rem; padding-top: 1.5rem; }
 

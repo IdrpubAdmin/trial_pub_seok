@@ -188,3 +188,18 @@ html {
   margin: 0 auto;
   background: url("../img/location_ico_map_leave.png") no-repeat center center/contain;
 }
+
+.t-tit {
+  font: 3.6rem "BMYEONSUNG";
+  color: $brown;
+  text-align: center;
+  margin-top: 7rem;
+  em {
+    color: $orange;
+  }
+}
+.s-tit {
+  font: 1.6rem "Lato";
+  color: $brown;
+  text-align: center;
+}
