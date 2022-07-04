@@ -447,7 +447,7 @@ html { font-size: 62.5%; }
 
 .map-icon-img { width: 1.4rem; height: 3.9rem; margin: 0 auto; background: url("../img/location_ico_map_leave.png") no-repeat center center/contain; }
 
-.t-tit { font: 3.6rem "BMYEONSUNG"; color: #786c60; text-align: center; margin-top: 7rem; }
+.t-tit { font: 3.6rem "BMYEONSUNG"; color: #786c60; text-align: center; }
 
 .t-tit em { color: #f37537; }
 
