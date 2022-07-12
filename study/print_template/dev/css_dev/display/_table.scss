@@ -1,0 +1,55 @@
+.table-ty {
+  @include bdt(2px, #000);
+}
+
+.table-row {
+  @include bdb(1px, #eee);
+}
+
+.table-col {
+  display: table;
+  width: 100%;
+  height: auto;
+  min-height: $font-30r;
+  text-align: center;
+
+  .lf {
+    text-align: left;
+  }
+
+  .ri {
+    text-align: right;
+  }
+
+}
+
+.table-col li {
+  display: table-cell;
+  @include lh(1.6);
+  vertical-align: middle;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-clamp: 2;
+
+  &.col1 {
+    width: 15%;
+  }
+
+  &.col2 {
+    width: 15%;
+  }
+
+  &.col3 {
+    width: 30%;
+  }
+
+  &.col4 {
+    width: 15%;
+  }
+
+  &.col5 {
+    width: 25%;
+  }
+
+}

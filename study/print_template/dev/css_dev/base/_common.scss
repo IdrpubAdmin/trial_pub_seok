@@ -1,0 +1,18 @@
+.bd1 {
+  border: 1px solid $border_clr2;
+}
+
+.bd2 {
+  border: 2px solid $border_clr2;
+}
+
+.t-tit {
+  font-size: $font-20r;
+  @include lh(2);
+}
+
+.txt {
+  font-size: $font-14r;
+  @include lh(1.2);
+  margin-top: $con-pd;
+}

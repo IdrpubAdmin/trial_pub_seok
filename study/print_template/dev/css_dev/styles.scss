@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+@import "utils/mixin";
+@import "utils/variables";
+
+@import "base/normalize";
+@import "base/reset";
+@import "base/fonts";
+@import "base/common";
+
+@import "layout/container";
+
+@import "display/table";
+
+@import "pages/receipt";
+

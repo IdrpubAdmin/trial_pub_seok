@@ -1,0 +1,16 @@
+body {
+  font-family: $default_font;
+}
+
+#content {
+  width: $max_w;
+  @include center-block;
+  @include bdrs;
+  padding: $con_pd2;
+  background-color: #fff;
+}
+
+.section {
+  margin-top: $con_pd3;
+  font-size: $font-14r;
+}
