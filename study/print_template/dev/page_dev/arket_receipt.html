@@ -10,7 +10,7 @@
     <div id="container">
 
         <!-- contents | 컨텐츠영역 -->
-        <div class="bd1" id="content">
+        <div class="rcpt" id="content">
             <div class="section-hd">
                 <h2 class="t-tit">영수증/세금계산서</h2>
                 <div class="bd2"></div>
@@ -30,22 +30,21 @@
                     </li>
                     <li class="table-row">
                         <ul class="table-col">
-                            <li class="col1">DT202207111203</li>
+                            <li class="col1">DT202207111343434</li>
                             <li class="col2">선식당 청라점</li>
                             <li class="col3">마늘우삼겹 볶음밥 외 4건</li>
                             <li class="col4">58,100원</li>
                             <li class="col5">
                                 <div class="input-wrap">
-                                    <div class="btn-m btn-ty">
-                                        <a href="javascript:void(0);">
+                                    <div class="btn-m">
+                                        <a class="link pop-btn" data-pop-id="rcpt-tax" href="javascript:void(0);">
                                             세금계산서 출력
                                         </a>
                                     </div>
-                                    <div class="btn-m btn-ty02">
-                                        <a href="javascript:void(0);">
+                                    <div class="btn-m">
+                                        <a class="link pop-btn" data-pop-id="rcpt-cash" href="javascript:void(0);">
                                             현금영수증 출력
                                         </a>
-
                                     </div>
                                 </div>
                             </li>
@@ -64,9 +63,248 @@
 <!-- //wrapper -->
 <!--end Contents-->
 
-<script>
-    $(function () {
 
-    });
+<!-- start popup-contents -->
+
+<div class="pop-wrapper rcpt-cash bd1" id="pop1">
+    <div class="pop-container">
+        <div class="pop-content">
+            <div class="pop-header">
+                <h3 class="t-tit">
+                    현금 영수증 인쇄
+                </h3>
+                <div class="btn-cls"><a href="javascript:void(0);" onclick="toggleModal('.rcpt-cash')"><i class="blind">세금계산서
+                    출력화면 닫기</i></a></div>
+            </div>
+
+            <section class="pop-section">
+                <table class="table-cash">
+                    <tbody>
+                    <tr class="ht46">
+                        <td colspan="3"></td>
+                    </tr>
+                    <tr class="ht38">
+                        <td class="wd92">12345</td>
+                        <td class="wd153">123456</td>
+                        <td class="wd86">123456</td>
+                    </tr>
+                    <tr>
+                        <td class="dp2" colspan="3">
+                            <table>
+                                <tr class="ht36">
+                                    <td class="wd227">현금(소득공제용)</td>
+                                    <td class="wd104">승인</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr class="ht35">
+                        <td colspan="3">43028023**********</td>
+                    </tr>
+                    <tr>
+                        <td class="dp2" colspan="3">
+                            <table>
+                                <tr class="ht36">
+                                    <td class="wd76">** / **</td>
+                                    <td class="wd170">2021-07-10 20:02:05</td>
+                                    <td class="wd85">20210705</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="dp2" colspan="3">
+                            <table>
+                                <tr class="ht36">
+                                    <td class="wd144" colspan="2">72227</td>
+                                    <td class="wd51"></td>
+                                    <td class="wd17"></td>
+                                    <td class="wd17">6</td>
+                                    <td class="wd17">6</td>
+                                    <td class="wd17">8</td>
+                                    <td class="wd17">6</td>
+                                    <td class="wd17">6</td>
+                                    <td class="wd17">8</td>
+                                    <td class="wd17">8</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="dp2" colspan="3">
+                            <table>
+                                <tr class="ht36">
+                                    <td class="wd144" colspan="2">가맹점명</td>
+                                    <td class="wd51"></td>
+                                    <td class="wd17"></td>
+                                    <td class="wd17">6</td>
+                                    <td class="wd17">6</td>
+                                    <td class="wd17">8</td>
+                                    <td class="wd17">6</td>
+                                    <td class="wd17">6</td>
+                                    <td class="wd17">8</td>
+                                    <td class="wd17">8</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="dp2" colspan="3">
+                            <table>
+                                <tr class="ht36">
+                                    <td class="wd144" colspan="2">000-00-0000</td>
+                                    <td class="wd51"></td>
+                                    <td class="wd17"></td>
+                                    <td class="wd17">6</td>
+                                    <td class="wd17">6</td>
+                                    <td class="wd17">8</td>
+                                    <td class="wd17">6</td>
+                                    <td class="wd17">6</td>
+                                    <td class="wd17">8</td>
+                                    <td class="wd17">8</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="dp2" colspan="3">
+                            <table>
+                                <tr class="ht36">
+                                    <td class="wd45">일시불</td>
+                                    <td class="wd99">6개월</td>
+                                    <td class="wd51"></td>
+                                    <td class="wd17"></td>
+                                    <td class="wd17">6</td>
+                                    <td class="wd17">6</td>
+                                    <td class="wd17">8</td>
+                                    <td class="wd17">6</td>
+                                    <td class="wd17">6</td>
+                                    <td class="wd17">8</td>
+                                    <td class="wd17">8</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="dp2" colspan="3">
+                            <table>
+                                <tr class="ht37">
+                                    <td class="wd144" colspan="2">5678</td>
+                                    <td class="wd51"></td>
+                                    <td class="wd17">4</td>
+                                    <td class="wd17">6</td>
+                                    <td class="wd17">6</td>
+                                    <td class="wd17">8</td>
+                                    <td class="wd17">6</td>
+                                    <td class="wd17">6</td>
+                                    <td class="wd17">8</td>
+                                    <td class="wd17">8</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="dp2" colspan="3">
+                            <table>
+                                <tr class="ht36">
+                                    <td class="wd144">LG</td>
+                                    <td class="wd153">79450</td>
+                                    <td class="wd34"></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="dp2" colspan="3">
+                            <table>
+                                <tr class="ht36">
+                                    <td class="wd144">김인원</td>
+                                    <td class="wd187 taR">211-87-21455</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="dp2" colspan="3">
+                            <table>
+                                <tr class="ht36">
+                                    <td class="wd195">현대백화점</td>
+                                    <td class="wd136">
+                                        <div class="line1 wd135">오버사이즈 티셔츠롱스커트</div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr class="ht38">
+                        <td colspan="3">
+                            <div class="line1 wd331">서울 강동구 천호동 454-2</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="dp2" colspan="3">
+                            <table>
+                                <tr class="ht36">
+                                    <td class="wd108">1800-2233</td>
+                                    <td class="wd223">
+                                        알림
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="dp2" colspan="3">
+                            <table>
+                                <tr class="ht36">
+                                    <td class="wd92">000000</td>
+                                    <td class="wd239">
+                                        서명
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </section>
+            <div class="pop-footer">
+                <div class="btn-area">
+                    <ul>
+                        <li>
+                            <a class="btn-b btn-ty" href="javascript:void(0);"
+                               onclick="toggleModal('.rcpt-cash')">닫기</a>
+                        </li>
+                        <li class="wd15"></li>
+                        <li>
+                            <a class="btn-b btn-ty02" href="javascript:void(0);"
+                               onclick="printBtn('.table-cash')">인쇄하기</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end popup-contents -->
+
+<script>
+    var popOpen = document.querySelectorAll('.pop-btn');
+    var popId;
+
+    for (let i = 0; i < popOpen.length; i++) {
+        popOpen[i].addEventListener('click', function () {
+            popId = this.getAttribute('data-pop-id');
+            document.querySelector('.' + popId).classList.add('on');
+        });
+    }
+
+    function toggleModal(target) {
+        document.querySelector(target).classList.remove('on');
+    }
+
+    function printBtn() {
+        window.print();
+    }
 </script>
 <!-- @@close -->

@@ -3,14 +3,15 @@ body {
 }
 
 #content {
-  width: $max_w;
   @include center-block;
-  @include bdrs;
-  padding: $con_pd2;
-  background-color: #fff;
+  padding: $con_pd3;
 }
 
 .section {
-  margin-top: $con_pd3;
   font-size: $font-14r;
+}
+
+.pop-wrapper {
+  @include posa-tl(45px, 50%);
+  transform: translateX(-50%);
 }

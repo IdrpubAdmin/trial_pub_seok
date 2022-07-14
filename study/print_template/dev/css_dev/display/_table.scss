@@ -1,16 +1,16 @@
 .table-ty {
-  @include bdt(2px, #000);
+  @include bdt(2px, $black);
 }
 
 .table-row {
-  @include bdb(1px, #eee);
+  @include bdb(1px, $border_clr);
 }
 
 .table-col {
   display: table;
   width: 100%;
   height: auto;
-  min-height: $font-30r;
+  min-height: $font-32r;
   text-align: center;
 
   .lf {
@@ -25,12 +25,12 @@
 
 .table-col li {
   display: table-cell;
+  padding: 10px;
+  box-sizing: border-box;
   @include lh(1.6);
   vertical-align: middle;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  line-clamp: 2;
+  word-wrap: break-word;
+  word-break: break-all;
 
   &.col1 {
     width: 15%;

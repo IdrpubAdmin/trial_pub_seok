@@ -1,0 +1,103 @@
+.rcpt {
+  width: 700px;
+  min-height: 500px;
+  height: auto;
+  margin-top: 5%;
+  @include bd(1px, #ccc);
+  @include bdrs(10px);
+
+  .section {
+    margin-top: $con-pd3;
+  }
+}
+
+.rcpt-cash {
+  width: 381px;
+  height: 840px;
+  background-color: $white;
+  display: none;
+
+
+  .pop-header {
+    margin-top: 33px;
+  }
+
+  .btn-cls {
+    @include posa-tr(26px, 18px);
+  }
+
+  .pop-section {
+    width: 351px;
+    height: 627px;
+    margin-top: 24px;
+    font: $font-12r $second_font;
+    background: url("../images/bg-receipt-cash.png") no-repeat center center/cover;
+  }
+
+  .btn-area {
+    margin-top: $con_mg2;
+  }
+
+}
+
+.table-cash {
+  margin: $con-pd;
+  box-sizing: border-box;
+  width: 331px;
+
+  tr {
+    td {
+      vertical-align: middle;
+      padding: 10px 3px 0 3px;
+      box-sizing: border-box;
+
+      &.dp2 {
+        padding: 0;
+
+        table {
+          tr {
+            td {
+              padding: 10px 3px 0 3px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
+
+.pop-wrapper {
+  padding: $pop-pd;
+  box-sizing: border-box;
+
+  .t-tit {
+    font-size: $font-20r;
+    @include lh(1);
+    text-align: center;
+  }
+}
+
+.btn-cls {
+  width: 23px;
+  height: 23px;
+
+  a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size: $font-22r;
+
+    &::after {
+      content: "ⓧ";
+      display: inline-block;
+    }
+  }
+
+}
+
+.line1 {
+  display: block;
+  width: 100%;
+  @include line1;
+}

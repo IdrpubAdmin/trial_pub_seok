@@ -3,16 +3,101 @@
 }
 
 .bd2 {
-  border: 2px solid $border_clr2;
+  border: 2px solid $point_clr;
 }
 
 .t-tit {
-  font-size: $font-20r;
-  @include lh(2);
+  font-size: $font-24r;
+  @include lh(2.4);
 }
 
 .txt {
   font-size: $font-14r;
-  @include lh(1.2);
-  margin-top: $con-pd;
+  @include lh(1.4);
+  margin-top: $con-pd3;
+}
+
+.link {
+  position: relative;
+  font-size: $font-14r;
+
+  &::after {
+    content: "";
+    @include posa-tl(0px, 0px);
+    width: 100%;
+    height: 2.8rem;
+    line-height: 2.8;
+    @include bdb(1px, #000);
+    max-width: 0;
+    //overflow: hidden;
+    transition: all 0.4s;
+  }
+
+  &:hover::after {
+    max-width: 100%;
+  }
+}
+
+.btn-m {
+  width: auto;
+  min-width: 6rem;
+  height: auto;
+  min-height: 3rem;
+  line-height: 3rem;
+
+  a {
+    display: inline-block;
+    width: max-content;
+    height: 100%;
+  }
+}
+
+.blind {
+  font-size: 0;
+  position: absolute;
+  text-indent: -9999px;
+}
+
+.btn-area {
+  ul {
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+
+    li {
+      width: 100%;
+      display: table-cell;
+
+      a {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.btn-ty {
+  background-color: #fff;
+  @include bd(2px, #000);
+  box-sizing: border-box;
+}
+
+.btn-ty02 {
+  background-color: $black;
+  color: $white;
+  @include bd(2px, #000);
+  box-sizing: border-box;
+}
+
+.btn-b {
+  display: inline-block;
+  height: 5rem;
+  font-size: $font-18r;
+  padding: 1.6rem;
+
+  box-sizing: border-box;
+}
+
+.on {
+  display: block !important;
 }

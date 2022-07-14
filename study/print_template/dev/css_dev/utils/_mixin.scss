@@ -65,3 +65,23 @@
 @mixin bdb($t: 1px, $c: #000) {
   border-bottom: $t solid $c;
 }
+
+@mixin bd($t: 1px, $c: #000) {
+  border: $t solid $c;
+}
+
+@mixin line2($l: 2) {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+@mixin line1() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  
+}
