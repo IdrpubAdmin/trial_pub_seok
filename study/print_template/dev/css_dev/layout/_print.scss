@@ -1,0 +1,15 @@
+@media print {
+  * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .pop-header, .pop-footer {
+    display: none;
+  }
+  #content {
+    display: none;
+  }
+  .pop-wrapper {
+    border: none !important;
+  }
+}

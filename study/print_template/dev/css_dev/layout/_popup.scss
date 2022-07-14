@@ -1,0 +1,52 @@
+//레이어팝업 공통클래스
+
+.pop-wrapper {
+  padding: $pop-pd;
+  @include bd(1px, $border_clr2);
+  box-sizing: border-box;
+
+  .t-tit {
+    font-size: $font-20r;
+    @include lh(1);
+    text-align: center;
+  }
+}
+
+.pop-header {
+  margin-top: 33px;
+}
+
+.pop-section {
+  margin-top: 24px;
+  font: $font-12r $second_font;
+}
+
+
+.pop-footer {
+  .btn-area {
+    margin-top: $con_mg2;
+  }
+}
+
+// 레이어 팝업 닫기 버튼 layer popup close button
+.btn-cls {
+  @include posa-tr(26px, 18px);
+  width: 23px;
+  height: 23px;
+
+  a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    //font-size: $font-22r;
+
+    &::after {
+      display: inline-block;
+      content: "";
+      width: 23px;
+      height: 23px;
+      background: url("../images/icon-x.png") no-repeat center/contain;
+
+    }
+  }
+}
