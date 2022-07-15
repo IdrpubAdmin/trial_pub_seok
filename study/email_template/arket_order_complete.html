@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:width="http://www.w3.org/1999/xhtml">
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
@@ -8,19 +8,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 
+
+<body>
+
+<!--email contents start-->
 <style type="text/css">
-    /* CLIENT-SPECIFIC RESETS */
-    /* Outlook.com(Hotmail)의 전체 너비 및 적절한 줄 높이를 허용 */
-    .ReadMsgBody {
-        width: 100%;
+    /*  Font import */
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+    /* GENERAL STYLE RESETS */
+    body, #bodyTable {
+        width: 100% !important;
+        height: 100% !important;
+        margin: 0;
+        padding: 0;
     }
 
-    .ExternalClass {
-        width: 100%;
+    #bodyTable {
+        padding: 20px 0 30px 0;
+        background-color: #ffffff;
     }
 
-    .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {
-        line-height: 100%;
+    img, a img {
+        border: 0;
+        outline: none;
+        text-decoration: none;
+    }
+
+    table, td {
+        border-collapse: collapse;
     }
 
     /* Outlook 2007 이상에서 Outlook이 추가하는 테이블 주위의 간격을 제거 */
@@ -41,24 +57,297 @@
     }
 </style>
 
-<body>
 <!-- OUTERMOST CONTAINER TABLE -->
 <table border="0" cellpadding="0" cellspacing="0" width="100%" id="bodyTable">
     <tr>
         <td>
 
             <!-- 600px - 800px CONTENTS CONTAINER TABLE -->
-            <table border="0" bgcolor="#ffffff" cellpadding="0" cellspacing="0" style="margin: 0 auto; max-width: 600px; min-width: 300px; width: 100%; font-family: 'Noto Sans KR', Malgun Gothic, Sans-serif;">
+            <table border="0" bgcolor="#ffffff" cellpadding="0" cellspacing="0" width="100%"
+                   style="border:1px solid #cccccc; max-width: 600px; min-width: 300px; margin: 0 auto; font-family: 'Noto Sans KR', Sans-serif; font-size: 12px; line-height: 1.5;">
+                <!-- arket logo -->
                 <tr>
-                    <td>
+                    <td style="padding-bottom: 68px;">
+                        <table align="center" style="max-width: 540px; min-width: 300px; width: 100%;">
+                            <tr>
+                                <td height="112" align="center" valign="middle">
+                                    <img src="https://lh3.googleusercontent.com/CZTZop3UCOI8ogwlFC5Qpxp_FbnGAAt0z_8tZmfZWpV1cSOQtYA-97zU8knbCZHxVTNFcubBTJNJSvC657TxfGdcH6_f_IElxBWa4hOAvR7LSxOOZXCWfRAcSh9vLtUEOhr0A03do8Bh-U5IgcBdy_P3kLaoa9W9DDuhmlLhC0zANND7MFMbF_RFcjkSohz25QdcKp2seeglJxpZDD5U6huz5-FXxXVACIc-b71MJh_p11dJ8cS-eMVWUg7u5Y-8x-MozRWMO_-rGoJq5z27QKlq9JoeLaOSwj7T6kTL3XRGSiFXCJ53IltcS-7WCuNpcD6B0kd8_i1EuyadaRQEaSHJ4M4m_oELsVAEPN6uajxdni5vZ_IuccTCIHj_DmFq0-FjH7NSK8syTqZ6mrBg4KGw8RCpgE2Vi1yBAYKb6Tw964dPlSyijO6P1vFwYNFh07ZA-EVbrD541VKC4g9tX4GAnnUaohzEKXDUsVj_1Tm02MPlmFQuYdNHXZu4t9m8IhwHq6lwb_-trj0L02GM6eECYxrKPZtxhk_5tbAm-i_WVE1dZoEHDl2nsSQDkjB1JFLBLLGqiIJQ9aYySiloMlvrf2x6BjqU8G3PkrQs-jc0lmAGFiUDULffvdjyp2CQ59vYd34l5m0wrRUgH9iyPDvpFKRvnCh5taTJz_7pXZAPiDglwL6oOjGgXgbNPkPCrOKRSVl9JpWg-BHZKIjJanL2XXUIr3qIz2unFc_dJcpi7PqyU1ru9LCaQqQJ=w300-h67-no?authuser=0" alt="Arket" width="180" height="40">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td height="55"
+                                    style="padding-left:2px; font-size:30px; font-weight: bold">
+                                    주문이 완료되었습니다.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td height="83" >
+                                    {이름} 고객님, 주문해 주셔서 감사드립니다. <br>
+                                    고객님의 주문이 정상적으로 접수되어 주문내역을 안내해드립니다.
 
+                                </td>
+                            </tr>
+                            <tr>
+                                <td height="32" valign="middle"
+                                    style="font-size: 18px">
+                                    주문정보
+                                </td>
+                            </tr>
+                            <tr>
+                                <td bgcolor="#000000"></td>
+                            </tr>
+                            <tr>
+                                <td style="font-size: 13px; padding-top: 30px;">
+                                    <table cellpadding="0" cellspacing="0" width="100%">
+                                        <tr valign="top">
+                                            <td style="width:50%; max-width: 280px; min-width: 150px;">
+                                                <table cellpadding="0" cellspacing="0" width="100%">
+                                                    <tr>
+                                                        <td height="20" style="font-size: 12px">주문번호</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="padding-bottom: 18px">21061500850132</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td height="20" style="font-size: 12px">주문일</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="padding-bottom: 18px">2021년 6월 10일</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td height="20" style="font-size: 12px">주문자</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="padding-bottom: 18px">홍길동</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td height="20" style="font-size: 12px">결제수단</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>무통장입금</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>입금계좌 : 우리26494957518182</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>입금자명 : 홍길동</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>입금마감일 : 2021년06월16일</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>결제 예정액 : 225,000원</td>
+                                                    </tr>
+
+                                                </table>
+                                            </td>
+                                            <td style="width:50%; max-width: 280px; min-width: 150px;">
+                                                <table cellpadding="0" cellspacing="0" width="100%">
+                                                    <tr>
+                                                        <td height="20" style="font-size: 12px">배송받는사람</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="padding-bottom: 18px">홍길동</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td height="20" style="font-size: 12px">연락처</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="padding-bottom: 18px">010-1234-5678 / 010-1234-5699
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td height="20" style="font-size: 12px">배송 주소</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="padding-bottom: 18px">08807 서울 영등포구 양평로22길 21 코오롱디
+                                                            지털타워 800호
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td height="20" style="font-size: 12px">배송시 요청사항</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="padding-bottom: 18px">경비실이 없습니다. 배송 전, 연락주세요.</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td height="20" style="font-size: 12px">배송방법</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>택배발송(발송 후 1~3일 소요)</td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td height="32" valign="middle"
+                                    style="font-size: 18px; padding-top: 42px;">
+                                    주문내역
+                                </td>
+                            </tr>
+                            <tr>
+                                <td bgcolor="#000000"></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <table cellpadding="0" cellspacing="0" width="100%">
+                                        <tr height="40" style="text-align: center; border-bottom:1px solid #000000;">
+                                            <td style="width: 42.59%;">상품명</td>
+                                            <td style="width: 23.14%;">상품금액</td>
+                                            <td style="width: 12.03%;">수량</td>
+                                            <td style="width: 22.22%;">배송비</td>
+                                        </tr>
+                                        <tr height="62" style="text-align: center; border-bottom:1px solid #afb0b5;">
+                                            <td style="width: 42.59%; text-align: left">
+                                                <table cellpadding="0" cellspacing="0" width="100%">
+                                                    <tr>
+                                                        <td>오버사이즈리넨 재킷 울 코트</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="font-size: 11px;">M, 블루</td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td style="width: 23.14%;" >1,034,900원</td>
+                                            <td style="width: 12.03%;">1</td>
+                                            <td style="width: 22.22%;">무료배송</td>
+                                        </tr>
+                                        <tr height="62" style="text-align: center; border-bottom:1px solid #afb0b5;">
+                                            <td style="width: 42.59%; text-align: left">
+                                                <table cellpadding="0" cellspacing="0" width="100%">
+                                                    <tr>
+                                                        <td>스트라이프 니티드 탑</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="font-size: 11px;">ONESIZE, 더스티 핑크</td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td style="width: 23.14%;">54,900원</td>
+                                            <td style="width: 12.03%;">1</td>
+                                            <td style="width: 22.22%;">무료배송</td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="font-size: 13px">
+                                    <table cellpadding="0" cellspacing="0" width="100%">
+                                        <tr valign="top">
+                                            <td style="width:50%; max-width: 280px; min-width: 150px;"></td>
+                                            <td style="width:50%; max-width: 280px; min-width: 150px;">
+                                                <table cellpadding="0" cellspacing="0" width="100%">
+                                                    <tr>
+                                                        <td height="26" style="padding-top: 12px;">총 상품금액</td>
+                                                        <td height="26" style="padding-top: 12px; text-align: right">
+                                                            12,390,000원
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td height="26">총 할인금액</td>
+                                                        <td height="26" style="text-align: right; color: #dd0000;">
+                                                            -487,000원
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td height="26">배송비</td>
+                                                        <td height="26" style="text-align: right;">0원</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td height="10" style="border-bottom: 1px solid #000000;"
+                                                            colspan="2"></td>
+                                                    </tr>
+                                                    <tr valign="middle">
+                                                        <td height="20" style="padding-top: 12px;">총 결제금액</td>
+                                                        <td height="20"
+                                                            style="padding-top: 12px; text-align: right; font-size: 20px;">
+                                                            12,390,000원
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding-top: 56px" align="center" valign="middle">
+                                    <a href="javascript:void(0);"
+                                       style="display: block; width: 280px; height: 50px; background-color:#000000;  color: #ffffff; text-decoration: none; font-size: 18px; line-height: 50px">주문상세내역보기</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td height="20"
+                                    style="font-size:18px; padding-top: 97px; padding-bottom: 12px;">
+                                    청약철회 청구안내
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    상품을 인도받은 날로부터 7일 이내에 계약에 관한 청약철회가 가능합니다. </br></br>
+                                    단, 다음의 경우에는 청약철회가 불가합니다. : 소비자의 책임이 있는 경우, 소비자의 사용 또는 시간의 경과로 재화의 가치가 현저하게 감소한 경우, 재판매가 곤란할 정도로 재화의 가치가 현저히 감소한 경우, 재화의 멸실, 복제 가능한 재화 등의 포장을 훼손한 경우, 사전 고지된 일부 상품. </br></br>
+
+                                    상품의 표시, 광고 내용과 다르거나 계약 내용과 다르게 이행된 경우에는 그 사실을 안 날 또는 알 수 있었던 날로부터 30일 내 또는 상품을 공급받은 날로부터 3개월 내 청약철회가 가능합니다. </br></br>
+
+                                    청약 철회는 ARKET 고객센터(1522-0176)로 전화 또는 다음의 주소로 등기우편을 보내주시면 됩니다. (서울 강동구 올림픽로 70길 34 현대홈쇼핑 고객보호팀 담당자 앞) </br></br>
+
+                                    당사는 청약철회를 접수한 날로 부터 3일 이내 고객님께 상품 대금을 반환하여 드립니다. 이 경우 고객님께서는 상품 대금을 반환 받으신 이후에도 인도 받은 상품을 온전하게 반품하셔야 하며,이때 상품의 반품비용은 고객님이 부담하셔야 합니다. (상품 하자의 경우 당사 부담) </br></br>
+
+                                    반송 배송비는 당사 또는 협력사가 부담하며, 상품 설명에 명시된 경우는 고객 부담 입니다. </br></br>
+
+                                    본 상품에 대한 품질 보증 및 피해보상에 관한 사항은 소비자 피해 보상규정(재정경제부 고시 2001-22호)에 의거하여 실시 합니다. </br></br>
+
+                                    더 현대 닷컴은 현금 10만원 이상 거래에 대해 소비자가 대금을 지급하고 공급받지 못하는 경우에 대비하여 관련 법률에 따라 하나은행과 지급 보증 계약을 체결하였습니다. (매매보호 지급 보증의 총 한도액은 30억원 입니다.)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td height="20"
+                                    style="font-size:18px; padding-top: 40px; padding-bottom: 12px;">
+                                    상품 공급방법 및 시기
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    배송은 주문일 익일 기준으로 2~7일 소요됩니다. 일부 상품의 경우 예상 배송 소요일을 초과할 수 있으며, 이 경우 (안내 전화 등) 별도 연락 드립니다. (무통장입금은 입금확인일 기준, 공휴일/휴무일/천재지변에 의한 배송 불가 기간은 배송 소요일에서 제외) </br></br>
+
+                                    주문 상품의 품절 등 사유로 제공할 수 없을 때에는 그에 필요한 조치를 취하고 고객님께 안내 드립니다. </br></br>
+
+                                    이용약관 전문은 www.arket.co.kr에서 확인 할 수 있으며, 필요시 1522-0176로 요청하시면 송부해 드립니다. </br></br>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding-left: 8px; text-indent: -8px;">
+                                    -  상품 반품 시 반품 상품 도착 후에 상품 상태 점검이 완료되면 결제 취소가 진행 됩니다. </br>
+                                    단, 이때 반품 불가 사유에 해당될 경우에는 반품이 불가능하며, 고객님께 이 사실을 연락 드리
+                                    고 상품을 다시 배송해 드립니다.
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="120" bgcolor="#f5f5f5" style=" text-align: center; color: #666666; font-size: 13px">
+                        본 메일 내용과 관련하여 궁금하신 사항은 고객센터나 이메일로 문의 바랍니다.</br></br>
+
+                        고객센터 : 1522-0176</br>
+                        이메일 : customerservice.kr@arket.com
+                    </td>
+                </tr>
+                <tr>
+                    <td height="96" style="text-align: center; color: #999999;">
+                        주식회사 <span style="color: #555555;">현대백화점</span>  대표이사 : 김형종 외 2인 서울 테헤란로98길 12</br>
+                        사업자등록번호 : 211-87-21455  통신판매번호 : 2010-서울강남-01882</br>
+                        개인정보관리 및 청소년보호 책임자 : 회원운영관리담당 장근혁
                     </td>
                 </tr>
             </table>
-
         </td>
     </tr>
 </table>
+<!--email contents end-->
 </body>
 
 </html>
