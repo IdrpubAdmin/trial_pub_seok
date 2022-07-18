@@ -1,0 +1,87 @@
+@charset "UTF-8";
+
+@mixin bdrs($z: 5px) {
+  -webkit-border-radius: $z;
+  -moz-border-radius: $z;
+  border-radius: $z;
+}
+
+@mixin posa-tl($t: 0, $l:0) {
+  position: absolute;
+  top: $t;
+  left: $l;
+}
+
+@mixin posa-tr($t: 0, $r:0) {
+  position: absolute;
+  top: $t;
+  right: $r;
+}
+
+@mixin posa-bl($b: 0, $l:0) {
+  position: absolute;
+  bottom: $b;
+  left: $l;
+}
+
+@mixin posa-br($b: 0, $r:0) {
+  position: absolute;
+  bottom: $b;
+  right: $r;
+}
+
+@mixin posf-t($t: 0, $l:0) {
+  position: fixed;
+  top: $t;
+  left: $l;
+}
+
+@mixin posf-b($b: 0, $l:0) {
+  position: fixed;
+  bottom: $b;
+  left: $l;
+}
+
+@mixin clear-fix() {
+  display: block;
+  clear: both;
+  content: '';
+}
+
+@mixin center-block() {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin lh($lh: 1) {
+  line-height: $lh;
+}
+
+@mixin bdt($t: 1px, $c: #000) {
+  border-top: $t solid $c;
+}
+
+@mixin bdb($t: 1px, $c: #000) {
+  border-bottom: $t solid $c;
+}
+
+@mixin bd($t: 1px, $c: #000) {
+  border: $t solid $c;
+}
+
+@mixin line2($l: 2) {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+@mixin line1() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  
+}

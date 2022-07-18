@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('../fonts/OpenSans-Light.woff2') format('woff2'),
+  url('../fonts/OpenSans-Light.woff') format('woff'),
+  url('../fonts/OpenSans-Light.otf') format('opentype');
+  font-weight: $l;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('../fonts/OpenSans-Regular.woff2') format('woff2'),
+  url('../fonts/OpenSans-Regular.woff') format('woff'),
+  url('../fonts/OpenSans-Regular.otf') format('opentype');
+  font-weight: $r;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('../fonts/OpenSans-Medium.woff2') format('woff2'),
+  url('../fonts/OpenSans-Medium.woff') format('woff'),
+  url('../fonts/OpenSans-Medium.otf') format('opentype');
+  font-weight: $md;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('../fonts/OpenSans-Bold.woff2') format('woff2'),
+  url('../fonts/OpenSans-Bold.woff') format('woff'),
+  url('../fonts/OpenSans-Bold.otf') format('opentype');
+  font-weight: $b;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('../fonts/OpenSans-Black.woff2') format('woff2'),
+  url('../fonts/OpenSans-Black.woff') format('woff'),
+  url('../fonts/OpenSans-Black.otf') format('opentype');
+  font-weight: $bk;
+  font-style: normal;
+}
