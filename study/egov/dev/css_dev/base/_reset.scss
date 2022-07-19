@@ -35,7 +35,10 @@ html {
 }
 
 body {
-  line-height: 1;
+  font-family: '맑은 고딕', 'Malgun Gothic', sans-serif;
+  line-height: 1.4;
+  color: #333;
+  letter-spacing: -1px;
 }
 
 ol, ul {
@@ -60,4 +63,64 @@ table {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+/* common */
+hr, table caption {
+  display: none;
+}
+
+legend, .hd-element {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  font-size: 0;
+  line-height: 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+img, fieldset, button, input {
+  border: 0;
+  vertical-align: middle;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+em, address {
+  font-style: normal;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  vertical-align: top;
+  background: transparent;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
+a, input, select, button, textarea {
+  font-family: inherit;
 }

@@ -1,4 +1,5 @@
 .top-menu {
+  display: none;
   @include posa-tl(0, 0);
   width: 100%;
   height: 33px;
@@ -12,6 +13,10 @@
   font-family: "Open Sans", sans-serif;
 }
 
+.select-lang {
+  display: none;
+}
+
 .toggle-lang {
   //display: none;
   @include posa-tl(28px, 0);
@@ -19,7 +24,237 @@
 }
 
 .egov-section {
-  width: $full;
-  height: 1675px;
-  background: url("../images/egov_body.jpg") no-repeat center center/cover;
+  width: 100%;
+  //height: 1675px;
+  //background: url("../images/egov_body.jpg") no-repeat center center/cover;
 }
+
+.gnb {
+  width: 100%;
+  height: 60px;
+  box-shadow: 1px 3px 10px #eee;
+  border-bottom: 1px solid #cdd6e3;
+}
+
+.gnb-inner-wrap {
+  position: relative;
+}
+
+.i {
+  display: block;
+  overflow: hidden;
+  @include posa-tl(0, -99999999px);
+  width: 0;
+  height: 0;
+  font-size: 0;
+}
+
+.btn-fullmenu {
+  a {
+    @include posa-tr(0,0);
+    display: block;
+    overflow: hidden;
+    width: 60px;
+    height: 60px;
+    background-image: url("../images/icon-menu.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 20px auto;
+  }
+  &.close {
+    a {
+      background-image: url("../images/icon-menu-all-close.png");
+    }
+  }
+
+}
+
+.btn-logo {
+  @include posa-tl(50%, 50%);
+  transform: translate(-50%, -50%);
+  width: 109px;
+  height: 36px;
+  a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.btn-others {
+  @include posa-tr(0, 0);
+  display: block;
+  width: 60px;
+  height: 60px;
+}
+
+.btn-mygov {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+  a {
+    display: block;
+    overflow: hidden;
+    width: 60px;
+    height: 60px;
+    background-image: url("../images/icon-mygov.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 26px 26px;
+  }
+}
+
+.m-gnb {
+  display: none;
+  &.on {
+    display: block;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    overflow-y: scroll;
+    z-index: $z-gnb;
+
+  }
+}
+
+.gnb-hd {
+  display: block;
+  height: 60px;
+  background-color: $blue;
+}
+
+.btn-login {
+  display: inline-block;
+  height: 25px;
+  margin: 17px 20px;
+  padding: 0 10px;
+  line-height: 23px;
+  @include bd(1px, #fff);
+  @include bdrs(5px);
+  font-size: $font-12r;
+
+  .btn-text {
+    display: inline-block;
+    position: relative;
+    padding-left: 20px;
+    color: $white;
+    &::before {
+      content: "";
+      display: block;
+      @include posa-tl(0, 0);
+      width: 10.5px;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-position: 0 50%;
+      background-size: 100% auto;
+    }
+  }
+
+  &.login {
+    .btn-text {
+      &::before {
+        background-image: url("../images/icon-login.png");
+      }
+    }
+  }
+  &.join {
+    margin-left: -5px;
+    .btn-text {
+      &::before {
+        content: "+";
+        font-size: 22px;
+        line-height: 20px;
+
+      }
+    }
+  }
+}
+
+.gnb-bd {
+  display: block;
+  @include posf(60px, 0, 0, 0);
+  width: 100%;
+  > li {
+    > a {
+      display: block;
+      width: 30%;
+      background-color: $light_gray;
+      @include bdb(1px, $light_black);
+      @include bdr(1px, $light_black);
+      font-size: $font-24r;
+      padding: 15px 0;
+      font-weight: bold;
+      text-align: center;
+      box-sizing: border-box;
+    }
+    .dp2 {
+      display: none;
+      @include posa-tl(0, 0);
+      width: auto;
+      z-index: $z-gnb + 1;
+    }
+
+    &.on {
+      > a {
+        color: $blue;
+        background-color: $white;
+        @include bdl(4px, $blue);
+        border-right: none;
+        font-size: $font-16r;
+      }
+      .dp2 {
+        display: block;
+        overflow-y: auto;
+        left: 30%;
+        width: auto;
+        padding: 0 28px;
+        background-color: $white;
+        .gnb-menu {
+          ul {
+            li {
+              position: relative;
+              display: block;
+              .dp2-tit {
+                position: relative;
+                display: block;
+                padding: 14px 15px;
+                @include bdb(1px, $light_black);
+                color: $dark_gray;
+                font-size: $font-16r;
+                span {
+                  @include posa-tr(50%, 0);
+                  display: block;
+                  overflow: hidden;
+                  width: 21px;
+                  height: 21px;
+                  background-image: url("../images/icon-gnb-plus.svg");
+                  background-position: 50% 50%;
+                  background-size: 100% auto;
+                  @include txt-h;
+
+
+                }
+              }
+            }
+          }
+        }
+      }
+
+    }
+
+  }
+
+}
+
+

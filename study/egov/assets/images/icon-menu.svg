@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="26" viewBox="0 0 30 26">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #333;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <title>자산 1</title>
+  <g id="레이어_2" data-name="레이어 2">
+    <g id="레이어_1-2" data-name="레이어 1">
+      <g>
+        <path class="cls-1" d="M2,0H28a2,2,0,0,1,0,4H2A2,2,0,0,1,2,0Z"/>
+        <path class="cls-1" d="M2,11H28a2,2,0,0,1,0,4H2a2,2,0,0,1,0-4Z"/>
+        <path class="cls-1" d="M2,22H28a2,2,0,0,1,0,4H2a2,2,0,0,1,0-4Z"/>
+      </g>
+    </g>
+  </g>
+</svg>

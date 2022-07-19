@@ -42,6 +42,14 @@
   left: $l;
 }
 
+@mixin posf($t: 0, $r:0, $b:0, $l:0) {
+  position: fixed;
+  top: $t;
+  right: $r;
+  bottom: $b;
+  left: $l;
+}
+
 @mixin clear-fix() {
   display: block;
   clear: both;
@@ -62,8 +70,16 @@
   border-top: $t solid $c;
 }
 
-@mixin bdb($t: 1px, $c: #000) {
-  border-bottom: $t solid $c;
+@mixin bdb($b: 1px, $c: #000) {
+  border-bottom: $b solid $c;
+}
+
+@mixin bdr($r: 1px, $c: #000) {
+  border-right: $r solid $c;
+}
+
+@mixin bdl($l: 1px, $c: #000) {
+  border-left: $l solid $c;
 }
 
 @mixin bd($t: 1px, $c: #000) {
@@ -84,4 +100,9 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   
+}
+
+@mixin txt-h {
+  font-size: 0;
+  text-indent: -999999px;
 }
