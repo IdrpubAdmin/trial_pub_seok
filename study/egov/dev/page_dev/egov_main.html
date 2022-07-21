@@ -7,30 +7,57 @@
 <div id="wrapper">
 
     <!-- header -->
-    <header class="header">
+    <header class="header on">
         <div class="top-menu">
-            <div class="inner-wrap">
+            <div class="top-inner-wrap">
                 <div class="select-lang">
-                    <a href="javascript:void(0);">For Foreigners</a>
-                    <ul class="toggle-lang">
+                    <a href="javascript:void(0);" class="btn-toggle on">For Foreigners</a>
+                    <ul class="toggle-lang"><!-- 활성화 on-->
                         <li>
-                            <a href="javascript:void(0);" target="_blank" title="새창 열림">한국어</a>
+                            <a href="javascript:void(0);">한국어</a>
                         </li>
                         <li>
-                            <a href="javascript:void(0);" target="_blank" title="새창 열림">ENG</a>
+                            <a href="javascript:void(0);">ENG</a>
                         </li>
                         <li>
-                            <a href="javascript:void(0);" target="_blank" title="새창 열림">中文</a>
+                            <a href="javascript:void(0);">中文</a>
                         </li>
                     </ul>
                 </div>
-                <ul class="selec-child">
+                <ul class="select-child">
                     <li>
-                        <a href="javascript:void(0);" target="_blank" title="새창 열림">어린이</a>
+                        <a href="javascript:void(0);">어린이</a>
                     </li>
                 </ul>
-                <ul class="top">
-
+                <ul class="group-top-menu">
+                    <li>
+                        <a href="javascript:void(0);">로그인</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">회원가입</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">정부24소개</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">누리집 안내지도</a>
+                    </li>
+                    <li>
+                        <span>화면크기</span>
+                        <div class="zoom-scrn">
+                            <span class="btn-zoom out">
+                                <a href="javascript:void(0);">
+                                    <i class="i">화면축소</i>
+                                </a>
+                            </span><span class="zoom-txt">
+                                <a href="javascript:void(0);" title="화면확대축소 초기화">100%</a>
+                            </span><span class="btn-zoom in">
+                                <a href="javascript:void(0);">
+                                    <i class="i">화면확대</i>
+                                </a>
+                            </span>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -63,10 +90,10 @@
                 <!-- mobile-gnb -->
                 <div class="m-gnb on">
                     <div class="gnb-hd">
-                        <a href="javascipt:void(0);" class="btn-login login">
+                        <a href="javascript:void(0);" class="btn-login login">
                             <span class="btn-text">로그인</span>
                         </a>
-                        <a href="javascipt:void(0);" class="btn-login join">
+                        <a href="javascript:void(0);" class="btn-login join">
                             <span class="btn-text">회원가입</span>
                         </a>
                         <div class="btn-fullmenu close">
@@ -75,16 +102,21 @@
                             </a>
                         </div>
                     </div>
-                    <ul class="gnb-bd">
+                    <ul class="gnb-bd cf">
                         <!-- dp1 서비스 -->
-                        <li class="on">
+                        <li>
                             <a href="javascript:void(0);">
                                 서비스
                                 <span></span>
                             </a>
-                            <div class="dp2 pos1">
+                            <div class="dp2 pos1 cf">
+                                <!-- pc gnb visual area-->
+                                <div class="gnb-vsl v1">
+                                    <span class="v-tit">서비스</span>
+                                </div>
+                                <!-- //pc gnb visual area-->
                                 <div class="gnb-menu">
-                                    <ul>
+                                    <ul class="ver2">
                                         <!-- 신청 확인 공유 -->
                                         <li>
                                             <a href="javascript:void(0);" class="dp2-tit">
@@ -114,31 +146,27 @@
                                                 </li>
                                                 <li>
                                                     <a href="javascript:void(0);">
-                                                        행정정보공동이용
-                                                        <br>(e하나로민원)
+                                                        행정정보공동이용<br class="m-ver">(e하나로민원)
                                                     </a>
                                                 </li>
                                             </ul>
                                         </li>
                                         <!-- //신청 확인 공유 -->
                                         <!-- 찾기/안내 -->
-                                        <li>
-                                            <a href="javascript:void(0);">
+                                        <li class="on">
+                                            <a href="javascript:void(0);" class="dp2-tit" role="button">
                                                 찾기/안내
                                                 <span class="ico-plus">하위메뉴열기</span>
                                             </a>
                                             <ul class="dp3">
                                                 <li>
                                                     <a href="javascript:void(0);">
-                                                        원스톱/<br>
-                                                        생애주기/<br>
-                                                        꾸러미 서비스
+                                                        원스톱/<br class="m-ver">생애주기/<br class="m-ver">꾸러미 서비스
                                                     </a>
                                                 </li>
                                                 <li>
                                                     <a href="javascript:void(0);">
-                                                        연령/대상별<br>
-                                                        서비스
+                                                        연령/대상별<br class="m-ver"> 서비스
                                                     </a>
                                                 </li>
                                                 <li>
@@ -148,8 +176,7 @@
                                                 </li>
                                                 <li>
                                                     <a href="javascript:void(0);">
-                                                        기업단체 <br>
-                                                        서비스
+                                                        기업단체<br class="m-ver"> 서비스
                                                     </a>
                                                 </li>
                                                 <li>
@@ -159,8 +186,7 @@
                                                 </li>
                                                 <li>
                                                     <a href="javascript:void(0);">
-                                                        돌봄시설 등 <br>
-                                                        위치 찾기
+                                                        돌봄시설 등<br class="m-ver"> 위치 찾기
                                                     </a>
                                                 </li>
                                             </ul>
@@ -172,51 +198,466 @@
                         </li>
                         <!-- //dp1 서비스 -->
                         <!-- dp1 보조금24 -->
-<!--                        <li>-->
-<!--                            <a href="javascript:void(0);">-->
-<!--                                보조금24-->
-<!--                            </a>-->
-<!--                            <div class="dp2 pos1">-->
-<!--                                <div class="gnb-menu">-->
-<!--                                    <ul>-->
-<!--                                        &lt;!&ndash; 홈 &ndash;&gt;-->
-<!--                                        <li>-->
-<!--                                            <a href="javascript:void(0);">-->
-<!--                                                홈-->
-<!--                                            </a>-->
-<!--                                        </li>-->
-<!--                                        &lt;!&ndash; //홈 &ndash;&gt;-->
-<!--                                        &lt;!&ndash; 나의 혜택 &ndash;&gt;-->
-<!--                                        <li>-->
-<!--                                            <a href="javascript:void(0);">-->
-<!--                                                나의 혜택-->
-<!--                                            </a>-->
-<!--                                        </li>-->
-<!--                                        &lt;!&ndash; //나의 혜택 &ndash;&gt;-->
-<!--                                        &lt;!&ndash; 가족 구성 &ndash;&gt;-->
-<!--                                        <li>-->
-<!--                                            <a href="javascript:void(0);">-->
-<!--                                                가족 구성-->
-<!--                                            </a>-->
-<!--                                        </li>-->
-<!--                                        &lt;!&ndash; //가족 구성 &ndash;&gt;-->
-<!--                                        &lt;!&ndash; 가족 구성 &ndash;&gt;-->
-<!--                                        <li>-->
-<!--                                            <a href="javascript:void(0);">-->
-<!--                                                가족 구성-->
-<!--                                            </a>-->
-<!--                                        </li>-->
-<!--                                        &lt;!&ndash; //가족 구성 &ndash;&gt;-->
-<!--                                    </ul>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                        </li>-->
-                        <!-- //dp1 보조금24 -->
+                        <li>
+                            <a href="javascript:void(0);">
+                                보조금24
+                                <span></span>
+                            </a>
+                            <div class="dp2 pos1">
+                                <!-- pc gnb visual area-->
+                                <div class="gnb-vsl v2">
+                                    <span class="v-tit">보조금24</span>
+                                </div>
+                                <!-- //pc gnb visual area-->
+                                <div class="gnb-menu">
+                                    <ul>
+                                        <!-- 홈 -->
+                                        <li>
+                                            <a href="javascript:void(0);">
+                                                홈
+                                            </a>
+                                        </li>
+                                        <!-- //홈 -->
+                                        <!-- 나의 혜택 -->
+                                        <li>
+                                            <a href="javascript:void(0);">
+                                                나의 혜택
+                                            </a>
+                                        </li>
+                                        <!-- //나의 혜택 -->
+                                        <!-- 가족 구성 -->
+                                        <li>
+                                            <a href="javascript:void(0);">
+                                                가족 구성
+                                            </a>
+                                        </li>
+                                        <!-- //가족 구성 -->
+                                        <!-- 간편 찾기 -->
+                                        <li>
+                                            <a href="javascript:void(0);">
+                                                간편 찾기
+                                            </a>
+                                        </li>
+                                        <!-- //간편 찾기 -->
+                                        <!-- 전체 혜택 -->
+                                        <li>
+                                            <a href="javascript:void(0);">
+                                                전체 혜택
+                                            </a>
+                                        </li>
+                                        <!-- //전체 혜택 -->
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <!--    //dp1 보조금24-->
+                        <!-- dp1 정책정보 -->
+                        <li>
+                            <a href="javascript:void(0);">
+                                정책정보
+                                <span></span>
+                            </a>
+                            <div class="dp2 pos1">
+                                <!-- pc gnb visual area-->
+                                <div class="gnb-vsl v3">
+                                    <span class="v-tit">정책정보</span>
+                                </div>
+                                <!-- //pc gnb visual area-->
+                                <div class="gnb-menu">
+                                    <ul>
+                                        <!-- 분야별 정책정보 -->
+                                        <li>
+                                            <a href="javascript:void(0);">
+                                                분야별 정책정보
+                                            </a>
+                                        </li>
+                                        <!-- //분야별 정책정보 -->
+                                        <!-- 정책뉴스 -->
+                                        <li>
+                                            <a href="javascript:void(0);">
+                                                정책뉴스
+                                            </a>
+                                        </li>
+                                        <!-- //정책뉴스 -->
+                                        <!-- 연구보고서 -->
+                                        <li>
+                                            <a href="javascript:void(0);">
+                                                연구보고서
+                                            </a>
+                                        </li>
+                                        <!-- //연구보고서 -->
+                                        <!-- 간행물 -->
+                                        <li>
+                                            <a href="javascript:void(0);">
+                                                간행물
+                                            </a>
+                                        </li>
+                                        <!-- //간행물 -->
+                                        <!-- 정책자료 -->
+                                        <li>
+                                            <a href="javascript:void(0);">
+                                                정책자료
+                                            </a>
+                                        </li>
+                                        <!-- //정책자료 -->
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <!--    //dp1 정책정보-->
+                        <!-- dp1 기관정보 -->
+                        <li>
+                            <a href="javascript:void(0);">
+                                기관정보
+                                <span></span>
+                            </a>
+                            <div class="dp2 pos1">
+                                <!-- pc gnb visual area-->
+                                <div class="gnb-vsl v4">
+                                    <span class="v-tit">기관정보</span>
+                                </div>
+                                <!-- //pc gnb visual area-->
+                                <div class="gnb-menu">
+                                    <ul>
+                                        <!-- 정부/지자체 조직도 -->
+                                        <li>
+                                            <a href="javascript:void(0);">
+                                                정부/지자체 조직도
+                                            </a>
+                                        </li>
+                                        <!-- //정부/지자체 조직도 -->
+                                        <!-- 정부/지자체 운영누리집 -->
+                                        <li>
+                                            <a href="javascript:void(0);">
+                                                정부/지자체 운영누리집
+                                            </a>
+                                        </li>
+                                        <!-- //정부/지자체 운영누리집 -->
+                                        <!-- 행정기관위원회 -->
+                                        <li>
+                                            <a href="javascript:void(0);">
+                                                행정기관위원회
+                                            </a>
+                                        </li>
+                                        <!-- //행정기관위원회 -->
+                                        <!-- 지자체소식 -->
+                                        <li>
+                                            <a href="javascript:void(0);">
+                                                지자체소식
+                                            </a>
+                                        </li>
+                                        <!-- //지자체소식 -->
+                                        <!-- 공모전 -->
+                                        <li>
+                                            <a href="javascript:void(0);">
+                                                공모전
+                                            </a>
+                                        </li>
+                                        <!-- //공모전 -->
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <!--    //dp1기관정보-->
+                        <!-- dp1 고객센터 -->
+                        <li class="on">
+                            <a href="javascript:void(0);">
+                                고객센터
+                                <span></span>
+                            </a>
+                            <div class="dp2 pos1">
+                                <!-- pc gnb visual area-->
+                                <div class="gnb-vsl v5">
+                                    <span class="v-tit">고객센터</span>
+                                </div>
+                                <!-- //pc gnb visual area-->
+                                <div class="gnb-menu">
+                                    <ul>
+                                        <!-- 정부24 이용방법 -->
+                                        <li class="pc-only-menu">
+                                            <a href="javascript:void(0);">
+                                                정부24 이용방법
+                                            </a>
+                                        </li>
+                                        <!-- //정부24 이용방법 -->
+                                        <!-- 공지사항 -->
+                                        <li>
+                                            <a href="javascript:void(0);">
+                                                공지사항
+                                            </a>
+                                        </li>
+                                        <!-- //공지사항 -->
+                                        <!-- 자료실 -->
+                                        <li>
+                                            <a href="javascript:void(0);">
+                                                자료실
+                                            </a>
+                                        </li>
+                                        <!-- //자료실 -->
+                                        <!-- 서비스지원 -->
+                                        <li>
+                                            <a href="javascript:void(0);">
+                                                서비스지원
+                                                <span>하위메뉴열기</span>
+                                            </a>
+                                            <ul class="dp3 moblie-only-menu">
+                                                <li>
+                                                    <a href="javascript:void(0);">
+                                                        프린터 이용 안내
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0);">
+                                                        전자결제 안내
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0);">
+                                                        무인민원 발급 안내
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0);">
+                                                        어디서나 민원
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <!-- //서비스지원 -->
+                                        <!-- 자주묻는 질문(FAQ) -->
+                                        <li>
+                                            <a href="javascript:void(0);">
+                                                자주묻는 질문(FAQ)
+                                            </a>
+                                        </li>
+                                        <!-- //자주묻는 질문(FAQ) -->
+                                        <!-- 개선의견수렴 -->
+                                        <li>
+                                            <a href="javascript:void(0);">
+                                                개선의견수렴
+                                            </a>
+                                        </li>
+                                        <!-- //개선의견수렴 -->
+                                        <!-- 온라인 상담예약 -->
+                                        <li>
+                                            <a href="javascript:void(0);">
+                                                온라인 상담예약
+                                            </a>
+                                        </li>
+                                        <!-- //온라인 상담예약 -->
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <!--    //dp1 고객센터-->
+                        <!-- dp1 정부24 소개 -->
+                        <li class="moblie-only-menu">
+                            <a href="javascript:void(0);">
+                                정부24 소개
+                                <span></span>
+                            </a>
+                            <div class="dp2 pos1">
+                                <div class="gnb-menu">
+                                    <ul>
+                                        <!-- 정부24 개요 -->
+                                        <li class="on">
+                                            <a href="javascript:void(0);">
+                                                정부24 개요
+                                                <span>하위메뉴열기</span>
+                                            </a>
+                                            <ul class="dp3">
+                                                <li>
+                                                    <a href="javascript:void(0);">
+                                                        정부24 개요
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <!-- //정부24 개요 -->
+                                        <!-- 누리집 이용안내 -->
+                                        <li class="on">
+                                            <a href="javascript:void(0);">
+                                                누리집 이용안내
+                                                <span>하위메뉴열기</span>
+                                            </a>
+                                            <ul class="dp3">
+                                                <li>
+                                                    <a href="javascript:void(0);">
+                                                        장애인 이용 안내
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0);">
+                                                        개인정보 처리방침
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0);">
+                                                        저작권 보호정책
+                                                    </a>
+                                                </li>
+
+                                            </ul>
+                                        </li>
+                                        <!-- //누리집 이용안내 -->
+                                        <!-- 누리집 안내지도 -->
+                                        <li>
+                                            <a href="javascript:void(0);">
+                                                누리집 안내지도
+                                            </a>
+                                        </li>
+                                        <!-- //누리집 안내지도 -->
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <!--    //dp1 정부24 소개-->
+                        <!-- dp1 My Gov -->
+                        <li class="moblie-only-menu">
+                            <a href="javascript:void(0);">
+                                My Gov
+                                <span></span>
+                            </a>
+                            <div class="dp2 pos1">
+                                <div class="gnb-menu">
+                                    <ul>
+                                        <!-- 나의 서비스 -->
+                                        <li class="on">
+                                            <a href="javascript:void(0);">
+                                                나의 서비스
+                                                <span>하위메뉴열기</span>
+                                            </a>
+                                            <ul class="dp3">
+                                                <li>
+                                                    <a href="javascript:void(0);">
+                                                        서비스 신청내역
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0);">
+                                                        온라인 상담예약 내역
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0);">
+                                                        이벤트 참여
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0);">
+                                                        나의 생활정보
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0);">
+                                                        온종일 돌봄 신청내역
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <!-- //나의 서비스 -->
+                                        <!-- 회원정보 -->
+                                        <li class="on">
+                                            <a href="javascript:void(0);">
+                                                누리집 이용안내
+                                                <span>하위메뉴열기</span>
+                                            </a>
+                                            <ul class="dp3">
+                                                <li>
+                                                    <a href="javascript:void(0);">
+                                                        회원정보 관리
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0);">
+                                                        회원탈퇴
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0);">
+                                                        지문 및 간편비밀번호
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0);">
+                                                        인증등록/관리
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0);">
+                                                        복합인증 관리
+                                                    </a>
+                                                </li>
+
+                                            </ul>
+                                        </li>
+                                        <!-- //회원정보 -->
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <!--    //dp1 My Gov-->
+                        <!-- dp1 전자문서 지갑 -->
+                        <li class="moblie-only-menu">
+                            <a href="javascript:void(0);" class="m-menu">
+                                전자문서<br class="m-ver">지갑
+                                <span></span>
+                            </a>
+                            <div class="dp2 pos1">
+                                <div class="gnb-menu">
+                                    <ul>
+                                        <!-- 전자문서지갑 -->
+                                        <li class="on">
+                                            <a href="javascript:void(0);">
+                                                전자문서지갑
+                                            </a>
+                                        </li>
+                                        <!-- //전자문서지갑 -->
+                                        <!-- 공지사항 -->
+                                        <li class="on">
+                                            <a href="javascript:void(0);">
+                                                공지사항
+                                            </a>
+                                        </li>
+                                        <!-- //공지사항 -->
+                                        <!-- 자주 묻는 질문 -->
+                                        <li class="on">
+                                            <a href="javascript:void(0);">
+                                                자주 묻는 질문
+                                            </a>
+                                        </li>
+                                        <!-- //자주 묻는 질문 -->
+                                    </ul>
+                                    <div class="gnb-inner-info">
+                                        <span class="gnb-info-tit">전자문서지갑 이용 안내</span>
+                                        <div class="gnb-info-txt">
+                                            <span>고객센터 Tel. 1600-8613</span>
+                                            <span>토, 공휴일 제외</span>
+                                            <span>(점심시간 : 12:00~13:00)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!--    //dp1 전자문서 지갑 -->
+                        <!-- 공공마이데이터 -->
+                        <li class="moblie-only-menu">
+                            <a href="javascript:void(0);" class="m-menu">
+                                공공마이<br class="m-ver">데이터
+                            </a>
+                        </li>
                     </ul>
 
 
                 </div>
                 <!-- //mobile-gnb -->
+                <!-- guide menu-->
+                <div class="gnb-guide">
+                    <a href="javascript:void(0);" class="gd-txt">
+                        처음오셨나요?
+                    </a>
+                </div>
+                <!-- //guide menu-->
             </div>
         </div>
     </header>
@@ -240,5 +681,6 @@
 </div>
 <!-- //wrapper -->
 <!--end Contents-->
+
 
 <!-- @@close -->

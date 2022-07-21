@@ -5,7 +5,13 @@
   -moz-border-radius: $z;
   border-radius: $z;
 }
-
+@mixin posa($t: 0, $r:0, $b: 0, $l:0) {
+  position: absolute;
+  top: $t;
+  right: $r;;
+  bottom: $b;
+  left: $l
+}
 @mixin posa-tl($t: 0, $l:0) {
   position: absolute;
   top: $t;
@@ -105,4 +111,27 @@
 @mixin txt-h {
   font-size: 0;
   text-indent: -999999px;
+}
+
+//media query
+
+@mixin m-l {
+  @media (min-width: $m-l) {
+    @content;
+  }
+}
+@mixin t-s {
+  @media (min-width: $t-s) {
+    @content;
+  }
+}
+@mixin t-m {
+  @media (min-width: $t-m) {
+    @content;
+  }
+}
+@mixin p-s {
+  @media (min-width: $p-s) {
+    @content;
+  }
 }

@@ -1,32 +1,218 @@
-.top-menu {
-  display: none;
-  @include posa-tl(0, 0);
-  width: 100%;
-  height: 33px;
-  background-color: #033075;
+.header {
+  @include p-s{
+    @include posa(0, 0, none, 0);
+    width: 100%;
+    height: 120px;
+    z-index: $z-gnb - 1;
+    background-color: transparent;
+  }
+  &.on {
+    @include p-s {
+      height: 525px;
+      background-color: $white;
+      border-bottom: 3px solid #233671;
+    }
+  }
 }
 
-.inner-wrap {
+.top-menu {
+  display: none;
+  //@include posa-tl(0, 0);
   width: 100%;
-  max-width: $narrow;
+  height: 33px;
+  background-color: $top-blue;
+  color: $white;
+  font-size: $font-14r;
+  font-weight: bold;
+  @include p-s {
+    display: block;
+  }
+}
+
+.top-inner-wrap {
+  width: 100%;
+  max-width: $p-s;
   margin: 0 auto;
   font-family: "Open Sans", sans-serif;
 }
 
 .select-lang {
-  display: none;
+  float: left;
+  position: relative;
+  margin-top: 5px;
+  padding-right: 15px;
+
+  a {
+    &.btn-toggle {
+      display: block;
+      position: relative;
+      padding-right: 15px;
+
+      &::after {
+        content: "";
+        @include posa-tr(8px, 0);
+        width: 8px;
+        height: 5px;
+        background: url("../images/ico_arrow_type07.png") 0 0 no-repeat;
+        transition: transform .2s;
+        transform: rotateY(0);
+      }
+
+      &.on {
+        &::after {
+          transform: rotateY(180deg);
+        }
+      }
+    }
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    z-index: 1;
+    width: 1px;
+    height: 12px;
+    margin-top: -6px;
+    background-color: #6d88b4;
+  }
+
+  .toggle-lang {
+    display: none;
+    @include posa-tl(28px, 0);
+    z-index: $z-gnb + 2;
+    width: 100px;
+    border: solid #ddd;
+    border-width: 0 1px 1px;
+    background-color: $white;
+    box-shadow: 2px 2px 10px -6px $black;
+
+    li {
+      @include bdt(1px, #ddd);
+
+      a {
+        display: block;
+        padding: 5px 0;
+        text-align: center;
+        font-size: $font-14r;
+        font-weight: normal;
+        color: $gray;
+
+      }
+    }
+
+    &.on {
+      display: block;
+    }
+  }
 }
 
-.toggle-lang {
-  //display: none;
-  @include posa-tl(28px, 0);
-  z-index: $z-gnb + 1;
+.select-child {
+  float: left;
+
+  li {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    margin-top: 5px;
+  }
 }
+
+.group-top-menu {
+  float: right;
+  overflow: hidden;
+
+  li {
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    margin-top: 5px;
+
+    &::after {
+      content: '';
+      display: block;
+      @include posa-tr(50%, 0);
+      margin-top: -6px;
+      z-index: 1;
+      width: 1px;
+      height: 12px;
+      background-color: #6d88b4;
+    }
+
+    &:last-child {
+      &::after {
+        display: none;
+      }
+    }
+
+    a {
+      display: block;
+
+    }
+
+    span {
+      display: inline-block;
+      vertical-align: middle;
+      margin-top: -2px;
+    }
+  }
+
+  .zoom-scrn {
+    display: inline-block;
+    width: 90px;
+    height: 18px;
+    margin-left: 8px;
+    vertical-align: middle;
+    margin-top: -2px;
+
+    .btn-zoom {
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      background-repeat: no-repeat;
+      background-image: url("../images/ico-zoom-btn.png");
+
+      &.out {
+        background-position: 0 -18px;
+      }
+
+      &.in {
+        background-position: 0 0;
+      }
+
+      a {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .zoom-txt {
+      display: inline-block;
+      width: 50px;
+      height: 18px;
+      text-align: center;
+      font-weight: 700;
+      background-color: rgba(202, 231, 247, 0.4);
+      line-height: 16px;
+
+      a {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
 
 .egov-section {
   width: 100%;
-  //height: 1675px;
-  //background: url("../images/egov_body.jpg") no-repeat center center/cover;
+  margin-top: 108px;
+  height: 1675px;
+  background: url("../images/egov_body.jpg") no-repeat center center/cover;
+  background-size: 1920px auto;
 }
 
 .gnb {
@@ -34,10 +220,29 @@
   height: 60px;
   box-shadow: 1px 3px 10px #eee;
   border-bottom: 1px solid #cdd6e3;
+  z-index: $z-gnb;
+  background-color: $white;
+  @include m-l {
+    height: 80px;
+  }
+  @include p-s {
+    @include posa-tl(33px, 0);
+    right: 0;
+    box-shadow: 1px 3px 10px -7px $black;
+  }
 }
 
 .gnb-inner-wrap {
   position: relative;
+  width: 100%;
+  height: 100%;
+  @include p-s {
+    max-width: $p-s;
+    margin: 0 auto;
+    height: 75px;
+    padding-left: 200px;
+    box-sizing: border-box;
+  }
 }
 
 .i {
@@ -47,11 +252,19 @@
   width: 0;
   height: 0;
   font-size: 0;
+  line-height: 0;
+  text-indent: -999999px;
 }
 
 .btn-fullmenu {
+  @include p-s {
+    display: none;
+    @include posa-tl(0, 0);
+    margin-top: 0;
+  }
+
   a {
-    @include posa-tr(0,0);
+    @include posa-tl(0, 0);
     display: block;
     overflow: hidden;
     width: 60px;
@@ -60,10 +273,28 @@
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: 20px auto;
+    @include m-l {
+      width: 80px;
+      height: 80px;
+      background-size: 30px auto;
+    }
   }
+
   &.close {
     a {
+      left: auto;
+      right: 0;
       background-image: url("../images/icon-menu-all-close.png");
+      @include m-l {
+        width: 60px;
+        height: 60px;
+        background-size: 20px auto;
+      }
+      @include t-m {
+        width: 80px;
+        height: 80px;
+        background-size: 25px auto;
+      }
     }
   }
 
@@ -74,10 +305,21 @@
   transform: translate(-50%, -50%);
   width: 109px;
   height: 36px;
+  @include m-l {
+    width: 145.27px;
+    height: 48px;
+  }
+  @include p-s {
+    left: 0;
+    top: 7px;
+    transform: unset;
+  }
+
   a {
     display: block;
     width: 100%;
     height: 100%;
+
     img {
       display: block;
       width: 100%;
@@ -91,27 +333,43 @@
   display: block;
   width: 60px;
   height: 60px;
-}
+  @include m-l {
+    width: 80px;
+    height: 80px;
+  }
+  @include p-s {
+    display: none;
+  }
 
-.btn-mygov {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  vertical-align: middle;
-  a {
-    display: block;
-    overflow: hidden;
-    width: 60px;
-    height: 60px;
-    background-image: url("../images/icon-mygov.svg");
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: 26px 26px;
+  .btn-mygov {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+
+    a {
+      display: block;
+      overflow: hidden;
+      width: 100%;
+      height: 100%;
+      background-image: url("../images/icon-mygov.svg");
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: 26px 26px;
+      @include m-l {
+        background-size: 40px 40px;
+      }
+    }
   }
 }
 
+
 .m-gnb {
   display: none;
+  @include p-s {
+    display: block;
+  }
+
   &.on {
     display: block;
     position: fixed;
@@ -124,7 +382,28 @@
     background: #fff;
     overflow-y: scroll;
     z-index: $z-gnb;
+    @include p-s {
+      position: unset;
+      background-color: unset;
+      overflow-y: unset;
+      z-index: inherit;
+    }
+  }
 
+  &::before {
+    content: "";
+    display: block;
+    @include posa(60px, none, 0, 0);
+    width: 30%;
+    background-color: $light_gray;
+    @include bdr(1px, $light_black);
+    box-sizing: border-box;
+    @include t-m {
+      top: 80px;
+    }
+    @include p-s {
+      display: none;
+    }
   }
 }
 
@@ -132,77 +411,340 @@
   display: block;
   height: 60px;
   background-color: $blue;
-}
+  @include t-m {
+    height: 80px;
+  }
+  @include p-s {
+    display: none;
+  }
 
-.btn-login {
-  display: inline-block;
-  height: 25px;
-  margin: 17px 20px;
-  padding: 0 10px;
-  line-height: 23px;
-  @include bd(1px, #fff);
-  @include bdrs(5px);
-  font-size: $font-12r;
-
-  .btn-text {
+  .btn-login {
     display: inline-block;
-    position: relative;
-    padding-left: 20px;
-    color: $white;
-    &::before {
-      content: "";
-      display: block;
-      @include posa-tl(0, 0);
-      width: 10.5px;
-      height: 100%;
-      background-repeat: no-repeat;
-      background-position: 0 50%;
-      background-size: 100% auto;
-    }
-  }
+    height: 25px;
+    margin: 17px 20px;
+    padding: 0 10px;
+    line-height: 23px;
+    @include bd(1px, #fff);
+    @include bdrs(5px);
+    font-size: $font-12r;
 
-  &.login {
     .btn-text {
+      display: inline-block;
+      position: relative;
+      padding-left: 20px;
+      color: $white;
+
       &::before {
-        background-image: url("../images/icon-login.png");
+        content: "";
+        display: block;
+        @include posa-tl(0, 0);
+        width: 10.5px;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-position: 0 50%;
+        background-size: 100% auto;
       }
     }
-  }
-  &.join {
-    margin-left: -5px;
-    .btn-text {
-      &::before {
-        content: "+";
-        font-size: 22px;
-        line-height: 20px;
 
+    &.login {
+      .btn-text {
+        &::before {
+          background-image: url("../images/icon-login.png");
+        }
+      }
+    }
+
+    &.join {
+      margin-left: -5px;
+
+      .btn-text {
+        &::before {
+          content: "+";
+          font-size: $font-22r;
+          line-height: 20px;
+
+        }
       }
     }
   }
 }
+
 
 .gnb-bd {
   display: block;
-  @include posf(60px, 0, 0, 0);
+  @include posa(60px, 0, 0, 0);
   width: 100%;
+  @include t-m {
+    top: 80px;
+  }
+  @include p-s {
+    position: unset;
+    margin-top: 10px;
+  }
+
+  .moblie-only-menu {
+    @include p-s {
+      display: none !important;
+    }
+  }
+
+  .pc-only-menu {
+    display: none !important;
+    @include p-s {
+      display: block !important;
+    }
+  }
+
   > li {
+    @include p-s {
+      float: left;
+      padding: 0 26px;
+    }
+
     > a {
       display: block;
       width: 30%;
       background-color: $light_gray;
       @include bdb(1px, $light_black);
       @include bdr(1px, $light_black);
-      font-size: $font-24r;
+      font-size: $font-16r;
       padding: 15px 0;
       font-weight: bold;
       text-align: center;
       box-sizing: border-box;
+      @include m-l {
+        font-size: $font-20r;
+      }
+      @include t-s {
+        font-size: $font-24r;
+      }
+      @include p-s {
+        width: auto;
+        border: none;
+        background-color: unset;
+        font-size: $font-21r;
+        padding: 15px 8px;
+      }
+
+      &.m-menu {
+        font-size: $font-16r;
+      }
+
+      > span {
+        display: none;
+        width: 100%;
+        height: 5px;
+        margin-top: 21px;
+        background-color: $blue2;
+      }
     }
+
+
     .dp2 {
       display: none;
-      @include posa-tl(0, 0);
+      @include posa(0, 0, 0, 30%);
       width: auto;
+      padding: 0 28px;
+      overflow-y: auto;
+      background-color: $white;
       z-index: $z-gnb + 1;
+      box-sizing: border-box;
+      word-break: keep-all;
+
+      .gnb-vsl {
+        display: none;
+        float: left;
+        width: 350px;
+        height: 300px;
+        background-position: right 80px;
+        background-repeat: no-repeat;
+        box-sizing: border-box;
+        padding-top: 230px;
+
+        .v-tit {
+          display: block;
+          float: right;
+          width: auto;
+          min-width: 150px;
+          font-size: $font-30r;
+          color: $top-blue;
+          font-weight: 700;
+          text-align: left;
+          border: 0;
+        }
+
+        &.v1 {
+          background-image: url("../images/ico-gnb-m1.png");
+
+          .v-tit {
+            min-width: 130px;
+          }
+        }
+
+        &.v2 {
+          background-image: url("../images/ico-gnb-m5.png");
+
+          .v-tit {
+            text-align: center;
+          }
+        }
+
+        &.v3 {
+          background-image: url("../images/ico-gnb-m2.png");
+        }
+
+        &.v4 {
+          background-image: url("../images/ico-gnb-m3.png");
+        }
+
+        &.v5 {
+          background-image: url("../images/ico-gnb-m4.png");
+
+          .v-tit {
+            min-width: 125px;
+          }
+        }
+      }
+
+      @include p-s {
+        display: none;
+        @include posa(75px, 0, 0, 0);
+        width: 100%;
+        overflow-y: unset;
+        .gnb-vsl {
+          display: block;
+        }
+      }
+
+      .gnb-menu {
+        @include p-s {
+          float: left;
+          margin-left: 75px;
+          > ul {
+            float: left;
+            width: 195px;
+            margin-right: 45px;
+            padding-top: 30px;
+
+            &.ver2 {
+              overflow: hidden;
+              width: auto;
+              margin: 0;
+              padding-top: 0;
+
+              > li {
+                float: left;
+                width: 195px;
+                margin-right: 45px;
+                padding-top: 30px;
+              }
+            }
+          }
+        }
+
+        > ul {
+          > li {
+            position: relative;
+            display: block;
+
+            > a {
+              position: relative;
+              display: block;
+              padding: 14px 15px;
+              @include bdb(1px, $light_black);
+              color: $dark_gray;
+              font-size: $font-16r;
+
+              &:hover {
+                color: $blue;
+              }
+
+              @include m-l {
+                font-size: $font-20r;
+              }
+              @include t-s {
+                font-size: $font-24r;
+              }
+              @include p-s {
+                font-size: $font-16r;
+                font-weight: bold;
+                padding: 10px;
+              }
+
+              span {
+                @include posa-tr(50%, 0);
+                display: block;
+                overflow: hidden;
+                width: 21px;
+                height: 21px;
+                margin-top: -10px;
+                background-image: url("../images/icon-gnb-plus.svg");
+                background-position: 50% 50%;
+                background-size: 100% auto;
+                background-repeat: no-repeat;
+                @include txt-h;
+                @include p-s {
+                  display: none;
+                }
+              }
+
+              &.dp2-tit {
+                @include p-s {
+                  height: 30px;
+                  line-height: 30px;
+                  background-color: #c8e2ff;
+                  border: 0;
+                  border-radius: 15px;
+                  margin-bottom: 10px;
+                  padding: 0;
+                  text-align: center;
+                  font-size: 16px;
+                  color: #333;
+                  font-weight: 700;
+                }
+              }
+            }
+
+            .dp3 {
+              display: none;
+              padding: 15px 0;
+              height: 0;
+              @include p-s {
+                display: block;
+                padding: 0;
+                height: auto;
+              }
+
+              li {
+                display: block;
+                position: relative;
+
+                a {
+                  display: block;
+                  font-size: $font-16r;
+                  font-weight: normal;
+                  padding: 5px 20px;
+                  color: $gray;
+                  @include m-l {
+                    font-size: $font-20r;
+                  }
+                  @include t-s {
+                    font-size: $font-24r;
+                  }
+                  @include p-s {
+                    font-size: $font-16r;
+                    font-weight: bold;
+                    color: $dark_gray;
+                    padding: 10px;
+                    @include bdb(1px, $border_clr2);
+
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     }
 
     &.on {
@@ -211,50 +753,107 @@
         background-color: $white;
         @include bdl(4px, $blue);
         border-right: none;
-        font-size: $font-16r;
+        @include p-s {
+          border: none;
+          background-color: unset;
+          > span {
+            display: block;
+          }
+        }
       }
+
       .dp2 {
         display: block;
-        overflow-y: auto;
-        left: 30%;
-        width: auto;
-        padding: 0 28px;
-        background-color: $white;
+
         .gnb-menu {
           ul {
             li {
-              position: relative;
-              display: block;
-              .dp2-tit {
-                position: relative;
-                display: block;
-                padding: 14px 15px;
-                @include bdb(1px, $light_black);
-                color: $dark_gray;
-                font-size: $font-16r;
-                span {
-                  @include posa-tr(50%, 0);
-                  display: block;
-                  overflow: hidden;
-                  width: 21px;
-                  height: 21px;
-                  background-image: url("../images/icon-gnb-plus.svg");
-                  background-position: 50% 50%;
-                  background-size: 100% auto;
-                  @include txt-h;
-
-
+              &.on {
+                .dp2-tit {
+                  span {
+                    background-image: url("../images/icon-gnb-minus.svg");
+                  }
                 }
+
+                .dp3 {
+                  display: block;
+                  height: auto;
+                }
+
               }
             }
           }
         }
       }
-
     }
-
   }
 
+  .gnb-inner-info {
+    @include posa-br(70px, 0);
+    text-align: center;
+    width: 100%;
+    font-size: $font-18r;
+
+    span {
+      display: block;
+    }
+
+    .gnb-info-txt {
+      font-size: $font-14r;
+      margin-top: 20px;
+    }
+  }
 }
 
+// m-small 줄바꿈 조절
+.m-ver {
+  display: block;
+  @include m-l {
+    display: none;
+  }
+}
+
+.gnb-guide {
+  display: none;
+  @include posa-tr(7px, 0);
+  //z-index: 1;
+  a {
+    display: block;
+    width: 200px;
+    border-radius: 20px;
+    height: 40px;
+    line-height: 40px;
+    background-color: #eb193a;
+    font-size: $font-15r;
+    font-weight: bold;
+    text-align: center;
+    color: $white;
+    &.gd-txt {
+      &::before {
+        content: "";
+        display: inline-block;
+        width: 18px;
+        height: 24px;
+        background: url("../images/ico-guide.png") no-repeat 0px 0px;
+        margin-right: 7px;
+        vertical-align: middle;
+
+      }
+      &::after {
+        content: "";
+        display: inline-block;
+        width: 8px;
+        height: 11px;
+        background: url("../images/ico-myset.png") no-repeat 0px 0px;
+        background-position: -109px -65px;
+        margin-left: 20px;
+      }
+
+
+    }
+  }
+  @include p-s {
+    display: block;
+  }
+}
 

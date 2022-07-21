@@ -31,14 +31,17 @@ $default_fc: #222;
 $white: #fff;
 $black: #222;
 $dark_gray: #333;
+$gray: #666;
 $light_gray: #f4f5f6;
 $light_black: #c9d6dd;
 $white_gray: #f1f1f1;
 $camel: #c69c6d;
 $point_clr: #e46764;
 $border_clr: #f1f1f1;
-$border_clr2: #ccc;
+$border_clr2: #e2e2e2;
 $blue: #006ae2;
+$blue2: #0e72e4;
+$top-blue: #033075;
 
 //btn
 $df_h_s: 35px;
@@ -59,9 +62,13 @@ $con_pd3: 30px;
 $pop-pd: 15px;
 
 //media queries
-$full: 1920px;
-$middle: 1600px;
-$narrow: 1280px;
+$p-l: 1920px;
+$p-m: 1600px;
+$p-s: 1280px;
+$t-m: 720px;
+$t-s: 641px;
+$m-l: 480px;
+$m-s: 320px;
 
 //url
 $img_url: '../../images/';
@@ -134,6 +141,7 @@ $font-17r: 1.7rem;
 $font-18r: 1.8rem;
 $font-19r: 1.9rem;
 $font-20r: 2rem;
+$font-21r: 2.1rem;
 $font-22r: 2.2rem;
 $font-24r: 2.4rem;
 $font-26r: 2.6rem;

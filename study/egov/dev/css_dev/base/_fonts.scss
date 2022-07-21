@@ -45,3 +45,17 @@
   font-weight: $bk;
   font-style: normal;
 }
+
+@font-face {
+  font-family: '맑은 고딕', 'Malgun Gothic';
+  src: url("../fonts/malgun.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: '맑은 고딕', 'Malgun Gothic';
+  src: url("../fonts/malgunbd.ttf") format('truetype');
+  font-weight: $b;
+  font-style: normal;
+}

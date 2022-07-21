@@ -62,9 +62,9 @@
 
 
 //레이어팝업 활성화 클래스 on
-.on {
-  display: block !important;
-}
+//.on {
+//  display: block !important;
+//}
 
 // 1줄 이상 텍스트 말줄임 no-wrap
 
@@ -72,4 +72,10 @@
   display: block;
   width: 100%;
   @include line1;
+}
+
+.cf::after, .cf::before {
+  content: "";
+  display: block;
+  clear: both;
 }
