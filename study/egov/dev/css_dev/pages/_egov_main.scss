@@ -725,6 +725,9 @@
                   font-weight: normal;
                   padding: 5px 20px;
                   color: $gray;
+                  &:hover {
+                    color: $blue;
+                  }
                   @include m-l {
                     font-size: $font-20r;
                   }
