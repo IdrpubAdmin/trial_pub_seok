@@ -3189,11 +3189,7 @@ a, input, select, button, textarea { font-family: inherit; }
 
 @font-face { font-family: 'Open Sans'; src: url("../fonts/OpenSans-Regular.woff2") format("woff2"), url("../fonts/OpenSans-Regular.woff") format("woff"), url("../fonts/OpenSans-Regular.otf") format("opentype"); font-weight: 400; font-style: normal; }
 
-@font-face { font-family: 'Open Sans'; src: url("../fonts/OpenSans-Medium.woff2") format("woff2"), url("../fonts/OpenSans-Medium.woff") format("woff"), url("../fonts/OpenSans-Medium.otf") format("opentype"); font-weight: 500; font-style: normal; }
-
 @font-face { font-family: 'Open Sans'; src: url("../fonts/OpenSans-Bold.woff2") format("woff2"), url("../fonts/OpenSans-Bold.woff") format("woff"), url("../fonts/OpenSans-Bold.otf") format("opentype"); font-weight: 700; font-style: normal; }
-
-@font-face { font-family: 'Open Sans'; src: url("../fonts/OpenSans-Black.woff2") format("woff2"), url("../fonts/OpenSans-Black.woff") format("woff"), url("../fonts/OpenSans-Black.otf") format("opentype"); font-weight: 900; font-style: normal; }
 
 @font-face { font-family: '맑은 고딕', 'Malgun Gothic'; src: url("../fonts/malgun.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 
@@ -3210,21 +3206,37 @@ a, input, select, button, textarea { font-family: inherit; }
 
 .blind { font-size: 0; position: absolute; text-indent: -9999px; }
 
+.i { display: block; overflow: hidden; position: absolute; top: 0; left: -99999999px; width: 0; height: 0; font-size: 0; line-height: 0; text-indent: -999999px; }
+
 .line1 { display: block; width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
 .cf::after, .cf::before { content: ""; display: block; clear: both; }
+
+.m-ver { display: block; }
+
+@media (min-width: 480px) { .m-ver { display: none; } }
 
 #wrapper { width: 100%; }
 
 #header { width: 100%; }
 
-.gnb { width: 100%; }
-
-#container { width: 100%; }
-
 @media (min-width: 1280px) { .header { position: absolute; top: 0; right: 0; bottom: none; left: 0; width: 100%; height: 120px; z-index: 999; background-color: transparent; } }
 
 @media (min-width: 1280px) { .header.on { height: 525px; background-color: #fff; border-bottom: 3px solid #233671; } }
+
+.gnb { width: 100%; height: 60px; box-shadow: 1px 3px 10px #eee; border-bottom: 1px solid #cdd6e3; z-index: 1000; background-color: #fff; }
+
+@media (min-width: 480px) { .gnb { height: 80px; } }
+
+@media (min-width: 1280px) { .gnb { position: absolute; top: 33px; left: 0; right: 0; box-shadow: 1px 3px 10px -7px #222; } }
+
+#container { width: 100%; }
+
+.egov-section { width: 100%; height: 3074px; background: url("../images/egov_body_m.jpg") no-repeat center top/cover; background-size: 100% auto; }
+
+@media (min-width: 641px) { .egov-section { height: 1984px; background-image: url("../images/egov_body_t.jpg"); } }
+
+@media (min-width: 1280px) { .egov-section { margin-top: 108px; height: 1675px; background-image: url("../images/egov_body.jpg"); background-size: 1920px auto; } }
 
 .top-menu { display: none; width: 100%; height: 33px; background-color: #033075; color: #fff; font-size: 1.4rem; font-weight: bold; }
 
@@ -3280,19 +3292,9 @@ a, input, select, button, textarea { font-family: inherit; }
 
 .group-top-menu .zoom-scrn .zoom-txt a { width: 100%; height: 100%; }
 
-.egov-section { width: 100%; margin-top: 108px; height: 1675px; background: url("../images/egov_body.jpg") no-repeat center center/cover; background-size: 1920px auto; }
-
-.gnb { width: 100%; height: 60px; box-shadow: 1px 3px 10px #eee; border-bottom: 1px solid #cdd6e3; z-index: 1000; background-color: #fff; }
-
-@media (min-width: 480px) { .gnb { height: 80px; } }
-
-@media (min-width: 1280px) { .gnb { position: absolute; top: 33px; left: 0; right: 0; box-shadow: 1px 3px 10px -7px #222; } }
-
 .gnb-inner-wrap { position: relative; width: 100%; height: 100%; }
 
 @media (min-width: 1280px) { .gnb-inner-wrap { max-width: 1280px; margin: 0 auto; height: 75px; padding-left: 200px; box-sizing: border-box; } }
-
-.i { display: block; overflow: hidden; position: absolute; top: 0; left: -99999999px; width: 0; height: 0; font-size: 0; line-height: 0; text-indent: -999999px; }
 
 @media (min-width: 1280px) { .btn-fullmenu { display: none; position: absolute; top: 0; left: 0; margin-top: 0; } }
 
@@ -3436,7 +3438,7 @@ a, input, select, button, textarea { font-family: inherit; }
 
 .gnb-bd > li .dp2 .gnb-menu > ul > li .dp3 { display: none; padding: 15px 0; height: 0; }
 
-@media (min-width: 1280px) { .gnb-bd > li .dp2 .gnb-menu > ul > li .dp3 { display: block; padding: 0; height: auto; } }
+@media (min-width: 1280px) { .gnb-bd > li .dp2 .gnb-menu > ul > li .dp3 { display: block; height: auto; } }
 
 .gnb-bd > li .dp2 .gnb-menu > ul > li .dp3 li { display: block; position: relative; }
 
@@ -3457,7 +3459,7 @@ a, input, select, button, textarea { font-family: inherit; }
 
 .gnb-bd > li.on .dp2 { display: block; }
 
-.gnb-bd > li.on .dp2 .gnb-menu ul li.on .dp2-tit span { background-image: url("../images/icon-gnb-minus.svg"); }
+.gnb-bd > li.on .dp2 .gnb-menu ul li.on a span { background-image: url("../images/icon-gnb-minus.svg"); }
 
 .gnb-bd > li.on .dp2 .gnb-menu ul li.on .dp3 { display: block; height: auto; }
 
@@ -3466,10 +3468,6 @@ a, input, select, button, textarea { font-family: inherit; }
 .gnb-bd .gnb-inner-info span { display: block; }
 
 .gnb-bd .gnb-inner-info .gnb-info-txt { font-size: 1.4rem; margin-top: 20px; }
-
-.m-ver { display: block; }
-
-@media (min-width: 480px) { .m-ver { display: none; } }
 
 .gnb-guide { display: none; position: absolute; top: 7px; right: 0; }
 

@@ -1,19 +1,4 @@
-.header {
-  @include p-s{
-    @include posa(0, 0, none, 0);
-    width: 100%;
-    height: 120px;
-    z-index: $z-gnb - 1;
-    background-color: transparent;
-  }
-  &.on {
-    @include p-s {
-      height: 525px;
-      background-color: $white;
-      border-bottom: 3px solid #233671;
-    }
-  }
-}
+
 
 .top-menu {
   display: none;
@@ -207,30 +192,6 @@
 }
 
 
-.egov-section {
-  width: 100%;
-  margin-top: 108px;
-  height: 1675px;
-  background: url("../images/egov_body.jpg") no-repeat center center/cover;
-  background-size: 1920px auto;
-}
-
-.gnb {
-  width: 100%;
-  height: 60px;
-  box-shadow: 1px 3px 10px #eee;
-  border-bottom: 1px solid #cdd6e3;
-  z-index: $z-gnb;
-  background-color: $white;
-  @include m-l {
-    height: 80px;
-  }
-  @include p-s {
-    @include posa-tl(33px, 0);
-    right: 0;
-    box-shadow: 1px 3px 10px -7px $black;
-  }
-}
 
 .gnb-inner-wrap {
   position: relative;
@@ -243,17 +204,6 @@
     padding-left: 200px;
     box-sizing: border-box;
   }
-}
-
-.i {
-  display: block;
-  overflow: hidden;
-  @include posa-tl(0, -99999999px);
-  width: 0;
-  height: 0;
-  font-size: 0;
-  line-height: 0;
-  text-indent: -999999px;
 }
 
 .btn-fullmenu {
@@ -362,7 +312,6 @@
     }
   }
 }
-
 
 .m-gnb {
   display: none;
@@ -711,7 +660,6 @@
               height: 0;
               @include p-s {
                 display: block;
-                padding: 0;
                 height: auto;
               }
 
@@ -772,7 +720,7 @@
           ul {
             li {
               &.on {
-                .dp2-tit {
+                a {
                   span {
                     background-image: url("../images/icon-gnb-minus.svg");
                   }
@@ -805,14 +753,6 @@
       font-size: $font-14r;
       margin-top: 20px;
     }
-  }
-}
-
-// m-small 줄바꿈 조절
-.m-ver {
-  display: block;
-  @include m-l {
-    display: none;
   }
 }
 

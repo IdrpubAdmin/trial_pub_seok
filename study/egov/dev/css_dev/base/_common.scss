@@ -60,6 +60,16 @@
   text-indent: -9999px;
 }
 
+.i {
+  display: block;
+  overflow: hidden;
+  @include posa-tl(0, -99999999px);
+  width: 0;
+  height: 0;
+  font-size: 0;
+  line-height: 0;
+  text-indent: -999999px;
+}
 
 //레이어팝업 활성화 클래스 on
 //.on {
@@ -78,4 +88,12 @@
   content: "";
   display: block;
   clear: both;
+}
+
+// m-small 줄바꿈 조절
+.m-ver {
+  display: block;
+  @include m-l {
+    display: none;
+  }
 }

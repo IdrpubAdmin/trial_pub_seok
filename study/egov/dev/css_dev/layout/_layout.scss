@@ -6,10 +6,57 @@
   width: 100%;
 }
 
+.header {
+  @include p-s{
+    @include posa(0, 0, none, 0);
+    width: 100%;
+    height: 120px;
+    z-index: $z-gnb - 1;
+    background-color: transparent;
+  }
+  &.on {
+    @include p-s {
+      height: 525px;
+      background-color: $white;
+      border-bottom: 3px solid #233671;
+    }
+  }
+}
+
 .gnb {
   width: 100%;
+  height: 60px;
+  box-shadow: 1px 3px 10px #eee;
+  border-bottom: 1px solid #cdd6e3;
+  z-index: $z-gnb;
+  background-color: $white;
+  @include m-l {
+    height: 80px;
+  }
+  @include p-s {
+    @include posa-tl(33px, 0);
+    right: 0;
+    box-shadow: 1px 3px 10px -7px $black;
+  }
 }
 
 #container {
   width: 100%;
+}
+
+.egov-section {
+  width: 100%;
+  height: 3074px;
+  background: url("../images/egov_body_m.jpg") no-repeat center top/cover;
+  background-size: 100% auto;
+  @include t-s {
+    height: 1984px;
+    background-image: url("../images/egov_body_t.jpg");
+  }
+  @include p-s {
+    margin-top: 108px;
+    height: 1675px;
+    background-image: url("../images/egov_body.jpg");
+    background-size: 1920px auto;
+  }
 }
